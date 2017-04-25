@@ -1,0 +1,20 @@
+<pack:associatedspecifications xmlns:pack="urn:pack">
+<pack:associatedspecification name="Generic CDA" ref="GenericCDA/index.html">
+			<pack:description>The Generic CDA Domain Message Specification contains details on the "on-the-wire" format for CDA payloads. The "on-the-wire" format is the actual payload structure that is sent to a recipient. The Generic CDA Domain Message Specification documents two "on-the-wire" CDA formats. The first is for use over the Transaction Messaging System (TMS) when using TMS wrappers, this is documented in the Generic CDA Domain Message Specification as "NPfIT CDA RMIM - POCD_MT000001UK04". The second is used for non-TMS usage and is documented in the Generic CDA Domain Message Specification as "NHS CDA RMIM - POCD_MT000002UK01".</pack:description>
+		</pack:associatedspecification>
+		<pack:associatedspecification name="TMS Infrastructure" ref="TMSInfrastructure/index.html">
+		<pack:description>
+			The TMS Infrastructure Domain Message Specification defines the message wrappers used to transport message content over TMS. This package is a re-formatted version of the content taken from MIM 7.2.02.
+		</pack:description>
+	</pack:associatedspecification>
+		<pack:associatedspecification name="Distribution Envelope" ref="DistributionEnvelope/index.html">
+			<pack:description>The Distribution Envelope Specification defines the constraints to be applied to the distribution envelope when used with ITK Correspondence content.</pack:description>
+		</pack:associatedspecification>
+		<pack:associatedspecification name="Technical Guidance for Implementation of Templated CDA Domains" ref="TechnicalGuidance.pdf">
+			<pack:description>This document gives detailed technical information required to implement a HSCIC CDA templated domain. This document only forms part of the documentation required to implement a HSCIC CDA domain and should be used in conjunction with the message specification and the domain baseline document set. The reader is assumed to have some prior knowledge of the HSCIC message specifications and HL7.</pack:description>
+		</pack:associatedspecification>
+		<pack:associatedspecification name="CDA Implementation Guidance Narrative Block Tags
+" ref="NarrativeBlockTagsGuidance/index.html">
+			<pack:description>This pack gives guidance on the use of tags and attributes used in a CDA text section (also called CDA markup).The content of this pack is based on the schema "NarrativeBlock.xsd", which is included in Domain Message Specifications in the "dt" folder. This schema is included in the Generic CDA and Profile schemas to ensure the correct CDA mark-up has been applied to the text element within the section class.</pack:description>
+		</pack:associatedspecification>
+</pack:associatedspecifications>

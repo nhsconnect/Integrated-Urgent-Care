@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates version="1.0" title="Template configuration file for NHS 111 CDA Document DMS 0.4 Draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../dt/TemplateConfig.xsd">
+	<ChangeHistory>
+		<p>First Version of File</p>
+		<p>Changed definition of author choice for query repeat caller - added NPFIT-1000033#Role</p>
+		<p>Changed definition of author choice for response repeat caller - added NPFIT-1000034#Role</p>
+		<p>Changed definition of recipient choice for response repeat caller - changed (not yet issued) NPFIT-1000032#Role</p>
+		<p>Removed NPFIT-1000031#Role</p>
+	</ChangeHistory>
+	<DomainList>
+		<domain id="NHP">IntegratedUrgentCare</domain>
+		<domain id="TEM">Templates</domain>
+	</DomainList>
+	<StatusFlag>
+		<value id="A">Active</value>
+		<value id="D">Deprecated</value>
+		<value id="P">Proposed</value>
+	</StatusFlag>
+	<Template id="NPFIT-000080#Role" version="2.0" status="A">
+		<ChangeHistory>
+			<p>Version 2: Templates are updated to have address addr attribute.</p>
+			<p>Version 1: InformationRecipient/ tracker constraints added - universal templates only</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Recipient Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>REPC_MT200001GB02</id>
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145202GB02</id>
+		<id>COCD_TP145203GB03</id>
+		<id>COCD_TP145204GB03</id>
+	</Template>
+	<Template id="NPFIT-100032#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: InformationRecipient/ tracker constraints added - universal templates only for non-CDA</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Recipient Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>PRPA_MT000001GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145202GB02</id>
+	</Template>
+	<Template id="NPFIT-000081#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Author constraints added - universal templates only</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Author Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>REPC_MT200001GB02</id>
+				<id>POCD_MT200001GB02</id>
+			</domain>
+			<domain id="TEM">
+				<id>COCD_TP146246GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145200GB01</id>
+		<id>COCD_TP145208GB01</id>
+		<id>COCD_TP145212GB02</id>
+		<id>COCD_TP145207GB01</id>
+	</Template>
+	<Template id="NPFIT-100033#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Author constraints added - universal templates only for non-CDA for repeat caller query</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Author Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>QUPA_MT000001GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145200GB01</id>
+	</Template>
+	<Template id="NPFIT-100034#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Author constraints added - universal templates only for non-CDA for repeat caller response</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Author Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>PRPA_MT000001GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145208GB01</id>
+	</Template>
+	<Template id="NPFIT-000083#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: RecordTarget constraints added - universal templates only</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Patient Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>REPC_MT200001GB02</id>
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145201GB01</id>
+	</Template>
+	<Template id="NPFIT-000014#Role" version="6.0" status="A">
+		<comments>
+			<font color="black">Custodian Organisation Templates</font>
+			<br/>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">When a Sender has access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*CustodianUniversal (COCD_TP145018UK03)</font>
+			<br/>
+			<font color="black">When a Sender does not have access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*CustodianUniversal (COCD_TP145018UK03)</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145018UK03</id>
+	</Template>
+	<Template id="NPFIT-000052#Act" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Encounter Templates added</p>
+		</ChangeHistory>
+		<comments>
+			<p>Encounter Templates</p>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146232GB01</id>
+	</Template>
+	<Template id="NPFIT-000040#Section" version="4.0" status="A">
+		<ChangeHistory>
+			<p>Version 1.0 - text section constraints</p>
+		</ChangeHistory>
+		<comments>
+			<p>Text Section Templates</p>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146246GB01</id>
+	</Template>
+	<Template id="NPFIT-000085#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Informant constraints added - universal templates only</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Informant Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>REPC_MT200001GB02</id>
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<!--THESE NEED CHECKING-->
+		<id>COCD_TP145007UK03</id>
+		<id>COCD_TP145210GB01</id>
+		<id>COCD_TP145007UK05</id>
+	</Template>
+	<Template id="NPFIT-000086#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Participant constraints added - universal templates only</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Participant Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145214GB01</id>
+		<id>COCD_TP145007UK03</id>
+		<id>COCD_TP145212GB02</id>
+	</Template>
+	<Template id="NPFIT-000050#Act" version="2.0" status="A">
+		<ChangeHistory>
+			<p>Version 2: Service Event Templates updated to GB02</p>
+		</ChangeHistory>
+		<comments>
+			<p>Service Event Templates</p>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146227GB02</id>
+	</Template>
+	<Template id="NPFIT-000051#Act" version="2.0" status="A">
+		<ChangeHistory>
+			<p>Version 2: Consent Templates updated GB02</p>
+		</ChangeHistory>
+		<comments>
+			<p>Consent  Templates</p>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146226GB02</id>
+	</Template>
+	<Template id="NPFIT-000099#Role" version="4.0" status="A">
+		<ChangeHistory>
+			<p>Version 4.0 - COCD_TP145222GB02 is upversioned toget id in HealthCareFacilty class</p>
+		</ChangeHistory>
+		<ChangeHistory>
+			<p>Version 3.0 - Encompassing Encounter location Templates - universal</p>
+			<p>HealthCareFacilityUniversal (COCD_TP145211GB01) is removed from this constraint</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Encompassing Encounter location templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="TEM">
+				<id>COCD_TP146232GB01</id>
+			</domain>
+			<domain id="NHP">
+				<id>REPC_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145222GB02</id>
+	</Template>
+	<Template id="NPFIT-000089#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1.0 - Encompassing Encounter Encounter Participant Templates - universal</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Encompassing Encounter Participant Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="TEM">
+				<id>COCD_TP146232GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145210GB01</id>
+		<id>COCD_TP145212GB02</id>
+	</Template>
+	<Template id="NPFIT-000088#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1.0 - Encompassing Encounter ResponsibleParty Templates - universal</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Encompassing Encounter ResponsiblePartyTemplates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="TEM">
+				<id>COCD_TP146232GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145210GB01</id>
+		<id>COCD_TP145212GB02</id>
+	</Template>
+	<Template id="NPFIT-000091#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1.0: Performer Templates - added new universal templates.</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Performer Templates</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="TEM">
+				<id>COCD_TP146227GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145210GB01</id>
+		<id>COCD_TP145212GB02</id>
+	</Template>
+	<Template id="NPFIT-000065#Section" version="3.0" status="A">
+		<ChangeHistory>
+			<p>Version 3.0</p>
+			<p>Changed to point to new version of template (COCD_TP146245GB02)</p>
+			<p>Version 2.0</p>
+			<p>Created for NHS 111 for Attachement without Roles Template COCD_TP146245GB01</p>
+		</ChangeHistory>
+		<comments>
+			<p>Integrated Urgent Care Coded Entry Templates</p>
+			<br/>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">The following template should be used to carry the NHS 111 blob as attachment to CDA document. </font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*Attachment (COCD_TP146002GB01)</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>POCD_MT200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146002GB01</id>
+		<id>COCD_TP146050GB01</id>
+		<id>COCD_TP146091GB01</id>
+		<id>COCD_TP146092GB01</id>
+		<id>COCD_TP146093GB01</id>
+	</Template>
+	<Template id="NPFIT-000087#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Created for NHS 111 triage software</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">NHS 111 triage software and version number</font>
+			<br/>
+			<b>The following template should be used to carry the sorftware name and version number used to capture the NHS 111 triage</b>
+			<br/>
+			<font color="black">Device (COCD_TP145000GB01)</font>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>COCD_TP146002GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145000GB01</id>
+	</Template>
+	<Template id="NPFIT-100007#Act" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1.0 - Constraint of NHS111 Reports</p>
+		</ChangeHistory>
+		<comments>
+			<p>Integrated Urgent Care reports</p>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>PRPA_MT000001GB01</id>
+			</domain>
+		</parentModel>
+		<!--		allow for generic NHS111 report - for template schema generation-->
+		<!--<id>POCD_MT000002UK01</id>-->
+		<!--		allow for NHS111 report - for grid generation  -->
+		<id>POCD_RM200001GB02</id>
+	</Template>
+	<Template id="NPFIT-300007#Act" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1.0: Permission to View template added</p>
+		</ChangeHistory>
+		<comments>
+			<p>Permission To View Templates</p>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>REPC_MT200001GB02</id>
+				<id>QUPA_MT000001GB01</id>
+				<id>PRPA_MT000001GB01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146050GB01</id>
+	</Template>
+	<Template id="NPFIT-100041#Role" version="1.0" status="A">
+		<ChangeHistory>
+			<p>Version 1: Role constraints added - Workgroup template added for callback details</p>
+		</ChangeHistory>
+		<comments>
+			<font color="black">Role Template</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NHP">
+				<id>REPC_RM200001GB02</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145212GB02</id>
+	</Template>
+</Templates>

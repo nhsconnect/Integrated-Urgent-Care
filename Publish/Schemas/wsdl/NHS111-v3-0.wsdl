@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*****************************************************************************************************************
+* 
+* 	Copyright (c) 2012 NHS Connecting For Health. All rights reserved.
+*   
+*  	Redistribution and use in source and binary forms, with or without
+*  	modification, are permitted provided that the following conditions
+*  	are met:
+*  		1. Redistributions of source code must retain the above copyright
+*     		notice, this list of conditions and the following disclaimer.
+*  		2. Redistributions in binary form must reproduce the above copyright
+*     		notice, this list of conditions and the following disclaimer in the
+*     		documentation and/or other materials provided with the distribution.
+*  		3. All advertising materials mentioning features or use of this software
+*     		must display the following acknowledgement:
+*       This product includes software developed by Health Level Seven.
+*  	THIS SOFTWARE IS PROVIDED BY NHS Connecting For Health. AND CONTRIBUTORS "AS IS" AND
+*  	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+*  	IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+*  	ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+*  	FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+*  	DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+*  	OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+*  	HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+*  	LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+*  	OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+*  	SUCH DAMAGE.
+*
+* CHANGE HISTORY:
+*
+* VERSION   DATE            AUTHOR                                 DESCRIPTION
+* =======   ========== ======================    ===========================================================
+* 1.0          26-01-2012   Interoperability Team               Created this WSDL
+* 3.0          13-03-2012   Interoperability Team               Added Webservice for Repeat Caller Query and Response
+*********************************************************************************************************************************************************************
+-->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:itk="urn:nhs-itk:ns:201005" xmlns:hl7v3="urn:hl7-org:v3" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="xhtml:NPfIT:PresentationText" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="NHS111" targetNamespace="urn:nhs-itk:ns:201005">
+	<wsdl:types>
+		<xsd:schema targetNamespace="urn:nhs-itk:ns:201005" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:include schemaLocation="../ITKMessageTypes-2010-05.xsd"/>
+			<xsd:include schemaLocation="../distributionEnvelope-v2-0.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="acknowledgementResponse">
+		<wsdl:part name="acknowledgementResponse" element="itk:SimpleMessageResponse"/>
+	</wsdl:message>
+	<wsdl:message name="faultResponse">
+		<wsdl:part name="faultResponse" element="itk:ToolkitErrorInfo"/>
+	</wsdl:message>
+	<wsdl:message name="RequestAmbulanceDispatch-v2-0">
+		<wsdl:part name="RequestAmbulanceDispatch-v2-0" element="itk:DistributionEnvelope"/>
+	</wsdl:message>
+	<wsdl:message name="SendNHS111Report-v2-0">
+		<wsdl:part name="SendNHS111Report-v2-0" element="itk:DistributionEnvelope"/>
+	</wsdl:message>
+	<wsdl:message name="NHS111RepeatCallerQuery-v1-0">
+		<wsdl:part name="NHS111RepeatCallerQuery-v1-0" element="itk:DistributionEnvelope"/>
+	</wsdl:message>
+	<wsdl:message name="NHS111RepeatCallerResponse-v1-0">
+		<wsdl:part name="NHS111RepeatCallerResponse-v1-0" element="itk:DistributionEnvelope"/>
+	</wsdl:message>
+	<wsdl:portType name="RequestAmbulanceDispatch-v2-0_ptt">
+		<wsdl:operation name="RequestAmbulanceDispatch-v2-0">
+			<wsdl:input message="itk:RequestAmbulanceDispatch-v2-0"/>
+			<wsdl:output message="itk:acknowledgementResponse"/>
+			<wsdl:fault name="standardFault" message="itk:faultResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="SendNHS111Report-v2-0_ptt">
+		<wsdl:operation name="SendNHS111Report-v2-0">
+			<wsdl:input message="itk:SendNHS111Report-v2-0"/>
+			<wsdl:output message="itk:acknowledgementResponse"/>
+			<wsdl:fault name="standardFault" message="itk:faultResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="NHS111RepeatCallerSyncQueryResp-v1-0_ptt">
+		<wsdl:operation name="NHS111RepeatCallerSyncQueryResp-v1-0">
+			<wsdl:input message="itk:NHS111RepeatCallerQuery-v1-0"/>
+			<wsdl:output message="itk:NHS111RepeatCallerResponse-v1-0"/>
+			<wsdl:fault name="standardFault" message="itk:faultResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="RequestAmbulanceDispatch-v2-0_pttBinding" type="itk:RequestAmbulanceDispatch-v2-0_ptt">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="RequestAmbulanceDispatch-v2-0">
+			<soap:operation soapAction="urn:nhs-itk:services:201005:RequestAmbulanceDispatch-v2-0" style="document"/>
+			<wsdl:input>
+				<soap:body parts="RequestAmbulanceDispatch-v2-0" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="acknowledgementResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="standardFault"/>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="SendNHS111Report-v2-0_pttBinding" type="itk:SendNHS111Report-v2-0_ptt">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="SendNHS111Report-v2-0">
+			<soap:operation soapAction="urn:nhs-itk:services:201005:SendNHS111Report-v2-0" style="document"/>
+			<wsdl:input>
+				<soap:body parts="SendNHS111Report-v2-0" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="acknowledgementResponse" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="standardFault"/>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="NHS111RepeatCallerSyncQueryResp-v1-0_pttBinding" type="itk:NHS111RepeatCallerSyncQueryResp-v1-0_ptt">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="NHS111RepeatCallerSyncQueryResp-v1-0">
+			<soap:operation soapAction="urn:nhs-itk:services:201005:NHS111RepeatCallerSyncQueryResp-v1-0" style="document"/>
+			<wsdl:input>
+				<soap:body parts="NHS111RepeatCallerQuery-v1-0" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="NHS111RepeatCallerResponse-v1-0" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="standardFault"/>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="RequestAmbulanceDispatch-v2-0">
+		<wsdl:port name="RequestAmbulanceDispatch-v2-0_pttPort" binding="itk:RequestAmbulanceDispatch-v2-0_pttBinding">
+			<soap:address location="http://server:80/interoperability.toolkit/HL7v3/RequestAmbulanceDispatch-v2-0"/>
+		</wsdl:port>
+	</wsdl:service>
+	<wsdl:service name="SendNHS111Report-v2-0">
+		<wsdl:port name="SendNHS111Report-v2-0_pttPort" binding="itk:SendNHS111Report-v2-0_pttBinding">
+			<soap:address location="http://server:80/interoperability.toolkit/HL7v3/SendNHS111Report-v2-0"/>
+		</wsdl:port>
+	</wsdl:service>
+	<wsdl:service name="NHS111RepeatCallerSyncQueryResp-v1-0">
+		<wsdl:port name="NHS111RepeatCallerSyncQueryResp_pttPort" binding="itk:NHS111RepeatCallerSyncQueryResp-v1-0_pttBinding">
+			<soap:address location="http://server:80/interoperability.toolkit/HL7v3/NHS111RepeatCallerSyncQueryResp-v1-0"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml"><head><title>TMS Infrastructure - </title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link href="../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">TMS Infrastructure<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>5.7; <b>Status: </b>Final</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../index.html">About</a></li><li><a href="../Core/changehistory.html">Change History</a></li><li><a href="../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../Domains/messages.html">Messages</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../Domains/CMETs/Document files/cmetsusage.html">CMETs Usage</a></li><li><a href="../Vocabulary/vocabularyusage.html">Vocabulary Usage</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class=" vocabulary">
+ <h3>EhrRequestAckCode</h3>
+ <table class="table table-condensed"> 
+  <tbody>
+   <tr>
+    <th style="width: 20%; text-align: left">Code SystemId: </th>
+    <td style="width: 80%">2.16.840.1.113883.2.1.3.2.4.17.101</td>
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Version: </th> 
+    <td style="width: 80%">2.0</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Status: </th> 
+    <td style="width: 80%">active</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Date: </th> 
+    <td style="width: 80%">2006-02-07</td> 
+   </tr> 
+  </tbody> 
+ </table>
+ <h4>Description</h4>
+ <p>Assigned OID : 2.16.840.1.113883.2.1.3.2.4.17.101</p>
+ <p> <b>Use of the codes</b> </p>
+ <p> <i>Positive Responses</i> </p>
+ <p>When constructing a positive response to a received GP2GP Message no numeric error code is used, however the typeCode is used as follows:</p>
+ <p> <tt>&lt;acknowledgement typeCode = "AA"&gt;</tt> </p>
+ <p>In this case the ControlActEvent will not contain a 'reason' element</p>
+ <p> <i>Negative Responses</i> </p>
+ <p>When constructing a negative response to a received GP2GP Message the table of numeric codes in section 3 are available for use.</p>
+ <p>Here the Acknowledgement.typeCode is used as follows:</p>
+ <p> <tt>&lt;acknowledgement typeCode = "AE"&gt;</tt> </p>
+ <p>In addition the ControlActEvent.reason should be populated as follows (using the relevant code from the table, as highlighted in blue below):</p>
+ <h4>Values</h4>
+ <table class=" table table-condensed table-striped"> 
+  <thead class="vocabheader"> 
+   <tr> 
+    <th style="width: 20%">Code</th> 
+    <th style="width: 40%">Description</th> 
+    <th style="width: 40%">Note</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td style="width: 20%">03</td> 
+    <td style="width: 40%">Record available but cannot be sent</td> 
+    <td style="width: 40%"> <p> <b> <i>Deprecated Code</i> </b>: This should be used in cases where the activity of sending failed for technical reasons.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">04</td> 
+    <td style="width: 40%">record unavailable</td> 
+    <td style="width: 40%"> <p> <b> <i>Deprecated Code</i> </b>: This should be used when the record is not available for viewing by the requester. Most likely this will be as a result of the requester having no LR with the target patient, or the requester not being registered as the healthCareProvider in PDS.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">05</td> 
+    <td style="width: 40%">Record lost</td> 
+    <td style="width: 40%"> <p> <b> <i>Deprecated Code</i> </b>: This should be used when the patient is identified on the local index, but the record cannot be located on the system.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">06</td> 
+    <td style="width: 40%">Patient not at surgery</td> 
+    <td style="width: 40%"> <p>This should be used when the patient, identified by the NHS Number in the EHR Request, cannot be located in the local index of the receiving system.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">07</td> 
+    <td style="width: 40%">GP2GP Messaging is not enabled on this system</td> 
+    <td style="width: 40%"> <p>This should be used when a GP2GP message is received whilst the system is configured in the 'Disabled' mode.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">08</td> 
+    <td style="width: 40%">The system's configuration prevents it from processing this message.</td> 
+    <td style="width: 40%"> <p>This should be used when a GP2GP message is received whilst the 'Safe Exchange Framework' is enabled, and the received message breaks the processing rules.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">09</td> 
+    <td style="width: 40%">EHR Extract received without corresponding request.</td> 
+    <td style="width: 40%"> <p>This should be used when a GP2GP EHR Extract message is received by a system that has not previously sent an EHR Request message.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">10</td> 
+    <td style="width: 40%">Failed to successfully generate EHR Extract.</td> 
+    <td style="width: 40%"> <p>This should be used when a system fails to generate the EHR Extract for sending.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">11</td> 
+    <td style="width: 40%">Failed to successfully integrate EHR Extract.</td> 
+    <td style="width: 40%"> <p>This should be used when a system fails to successfully integrate the received EHR Extract into the clinical system.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">12</td> 
+    <td style="width: 40%">Duplicate EHR Extract received.</td> 
+    <td style="width: 40%"> <p>This should be used when a system receives a subsequent copy of an EHR Extract after it has previously integrated one for the current registration.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">99</td> 
+    <td style="width: 40%">Unexpected condition.</td> 
+    <td style="width: 40%"> <p>This is a code that should only be used in circumstances where the above codes cannot be used to accurately describe the condition.</p> </td> 
+   </tr> 
+  </tbody> 
+ </table>
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:interoperabilityteam@hscic.gov.uk">Contact Us</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>20-Jan-2012</p></div></div></div></div><script src="../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

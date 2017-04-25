@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staticModel isAbstract="false" isSerializable="true"
+    name="COCD_TP145002UK03" packageKind="root"
+    representationKind="flat" title="SDTC_RM000017"
+    xmlns="urn:hl7-org:v3/mif"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3/mif ../MifSchemas/mifStaticModelFlat.xsd">
+    <packageLocation artifact="TP" domain="CD" id="145002"
+        name="COCD_TP145002UK03" realm="UK" root="DEFN" section="HM"
+        subSection="CO" version="03"/>
+    <header>
+        <renderingInformation
+            application="NHS R-MIM Designer 2.99.KJ.04"
+            renderingTime="2007-10-23T12:08:49" schemaVersion="1"/>
+        <legalese copyrightOwner="NHS Connecting for Health"/>
+    </header>
+    <graphicRepresentation presentation="HL7">
+        <graphElement name="Main">
+            <position x="0.0" y="0.0"/>
+            <size height="3.341" width="9.852"/>
+        </graphElement>
+    </graphicRepresentation>
+    <derivationSupplier staticModelDerivationId="1">
+        <targetStaticModel artifact="RIM" realm="UV" root="DEFN" version="1"/>
+    </derivationSupplier>
+    <ownedEntryPoint className="AssignedAuthor" id="COCD_TP145002UK03"
+        isAbstract="false" name="AuthorNonSDSWithOrgNonSDS">
+        <annotations>
+            <description>
+                <text>
+                    <p>Template for a author when role not identified by SDS</p>
+                </text>
+            </description>
+            <otherAnnotation type="html">
+                <text/>
+            </otherAnnotation>
+        </annotations>
+        <graphicRepresentation>
+            <graphElement containerDiagramName="Main"
+                isHeightAutoSize="false" isWidthAutoSize="false"
+                nodeOrientation="Down" shapeId="COCD_TP145002UK03">
+                <position x="3.76547" y="0.02822"/>
+                <size height="0.45278" width="2.75456"/>
+                <anchorage connectToShapeId="Sheet.1">
+                    <position x="5.14275" y="0.481"/>
+                    <graphEdge>
+                        <anchor>
+                            <position x="5.14275" y="0.831"/>
+                        </anchor>
+                    </graphEdge>
+                </anchorage>
+            </graphElement>
+        </graphicRepresentation>
+    </ownedEntryPoint>
+    <ownedClass>
+        <class isAbstract="false" name="AssignedAuthor">
+            <derivationSupplier className="Role" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="false" isWidthAutoSize="false"
+                    shapeId="Sheet.1" shapeTemplate="Role">
+                    <position x="3.342" y="0.831"/>
+                    <size height="1.15" width="3.3"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <strong>Identifies a person playing the role of author.  This person does not appear on SDS.<br/>
+                        </strong>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R"
+                defaultValue="COCD_TP145002UK03#AssignedAuthor"
+                fixedValue="COCD_TP145002UK03#AssignedAuthor"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="templateId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>
+                                <p>The fixed value of this attribute provides a unique identifier for the  template and the classname within that template.</p>
+                                <p>The IdentifierExternal datatype flavour is used to carry this information as follows:</p>
+                                <ul>
+                                    <li>The root attribute shall contain the OID "2.16.840.1.113883.2.1.3.2.4.18.2"</li>
+                                    <li>The extension attribute shall contain the fixed value.</li>
+                                </ul>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="templateId"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="ASSIGNED"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="classCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>Indicates that this role is assigned.<br/>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="ASSIGNED"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="id" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div style="height: 100%; width: 100%">
+                                <div>
+                                    <p>This attribute is only present for CDA compliancy and MUST be fixed to a null flavour of "NA".</p>
+                                    <p>&lt;id nullFlavour="NA" &gt;.</p>
+                                </div>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="id" className="Role" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="code" sortKey="3">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>
+                                <p>Any code that describes a person's job role. <br/>
+                                    <br/>The Coded Plain  flavour of the Coded Value (CV) data type shall be used to carry this  information as follows:  </p>
+                                <ul>
+                                    <li>The <i>code</i> attribute shall contain the person's job role code<br/>
+                                    </li>
+                                    <li>The <i>codeSystem</i> attribute shall contain the OID for the code system  </li>
+                                    <li>The <i>displayName </i>attribute shall carry the person's job role name</li>
+                                </ul>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="code"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="CV"/>
+                <supplierDomainSpecification codingStrength="CWE" domainName="CDAJobRoleName"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="addr" sortKey="5">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>An address associated with the role.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="addr"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="AD"/>
+            </attribute>
+            <attribute isMandatory="false" maximumMultiplicity="1"
+                minimumMultiplicity="0" name="telecom" sortKey="6">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>A set of telecommunication addresses associated with the role.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="telecom"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="SET">
+                    <supplierBindingArgumentDatatype name="TEL"/>
+                </type>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person">
+            <derivationSupplier className="Person" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="false" isWidthAutoSize="false"
+                    shapeId="Sheet.11" shapeTemplate="Entity">
+                    <position x="6.542" y="2.346"/>
+                    <size height="0.871" width="3.3"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <strong>Details to allow identifcation of a person.</strong>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R"
+                defaultValue="COCD_TP145002UK03#assignedPerson"
+                fixedValue="COCD_TP145002UK03#assignedPerson"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="templateId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>
+                                <p>The fixed value of this attribute provides a unique identifier for the  template and the classname within that template.</p>
+                                <p>The IdentifierExternal datatype flavour is used to carry this information as follows:</p>
+                                <ul>
+                                    <li>The root attribute shall contain the OID "2.16.840.1.113883.2.1.3.2.4.18.2"</li>
+                                    <li>The extension attribute shall contain the fixed value.</li>
+                                </ul>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="templateId"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="PSN"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="classCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>Indicates that this a person.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="PSN"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="INSTANCE"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="determinerCode" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>Indicates this is a instance of a person.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="determinerCode"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="INSTANCE"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="name" sortKey="6">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>The name of the person.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="name"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="PN"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Organization">
+            <derivationSupplier className="Organization" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="false" isWidthAutoSize="false"
+                    shapeId="Sheet.15" shapeTemplate="Entity">
+                    <position x="0.01" y="2.205"/>
+                    <size height="1.126" width="3.932"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <strong>An organisation which cannot be identified using SDS.</strong>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R"
+                defaultValue="COCD_TP145002UK03#representedOrganization"
+                fixedValue="COCD_TP145002UK03#representedOrganization"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="templateId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>
+                                <p>The fixed value of this attribute provides a unique identifier for the  template and the classname within that template.</p>
+                                <p>The IdentifierExternal datatype flavour is used to carry this information as follows:</p>
+                                <ul>
+                                    <li>The root attribute shall contain the OID "2.16.840.1.113883.2.1.3.2.4.18.2"</li>
+                                    <li>The extension attribute shall contain the fixed value.</li>
+                                </ul>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="templateId"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="ORG"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="classCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>Indicates that this is an organisation.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="ORG"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="INSTANCE"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="determinerCode" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>Indicates that the entity is a single identifiable organisation.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="determinerCode"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="INSTANCE"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="name" sortKey="6">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>The name of the organisation.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="name"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="ON"/>
+            </attribute>
+            <attribute isMandatory="false" maximumMultiplicity="1"
+                minimumMultiplicity="0" name="addr" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>An optional address of the organisation.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="addr"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="AD"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="standardIndustryClassCode" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>An code which describes the type of organisation.<br/>
+                                <br/>  The  Coded Plain flavour of the Coded Value (CV) data type shall be used to  carry this information as follows:   <ul>
+                                    <li>The <em>code</em> attribute shall contain a value from the list of codes in  the vocabulary  </li>
+                                    <li>The <em>codeSystem</em> attribute shall contain the OID for the vocabulary  </li>
+                                    <li>The <em>displayName</em> attribute will carry a description for the code  from the vocabulary</li>
+                                </ul>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    attributeName="standardIndustryClassCode"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="CV"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="CDAOrganizationType"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.11"
+                containerDiagramName="Main" shapeId="Sheet.1">
+                <position x="6.642" y="1.981"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.11">
+                        <position x="6.542" y="2.346"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="assignedPerson" participantClassName="Person">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>A link to the person entity which is playing this role.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier associationEndName="player"
+                    className="AssignedAuthor" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="AssignedAuthor">
+                <derivationSupplier associationEndName="playedRole"
+                    className="Person" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.15"
+                containerDiagramName="Main" shapeId="Sheet.1">
+                <position x="6.642" y="0.831"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.15">
+                        <position x="3.942" y="2.206"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="representedOrganization" participantClassName="Organization">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>A link to the optional organisation entity which is scoping this role.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier associationEndName="scoper"
+                    className="AssignedAuthor" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="AssignedAuthor">
+                <derivationSupplier associationEndName="scopedRole"
+                    className="Organization" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+</staticModel>

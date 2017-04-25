@@ -1,0 +1,186 @@
+/* 
+html, body, #wrap, #push, #footer rules rules based upon examples from http://twitter.github.io/bootstrap.  
+Licensed under CC BY 3.0 http://creativecommons.org/licenses/by/3.0/.
+*/
+
+html,body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -40px;
+}
+
+/* Set the fixed height of the footer here */
+#push, #footer {
+	height: 40px;
+}
+
+#footer {
+	padding-top: 15px;
+	background-color: #f5f5f5;
+}
+
+/* ===== */
+
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+
+.pack-title {
+	padding-top: 15px;
+	word-wrap: break-word;
+}
+
+a {
+	color: #005090;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+html {
+	overflow-y: scroll;
+	overflow-x: none;
+}
+
+img.rmim_diagram
+{
+	max-width: none; 
+	padding: 20px;
+}
+
+img.template_grid
+{
+	max-width: none; 
+	padding: 20px;
+}
+
+div.tabularview > table > tbody > tr > td
+{
+	vertical-align: top;
+}
+
+.pack-title
+{
+	line-height: 1.3em;
+}
+
+.rmim
+{
+	max-width: 100%;
+	overflow-x: auto; 
+	overflow-y: hidden;
+}
+
+.constraint
+{
+	max-width: 100%;
+	overflow-x: auto; 
+	overflow-y: hidden;
+}
+
+span.implementation-label
+{
+	width: 40px;
+}
+
+.actclass
+{
+	background-color: rgb(255, 108, 108);
+}
+
+.entclass
+{
+	background-color: lightgreen;
+}
+
+.roleclass
+{
+	background-color: yellow;
+}
+.otherclass
+{
+	background-color: rgb(114, 108, 255);
+	color: white;
+}
+.choiceclass
+{
+	background-color: lightgray;
+}
+.actrelclass
+{
+	background-color: pink;
+}
+.partclass
+{
+	background-color: rgb(146, 248, 248);
+}
+.rolelinkclass
+{
+	background-color: lightyellow;
+}
+
+/* SMD rules */
+
+.hl7class,.hl7choice,.hl7template,.hl7stub {
+	/*border: 4px solid black;*/
+}
+
+.classtext,.choicetext,.templatetext {
+	font-weight: bold;
+}
+
+tr.choiceheaderrow,tr.classheaderrow,tr.hl7templateheaderrow, tr.hl7stubheaderrow {
+	/*border: 4px solid black;*/
+}
+
+.conformance {
+	color: green;
+}
+
+.mandatory {
+	color: green;
+}
+
+.required {
+	color: green;
+}
+
+.defaultvalue {
+	color: red;
+}
+
+.fixedvalue {
+	color: red;
+}
+
+.attributename {
+	font-weight: bold;
+}
+
+.associationname {
+	font-weight: bold;
+}
+
+td.templateclass {
+	background-color: rgb(255, 255, 128);
+}
+
+td.stubclass {
+	background-color: rgb(255, 255, 255);
+}
+
+span.classtext > a{
+	color: white;
+	cursor: default;
+	text-decoration: none;
+}

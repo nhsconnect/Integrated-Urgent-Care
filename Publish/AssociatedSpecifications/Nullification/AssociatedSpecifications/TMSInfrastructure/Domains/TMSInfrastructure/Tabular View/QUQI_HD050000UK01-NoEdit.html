@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml"><head><title>TMS Infrastructure - Tabular View</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><link href="../../../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../../../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">TMS Infrastructure<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>5.7; <b>Status: </b>Final</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../../../index.html">About</a></li><li><a href="../../../Core/changehistory.html">Change History</a></li><li><a href="../../../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../../../Domains/messages.html">Messages</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../../../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../../../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../../../Domains/CMETs/Document files/cmetsusage.html">CMETs Usage</a></li><li><a href="../../../Vocabulary/vocabularyusage.html">Vocabulary Usage</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class="tabularview">
+ <h3>QueryControlAct Tabular View</h3>  
+ <table cellspacing="0" cellpadding="2" class=" table"> 
+  <tbody> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr> 
+    <td><a href="QUQI_RM050000UK01.html"><b>QUQI_RM050000UK01</b></a></td> 
+    <td nowrap=""/>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td bgcolor="yellow"><a name="ControlActEvent"> </a><b>ControlActEvent</b></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#ControlAct;ControlActEvent_c" title="QUQI_HD050000UK01#ControlActEvent"> 
+      <p>The Query Control Act carries administrative information related to a query message..</p>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr class="hmd"> 
+    <td align="right"/> 
+    <td><font color="gray"><a name="ControlActEvent">Used by: </a></font></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>CACT</b>} )<a>{  }</a><b> Fixed="<font color="red">CACT</font>"</b></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#Act;ControlActEvent/$classCode" title="ControlActEvent.classCode"> 
+      <p>Indicates that  this is a Control Act.</p> 
+      <ul> 
+       <li>Fixed value "CACT"</li>
+      </ul>
+     </div></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>moodCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>EVN</b>} )<a>{  }</a><b> Fixed="<font color="red">EVN</font>"</b></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#Act;ControlActEvent/$moodCode" title="ControlActEvent.moodCode"> 
+      <p>Indicates that the control act mood is an event.</p> 
+      <ul> 
+       <li>Fixed value "EVN"</li>
+      </ul>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%" bgcolor="#d0ffff"><font color="green"><b>[0..1] </b></font><a name="Author"> </a><b>author</b></td> 
+    <td> 
+     <div id="QUQI_HD050000UK01#Act;/ControlActEvent/author" title="ControlActEvent/author"> 
+      <p><b>A participation referring to a person who is logged in at the time the message is initiated. </b></p> 
+      <p><b>The participation is optional. It shall be present when the message is initiated by a person. It shall not be present when the message is automatically initiated by a system. </b></p>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>typeCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>AUT</b>} )<a>{  }</a><b> Fixed="<font color="red">AUT</font>"</b></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#Act;ControlActEvent/$classCode0" title="ControlActEvent.classCode">
+       Indicates that the role has author responsibility.
+      <ul> 
+       <li>Fixed value: "AUT"</li>
+      </ul>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b><a href="../../CMETs/Tabular View/UKCT_HD120900UK01-NoEdit.html">agent</a></b>      <a href="../../CMETs/Tabular View/UKCT_RM120900UK01.html"><small>[CMET: UKCT_MT120901UK01]</small></a></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#Act;ControlActEvent/$moodCode0" title="ControlActEvent.moodCode">
+       NPfIT CMET to identify a person fulfilling a specific role where the Person, Role Profile and Job Role are all mandatory. Full details of the person, role profile and job role are available from SDS.
+      <p>In this context the person is the signed in user for the user session responsible for initiating the message. The person shall be identified by SDS Role Profile ID, SDS User Id and SDS Role Id.</p>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%" bgcolor="#d0ffff"><font color="green"><b>[1..2] </b></font><a name="Author2"> </a><b>author1</b></td> 
+    <td> 
+     <div id="QUQI_HD050000UK01#Act;/ControlActEvent/author1" title="ControlActEvent/author1"> 
+      <p><b>A participation referring to one or more systems that are involved in the initiation of the message.</b></p> 
+      <p><b>One instance of the participation is mandatory and shall carry the accredited service id of the system in use at the time the message is initiated.</b></p> 
+      <p><b>One instance of the participation is optional and may carry the workstation id of the system being used by the logged in user at the time the message is initiated</b>.</p>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>typeCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>AUT</b>} )<a>{  }</a><b> Fixed="<font color="red">AUT</font>"</b></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#Act;ControlActEvent/$classCode1" title="ControlActEvent.classCode">
+       Indicates that the role has author responsibility.
+      <ul> 
+       <li>Fixed value: "AUT"</li>
+      </ul>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b><a href="../../CMETs/Tabular View/UKCT_HD121000UK01-NoEdit.html">agent</a></b>      <a href="../../CMETs/Tabular View/UKCT_RM121000UK01.html"><small>[CMET: UKCT_MT121001UK01]</small></a></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#Act;ControlActEvent/$moodCode1" title="ControlActEvent.moodCode">
+       NPfIT CMET to identify a mandatory system which could be software or hardware. Full details of the system are available from SDS.
+      <p>In this context the system is a system in use at the time the message is initiated. This shall be represented by either the SDS Accredited Application Instance Id held in the SDS directory as the Accredited System Identifier or a locally identified workstation id.</p>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>query</b> (<a href="#Query"><b>Query</b></a>)</td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#ControlAct;ControlActEvent/query-Query" title="QUQI_HD050000UK01#ControlActEvent/query-Query">
+      <b>Refers to the query.</b>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td bgcolor="yellow"><a name="Query"> </a><b>Query</b></td> 
+    <td width="50%"> 
+     <div id="QUQI_HD050000UK01#QueryByParameter;Query_c" title="QUQI_HD050000UK01#Query_c">
+      <b>This class provides the entry point into the query payload.</b>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr class="hmd"> 
+    <td align="right"/> 
+    <td><font color="gray"><a name="Query">Used by: </a></font><a href="#ControlActEvent"><b>ControlActEvent</b></a></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+  </tbody>
+ </table> 
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:interoperabilityteam@hscic.gov.uk">Contact Us</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>20-Jan-2012</p></div></div></div></div><script src="../../../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../../../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../../../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml"><head><title>${pack_title} - Tabular View</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><link href="../../../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../../../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">${pack_title}<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>${pack_version}; <b>Status: </b>${pack_status}</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../../../index.html">About</a></li><li><a href="../../../Core/changehistory.html">Change History</a></li><li><a href="../../../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../../../Domains/messages.html">Messages</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../../../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../../../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../../../Domains/CMETs/Document files/cmetsusage.html">CMETs Usage</a></li><li><a href="../../../Vocabulary/vocabularyusage.html">Vocabulary Usage</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class=" tabularview">
+ <h3>R_AgentNPFITPersonSDS Tabular View</h3>
+ <table cellspacing="0" cellpadding="2" class=" table"> 
+  <tbody> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr> 
+    <td><a href="UKCT_RM120300UK02.html"><b>UKCT_RM120300UK02</b></a></td> 
+    <td nowrap=""/>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td bgcolor="yellow"><a name="AgentPersonSDS"> </a><b>AgentPersonSDS</b></td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#RoleHeir;AgentPersonSDS_c" title="UKCT_HD120300UK02#AgentPersonSDS_c"> 
+      <p>Identifies a person fulfilling a specific role. Full details of the person and role profile are available from SDS.</p>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr class="hmd"> 
+    <td align="right"/> 
+    <td><font color="gray"><a name="AgentPersonSDS">Used by: </a></font></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>AGNT</b>} )<a>{  }</a><b> Fixed="<font color="red">AGNT</font>"</b></td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#Role;AgentPersonSDS/$classCode" title="Role.classCode"> 
+      <p>Indicates that this is an Agent</p> 
+      <ul> 
+       <li>Fixed value: "AGNT"</li>
+      </ul>
+     </div></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>id</b> (<a href="../../../Data Types/datatypes.html#II"><b>II</b></a>)</td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#Role;AgentPersonSDS/$id" title="UKCT_HD120300UK02#AgentPersonSDS.id"> 
+      <p>An SDS identifier that uniquely identifies the role profile of the person.   This is carried in the following way: </p> 
+      <ul> 
+       <li>The <i>root</i> attribute shall contain an OID with the value 1.2.826.0.1285.0.2.0.67</li> 
+       <li>the <i>extension</i> attribute shall contain the SDS Role Profile ID, known in the External Interface Specification as Role Profile Code.</li>
+      </ul>
+     </div></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>agentPersonSDS</b> (<a href="#PersonSDS"><b>PersonSDS</b></a>)</td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#Role;AgentPersonSDS/agentPersonSDS-PersonSDS" title="UKCT_HD120300UK02#AgentPersonSDS/agentPersonSDS-PersonSDS"> 
+      <p>A link to the Person playing the role.</p>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td bgcolor="yellow"><a name="PersonSDS"> </a><b>PersonSDS</b></td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#Person;PersonSDS_c"/></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr class="hmd"> 
+    <td align="right"/> 
+    <td><font color="gray"><a name="PersonSDS">Used by: </a></font><a href="#AgentPersonSDS"><b>AgentPersonSDS</b></a></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>PSN</b>} )<a>{  }</a><b> Fixed="<font color="red">PSN</font>"</b></td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#Person;PersonSDS/$classCode" title="Person.classCode"> 
+      <p>Indicates that this is a Person</p> 
+      <ul> 
+       <li>Fixed value: "PSN"</li>
+      </ul>
+     </div></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>determinerCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>INSTANCE</b>} )<a>{  }</a><b> Fixed="<font color="red">INSTANCE</font>"</b></td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#Person;PersonSDS/$determinerCode" title="Person.determinerCode"> 
+      <p>Indicates that the entity is a single identifiable Person</p> 
+      <ul> 
+       <li>Fixed value: "INSTANCE"</li>
+      </ul>
+     </div></td>
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr> 
+   <tr valign="top"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>id</b> (<a href="../../../Data Types/datatypes.html#II"><b>II</b></a>)</td> 
+    <td width="50%"> 
+     <div id="UKCT_HD120300UK02#Person;PersonSDS/$id" title="UKCT_HD120300UK02#PersonSDS.id"> 
+      <p>An SDS identifier that uniquely identifies the Person.   This is carried in the following way: </p> 
+      <ul> 
+       <li>The <i>root</i> attribute shall contain an OID with the value 1.2.826.0.1285.0.2.0.65 </li> 
+       <li>the <i>extension</i> attribute shall contain the SDS User ID, known in the External Interface Specification as User's Unique Identifier.</li>
+      </ul>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+  </tbody>
+ </table>
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:interoperabilityteam@hscic.gov.uk">Contact Us</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>${pack_releaseDate}</p></div></div></div></div><script src="../../../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../../../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../../../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

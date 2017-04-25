@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"><head><title>Integrated Urgent Care - </title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><link href="../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">Integrated Urgent Care<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>3.0; <b>Status: </b>RC1</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../index.html">About</a></li><li><a href="../Core/changehistory.html">Change History</a></li><li><a href="../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../Domains/messages.html">Messages</a></li><li><a href="../Examples/examples.html">Examples</a></li><li><a href="../AssociatedSpecifications/AssociatedSpecifications.html">Associated Specifications</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../Domains/Templates/Document files/constraintusage.html">Constraint Usage</a></li><li><a href="../Domains/Templates/Document files/templateusage.html">Template Usage</a></li><li><a href="../Domains/profiles.html">Configuration Profiles</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class=" vocabulary">
+ <h3>CDAObservationType</h3>
+ <table class="table table-condensed"> 
+  <tbody>
+   <tr>
+    <th style="width: 20%; text-align: left">Code SystemId: </th>
+    <td style="width: 80%">2.16.840.1.113883.2.1.3.2.4.17.220</td>
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Version: </th> 
+    <td style="width: 80%">9.0</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Status: </th> 
+    <td style="width: 80%">active</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Date: </th> 
+    <td style="width: 80%">2015-06-29</td> 
+   </tr> 
+  </tbody> 
+ </table>
+ <h4>Description</h4>
+ <p>A set of codes to identify observation type used in the CDA domains.</p>
+ <h4>Values</h4>
+ <table class=" table table-condensed table-striped"> 
+  <thead class="vocabheader"> 
+   <tr> 
+    <th style="width: 20%">Code</th> 
+    <th style="width: 40%">Description</th> 
+    <th style="width: 40%">Note</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td style="width: 20%">RAF</td> 
+    <td style="width: 40%">ReAdmission Flag</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">LAR</td> 
+    <td style="width: 40%">Last Assessment Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PAR</td> 
+    <td style="width: 40%">Planned Assessment Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPF</td> 
+    <td style="width: 40%">Copy Provided Flag</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPA</td> 
+    <td style="width: 40%">Care Plan Agreement</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPED</td> 
+    <td style="width: 40%">Component Planned End Date</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">NCR</td> 
+    <td style="width: 40%">Next Component Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">LCR</td> 
+    <td style="width: 40%">Last Component Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CAFIS</td> 
+    <td style="width: 40%">CAF Information Set</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CTHT</td> 
+    <td style="width: 40%">Component Text Heading Type</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">EDD</td> 
+    <td style="width: 40%">Estimated Discharge Date</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">LCPR</td> 
+    <td style="width: 40%">Last Care Plan Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">NCPR</td> 
+    <td style="width: 40%">Next Care Plan Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THT</td> 
+    <td style="width: 40%">Text Heading Type</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PDR</td> 
+    <td style="width: 40%">Procedure Date Reported</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DIRS</td> 
+    <td style="width: 40%">DI Report Status</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DIUI</td> 
+    <td style="width: 40%">Diagnostic Imaging Urgency Indicator</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">NMHATD</td> 
+    <td style="width: 40%">Next Mental Health Act Tribunal Date</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ARRE</td> 
+    <td style="width: 40%">At Risk Register Entry</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PRC</td> 
+    <td style="width: 40%">ProtectionRegisterCategory</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPDCFR</td> 
+    <td style="width: 40%">Care Process Date Commenced or First Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPDCMRR</td> 
+    <td style="width: 40%">Care Process Date Concluded or Most Recent Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPAD</td> 
+    <td style="width: 40%">Care Process Administration</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CRA</td> 
+    <td style="width: 40%">Care Review Administration</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPDOPR</td> 
+    <td style="width: 40%">Care Process Date of Previous Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CPDONPR</td> 
+    <td style="width: 40%">Care Process Date of Next Planned Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">OEAWP</td> 
+    <td style="width: 40%">Other Entity Associated With Patient</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CRS</td> 
+    <td style="width: 40%">Care Review Status</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">SF</td> 
+    <td style="width: 40%">Sampling Frequency</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DMRPQ</td> 
+    <td style="width: 40%">Device Measurement Range Physical Quantity</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DMRST</td> 
+    <td style="width: 40%">Device Measurement Range String</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DRPQ</td> 
+    <td style="width: 40%">Device Resolution Physical Quantity</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DRST</td> 
+    <td style="width: 40%">Device Resolution String</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DAPQ</td> 
+    <td style="width: 40%">Device Accuracy Physical Quantity</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DAST</td> 
+    <td style="width: 40%">Device Accuracy String</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">WSPO</td> 
+    <td style="width: 40%">Waveform Sample Period Observation</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TESOBS</td> 
+    <td style="width: 40%">Test Result Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BPOBS</td> 
+    <td style="width: 40%">Blood Pressure Observation Series</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 17-Aug-2012</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BMIOBS</td> 
+    <td style="width: 40%">BMI Observation Series</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 17-Aug-2012</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MBPOBS</td> 
+    <td style="width: 40%">Mean Blood Pressure Observation Series</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 17-Aug-2012</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TEMOBS</td> 
+    <td style="width: 40%">Temperature Observation Series</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 17-Aug-2012</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">HOBS</td> 
+    <td style="width: 40%">Height Observation Series</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 17-Aug-2012</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">WOBS</td> 
+    <td style="width: 40%">Weight Observation Series</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 17-Aug-2012</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PULOBS</td> 
+    <td style="width: 40%">Pulse Observation Series</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 17-Aug-2012</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THR</td> 
+    <td style="width: 40%">Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THRR</td> 
+    <td style="width: 40%">Threshold Rate</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DSTO</td> 
+    <td style="width: 40%">DST Outcome</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CO</td> 
+    <td style="width: 40%">Checklist Outcome</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CHCRS</td> 
+    <td style="width: 40%">CHC Referral Status</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DSTEO</td> 
+    <td style="width: 40%">DST Eligibility Outcome</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DDEF</td> 
+    <td style="width: 40%">Device Definition</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BCOBSSER</td> 
+    <td style="width: 40%">Blood Coagulation Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BGOBSSER</td> 
+    <td style="width: 40%">Blood Glucose Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BPOBSSER</td> 
+    <td style="width: 40%">Blood Pressure Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BMIOBSSER</td> 
+    <td style="width: 40%">Body Mass Index Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BTOBSSER</td> 
+    <td style="width: 40%">Body Temperature Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CMOBSSER</td> 
+    <td style="width: 40%">Carbon Monoxide Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">COBSSER</td> 
+    <td style="width: 40%">Cholesterol Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">FEVOBSSER</td> 
+    <td style="width: 40%">Forced Expiratory Volume of an Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">FVCOBSSER</td> 
+    <td style="width: 40%">Forced Vital Capacity Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">HOBSSER</td> 
+    <td style="width: 40%">Height Observation Series.</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MBPOBSSER</td> 
+    <td style="width: 40%">Mean Blood Pressure Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">OSOBSSER</td> 
+    <td style="width: 40%">Oxygen Saturation Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PFOBSSER</td> 
+    <td style="width: 40%">Peak Flow Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PROBSSER</td> 
+    <td style="width: 40%">Pulse Rate Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TOBSSER</td> 
+    <td style="width: 40%">Triglycerides Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">WOBSSER</td> 
+    <td style="width: 40%">Weight Observation Series</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THRI</td> 
+    <td style="width: 40%">Threshold Interpretation</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BPTHR</td> 
+    <td style="width: 40%">Blood Pressure Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">WTHR</td> 
+    <td style="width: 40%">Weight Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PRTHR</td> 
+    <td style="width: 40%">Pulse Rate Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MBPTHR</td> 
+    <td style="width: 40%">Mean Blood Pressure Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BGTHR</td> 
+    <td style="width: 40%">Blood Glucose Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PFTHR</td> 
+    <td style="width: 40%">Peak Flow Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">FVCTHR</td> 
+    <td style="width: 40%">Forced Vital Capacity Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BTTHR</td> 
+    <td style="width: 40%">Body Temperature Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BMITHR</td> 
+    <td style="width: 40%">Body Mass Index Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">FEVTHR</td> 
+    <td style="width: 40%">FEV Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TTHR</td> 
+    <td style="width: 40%">Triglycerides Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CTHR</td> 
+    <td style="width: 40%">Cholesterol Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">OSTHR</td> 
+    <td style="width: 40%">Oxygen Saturation Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CMTHR</td> 
+    <td style="width: 40%">Carbon Monoxide Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PTTHR</td> 
+    <td style="width: 40%">Prothrombin Time Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">APTTTHR</td> 
+    <td style="width: 40%">Activated Partial Thromboplastin Time Threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CSOBS</td> 
+    <td style="width: 40%">Cuff Size Observation</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">GA</td> 
+    <td style="width: 40%">Gestational age</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">HUO</td> 
+    <td style="width: 40%">Hips ultra sound outcome decision</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">EMP</td> 
+    <td style="width: 40%">Expert management plan</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">SCROT</td> 
+    <td style="width: 40%">Systolic rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DROCT</td> 
+    <td style="width: 40%">Diastolic rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">APTTROCT</td> 
+    <td style="width: 40%">APTT rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BGROCT</td> 
+    <td style="width: 40%">Blood glucose rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BMIROCT</td> 
+    <td style="width: 40%">Body mass index rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BTROCT</td> 
+    <td style="width: 40%">Body temperature rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CMROCT</td> 
+    <td style="width: 40%">Carbon monoxide rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CROCT</td> 
+    <td style="width: 40%">Cholesterol rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">FEVROCT</td> 
+    <td style="width: 40%">FEV rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">FVCROCT</td> 
+    <td style="width: 40%">Forced vital capacity rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MBPROCT</td> 
+    <td style="width: 40%">Mean blood pressure rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">OSROCT</td> 
+    <td style="width: 40%">Oxygen saturation rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PFROCT</td> 
+    <td style="width: 40%">Peak flow rate of change</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PTROCT</td> 
+    <td style="width: 40%">Prothrombin time rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PRROCT</td> 
+    <td style="width: 40%">Pulse rate rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TROCT</td> 
+    <td style="width: 40%">Triglycerides rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">WROCT</td> 
+    <td style="width: 40%">Weight rate of change threshold</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TFT</td> 
+    <td style="width: 40%">Telehealth finding type</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ART</td> 
+    <td style="width: 40%">Alert reason text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BV</td> 
+    <td style="width: 40%">Base value</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THP</td> 
+    <td style="width: 40%">Telehealth Plan</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THPNR</td> 
+    <td style="width: 40%">Telehealth Plan Next Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THVSMF</td> 
+    <td style="width: 40%">Telehealth Vital Signs Monitoring Frequency</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THVSMFT</td> 
+    <td style="width: 40%">Telehealth Vital Signs Monitoring Frequency Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THMD</td> 
+    <td style="width: 40%">Telehealth Monitoring Duration</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THACCR</td> 
+    <td style="width: 40%">Telehealth Alert Care Contact Registration</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THRF</td> 
+    <td style="width: 40%">Telehealth Reporting Frequency</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">OSTC</td> 
+    <td style="width: 40%">Overseas Travel Country</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DGD</td> 
+    <td style="width: 40%">Diagnosis Date</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PDD</td> 
+    <td style="width: 40%">Person Death Date</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">EMPLD</td> 
+    <td style="width: 40%">Employment Details</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THVSMFP</td> 
+    <td style="width: 40%">Telehealth Vital Signs Monitoring Frequency PIVL</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">THVSMFE</td> 
+    <td style="width: 40%">Telehealth Vital Signs Monitoring Frequency EIVL</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TCP</td> 
+    <td style="width: 40%">Telecare Plan</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TCPNR</td> 
+    <td style="width: 40%">Telecare Plan Next Review</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TCPSUAR</td> 
+    <td style="width: 40%">Telecare Plan Service User Aware Of Referral</td> 
+    <td style="width: 40%"> <p> </p><p class="retired">Retired from Publication as from 09-Feb-2015</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TCRCR</td> 
+    <td style="width: 40%">Telecare Responders Contact Registration</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">NBBBD</td> 
+    <td style="width: 40%">New Born Baby Birth Details</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TCPC</td> 
+    <td style="width: 40%">Telecare Plan Consent</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TCKS</td> 
+    <td style="width: 40%">Telecare Key Safe</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">LOCSTS</td> 
+    <td style="width: 40%">Location Status</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">LABSNO</td> 
+    <td style="width: 40%">Laboratory Card Serial Number</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">LABSNP</td> 
+    <td style="width: 40%">Previous Laboratory Card Serial Number</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PKUSSS</td> 
+    <td style="width: 40%">Phenylketonuria (PKU) Screening Status Sub-Code</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PKURTX</td> 
+    <td style="width: 40%">Phenylketonuria (PKU) Reason Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PKUSTX</td> 
+    <td style="width: 40%">Phenylketonuria (PKU) Supplementary Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">SCDSSS</td> 
+    <td style="width: 40%">Sickle-cell disease (SCD) Screening Status Sub-Code</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">SCDRTX</td> 
+    <td style="width: 40%">Sickle-cell disease (SCD) Reason Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">SCDSTX</td> 
+    <td style="width: 40%">Sickle-cell disease (SCD) Supplementary Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CHTSSS</td> 
+    <td style="width: 40%">Congenital hypothyroidism (CHT) Screening Status Sub-Code</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CHTRTX</td> 
+    <td style="width: 40%">Congenital hypothyroidism (CHT) Reason Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CHTSTX</td> 
+    <td style="width: 40%">Congenital hypothyroidism (CHT) Supplementary Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CFSSS</td> 
+    <td style="width: 40%">Cystic fibrosis (CF) Screening Status Sub-Code</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CFRTX</td> 
+    <td style="width: 40%">Cystic fibrosis (CF) Reason Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">CFSTX</td> 
+    <td style="width: 40%">Cystic fibrosis (CF) Supplementary Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MCDSSS</td> 
+    <td style="width: 40%">Medium-chain acyl-CoA dehydrogenase deficiency (MCADD) Screening Status Sub-Code</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MCDRTX</td> 
+    <td style="width: 40%">Medium-chain acyl-CoA dehydrogenase deficiency (MCADD) Reason Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MCDSTX</td> 
+    <td style="width: 40%">Medium-chain acyl-CoA dehydrogenase deficiency (MCADD) Supplementary Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">TCKSC</td> 
+    <td style="width: 40%">Telecare Key Safe Combination</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">SUAR</td> 
+    <td style="width: 40%">Service User Aware Of Referral</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BSSSS</td> 
+    <td style="width: 40%">Blood Spot Screening Status Sub-Code</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BSRTX</td> 
+    <td style="width: 40%">Blood Spot Reason Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">BSSTX</td> 
+    <td style="width: 40%">Blood Spot Supplementary Text</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ASF</td> 
+    <td style="width: 40%">Allergy Supporting Finding</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">MOA</td> 
+    <td style="width: 40%">Method of Admission</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">RFA</td> 
+    <td style="width: 40%">Reason for Admission</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">SOP</td> 
+    <td style="width: 40%">Source of Patient</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DM</td> 
+    <td style="width: 40%">Discharge Method</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">DD</td> 
+    <td style="width: 40%">Discharge Destination</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">PTV</td> 
+    <td style="width: 40%">Permission To View</td> 
+    <td style="width: 40%"> <p> </p></td> 
+   </tr> 
+  </tbody> 
+ </table>
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:information.standards@nhs.net?subject=IntegratedUrgentCare v3.0">Contact us
+            					</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>2017</p></div></div></div></div><script src="../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

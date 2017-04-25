@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2017-01-18T23:00:00+00:00"
+  },
+  "url": "https://fhir.nhs.uk/ValueSet/itk-handling-key-1",
+  "name": "ITK Handling Specification",
+  "status": "active",
+  "description": "A valueset to describe the type of handling key for ITK bundle management.",
+  "codeSystem": {
+    "system": "https://fhir.nhs.uk/ValueSet/itk-handling-key-1",
+    "concept": [
+      {
+        "code": "INFACK",
+        "display": "Infrastructure Acknowledgement"
+      },
+      {
+        "code": "BUSACK",
+        "display": "Business Acknowledgement"
+      },
+      {
+        "code": "PID",
+        "display": "Profile ID"
+      },
+      {
+        "code": "INTID",
+        "display": "Interaction ID"
+      },
+      {
+        "code": "SNDSRVC",
+        "display": "Sending Service"
+      }
+    ]
+  }
+}

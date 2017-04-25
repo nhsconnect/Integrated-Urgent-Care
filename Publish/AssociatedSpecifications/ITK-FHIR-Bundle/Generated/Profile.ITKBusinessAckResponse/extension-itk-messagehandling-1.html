@@ -1,0 +1,278 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+			<title>ITK FHIR Distribution - FHIR Implementation Guide</title>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="author" content="HSCIC" />        
+			<meta name="publisher version" content=	"FHIR-Furnace : 2.7.6256.31052" />
+		
+			<link href="../dist/css/fhir.css" rel="stylesheet" />
+	 
+			<!-- Bootstrap core CSS -->
+			<link href="../dist/css/bootstrap.css" rel="stylesheet" />
+			<link href="../dist/css/bootstrap-fhir.css" rel="stylesheet" />
+			<link href="../dist/css/bootstrap-glyphicons.css" rel="stylesheet" />
+
+			<!-- Project extras -->
+			
+			<link href="../dist/css/pygments-manni.css" rel="stylesheet" />
+
+			<script src="../dist/js/jquery.js"> </script>
+			<script src="../dist/js/bootstrap.min.js"> </script>
+
+			<script src="../dist/js/fhir.js"> </script>
+			
+				<script>
+				  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				  ga('create', 'UA-67795986-1', 'auto');
+				  ga('send', 'pageview');
+
+				</script>
+			
+			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!--[if lt IE 9]>
+				<script src="../dist/js/html5shiv.js"></script>
+				<script src="../dist/js/respond.min.js"></script>
+			<![endif]-->
+
+			<!-- Favicons -->
+			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/images/apple-touch-icon-144-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/images/apple-touch-icon-114-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/images/apple-touch-icon-72-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" href="../dist/images/apple-touch-icon-57-precomposed.png" />
+			<link rel="shortcut icon" href="../dist/images/favicon.ico" />
+	</head>
+	
+	<body>  
+		
+		<!-- segment-header -->
+		<div id="segment-header" class="segment">
+            
+            <div class="container">
+                <!-- container -->
+                <a id="logo" href="http://www.digital.nhs.uk" target="_blank">
+                    <img src="../dist/images/logo.png" alt="logo NHS Digital" />
+                </a>
+                <div id="specificationName">
+         
+                        <b>ITK FHIR Distribution</b>
+                  
+                </div>
+
+            </div>
+            <div class="container">
+                <!-- container -->
+            </div>
+        </div>
+        
+		<!-- /segment-header -->
+		
+		
+		<div id="segment-navbar" class="segment">
+            <!-- segment-navbar -->
+            <div id="stripe"> </div>
+            <div class="container">
+                <!-- container -->
+                <!-- HEADER CONTENT -->
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container">
+                        <button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="icon-bar"> </span>
+                            <span class="icon-bar"> </span>
+                            <span class="icon-bar"> </span>
+                        </button>
+                        <div class="nav-collapse collapse navbar-inverse-collapse">
+                            <ul class="nav navbar-nav">   
+
+											<li>
+												<a href='../Chapter.1.About/index.html'>About</a>
+											</li>
+											<li>
+												<a href='../Chapter.2.Change History/index.html'>Change History</a>
+											</li>
+											<li>
+												<a href='../Chapter.3.Architecture/index.html'>Architecture</a>
+											</li>
+											<li>
+												<a href='../Chapter.4.FHIR Constrained Messages/index.html'>FHIR Constrained Messages</a>
+											</li>
+											<li>
+												<a href='../Chapter.5.Examples/examples.html'>Examples</a>
+											</li>
+											<li>
+												<a href='../Chapter.6.Glossary/index.html'>Glossary</a>
+											</li>
+
+                            </ul>
+							
+                            <p class="navbar-text pull-right" style="padding-right: 10px;padding-top: 3px;">
+                                <span class="label label-default"  style="font-size: 95%;">Version 1.0 : DRAFT A</span>
+                            </p>
+
+                        </div>
+                    </div>
+                </nav>				
+            </div>
+        </div>
+		
+		<div id="segment-breadcrumb" class="segment">
+            <!-- segment-breadcrumb -->
+            <div class="container">
+                <!-- container -->
+                <ul class="breadcrumb"></ul>
+            </div>
+            <!-- /container -->
+        </div>
+        <div id="segment-content" class="segment">
+            <!-- segment-content -->
+            <div class="container">
+                <!-- container -->
+                <div class="row">
+                    <div class="inner-wrapper">
+						<!-- CONTENT CONTENT -->
+                        <div class="col-12">
+							
+								<div class="introContent">
+							
+									<div class="panel panel - default" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="panel-heading">
+    <h3 class="panel-title">Extension-ITK-MessageHandling-1</h3>
+  </div>
+  <div class="panel-body">
+    <div xmlns="">
+      <p>A complex extension to support the ITK handling specification. This provides the ability to control the sending of acknowledgements and other values such as profile ID and interaction ID.</p>
+    </div>
+  </div>
+</div>
+							
+									<ul class="nav nav-tabs">		
+										
+										<li  class="active"><a href="#profileTab" data-toggle="tab">Profile</a></li>
+										
+										
+											<li class ="disabled"><a>Extensions</a></li>
+										
+											<li><a href="#bindingsTab" data-toggle="tab">Bindings</a></li>
+										
+																				
+										
+											<li class ="disabled"><a>Examples</a></li>
+										
+									</ul>
+								
+								</div>
+								<div class="tab-content">
+								 
+									 <div class="well tab-pane active" id="profileTab">
+										
+										<div class="panel panel - default">
+											<table xmlns="http://www.w3.org/1999/xhtml"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><span title="The logical name of the element">Name</span></th><th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><span title="Minimum and maximum # of times the element can appear in the instance">Card.</span></th><th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; width:100px"><span title="Reference to the type of the element">Type</span></th><th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Description &amp; Constraints</th></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/icon_datatype.gif" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension" title="Complex extension for message handling.">Extension</a><a name="Extension" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#element">Element</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Complex extension for message handling.<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.id" title="xml:id (or equivalent in JSON)">id</a><a name="Extension.id" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#id">Id</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">xml:id (or equivalent in JSON)<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck11.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_extension_simple.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.Key" title="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension (Key)</a><a name="Extension.extension" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#extension">Extension</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Additional Content defined by implementations<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck11.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.id" title="xml:id (or equivalent in JSON)">id</a><a name="Extension.extension.id" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#id">Id</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">xml:id (or equivalent in JSON)<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck11.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.url" title="identifies the meaning of the extension">url</a><a name="Extension.extension.url" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#uri">Uri</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">identifies the meaning of the extension<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck101.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin_end.png" class="hierarchy" alt="." /><img src="../dist/images/icon_datatype.gif" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept" title="Value of extension">valueCodeableConcept</a><a name="Extension.extension.valueCodeableConcept" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#codeableconcept">CodeableConcept</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Value of extension<br /><span class="label label-pub-grey label-big">Binding</span> Event code<a href="itk-handling-key-1.html"> (https://fhir.nhs.uk/ValueSet/itk-handling-key-1)</a><br /><span class="label label-pub-grey label-big">Binding Strength</span> Extensible<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck101.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.id" title="xml:id (or equivalent in JSON)">id</a><a name="Extension.extension.valueCodeableConcept.id" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#id">Id</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">xml:id (or equivalent in JSON)<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1011.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_datatype.gif" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.coding" title="Code defined by a terminology system">coding</a><a name="Extension.extension.valueCodeableConcept.coding" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#coding">Coding</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Code defined by a terminology system<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1011.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.coding.id" title="xml:id (or equivalent in JSON)">id</a><a name="Extension.extension.valueCodeableConcept.coding.id" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#id">Id</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">xml:id (or equivalent in JSON)<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1011.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.coding.system" title="Identity of the terminology system">system</a><a name="Extension.extension.valueCodeableConcept.coding.system" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#uri">Uri</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Identity of the terminology system<br /><span class="label label-pub-grey label-big">Fixed Value</span> https://fhir.nhs.uk/ValueSet/itk-handling-key-1<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1011.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.coding.version" title="Version of the system - if relevant">version</a><a name="Extension.extension.valueCodeableConcept.coding.version" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#string">String</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Version of the system - if relevant<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1011.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.coding.code" title="Symbol in syntax defined by the system">code</a><a name="Extension.extension.valueCodeableConcept.coding.code" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#code">Code</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Symbol in syntax defined by the system<br /><span class="label label-pub-grey label-big">Example Value</span> INFACK<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1011.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.coding.display" title="Representation defined by the system">display</a><a name="Extension.extension.valueCodeableConcept.coding.display" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#string">String</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Representation defined by the system<br /><span class="label label-pub-grey label-big">Example Value</span> Infrastructure Acknowledgement<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck101.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin_end.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.coding.userSelected" title="If this coding was chosen directly by the user">userSelected</a><a name="Extension.extension.valueCodeableConcept.coding.userSelected" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#boolean">Boolean</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">If this coding was chosen directly by the user<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_blank.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin_end.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.valueCodeableConcept.text" title="Plain text representation of the concept">text</a><a name="Extension.extension.valueCodeableConcept.text" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#string">String</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Plain text representation of the concept<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck11.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_extension_simple.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.Value" title="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension (Value)</a><a name="Extension.extension" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#extension">Extension</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Additional Content defined by implementations<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck11.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.id" title="xml:id (or equivalent in JSON)">id</a><a name="Extension.extension.id" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">0..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#id">Id</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">xml:id (or equivalent in JSON)<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck11.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.url" title="identifies the meaning of the extension">url</a><a name="Extension.extension.url" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#uri">Uri</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">identifies the meaning of the extension<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck1.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vline.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin_end.png" class="hierarchy" alt="." /><img src="../dist/images/icon_choice.gif" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.extension.value[x]" title="Value of extension">value[x]</a><a name="Extension.extension.value_x_" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#boolean">Boolean</a> | <a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#string">String</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">Value of extension<br /><br /></td></tr><tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;"><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(../dist/images/tbl_bck.png); background-repeat: repeat-y; "><img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." /><img src="../dist/images/tbl_vjoin_end.png" class="hierarchy" alt="." /><img src="../dist/images/icon_primitive.png" class="hierarchy" style="background-color: white; padding-right: 4px;" alt="." /><a href="extension-itk-messagehandling-1-dict.html#Extension.url" title="identifies the meaning of the extension">url</a><a name="Extension.url" /></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">1..1</td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px"><a href="http://www.hl7.org/fhir/DSTU2/datatypes.html#uri">Uri</a></td><td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">identifies the meaning of the extension<br /><span class="label label-pub-grey label-big">Fixed Value</span> https://fhir.nhs.uk/StructureDefinition/extension-itk-messagehandling-1<br /><br /></td></tr></table>
+										</div>
+									 
+									 </div>
+									 
+									 								 
+									   
+									
+										<div class='well tab-pane' id="bindingsTab">
+									   
+									   		<div class="panel panel - default">
+												<table xmlns="http://www.w3.org/1999/xhtml">
+  <tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;">
+    <th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; width:100px">
+      <span title="The path of the element">Path</span>
+    </th>
+    <th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; width:100px">
+      <span title="The name of the valueSet">Name</span>
+    </th>
+    <th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; width:100px">
+      <span title="How closely the valueSet should be followed.">Binding Strength</span>
+    </th>
+    <th class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; width:100px">
+      <span title="A value set specifies a set of codes drawn from one or more code systems.">ValueSet</span>
+    </th>
+  </tr>
+  <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+    <td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(); background-repeat: repeat-y; ">
+      <img src="../dist/images/tbl_spacer.png" class="hierarchy" alt="." />Extension.extension.valueCodeableConcept</td>
+    <td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">valueCodeableConcept</td>
+    <td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">
+      <a href="http://www.hl7.org/fhir/DSTU2/terminologies.html#extensible">Extensible</a>
+    </td>
+    <td class="hierarchy" style="vertical-align:top; text-align:left; padding:0px 4px 0px 4px">
+      <a href="itk-handling-key-1.html">https://fhir.nhs.uk/ValueSet/itk-handling-key-1</a>
+    </td>
+  </tr>
+</table>
+											</div>
+									   
+										</div>
+
+									
+																										
+								</div>                       
+							
+							
+							
+							
+							
+						
+					   </div>                      
+                    </div>
+                    <!-- /inner-wrapper -->                   
+                </div>
+                <!-- /row -->              
+            </div>
+            <!-- /container -->           
+        </div>
+    <!-- /segment-content -->
+
+        <div id="segment-footer" class="segment">
+            <!-- segment-footer -->
+            <div class="container">
+                <!-- container -->
+                <div class="inner-wrapper">
+					<div id="explanatoryline">
+                         <img src="../dist/images/explanatoryline.png" alt="Information and technology for better health and care" />
+						 <p>
+                        Copyright &copy; 2017 Health and Social Care Information Centre<br/>
+						NHS Digital is the trading name of the Health and Social Care Information Centre.
+                    </p>
+                    </div>
+				<div id="hl7-nav">
+                    <a id="hl7-logo" href="http://www.hl7.org" target="_blank">
+                        <img src="../dist/images/hl7-logo.png" alt="visit the hl7 website" />
+                    </a>
+					<p>
+					FHIR&reg; is the registered trademark of HL7<br/>
+					and is used with the permission of HL7.
+					</p>
+				</div>
+					<p>
+						<!--<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> -->
+                    </p>
+                </div>
+                <!-- /inner-wrapper -->
+            </div>
+            <!-- /container -->
+        </div>
+
+        <div id="segment-post-footer" class="segment">
+            <!-- segment-post-footer -->
+            <div class="container">
+                <!-- container -->
+            </div>
+            <!-- /container -->
+        </div>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProfileConfig xmlns:iops="urn:GB-en-NHS:iops">
+   <profileId root="2.16.840.1.113883.2.1.3.2.4.18.28"
+              extension="urn:nhs-en:profile:AmbulanceRequest-v2-1"/>
+   <messageType codeSystem="2.16.840.1.113883.2.1.3.2.4.18.17" displayName="Ambulance Request"
+                code="MEPC_MT200001GB02"/>
+   <configGroup type="Templates">
+      <configItem code="COCD_TP145007UK03" displayName="RelatedEntity"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145200GB01" displayName="AuthorPersonUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145201GB01" displayName="PatientUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145202GB02" displayName="RecipientPersonUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145203GB03" displayName="RecipientOrganizationUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145204GB03" displayName="RecipientWorkgroupUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145207GB01" displayName="AuthorDeviceUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145208GB01" displayName="AuthorNonNamedPersonUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145210GB01" displayName="PersonWithOrganizationUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145212GB02" displayName="WorkgroupUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP145222GB02" displayName="IncidentalHealthCareFacilityUniversal"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+      <configItem code="COCD_TP146050GB01" displayName="PermissionToView"
+                  codeSystem="2.16.840.1.113883.2.1.3.2.4.18.2"/>
+   </configGroup>
+   <configGroup type="Vocabularies">
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.329"
+                  codeSystemName="AmbulancePriorityType"
+                  codeSystemVersion="2.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.178"
+                  codeSystemName="AuthorFunctionType"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.220"
+                  codeSystemName="CDAObservationType"
+                  codeSystemVersion="7.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.289"
+                  codeSystemName="CDAOrganizationProviderType"
+                  codeSystemVersion="2.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.191"
+                  codeSystemName="CDAOrganizationType"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.16.45"
+                  codeSystemName="CDAPersonRelationshipType"
+                  codeSystemVersion="4.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.70" codeSystemName="HumanLanguage"
+                  codeSystemVersion="4.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.124" codeSystemName="JobRoleName"
+                  codeSystemVersion="5.0"/>
+      <configItem codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.5.61" codeSystemName="LanguageAbilityProficiency"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.332"
+                  codeSystemName="ManufacturerModelName"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.422"
+                  codeSystemName="NHS111AdditionalNotesType"
+                  codeSystemVersion="2.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.16.25" codeSystemName="Sex"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.333" codeSystemName="SoftwareName"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.327" codeSystemName="SystemFlagType"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.419"
+                  codeSystemName="TriageDispositionType"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.328"
+                  codeSystemName="TriageOutcomeType"
+                  codeSystemVersion="1.0"/>
+      <configItem codeSystem="2.16.840.1.113883.2.1.3.2.4.17.266"
+                  codeSystemName="WorkgroupRoleName"
+                  codeSystemVersion="1.0"/>
+   </configGroup>
+   <configGroup type="TemplateConstraints">
+      <configItem name="NPFIT-000080#Role" version="2.0"/>
+      <configItem name="NPFIT-000081#Role" version="1.0"/>
+      <configItem name="NPFIT-000083#Role" version="1.0"/>
+      <configItem name="NPFIT-000085#Role" version="1.0"/>
+      <configItem name="NPFIT-000099#Role" version="4.0"/>
+      <configItem name="NPFIT-100041#Role" version="1.0"/>
+      <configItem name="NPFIT-300007#Act" version="1.0"/>
+   </configGroup>
+   <configGroup type="CoreSchemas">
+      <configItem schemaName="CDAVocab.xsd" version="UNDEFINED"/>
+      <configItem schemaName="InfVocab.xsd" version="UNDEFINED"/>
+      <configItem schemaName="datatypes.xsd" version="1.0"/>
+      <configItem schemaName="datatypeflavours.xsd" version="UNDEFINED"/>
+      <configItem schemaName="infrastructureRoot.xsd" version="UNDEFINED"/>
+      <configItem schemaName="datatypes-2005.xsd" version="UNDEFINED"/>
+      <configItem schemaName="NarrativeBlock.xsd" version="UNDEFINED"/>
+      <configItem schemaName="NHSLocalisation.xsd" version="UNDEFINED"/>
+      <configItem schemaName="NHSVocab.xsd" version="UNDEFINED"/>
+      <configItem schemaName="commonInclude.xsd" version="UNDEFINED"/>
+      <configItem schemaName="voc.xsd" version="UNDEFINED"/>
+   </configGroup>
+</ProfileConfig>

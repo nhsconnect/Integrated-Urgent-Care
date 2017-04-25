@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itk:DistributionEnvelope xmlns:itk="urn:nhs-itk:ns:201005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:nhs-itk:ns:201005 ..\..\Schemas\distributionEnvelope-v2-0.xsd">
+	<!-- the header of the distribution envelope contains a service name - ALWAYS "NHS111RepeatCallerSyncQueryResp-v1-0" for NHS 111 CDA documents and a generated DCE UUID trackingId-->
+	<itk:header service="NHS111RepeatCallerSyncQueryResp-v1-0" trackingid="7D6F23E0-AE1A-11DB-9808-B18E1E0994AA">
+		<!-- the address list is not needed, as the end point has been looked up and is in the SOAP header 
+		<itk:addresslist>
+			<itk:address uri="urn:nhs-uk:addressing:ods:RepeatCallerEndPoint"/>
+		</itk:addresslist> -->
+		<!-- an audit identification of the sending organisation - use the send organisation's ODS site code -->
+		<itk:auditIdentity>
+			<itk:id uri="urn:nhs-uk:identity:ods:5L399"/>
+		</itk:auditIdentity>
+		<!-- for 111 Repeat caller query, only 1 payload is expected -->
+		<itk:manifest count="1">
+			<!-- mimetype will be text/xml -->
+			<!--profileid will be as shown-->
+			<!--id is a generated DCE UUID prefixed with "uuid_"-->
+			<!-- for more details of manifest attributes see the ITK Core pack -->
+			<itk:manifestitem mimetype="text/xml" id="uuid_7D6F23E0-AE1A-11DB-9808-B18E1E0994BB" profileid="urn:nhs-en:profile:IntegratedUrgentCareRepeatCallerQuery-v2-1"/>
+		</itk:manifest>
+		<!-- the sender address - use the ODS org site code of the requester, with a SDS idenifier of the requesting person if available -->
+		<itk:senderAddress uri="urn:nhs-uk:addressing:ods:5L399:445510770"/>
+		<!-- handlingSpecification contains the interaction id from the 111 specification - key & value are as shown -->
+		<itk:handlingSpecification>
+			<itk:spec value="urn:nhs-itk:interaction:nhs111RepeatCallerSyncQueryResp-v1-0" key="urn:nhs-itk:ns:201005:interaction"/>
+		</itk:handlingSpecification>
+	</itk:header>
+	<itk:payloads count="1">
+		<!-- this matches the manifestitem@id for the payload being referenced by the manifest -->
+		<itk:payload id="uuid_7D6F23E0-AE1A-11DB-9808-B18E1E0994BB">
+			<!--the repeat caller request goes in here-->
+			<RepeatCallerQuery classCode="CACT" moodCode="EVN" xsi:schemaLocation="urn:hl7-org:v3 ../../schemas/QUPA_MT000001GB01.xsd" xmlns:npfitlc="NPFIT:HL7:Localisation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+	<!--the code for a query message is always fixed as shown-->
+	<code code="01" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.420"/>
+	<!--this is the date and time the message was created - probably derived from system datetime-->
+	<effectiveTime value="201202120948"/>
+	<!--this is a DCE UUID that acts as an identifier for this query. This will be returned in the response to enable matching of query to response-->
+	<id root="7D6D9D40-AE1A-11DB-9803-B18E1E0994CD"/>
+	<!--the author details - this will probably be the call handler's details-->
+	<author typeCode="AUT" contextControlCode="OP">
+		<!--contentId is a forward pointer to the author template used. As this message only uses one author template, this is effectively fixed as shown-->
+		<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145200GB01#AssignedAuthor"/>
+		<!--classCode is wlays fixed as shown-->
+		<COCD_TP145200GB01.AssignedAuthor classCode="ASSIGNED">
+			<!--address of the author. This is optional-->
+			<addr>
+				<streetAddressLine>Birming NHS111 Call Centre</streetAddressLine>
+				<streetAddressLine>5 New Street</streetAddressLine>
+				<streetAddressLine>Birmingham</streetAddressLine>
+				<postalCode>B1 4HY</postalCode>								
+			</addr>
+			<!--a code to identify the job role of the author. The example here uses a local code (as shown by the OID) -->
+			<code code="584H" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.339" displayName="Senior Call Handler"/>
+			<!--an identifier for the author - the example here shows an SDS code-->
+			<id root="1.2.826.0.1285.0.2.0.65" extension="8765098"/>
+			<!--an optional telecom for the author-->
+			<telecom value="tel:01256789033" use="EC"/>
+			<!--templateId will always be fixed as shown-->
+			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#AssignedAuthor"/>
+			<!--classCode and determinerCode always fixed as shown-->
+			<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+				<!--the name of the author - in structured format-->
+				<name>
+					<given>Harry</given>
+					<family>Smith</family>
+				</name>
+				<!--templateId will always be fixed as shown-->
+				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#assignedPerson"/>
+			</assignedPerson>
+			<!--classCode and determinerCode are always fixed as shown-->
+			<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+				<!--An identifier for the author's organisation - use site by preference-->
+				<id root="2.16.840.1.113883.2.1.3.2.4.19.2" extension="45TTH"/>
+				<!--the name associated with the organisation code above-->
+				<name>Birmingham NHS111 Call Centre</name>
+				<!--templateId will always be fixed as shown-->
+				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145200GB01#representedOrganization"/>
+			</representedOrganization>
+		</COCD_TP145200GB01.AssignedAuthor>
+	</author>
+	<!--the query parameters - note that here all parameters are shown. However, suppliers should be aware of the repeat caller matching rules to identify what parameters are required-->
+	<pertinentInformation typeCode="PERT">
+	<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146050GB01#PermissionToView"/>
+	<!--seperatableInd is FIXED as ashown-->
+	<seperatableInd value="false"/>
+	<!--classCode and moodCode are FIXED as shown-->
+	<COCD_TP146050GB01.PermissionToView classCode="OBS" moodCode="EVN">
+	<!--code is drawn from the codesystem "2.16.840.1.113883.2.1.3.2.4.17.220" - currently only 1 value for "Permission To View"-->
+		<code code="PTV" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.220"/>
+	<!--the time period for which the permission to view applies-->	
+		<effectiveTime>
+		<low value="201202120948+00"/>
+		<high value="201202190948+00"/>		
+		</effectiveTime>
+	<!--templateId is FIXED as shown-->	
+		<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146050GB01#PermissionToView"></templateId>
+		<!--the permission to view code-->
+		<value code="01" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.524"/>
+	</COCD_TP146050GB01.PermissionToView>
+</pertinentInformation>	
+	<query>
+		<!--patient's date of birth-->
+		<person.birthTime>
+			<!--semanticsText is always fixed as shown-->
+			<semanticsText>Person.birthTime</semanticsText>
+			<!--DOB goes in the value attribute and should be a valid date YYYYMMDD-->
+			<value value="19760330"/>
+		</person.birthTime>
+		<!--patient's family name-->
+		<person.familyName>
+			<!--semanticsText is always fixed as shown-->
+			<semanticsText>Person.familyName</semanticsText>
+			<!--parameter value is in element content-->
+			<value>Johnson</value>
+		</person.familyName>
+		<person.givenName>
+			<!--semanticsText is always fixed as shown-->
+			<semanticsText>Person.givenName</semanticsText>
+			<!--parameter value is in element content-->			
+			<value>Jason</value>
+		</person.givenName>
+		<!--the patient's NHS Number-->
+		<person.id>
+			<!--semanticsText is always fixed as shown-->		
+			<semanticsText>Person.id</semanticsText>
+			<!--NHS Number goes ij root / extension attributes as shown (note the extension should be fixed to 2.16.840.1.113883.2.1.4.1 as the NHS Number should be a verified NHS Number-->
+			<value root="2.16.840.1.113883.2.1.4.1" extension="8976781256"/>
+		</person.id>
+		<!--patient's post code-->
+		<person.postalCode>
+			<!--semanticsText is always fixed as shown-->		
+			<semanticsText>Person.postalCode</semanticsText>
+			<!--parameter value is in element content-->			
+			<value>B8 7GF</value>
+		</person.postalCode>
+		<!--patient's first address line - this should be a house number and street-->
+		<person.streetAddressLine1>
+			<!--semanticsText is always fixed as shown-->		
+			<semanticsText>Person.streetAddressLine1</semanticsText>
+			<!--parameter value is in element content-->			
+			<value>65 Fir Tree Avenue</value>
+		</person.streetAddressLine1>
+	</query>
+</RepeatCallerQuery>
+			<!--end of query-->
+			</itk:payload>
+	</itk:payloads>
+</itk:DistributionEnvelope>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>NHS 111: Transforms</title>
+</head>
+<!-- Framework CSS -->
+<link rel="stylesheet" href="../Core/Stylesheets/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="../Core/Stylesheets/print.css" type="text/css" media="print">
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="../Core/Stylesheets/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<style type="text/css">
+/*Override default styles as contains nested tables*/
+	TD {
+		border-bottom: 1px solid black;
+		background: #fff !important; 
+	}
+	table { border-collapse:collapse; }
+</style>
+</head>
+<body>
+<div class="d-mim-container">
+	<div id="banner">
+		<div class="d-mim-span-6 d-mim-left">
+			<img src="../Core/logo_left.png"/>
+		</div>
+		<div class="d-mim-span-12">
+			<h1><a name=_Toc_Section_></a>NHS 111<br>Domain Message Specification </h1>
+		</div>
+		<div class="d-mim-span-6 d-mim-last">
+			<img src="../Core/logo_right.jpg" class="d-mim-right">
+		</div>
+	</div>
+		<div id="navigation">
+		<div id="status">Version: 1.0; Status: RC2</div>
+		<ul class="tabs level0">
+			<li><a href="../Index.htm" title="Overview">Overview</a></li>
+			<li><a href="../Domains/NHS111/Document files/IM.htm" title="Message Definitions">Message Definitions</a></li>
+			<li><a href="../Domains/NHS111/Document files/AssociatedSpecifications.htm" title="Associated Specifications">Associated Specifications</a></li>			
+			<li class="selected"><a href="../Core/References.htm" title="References">References</a></li>
+		</ul>
+		<ul  class="tabs level1">
+			<li>		<a href="../Data Types/DataTypesIndexPage.htm" title="Data Types">Data Types</a></li>
+			<li>				<a href="../Domains/Templates/Document files/Constraint Reference.htm" title="Constraint Cross Ref">
+			Constraint Usage</a>    
+			</li>
+			<li>
+				<a href="../Domains/Templates/Document files/Template Reference.htm" title="Template Cross Ref">
+				Template Usage</a>    
+			</li>
+<li>
+				<a title="Vocabulary Usage" href="../Vocabulary/NHS111VocabReferences.htm">Vocabulary Usage</a>    
+			</li>
+			<li class="selected">
+				<a title="Transforms" href="./TransformsIndexPage.htm">Transforms</a>    
+			</li>
+		</ul>	
+
+	</div>
+<div id="content"><h1><a name=_Toc_Section_></a>Transforms</h1>
+<br/>
+		<table class="MsoTableGrid" style="border: 1pt solid windowtext" id="table205" border="1" cellpadding="0" cellspacing="3" width="80%">
+
+
+
+	<thead>
+
+		<tr>
+
+			<th>Transform</th>
+
+			<th>Description</th>
+
+		</tr>
+
+		</thead>
+
+		<tbody>
+
+		<tr>
+
+			<td>
+
+			<b><a href="TrueCDAToCDALike_v2.xsl" target="_blank">TrueCDAToCDALike_v2.xsl</a></b></td>
+
+			<td>When creating a message to the &quot;on-the-wire&quot; CDA format, this 
+			transform will take the &quot;on-the-wire&quot; format XML instance and create 
+			a &quot;templated&quot; version of the same instance. The &quot;templated&quot; version 
+			can then be schema validated against the NHS 111 CDA conformance schema provided in the Schemas
+			folder within this pack (<a target="_blank" href="../Schemas/POCD_MT200001GB02.xsd">POCD_MT200001GB02.xsd</a>). 
+			If the XML instance validates against the CDA conformance schema, a 
+			valid NHS 111 instance has been created.</td>
+
+		</tr>
+
+		<tr>
+
+			<td><b>
+
+			<a href="CDA_NPfIT_Document_Renderer.xsl" target="_blank">CDA_NPfIT_Document_Renderer.xsl</a></b></td>
+
+			<td>This is a sample transform that renders a valid CDA XML instance 
+			into a html document. This transform is an example transform only 
+			and is not expected to be used &quot;as is&quot; in&nbsp; production systems.</td>
+
+		</tr>
+
+
+
+	</tbody>
+
+
+
+	</table>
+
+
+
+
+
+</div>
+<div id="footer">
+	<div class="d-mim-span-8">Document Ref: NPFIT-FNT-TO-DSD-0214</div>
+	<div class="d-mim-span-8">CFH Interoperability Team:
+		<a href="mailto:CFH.interoperabilityteam@nhs.net">Contact Us</a></div>
+	<div class="d-mim-span-8 d-mim-last">Release Date: 16-Mar-2012</div></div>
+
+
+</body>
+
+</html>

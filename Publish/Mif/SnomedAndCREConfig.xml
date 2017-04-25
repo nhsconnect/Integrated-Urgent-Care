@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snomed>
+	<code code="182836005" type="Act">
+		<name>Review of medication</name>
+	</code>
+	<code code="60621009" type="Act">
+		<name>DeviceReadBodyMassIndex</name>
+	</code>
+	<code code="75367002" type="Act">
+		<name>DeviceReadBloodPressure</name>
+	</code>
+	<code code="50373000" type="Act">
+		<name>DeviceReadHeight</name>
+	</code>
+	<code code="6797001" type="Act">
+		<name>DeviceReadMeanBloodPressure</name>
+	</code>
+	<code code="365811003" type="Act">
+		<name>DeviceReadTestResult</name>
+	</code>
+	<code code="27113001" type="Act">
+		<name>DeviceReadWeightx</name>
+	</code>
+	<code code="386725007" type="Act">
+		<name>DeviceReadBodyTemperature</name>
+	</code>
+	<code code="78564009" type="Act">
+		<name>DeviceReadPulse</name>
+	</code>
+	<code code="185381000000106" type="Act">
+		<name>Patient informed of discontinuation of medication</name>
+	</code>
+	<code code="274512008" type="Act">
+		<name>Drug therapy discontinued</name>
+	</code>
+	<code code="196971000000103" type="Event">
+		<name>General Practice Initial Summary</name>
+	</code>
+	<code code="196981000000101" type="Event">
+		<name>General Practice Summary</name>
+	</code>
+	<code code="181301000000103" type="Act">
+		<name>Abstract problem node</name>
+	</code>
+	<code code="416586004" type="Act">
+		<name>Has problem name</name>
+	</code>
+	<code code="416271009" type="Act">
+		<name>Has problem member</name>
+	</code>
+	<code code="181311000000101" type="Act">
+		<name>Problem link</name>
+	</code>
+	<code code="222671000000103" type="Act">
+		<name>Acute medication</name>
+	</code>
+	<code code="222681000000101" type="Act">
+		<name>Repeat medication</name>
+	</code>
+	<code code="222691000000104" type="Act">
+		<name>Discontinued repeat medication</name>
+	</code>
+	<code code="222701000000104" type="Act">
+		<name>Risk to patient</name>
+	</code>
+	<code code="18629005" type="Act">
+		<name>Administration of medication</name>
+	</code>
+	<code code="271650006" type="Act">
+		<name>Diastolic blood pressure</name>
+	</code>
+	<code code="271649006" type="Act">
+		<name>Systolic blood pressure</name>
+	</code>
+	<code code="246205007" type="Act">
+		<name>Quantity</name>
+	</code>
+	<code code="228864003" type="Act">
+		<name>Duration of course of treatment</name>
+	</code>
+	<code code="416308001" type="Act">
+		<name>Refused consent for upload to national shared electronic record</name>
+	</code>
+	<code code="185291000000100" type="Act">
+		<name>Emergency Department Event</name>
+	</code>
+	<code code="163381000000105" type="Act">
+		<name>Outpatient Clinic Attendance</name>
+	</code>
+	<code code="163391000000107" type="Act">
+		<name>Discharge from Inpatient Care</name>
+	</code>
+	<code code="163141000000104" type="CareRecordElement">
+		<name>Investigation Results</name>
+	</code>
+	<code code="163091000000105" type="CareRecordElement">
+		<name>Administrative Procedures</name>
+	</code>
+	<code code="75367002" type="Act">
+		<name>Blood pressure</name>
+	</code>
+	<code code="107724000" type="Act">
+		<name>Patient transfer</name>
+	</code>
+	<code code="283281000000100" type="Act">
+		<name>HealthSpace Summary</name>
+	</code>
+	<code code="16521000000101" type="Act">
+		<name>Lloyd George record folder</name>
+	</code>
+	<code code="246435002" type="Act">
+		<name>Number of fetuses</name>
+	</code>
+	<code code="268477000" type="Act">
+		<name>Fetal gestation at delivery</name>
+	</code>
+	<code code="364589006" type="Act">
+		<name>Birth weight</name>
+	</code>
+	<code code="237364002" type="Act">
+		<name>Stillbirth</name>
+	</code>
+	<code code="66091009" type="Act">
+		<name>Congenital disease</name>
+	</code>
+	<code code="285101000000100" type="Act">
+		<name>Refusal To Seal Document</name>
+	</code>
+	<code code="314530002" type="Act">
+		<name>Medication review done</name>
+	</code>
+	<code code="314529007" type="Act">
+		<name>Medication review due</name>
+	</code>
+	<code code="305056002" type="Act">
+		<name>Admission procedure</name>
+	</code>
+	<code code="226081000000107" type="Act">
+		<name>Gestational age</name>
+	</code>
+	<code code="21840007" type="Act">
+		<name>Date of last menstrual period</name>
+	</code>
+	<code code="16310003" type="Act">
+		<name>Ultrasonography</name>
+	</code>
+	
+	<code code="193831000000104" type="Act">
+		<name>Pathology Request Event</name>
+	</code>	
+	<code code="197431000000109" type="Act">
+		<name>Laboratory report</name>
+	</code>
+	<code code="197421000000107" type="Act">
+		<name>isolate identified</name>
+	</code>
+	<code code="225426007" type="Act">
+		<name>Administration of theraputic substance</name>
+	</code>
+	<!-- need to update with template info
+		<cmet id="UKCT_MT144043UK02" name="A_Finding">
+			<class name="Finding"/>
+			<class name="FindingOrganizer"/>
+		</cmet>
+	</code>
+	<code code="163171000000105" type="CareRecordElement">
+		<name>Care Professional Documentation</name>
+		<cmet id="UKCT_MT144035UK01" name="A_Documentation">
+			<class name="CareProfessionalDocumentation"/>
+		</cmet>
+	</code>
+	<code code="163181000000107" type="CareRecordElement">
+		<name>Patient/Carer Correspondence</name>
+		<cmet id="UKCT_MT144035UK01" name="A_Documentation">
+			<class name="PatientCarerCorrespondence"/>
+		</cmet>
+	</code>
+	<code code="163191000000109" type="CareRecordElement">
+		<name>Third Party Correspondence</name>
+		<cmet id="UKCT_MT144035UK01" name="A_Documentation">
+			<class name="ThirdPartyCorrespondence"/>
+		</cmet>
+	</code>
+	<code code="163021000000107" type="CareRecordElement">
+		<name>Social and Personal Circumstances</name>
+		<cmet id="UKCT_MT144036UK01" name="A_SocialContext">
+			<class name="SocialOrPersonalCircumstance"/>
+		</cmet>
+	</code>
+	<code code="163041000000100" type="CareRecordElement">
+		<name>Lifestyle</name>
+		<cmet id="UKCT_MT144036UK01" name="A_SocialContext">
+			<class name="LifeStyle"/>
+			<class name="Smoking"/>
+			<class name="AlcoholIntake"/>
+		</cmet>
+	</code>
+	<code code="162951000000105" type="CareRecordElement">
+		<name>Care Events</name>
+		<cmet id="UKCT_MT144037UK01" name="A_CareEvent">
+			<class name="CareEvent"/>
+		</cmet>
+	</code>
+	<code code="162991000000102" type="CareRecordElement">
+		<name>Problems and Issues</name>
+		<cmet id="UKCT_MT144038UK02" name="A_Problem">
+			<class name="Problem"/>
+		</cmet>
+	</code>
+	<code code="181331000000109" type="CareRecordElement">
+		<name>Link Assertion</name>
+		<cmet id="UKCT_MT144039UK02" name="A_LinkAssertion">
+			<class name="LinkAssertion"/>
+			<class name="ProblemMemberAssertion"/>
+			<class name="ProblemLinkAssertion"/>
+		</cmet>
+	</code>
+	<code code="185361000000102" type="CareRecordElement">
+		<name>Medication</name>
+		<cmet id="UKCT_MT144040UK01" name="A_MedicationRecordMinimal">
+			<class name="MedicationAdministration"/>
+			<class name="CurrentRepeatMedication"/>
+			<class name="AcuteMedication"/>
+			<class name="DiscontinuedRepeatMedication"/>
+		</cmet>
+		<cmet id="UKCT_MT144056UK01" name="A_Refusal">
+			<class name="Refusal"/>
+		</cmet>
+	</code>
+	<code code="163241000000109" type="CareRecordElement">
+		<name>Risks to Care Professional or Third Party</name>
+		<cmet id="UKCT_MT144041UK01" name="A_RiskToPerson">
+			<class name="RiskToPerson"/>
+		</cmet>
+	</code>
+	<code code="163001000000103" type="CareRecordElement">
+		<name>Diagnoses</name>
+		<cmet id="UKCT_MT144042UK01" name="A_Diagnosis">
+			<class name="Diagnosis"/>
+		</cmet>
+		<cmet id="UKCT_MT144048UK02" name="A_AllergiesAndAdverseReactionDE">
+			<class name="AllergyDE"/>
+		</cmet>
+	</code>
+	<code code="163131000000108" type="CareRecordElement">
+		<name>Clinical Observations and Findings</name>
+		<cmet id="UKCT_MT144043UK02" name="A_Finding">
+			<class name="Finding"/>
+			<class name="FindingOrganizer"/>
+			<class name="BloodPressure"/>
+			<class name="Weight"/>
+			<class name="Height"/>
+			<class name="Temperature"/>
+		</cmet>
+	</code>
+	<code code="163051000000102" type="CareRecordElement">
+		<name>Family History</name>
+		<cmet id="UKCT_MT144044UK01" name="A_FamilyHistory">
+			<class name="FamilyHistory"/>
+		</cmet>
+	</code>
+	<code code="163081000000108" type="CareRecordElement">
+		<name>Investigations</name>
+		<cmet id="UKCT_MT144045UK01" name="A_Investigation">
+			<class name="Investigation"/>
+		</cmet>
+	</code>
+	<code code="162961000000108" type="CareRecordElement">
+		<name>Personal Preferences</name>
+		<cmet id="UKCT_MT144046UK01" name="A_PersonalPreference">
+			<class name="PersonalPreference"/>
+		</cmet>
+		<cmet id="UKCT_MT144056UK01" name="A_Refusal">
+			<class name="Refusal"/>
+		</cmet>
+	</code>
+	<code code="163031000000109" type="CareRecordElement">
+		<name>Services, Care Professionals and Carers</name>
+		<cmet id="UKCT_MT144047UK01" name="A_Services">
+			<class name="Service"/>
+		</cmet>
+	</code>
+	<code code="163101000000102" type="CareRecordElement">
+		<name>Provision of Advice and Information to Patients and Carers</name>
+		<cmet id="UKCT_MT144049UK01" name="A_ProvisionOfAdviceAndInformation">
+			<class name="ProvisionOfAdviceAndInformation"/>
+		</cmet>
+	</code>
+	<code code="163091000000105" type="CareRecordElement">
+		<name>Administrative Procedures</name>
+		<cmet id="UKCT_MT144050UK01" name="A_AdministrativeProcedure">
+			<class name="AdministrativeProcedure"/>
+		</cmet>
+	</code>
+	<code code="163221000000102" type="CareRecordElement">
+		<name>Allergies and Adverse Reactions</name>
+		<cmet id="UKCT_MT144053UK02" name="A_AllergiesAndAdverseReactionIdent">
+			<class name="Allergy"/>
+		</cmet>
+		<cmet id="UKCT_MT144056UK01" name="A_Refusal">
+			<class name="Refusal"/>
+		</cmet>
+	</code>
+	<code code="163231000000100" type="CareRecordElement">
+		<name>Risks to Patient</name>
+		<cmet id="UKCT_MT144054UK01" name="A_RiskToPatient">
+			<class name="RiskToPatient"/>
+		</cmet>
+	</code>
+	<code code="163071000000106" type="CareRecordElement">
+		<name>Treatments</name>
+		<cmet id="UKCT_MT144055UK01" name="A_Treatment">
+			<class name="Treatment"/>
+		</cmet>
+-->
+</snomed>

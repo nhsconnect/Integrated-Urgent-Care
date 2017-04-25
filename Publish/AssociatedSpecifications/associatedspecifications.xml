@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pack:associatedspecifications xmlns:pack="urn:pack">
+	<pack:associatedspecification name="ITK FHIR Bundle" ref="ITK-FHIR-Bundle/Generated/index.html">
+		<pack:description>
+		The FHIR resource profiles created to support the ITK FHIR bundle.
+		</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="Generic CDA" ref="GenericCDA/index.html">
+		<pack:description>The Generic CDA Domain Message Specification contains details on the "on-the-wire" format for CDA payloads. The "on-the-wire" format is the actual payload structure that is sent to a recipient. The Generic CDA Domain Message Specification documents two "on-the-wire" CDA formats. The first is for use over the Transaction Messaging System (TMS) when using TMS wrappers, this is documented in the Generic CDA Domain Message Specification as "NPfIT CDA RMIM - POCD_MT000001UK04". The second is used for non-TMS usage and is documented in the Generic CDA Domain Message Specification as "NHS CDA RMIM - POCD_MT000002UK01".</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="Nullification" ref="Nullification/index.html">
+		<pack:description>
+			The Nullification Domain Message Specification contains details on how to nullify a CDA document that was, for example, sent in error or a document that is not accepted by a recipient. The domain specifies the message definition of the nullification document ("Nullification Document - POCD_MT130001UK05"), which is generically used to nullify any CDA document.
+		</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="Distribution Envelope" ref="DistributionEnvelope/index.html">
+		<pack:description>
+			The Distribution Envelope Specification defines the constraints to be applied to the distribution envelope when used with ITK Correspondence content.
+		</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="CDA Implementation Guidance Narrative Block Tags" ref="NarrativeBlockTagsGuidance/index.html">
+		<pack:description>This pack gives guidance on the use of tags and attributes used in a CDA text section (also called CDA markup).The content of this pack is based on the schema "NarrativeBlock.xsd", which is included in Domain Message Specifications in the "dt" folder. This schema is included in the Generic CDA and Profile schemas to ensure the correct CDA mark-up has been applied to the text element within the section class.</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="Technical Guidance for Templated CDA Domains" ref="TechnicalGuidance.pdf">
+		<pack:description>
+			Technical Guidance for Templated CDA Domains gives detailed technical information required to implement a HSCIC CDA templated domain. This document only forms part of the documentation required to implement a HSCIC CDA domain and should be used in conjunction with the message specification and the domain baseline document set.
+		</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="Guidance for the Creation of an Integrated Urgent Care CDA Document" ref="Guidance for the Creation of an Integrated Urgent Care CDA Document.pdf">
+		<pack:description>
+			This document provides guidance for creating an Integrated Urgent Care CDA document. The document includes the information that a Integrated Urgent Care system needs to transmit to create a clinical document. The CDA document is used in Integrated Urgent Care as a referral to Out of Hours services and to Accident and Emergency, to inform a patient’s General Practitioner about a 111 call, and to inform a repeat caller database to monitor repeat calls to the Integrated Urgent Care service.
+		</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="Guidance for the Creation of an Integrated Urgent Care Ambulance Request" ref="Guidance for the Creation of an Integrated Urgent Care Ambulance Request.pdf">
+		<pack:description>
+		This document provides guidance for creating an Integrated Urgent Care Ambulance Request message. The document includes the information that an Integrated Urgent Care system needs to supply to create the request.
+		</pack:description>
+	</pack:associatedspecification>
+	<pack:associatedspecification name="Guidance for the Creation of an Integrated Urgent Care Repeat Caller Query" ref="Guidance for the Creation of an Integrated Urgent Care Repeat Caller Query.pdf">
+		<pack:description>
+		This document provides guidance for creating an Integrated Urgent Care Repeat Caller Query message. The document includes the information that an Integrated Urgent Care system needs to supply to create the query..
+		</pack:description>
+	</pack:associatedspecification>
+</pack:associatedspecifications>

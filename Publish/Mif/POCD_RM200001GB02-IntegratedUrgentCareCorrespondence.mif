@@ -1,0 +1,4178 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<staticModel isAbstract="false" isSerializable="true" name="POCD_RM200001GB02" packageKind="root" representationKind="flat" xsi:schemaLocation="urn:hl7-org:v3/mif C:\PROGRA~1\HL7\System\schemas\mifStaticModelFlat.xsd" xmlns="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<packageLocation artifact="RM-deprecated" domain="CD" name="POCD_RM200001GB02" realm="GB" root="DEFN" section="HM" subSection="PO" version="02" id="200001"/>
+	<header>
+		<renderingInformation application="NHS R-MIM Designer 2.99.KJ.08" renderingTime="2017-02-28T15:02:48" schemaVersion="1"/>
+		<legalese copyrightOwner="NHS Connecting for Health"/>
+	</header>
+	<graphicRepresentation presentation="HL7">
+		<graphElement name="Main">
+			<position x="0.0" y="0.0"/>
+			<size height="12.34443" width="21.21"/>
+		</graphElement>
+	</graphicRepresentation>
+	<derivationSupplier staticModelDerivationId="1">
+		<targetStaticModel artifact="RIM" realm="UV" root="DEFN" version="1"/>
+	</derivationSupplier>
+	<ownedEntryPoint className="ClinicalDocument" id="POCD_RM200001GB02" isAbstract="false" name="Integrated Urgent Care Report">
+		<annotations>
+			<description>
+				<text>
+					<p>An Integrated Urgent Care CDA Message</p>
+				</text>
+			</description>
+			<otherAnnotation type="html">
+				<text>
+					<b>An Integrated Urgent Care Report</b>
+					<br/>
+				</text>
+			</otherAnnotation>
+		</annotations>
+		<graphicRepresentation>
+			<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="false" nodeOrientation="Down" shapeId="POCD_RM200001GB02">
+				<position x="5.89864" y="0.02778"/>
+				<size height="0.45278" width="2.16151"/>
+				<anchorage connectToShapeId="Sheet.1">
+					<position x="6.97939" y="0.48056"/>
+					<graphEdge>
+						<anchor>
+							<position x="6.97939" y="1.19184"/>
+						</anchor>
+					</graphEdge>
+				</anchorage>
+			</graphElement>
+		</graphicRepresentation>
+	</ownedEntryPoint>
+	<ownedClass>
+		<class isAbstract="false" name="ClinicalDocument">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="false" shapeId="Sheet.1" shapeTemplate="Act">
+					<position x="5.59464" y="1.19183"/>
+					<size height="10.38872" width="3.08536"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>This class is a clinical document class. This class and its participations are commonly known as the  header of the CDA document.</b>
+							<br/>
+						</p>
+						<p/>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" defaultValue="POCD_HD000040" fixedValue="POCD_HD000040" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div class="55565A30-5EAC-11DB-B19A-A25AC51C7F82">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>typeId</b> signals the imposition of  constraints defined in an HL7-specified message type.                </p>
+								<p>The <b>typeId</b> is used to indicate this is a CDA document that complies with CDA R2. <br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>
+								<div class="55565A30-5EAC-11DB-B19A-A25AC51C7F82">                         The XML element <b>typeId</b> is populated as follows:</div>
+								<ul>
+									<li>The XML attribute <b>root</b> shall carry the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.1.3</b>
+										</font>"  </li>
+									<li>The XML attribute <b>extension</b> shall carry the value "<font color="#ff0000">
+											<b>POCD_HD000040</b>
+										</font>" <br/>
+									</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeId" className="Act" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="POCD_RM200001GB02" fixedValue="POCD_RM200001GB02" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="messageType" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 (NHS localisation) attribute <b>messageType</b> identifies the CDA document as one that complies with a certain NHS CDA profile. </p>
+							<p>The value of this attribute provides a  unique identifier for the profile in question.</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>   The XML element <b>messageType</b> is populated as follows   <ul>
+								<li>The XML attribute <b>root</b> shall carry the OID "<font color="#ff0000">
+										<b>2.16.840.1.113883.2.1.3.2.4.18.17</b>
+									</font>"</li>
+								<li>The XML attribute <b>extension</b> shall carry the value "<font color="#ff0000">
+										<b>POCD_MT200001GB02</b>
+									</font>" </li>
+							</ul>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="messageType" className="Act" staticModelDerivationId="1"/>
+				<type name="II" typeSpecialisation="II.NPfIT.oid.mandatory"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="setId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<div contenteditable="false" style="height: 100%; width: 100%">
+								<div>
+									<p>The HL7 attribute<b> setId</b> uses an identifier to identify all documents that are part of a set of documents.                     </p>
+									<p>
+										<u>
+											<b>Implementation in XML Instance</b>
+										</u>
+									</p>                         The <b>Identifier Global</b> data type flavour is used to carry the  identifier in the XML element <b>setId</b> as follows:                       <div style="height: 100%; width: 100%">
+										<div>
+											<ul>
+												<li>The XML attribute <b>root</b> shall contain a DCE UUID                                                        </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="setId" className="Act" staticModelDerivationId="1"/>
+				<type name="II" typeSpecialisation="II.NPfIT.uuid.mandatory"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="versionNumber" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>versionNumber</b> uses an integer value to allow versioning of the CDA document.</p>
+							<p>The version number here is the version number of this document</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>
+							<p>The XML element <b>versionNumber</b> is populated as follows: </p>
+							<ul>
+								<li>The XML attribute <b>value</b> should contain the version number of the document as an integer value.  </li>
+							</ul>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="versionNumber" className="Act" staticModelDerivationId="1"/>
+				<type name="INT"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="DOCCLIN" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>classCode</b> uses a code to describe this class as a clinical document.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                          The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+								<b>DOCCLIN</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="DOCCLIN"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="EVN" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="2" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div class="E860D0D0-5EA7-11DB-B0DC-A25AC51C7F82">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>moodCode</b> uses a code to describe this class as a clinical document event<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                         The XML attribute <b>moodCode</b> is fixed to "<font color="#ff0000">
+									<b>EVN</b>
+								</font>".                </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="EVN"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="id" sortKey="3">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div class="3C6C8330-5EA9-11DB-B131-A25AC51C7F82">
+								<div>
+									<div contenteditable="false" style="height: 100%; width: 100%">
+										<div>
+											<p>
+												<u>
+													<b>Model Attribute Description</b>
+												</u>
+											</p>
+											<p>The HL7 attribute <b>id</b> uses an identifier to identify each unique instance of  a clinical document.                      </p>
+											<p>
+												<u>
+													<b>Implementation in XML Instance</b>
+												</u>
+											</p>                         The <b>Identifier Global</b> data type flavour is used to carry the  identifier in the XML element <b>id</b> as follows:                       <div style="height: 100%; width: 100%">
+												<div>
+													<ul>
+														<li>The XML attribute <b>root</b> shall contain a DCE UUID.                                                        </li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="id" className="Act" staticModelDerivationId="1"/>
+				<type name="II" typeSpecialisation="II.NPfIT.uuid.mandatory"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="code" sortKey="4">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<div contenteditable="false" style="height: 100%; width: 100%">
+									<div style="height: 100%; width: 100%">
+										<div>
+											<p>
+												<u>
+													<b>Model Attribute Description</b>
+												</u>
+											</p>
+											<div>The HL7 attribute code uses a code from any vocabulary to describe the type of CDA document.<br/>There are three possible representations for this attribute:</div>
+											<div>
+												<ul>
+													<li>A single code from SNOMED CT</li>
+													<li>A compositional expression consisting of multiple codes from SNOMED CT</li>
+													<li>A single code from a suitable alternative vocabulary</li>
+												</ul>
+											</div>Note: the vocabulary contains additional guidance for the use of this attribute with SNOMED CT<p>
+												<u>
+													<b>Implementation in XML Instance</b>
+												</u>
+											</p>
+											<p>Integrated Urgent Care will use a single SNOMED CT code to represent an Integrated Urgent Care Report <br/>
+											</p>
+											<p>The <b>Coded Value</b> (CV) data type shall be used to carry this information  in the XML element <b>code</b> as follows:                         </p>
+											<ul>
+												<li>Th<i>e </i>XML attribute <b>code</b> shall contain the value "<b>
+														<font color="#ff0000">1066271000000101</font>
+													</b>"                                                                                                           </li>
+												<li>The XML attribute <b>codeSystem</b> shall contain the OID "<font color="#ff0000">
+														<b>2.16.840.1.113883.2.1.3.2.4.15</b>
+													</font>"</li>
+											</ul>
+											<br/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="code" className="Act" staticModelDerivationId="1"/>
+				<type name="CV"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="CDADocumentTypeSnCT"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="title" sortKey="8">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>title</b> uses a string which is rendered as a human readable title.</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>
+							<p>The XML element <b>title</b> is populated as follows:</p>
+							<p>When using a single code in the XML attribute <b>code </b>of the XML element <b>code </b>the XML element title shall contain: <br/>
+							</p>
+							<ul>
+								<li>The XML element <b>title </b>shall contain the value "<font color="#ff0000">
+										<b>Integrated Urgent Care Report</b>
+										<font color="#000000">"</font>
+									</font>
+								</li>
+							</ul>
+							<p>When using multiple SNOMED CT codes in the XML attribute <b>code </b>of the XML element <b>code</b>,the XML element <b>title </b>shall contain:<br/>
+								<br/>
+							</p>
+							<ul>
+								<li>A human readable string deemed to be the title of the document by the sending system. This string may be derived from the multiple SNOMED CT code preferred terms.</li>
+							</ul>
+							<p>Note: the term sending system is used here as a generic term, how the <b>title </b>is defined is dependant system configuration or design.<br/>
+							</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="title" className="Act" staticModelDerivationId="1"/>
+				<type name="ST" typeSpecialisation="ST.Title"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="effectiveTime" sortKey="10">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>effectiveTime</b> is used to define the creation time of the CDA document.</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>
+							<p>                         The XML attribute value of the XML element  <b>effectiveTime </b>shall be populated with the time the document was created using a  time stamp in the format yyyymmddhhmmss[+|-ZZzz] where:                                                    </p>
+							<ul>
+								<li>yyyy is the year</li>
+								<li>mm is the month</li>
+								<li>dd is the day</li>
+								<li>hh is the hour</li>
+								<li>mm is the minutes</li>
+								<li>ss is the seconds</li>
+								<li>[+|-ZZzz] is the time zone offset in hours and minutes</li>
+							</ul>
+							<p>Sections from the right of this representation may be left off when the sending system does not record to this level of accuracy.                      When hours are present, the time zone offset must also be present. <br/>
+							</p>
+							<p/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="effectiveTime" className="Act" staticModelDerivationId="1"/>
+				<type name="TS"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="confidentialityCode" sortKey="14">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p/>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>confidentiality</b>
+								<b>code</b> uses a code from any vocabulary to describe the confidentiality of the CDA document. This may be implemented using NHS CFH sealing or some form of locally agreed access control.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+								<br/>
+							</p>
+							<p>
+								<b>When implementing NHS CFH Sealing then:  </b>
+							</p>
+							<p>A code from the HL7 <b>x_BasicConfidentialityKind</b> vocabulary to denote the level of confidentially applied to the document.</p>
+							<p>The <b>Coded Plain</b> flavour of the <b>Coded Value</b> (CV) data type shall be used to carry this information in the XML element <b>confidentialityCode</b> as follows:</p>
+							<ul>
+								<li>The XML attribute  <b>code</b> shall contain a fixed value of "<font color="#ff0000">
+										<b>V</b>
+									</font>".</li>
+								<li>The XML attribute <b>codeSystem</b>  shall contain the OID of "<font color="#ff0000">
+										<b>2.16.840.1.113883.1.11.16926</b>
+									</font>".</li>
+								<li>The XML attribute <b>displayName</b> shall carry a value of "<font color="#ff0000">
+										<b>very restricted</b>
+									</font>".</li>
+							</ul>
+							<p>When this attribute contains a value of "<b>
+									<font color="#ff0000">V</font>
+								</b>" ("very restricted") then the relevant centralised ACF service must be consulted prior to rendering to any user.</p>
+							<p>
+								<b>
+									<u>Otherwise it shall be populated with:</u>
+								</b>
+							</p>
+							<p>
+								<u>
+									<b>Either  </b>
+								</u>
+							</p>
+							<p>A code from the HL7 <b>x_BasicConfidentialityKind</b> vocabulary to denote the level of confidentially applied to the document.</p>
+							<p>The <b>Coded Plain</b> flavour of the <b>Coded Value</b> (CV) data type shall be used to carry this information in the XML element <b>confidentialityCode</b> as follows:</p>
+							<ul>
+								<li>The XML attribute <b>code</b> shall contain a value from the stated HL7 vocabulary.</li>
+								<li>The XML attribute <b>codeSystem</b> shall contain the OID of "<font color="#ff0000">
+										<b>2.16.840.1.113883.1.11.16926</b>
+									</font>".</li>
+								<li>The XML attribute <b>displayName</b> shall carry the description associated with the code.</li>
+							</ul>
+							<p>
+								<b>These codes should be populated and processed as appropriate for the local requirement for controlling access to the information. </b>
+							</p>
+							<p>
+								<u>
+									<b>Or </b>
+								</u>
+							</p>
+							<p>A code from an alternative locally agreed vocabulary to denote the level of confidentially applied to the document.</p>
+							<p>The <b>Coded Plain </b>flavour of the <b>Coded Value</b> (CV) data type shall be used to carry this information in the XML element <b>confidentialityCode</b> as follows:</p>
+							<ul>
+								<li>The XML attribute <b>code</b> shall contain a value from the vocabulary.</li>
+								<li>The XML attribute <b>codeSystem</b> shall contain the OID "<font color="#ff0000">
+										<b>2.16.840.1.113883.2.1.3.2.4.17.415</b>
+									</font>"</li>
+								<li>The XML attribute <b>displayName</b> shall carry a value associated with the code.</li>
+							</ul>
+							<p>
+								<b>These codes should be populated and processed as appropriate for the local requirement for controlling access to the information.</b>
+							</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="confidentialityCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CV"/>
+				<supplierDomainSpecification codingStrength="CWE" domainName="x_BasicConfidentialityKind"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Tracker">
+			<derivationSupplier className="Participation" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.5" shapeTemplate="Participation" textWrappingWidth="66.0">
+					<position x="3.97348" y="3.50488"/>
+					<size height="0.43611" width="1.62116"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000080#Role</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.234" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="4.2" y="4.58056"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.5">
+								<position x="4.7682" y="4.74445"/>
+								<graphEdge>
+									<anchor>
+										<position x="4.84546" y="3.94099"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>This class is a tracker participation. A tracker is a recipient who is sent a copy of the CDA document for information only. They are not normally required to carry out any action on recipient of the CDA document. </b>
+							<br/>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="Participation" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="TRC" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this participation as a tracker.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>TRC</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="TRC"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="PrimaryInformationRecipient">
+			<derivationSupplier className="Participation" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.11" shapeTemplate="Participation" textWrappingWidth="66.0">
+					<position x="3.97348" y="1.63938"/>
+					<size height="0.43611" width="1.62116"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000080#Role</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.238" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="4.26361" y="2.61667"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.11">
+								<position x="4.8318" y="2.78056"/>
+								<graphEdge>
+									<anchor>
+										<position x="5.5402" y="2.07549"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>This class is a primary information recipient participation.</b>
+						</p>
+						<p>
+							<b>The primary information recipients of the clinical documents are usually expected to perform some action on receipt of a CDA document. There can be more than one primary recipient.</b>
+							<br/>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="Participation" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="PRCP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a primary information recipient participation.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+								<b>PRCP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="PRCP"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Author">
+			<derivationSupplier className="Participation" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.17" shapeTemplate="Participation" textWrappingWidth="66.0">
+					<position x="2.3" y="5.39374"/>
+					<size height="0.83611" width="3.29464"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000081#Role</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.242" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="4.17348" y="6.88056"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.17">
+								<position x="4.74168" y="7.04445"/>
+								<graphEdge>
+									<anchor>
+										<position x="4.01152" y="6.22985"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>This class is a participant of authorship. </b>
+							<b>It holds details of how and when the author authored the CDA document.<br/>
+							</b>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="Participation" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="AUT" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p/>
+							<div contenteditable="false" style="height: 100%; width: 100%">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as an author participation.<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+									<b>AUT</b>
+								</font>".                </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="AUT"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="OA" fixedValue="OA" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="functionCode" sortKey="2">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<div contenteditable="false" style="height: 100%; width: 100%">
+									<p>
+										<u>
+											<b>Model Attribute Description</b>
+										</u>
+									</p>
+									<p>The HL7 attribute <b>functionCode</b> uses a code from the vocabulary <b>AuthorFunctionType</b> to describe the function of the author.<br/>
+									</p>
+									<p>
+										<u>
+											<b>Implementation in XML Instance</b>
+										</u>
+									</p>
+									<p>The  <b>Coded Plain</b> flavour of <b>Coded Value</b> (CV) datatype shall be used to carry this information in the XML element <b>functionCode</b> as  follows:                   </p>
+									<ul>
+										<li>The  XML attribute <b>code </b>shall contain the value "<font color="#ff0000">
+												<b>OA</b>
+											</font>"                                                 </li>
+										<li>The  XML attribute <b>codeSystem </b>shall contain the OID "<font color="#ff0000">
+												<b>2.16.840.1.113883.2.1.3.2.4.17.178</b>
+											</font>"                      </li>
+										<li>The  XML attribute <b>displayName </b>will contain the value "<font color="#ff0000">
+												<b>Originating Author</b>
+											</font>"                      </li>
+									</ul>
+								</div>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="functionCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CV"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="AuthorFunctionType"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="OP" fixedValue="OP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextControlCode" sortKey="3" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description  </b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 attribute <b>contextConductionCode </b>uses a set of codes from the HL7 vocabulary <b>ContextControl</b>  to determine whether participations associated with the parent section  is conducted across                            to                         the child section (also associated with the  child section). This set of codes also determine how these  participations conduct.                                               </p>
+								<p>The conduction can only take place if the <b>contextConductionInd</b> is set to "<font color="#ff0000">
+										<b>true</b>
+									</font>".                       </p>
+								<p>The value of this attribute is fixed in the HL7 model to "<font color="#ff0000">
+										<b>OP</b>
+									</font>":                       </p>
+								<ul>
+									<li>"<font color="#ff0000">
+											<b>O</b>
+										</font>" (Overriding)- the author replaces any author that has been conducted from any previous acts.                                                </li>
+									<li>"<font color="#ff0000">
+											<b>P</b>
+										</font>"   (Propagating)- the author is conducted to all child acts where the <b>contextConductionInd</b> is set                      to  "<font color="#ff0000">
+											<b>true</b>
+										</font>".                         </li>
+								</ul>
+								<p>
+									<u>
+										<b>Implementation in XML Instance  </b>
+									</u>
+									<br/>
+								</p>  The XML attribute <b>contextControlCode</b> shall contain the fixed value "<font color="#ff0000">
+									<b>OP</b>
+								</font>".                   </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextControlCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ContextControl"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="time" sortKey="7">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute author <b>time</b> is used to indicate when the person authored the CDA document.                                      </p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>
+							<p>The XML attribute <b>value</b> of the XML element <b>time,  </b>shall be populated with a  time stamp in the format yyyymmddhhmmss[+|-ZZzz] where:                                                    </p>
+							<ul>
+								<li>yyyy is the year</li>
+								<li>mm is the month</li>
+								<li>dd is the day</li>
+								<li>hh is the hour</li>
+								<li>mm is the minutes</li>
+								<li>ss is the seconds</li>
+								<li>[+|-ZZzz] is the time zone offset in hours and minutes</li>
+							</ul>
+							<p>                                      Sections from the right of this representation may be left off to when the sending system does not record to this accuracy.                      When hours are present, the time zone offset must also be present. </p>
+							<p/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="time" className="Participation" staticModelDerivationId="1"/>
+				<type name="TS"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="RecordTarget">
+			<derivationSupplier className="Participation" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.23" shapeTemplate="Participation" textWrappingWidth="66.0">
+					<position x="2.17348" y="7.46666"/>
+					<size height="0.56944" width="3.42116"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000083#Role</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.246" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="4.20528" y="8.15279"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.23">
+								<position x="4.77348" y="8.31668"/>
+								<graphEdge>
+									<anchor>
+										<position x="3.94567" y="8.03611"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>A class which is a participation of record target (The patient whose record is the target for the information in the Document.)</b>
+							<br/>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="Participation" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="RCT" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a record target participation.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+								<b>RCT</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RCT"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="OP" fixedValue="OP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextControlCode" sortKey="3" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description  </b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 attribute <b>contextConductionCode </b>uses a set of codes from the HL7 vocabulary <b>ContextControl</b>  to determine whether participations associated with the parent section  is conducted across                            to                         the child section (also associated with the  child section). This set of codes also determine how these  participations conduct.                                               </p>
+								<p>The conduction can only take place if the <b>contextConductionInd</b> is set to "<font color="#ff0000">
+										<b>true</b>
+									</font>".                       </p>
+								<p>The value of this attribute is fixed in the HL7 model to "<font color="#ff0000">
+										<b>OP</b>
+									</font>":                       </p>
+								<ul>
+									<li>"<font color="#ff0000">
+											<b>O</b>
+										</font>" (Overriding)- the record target replaces any record target that has been conducted from any previous acts.                                                </li>
+									<li>"<font color="#ff0000">
+											<b>P</b>
+										</font>"   (Propagating)- the record target is conducted to all child acts where the <b>contextConductionInd</b> is set                      to  "<font color="#ff0000">
+											<b>true</b>
+										</font>".                         </li>
+								</ul>
+								<p>
+									<u>
+										<b>Implementation in XML Instance  </b>
+									</u>
+									<br/>
+								</p>  The XML attribute <b>contextControlCode</b> shall contain the fixed value "<font color="#ff0000">
+									<b>OP</b>
+								</font>".                   </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextControlCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ContextControl"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template4">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="false" shapeId="Sheet.29" shapeTemplate="Role">
+					<position x="0.26152" y="5.63056"/>
+					<size height="0.61324" width="1.91348"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Role" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RoleClass"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Custodian">
+			<derivationSupplier className="Participation" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.39" shapeTemplate="Participation" textWrappingWidth="66.0">
+					<position x="2.93696" y="8.76316"/>
+					<size height="0.43611" width="2.65768"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000014#Role</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.250" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="3.8" y="9.35277"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.39">
+								<position x="4.3682" y="9.51666"/>
+								<graphEdge>
+									<anchor>
+										<position x="4.3283" y="9.19927"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>A class which is a participation of custodian.</b>
+						</p>
+						<p>
+							<b>The custodian is  the legal owner of the CDA document and is the organisation responsible for maintaining the information in the CDA document.</b>
+							<br/>
+						</p>
+						<br/>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="Participation" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="CST" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a custodian participation.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+								<b>CST</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="CST"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="CustodianChoice">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.45" shapeTemplate="Choice">
+					<position x="0.77348" y="8.58056"/>
+					<size height="1.0" width="2.16348"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>An abstract placeholder for the templates of a custodian.</b>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template6">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.57">
+						<position x="0.89848" y="8.83056"/>
+						<size height="0.61324" width="1.91348"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to templates for a custodian.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template5">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="false" shapeId="Sheet.47" shapeTemplate="Role">
+					<position x="0.135" y="7.43056"/>
+					<size height="0.61324" width="1.91348"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Role" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RoleClass"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template6">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="false" shapeId="Sheet.57" shapeTemplate="Role">
+					<position x="0.89848" y="8.83056"/>
+					<size height="0.61324" width="1.91348"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Role" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RoleClass"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="InformationRecipientChoice">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.67" shapeTemplate="Choice">
+					<position x="1.76035" y="1.48056"/>
+					<size height="3.0" width="2.21313"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<b>An abstract placeholder for the templates of a recipient.<br/>
+						</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template1">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.69">
+						<position x="1.88535" y="1.73056"/>
+						<size height="2.55001" width="1.91465"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the templates of a recipient.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template1">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="false" shapeId="Sheet.69" shapeTemplate="Role">
+					<position x="1.88535" y="1.73056"/>
+					<size height="2.55001" width="1.91465"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Role" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RoleClass"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="AuthorChoice">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.79" shapeTemplate="Choice">
+					<position x="0.13652" y="5.38056"/>
+					<size height="1.0" width="2.16348"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>An abstract placeholder for the templates for an author.</b>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template4">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.29">
+						<position x="0.26152" y="5.63056"/>
+						<size height="0.61324" width="1.91348"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the choice of templates for an author.</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Patient">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.81" shapeTemplate="Choice">
+					<position x="0.01" y="7.18056"/>
+					<size height="1.0" width="2.16348"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<strong>An abstract placeholder for the templates of a patient<br/>
+							</strong>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template5">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.47">
+						<position x="0.135" y="7.43056"/>
+						<size height="0.61324" width="1.91348"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the choice of patient templates.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="ParentDocument">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="false" shapeId="Sheet.83" shapeTemplate="Act">
+					<position x="11.1" y="1.03277"/>
+					<size height="1.04778" width="3.60001"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<div>
+							<b>A related CDA document which is being referenced as the document being replaced.<br/>
+							</b>
+						</div>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="setId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div contenteditable="false" style="height: 100%; width: 100%">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<div contenteditable="false" style="height: 100%; width: 100%">
+									<div>
+										<p>The HL7 attribute<b> setId</b> uses an identifier to identify all documents that are part of a set of documents.                                              </p>
+										<p>
+											<u>
+												<b>Implementation in XML Instance</b>
+											</u>
+										</p>                         The <b>Identifier Global</b> data type flavour is used to carry the  identifier in the XML element <b>setId</b> as follows:                                                <div style="height: 100%; width: 100%">
+											<div>
+												<ul>
+													<li>The XML attribute <b>root</b> shall contain a DCE UUID                                                                                          </li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="setId" className="Act" staticModelDerivationId="1"/>
+				<type name="II" typeSpecialisation="II.NPfIT.uuid.mandatory"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="versionNumber" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div contenteditable="false" style="height: 100%; width: 100%">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>versionNumber</b> uses an integer value to allow versioning of the CDA document.                   </p>
+								<p>The version number here is the version number of the parent document.<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>
+								<p>The XML element <b>versionNumber</b> is populated as follows:                    </p>
+								<ul>
+									<li>The XML attribute <b>value</b> should contain the version number of the parent document as an integer value.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="versionNumber" className="Act" staticModelDerivationId="1"/>
+				<type name="INT"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="DOCCLIN" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div class="9DB41B10-5EA6-11DB-B0AE-A25AC51C7F82">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>classCode</b> uses a code to describe this class as a clinical document.<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                          The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+									<b>DOCCLIN</b>
+								</font>".                </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="DOCCLIN"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="EVN" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="2" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div class="E860D0D0-5EA7-11DB-B0DC-A25AC51C7F82">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>moodCode</b> uses a code to describe this class as a clinical document event<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                         The XML attribute <b>moodCode</b> is fixed to "<font color="#ff0000">
+									<b>EVN</b>
+								</font>".                                   </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="EVN"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="id" sortKey="3">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div contenteditable="false" style="height: 100%; width: 100%">
+								<div class="3C6C8330-5EA9-11DB-B131-A25AC51C7F82">
+									<div>
+										<div contenteditable="false" style="height: 100%; width: 100%">
+											<div>
+												<p>
+													<u>
+														<b>Model Attribute Description</b>
+													</u>
+												</p>
+												<p>The HL7 attribute <b>id</b> uses an identifier to identify each unique instance of  a parent clinical document.</p>
+												<p/>
+												<p>
+													<u>
+														<b>Implementation in XML Instance</b>
+													</u>
+												</p>                         The <b>Identifier Global</b> data type flavour is used to carry the  identifier in the XML element <b>id</b> as follows:                                                      <div style="height: 100%; width: 100%">
+													<div>
+														<ul>
+															<li>The XML attribute <b>root</b> shall contain a DCE UUID of the document being replaced.                                                                                                </li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="id" className="Act" staticModelDerivationId="1"/>
+				<type name="II" typeSpecialisation="II.NPfIT.uuid.mandatory"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="code" sortKey="4">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<div>The HL7 attribute code uses a code from any vocabulary to describe the type of CDA document.<br/>There are three possible representations for this attribute:</div>
+								<div>
+									<ul>
+										<li>A single code from SNOMED CT</li>
+										<li>A compositional expression consisting of multiple codes from SNOMED CT</li>
+										<li>A single code from a suitable alternative vocabulary</li>
+									</ul>
+								</div>Note: the vocabulary contains additional guidance for the use of this attribute with SNOMED CT<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>
+								<p>Integrated Urgent Care will use a single SNOMED CT code to represent an Integrated Urgent Care Report <br/>
+								</p>
+								<p>The <b>Coded Value</b> (CV) data type shall be used to carry this information  in the XML element <b>code</b> as follows:                         </p>
+								<ul>
+									<li>Th<i>e </i>XML attribute <b>code</b> shall contain the value "<b>
+											<font color="#ff0000">1066271000000101</font>
+										</b>"                                                                                                           </li>
+									<li>The XML attribute <b>codeSystem</b> shall contain the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.15</b>
+										</font>"</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="code" className="Act" staticModelDerivationId="1"/>
+				<type name="CV"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="CDADocumentTypeSnCT"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Component">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.87" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="8.68" y="6.2035"/>
+					<size height="0.43611" width="2.61105"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000052#Act</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.254" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="9.6" y="5.34443"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.87">
+								<position x="10.16819" y="5.50832"/>
+								<graphEdge>
+									<anchor>
+										<position x="10.05975" y="6.20351"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>This class is a component of relationship it is used to link the document header to the </b>
+							<b>EncompassingEncounter </b>
+							<b>that the CDA document is documenting. <br/>
+							</b>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="COMP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a component.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>COMP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="COMP"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template7">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="false" shapeId="Sheet.93" shapeTemplate="Act">
+					<position x="11.41605" y="6.03193"/>
+					<size height="0.75" width="1.4929"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ActClass"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ActMood"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="StructuredBody">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" shapeId="Sheet.97" shapeTemplate="Act">
+					<position x="11.24915" y="9.33055"/>
+					<size height="0.75" width="1.4017"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<strong>The StructuredBody represents a CDA document body that is comprised of one or more document sections.</strong>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" fixedValue="DOCBODY" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div class="9DB41B10-5EA6-11DB-B0AE-A25AC51C7F82">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>classCode</b> uses a code to describe this class as a clinical document body.<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                          The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+									<b>DOCBODY</b>
+								</font>".                 <br/>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="DOCBODY"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="EVN" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="2" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div class="E860D0D0-5EA7-11DB-B0DC-A25AC51C7F82">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>moodCode</b> uses a code to describe this class as a clinical document body event<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                         The XML attribute <b>moodCode</b> is fixed to "<font color="#ff0000">
+									<b>EVN</b>
+								</font>".                                   </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="EVN"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Component4">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Right" shapeId="Sheet.101" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="12.65085" y="9.46056"/>
+					<size height="0.43611" width="2.33734"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<b>This class is a component of a section (a section the nests within another section).</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" fixedValue="COMP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a component.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>COMP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="COMP"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="true" fixedValue="true" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextConductionInd" sortKey="4" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description  </b>
+								</u>
+								<br/>
+							</p>
+							<p>The HL7 attribute <b>contextConductionInd </b>uses a Boolean value (true or false) to determine whether information associated with the parent section is conducted across                      to the child section (also associated with the child section).                                       </p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance  </b>
+								</u>
+								<br/>
+							</p>   The XML attribute <b>contextConductionInd</b> is fixed to "<font color="#ff0000">
+								<b>true</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextConductionInd" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="BL"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Component5">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Right" shapeId="Sheet.107" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="8.68" y="9.49108"/>
+					<size height="0.43611" width="2.56915"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>This class is a component that connects the document header to the structured body. <br/>
+							</b>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" fixedValue="COMP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a component.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>COMP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="COMP"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="true" fixedValue="true" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextConductionInd" sortKey="4" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description  </b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 attribute <b>contextConductionInd </b>uses a Boolean value (true or false) to determine whether information associated with the document header is conducted across                      to the structured body (also associated with the structured body).                                       </p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance  </b>
+									</u>
+									<br/>
+								</p>   The XML attribute <b>contextConductionInd</b> is fixed to "<font color="#ff0000">
+									<b>true</b>
+								</font>".                                 </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextConductionInd" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="BL"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="EncompassingEncounter">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="false" nodeOrientation="Portrait" shapeId="Sheet.113" shapeTemplate="Choice">
+					<position x="11.29105" y="5.78193"/>
+					<size height="1.125" width="1.8179"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<strong>An abstract placeholder for the templates of an Encompassing encounter.<br/>
+							</strong>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template7">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.93">
+						<position x="11.41605" y="6.03193"/>
+						<size height="0.75" width="1.4929"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the templates for an encompassing encounter.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Component3_1">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Right" shapeId="Sheet.115" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="16.61181" y="11.18538"/>
+					<size height="0.56944" width="2.48919"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000040#Section</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.258" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="16.77759" y="11.95278"/>
+							<size width="1.22241" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.115">
+								<position x="17.3888" y="12.11667"/>
+								<graphEdge>
+									<anchor>
+										<position x="17.80618" y="11.75483"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<b>This class is a component. It links the classification section to the text sections. <br/>
+						</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<div contenteditable="false" style="height: 100%; width: 100%">
+									<div style="height: 100%; width: 100%">
+										<div>
+											<p>
+												<u>
+													<b>Model Attribute Description</b>
+												</u>
+												<br/>
+											</p>
+											<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                                         </p>
+											<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+											</p>
+											<p>
+												<br/>
+												<u>
+													<b>Implementation in XML Instance</b>
+												</u>
+											</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                                         <ul>
+												<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+														<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+													</font>"                                                                                                                </li>
+												<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.                            </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="COMP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a component.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>COMP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="COMP"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="true" fixedValue="true" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextConductionInd" sortKey="4" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description  </b>
+								</u>
+								<br/>
+							</p>
+							<p>The HL7 attribute <b>contextConductionInd </b>uses a Boolean value (true or false) to determine whether information associated with the parent section is conducted across                      to the child section (also associated with the child section).                    </p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance  </b>
+								</u>
+								<br/>
+							</p>  The XML attribute <b>contextConductionInd</b> is fixed to "<font color="#ff0000">
+								<b>true</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextConductionInd" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="BL"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="SectionChoice">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="false" nodeOrientation="Portrait" shapeId="Sheet.121" shapeTemplate="Choice">
+					<position x="19.101" y="10.88055"/>
+					<size height="1.126" width="2.099"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<div>
+							<b>An abstract placeholder for the templates of a section.</b>
+						</div>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template9">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.123">
+						<position x="19.226" y="11.13055"/>
+						<size height="0.75" width="1.77401"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the choice of section templates.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template9">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="false" shapeId="Sheet.123" shapeTemplate="Act">
+					<position x="19.226" y="11.13055"/>
+					<size height="0.75" width="1.77401"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ActClass"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ActMood"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="ClassificationSection">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="false" isWidthAutoSize="false" shapeId="Sheet.127" shapeTemplate="Act">
+					<position x="14.98819" y="8.61667"/>
+					<size height="3.2" width="1.62362"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>A section which is not rendered but  is used to hold the coded entries and CRE classification  in one place for ease of processing. </b>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" fixedValue="DOCSECT" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p/>
+							<div contenteditable="false" style="height: 100%; width: 100%">
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+								</p>
+								<p>The HL7 attribute <b>classCode</b> uses a code to describe this class document section.<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+									<b>DOCSECT</b>
+								</font>".                </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="DOCSECT"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="EVN" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="2" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<div contenteditable="false" style="height: 100%; width: 100%">
+								<p>The HL7 attribute <b>moodCode</b> uses a code to describe this class as a document event.<br/>
+								</p>
+								<p>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+									<b>EVN</b>
+								</font>".                </div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="EVN"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="id" sortKey="3">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>id</b> uses an identifier to identify each instance of a classification section.                      </p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                          The <b>Identifier Global</b> data type flavour is used to carry the  identifier in the XML element <b>id</b> as follows:                                                                                                        <ul>
+								<li>The XML attribute <b>root</b> shall contain a DCE UUID.                                                        </li>
+							</ul>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="id" className="Act" staticModelDerivationId="1"/>
+				<type name="II" typeSpecialisation="II.NPfIT.uuid.mandatory"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Informant">
+			<derivationSupplier className="Participation" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.131" shapeTemplate="Participation" textWrappingWidth="66.0">
+					<position x="2.21848" y="9.75457"/>
+					<size height="0.56944" width="3.37616"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000085#Role</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.262" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="3.8" y="10.45277"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.131">
+								<position x="4.3682" y="10.61666"/>
+								<graphEdge>
+									<anchor>
+										<position x="3.96906" y="10.32402"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>A class which is a participation of informant. </b>
+						</p>
+						<p>
+							<b>An informant is a person who informed the author about information contained in the CDA document.</b>
+							<br/>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="Participation" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="INF" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as an informant participation.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+								<b>INF</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="INF"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="OP" fixedValue="OP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextControlCode" sortKey="3" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description  </b>
+								</u>
+								<br/>
+							</p>
+							<p>The HL7 attribute <b>contextConductionCode </b>uses a set of codes from the HL7 vocabulary <b>ContextControl</b>  to determine whether participations associated with the parent section  is conducted across                            to                         the child section (also associated with the  child section). This set of codes also determine how these  participations conduct.                                               </p>
+							<p>The conduction can only take place if the <b>contextConductionInd</b> is set to "<font color="#ff0000">
+									<b>true</b>
+								</font>".                       </p>
+							<p>The value of this attribute is fixed in the HL7 model to "<font color="#ff0000">
+									<b>OP</b>
+								</font>":                       </p>
+							<ul>
+								<li>"<font color="#ff0000">
+										<b>O</b>
+									</font>" (Overriding)- the custodian replaces any custodian that has been conducted from any previous acts.                                                </li>
+								<li>"<font color="#ff0000">
+										<b>P</b>
+									</font>"   (Propagating)- the custodian is conducted to all child acts where the <b>contextConductionInd</b> is set                      to  "<font color="#ff0000">
+										<b>true</b>
+									</font>".                         </li>
+							</ul>
+							<p>
+								<u>
+									<b>Implementation in XML Instance  </b>
+								</u>
+								<br/>
+							</p>  The XML attribute <b>contextControlCode</b> shall contain the fixed value "<font color="#ff0000">
+								<b>OP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextControlCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ContextControl"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="InformantChoice">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.137" shapeTemplate="Choice">
+					<position x="0.55735" y="9.68056"/>
+					<size height="1.0" width="1.66114"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<strong>An abstract placeholder for the templates of an informant<br/>
+						</strong>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template8">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.139">
+						<position x="0.68235" y="9.93056"/>
+						<size height="0.5" width="1.41114"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to templates for an informant.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template8">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" shapeId="Sheet.139" shapeTemplate="Role">
+					<position x="0.68235" y="9.93056"/>
+					<size height="0.5" width="1.41114"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Role" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RoleClass"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="DocumentationOf">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Right" shapeId="Sheet.149" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="8.68" y="2.65387"/>
+					<size height="0.43611" width="2.02"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000050#Act</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.266" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="8.86361" y="2.05278"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.149">
+								<position x="9.4318" y="2.21667"/>
+								<graphEdge>
+									<anchor>
+										<position x="9.63797" y="2.65387"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<b>This class is a documentation of relationship. It is used to link the document header to the Service Event being documented in the CDA document.</b>
+						<br/>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="DOC" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>classCode</b> uses a code to describe this class as a document class.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+								<b>DOC</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="DOC"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template12">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" shapeId="Sheet.155" shapeTemplate="Act">
+					<position x="10.825" y="2.66806"/>
+					<size height="0.75" width="1.25"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ACT"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="2" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="EVN"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Authorization">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Right" shapeId="Sheet.159" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="8.68" y="4.21146"/>
+					<size height="0.43611" width="2.35792"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000051#Act</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.270" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="9.0" y="3.38056"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.159">
+								<position x="9.56819" y="3.54445"/>
+								<graphEdge>
+									<anchor>
+										<position x="9.80565" y="4.21147"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<b>Details of the authorisation associated with the CDA document </b>
+						<br/>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="AUTH" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as one of authorization.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>AUTH</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="AUTH"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template13">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" shapeId="Sheet.165" shapeTemplate="Act">
+					<position x="11.16292" y="4.16806"/>
+					<size height="0.75" width="1.25"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ACT"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="2" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="EVN"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="ServiceEvent">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.169" shapeTemplate="Choice">
+					<position x="10.7" y="2.41806"/>
+					<size height="1.125" width="1.5"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<b>An abstract placeholder for the templates of a service event.<br/>
+						</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template12">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.155">
+						<position x="10.825" y="2.66806"/>
+						<size height="0.75" width="1.25"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to choice of service event templates.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Consent">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.171" shapeTemplate="Choice">
+					<position x="11.03792" y="3.91806"/>
+					<size height="1.125" width="1.5"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<b>An abstract placeholder for the templates of consent<br/>
+						</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template13">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.165">
+						<position x="11.16292" y="4.16806"/>
+						<size height="0.75" width="1.25"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the templates for consent.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Component2">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Right" shapeId="Sheet.173" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="16.61181" y="8.73013"/>
+					<size height="0.56944" width="2.38819"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000065#Section</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.274" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="17.08879" y="7.79722"/>
+							<size width="1.22241" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.173">
+								<position x="17.7" y="7.96111"/>
+								<graphEdge>
+									<anchor>
+										<position x="17.7434" y="8.73014"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>This class is an entry.</b>
+						</p>
+						<p>
+							<b>It links the classification section to the component coded entries.  </b>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+								<br/>
+							</p>
+							<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+							<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+							</p>
+							<p>
+								<br/>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+								<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+										<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+									</font>"                                                                                    </li>
+								<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+							</ul>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" fixedValue="COMP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe this class as a component.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>COMP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="COMP"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="true" fixedValue="true" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextConductionInd" sortKey="4" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description  </b>
+								</u>
+								<br/>
+							</p>
+							<p>The HL7 attribute <b>contextConductionInd </b>uses a Boolean value (true or false) to determine whether information associated with the parent section is conducted across                      to the child section (also associated with the child section).                                       </p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance  </b>
+								</u>
+								<br/>
+							</p>  The XML attribute <b>contextConductionInd</b> is fixed to "<font color="#ff0000">
+								<b>true</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextConductionInd" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="BL"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" shapeId="Sheet.179" shapeTemplate="Act">
+					<position x="19.125" y="8.66806"/>
+					<size height="0.75" width="1.36763"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ActClass"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="moodCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="moodCode" className="Act" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ActMood"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="CodedEntry">
+			<derivationSupplier className="Act" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.183" shapeTemplate="Choice">
+					<position x="19.0" y="8.41806"/>
+					<size height="1.125" width="1.61763"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<b>An abstract placeholder for the templates of a coded entry.<br/>
+						</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.179">
+						<position x="19.125" y="8.66806"/>
+						<size height="0.75" width="1.36763"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="Participant">
+			<derivationSupplier className="Participation" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Left" shapeId="Sheet.185" shapeTemplate="Participation" textWrappingWidth="66.0">
+					<position x="2.26113" y="10.92916"/>
+					<size height="0.70278" width="3.33351"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<constraint name="contentId">
+					<text>
+						<p>NPFIT-000086#Role</p>
+					</text>
+					<graphicRepresentation>
+						<graphElement shapeId="Sheet.278" containerDiagramName="Main" isWidthAutoSize="true" isHeightAutoSize="true">
+							<position x="3.6318" y="12.01666"/>
+							<size width="1.13639" height="0.32778"/>
+							<anchorage connectToShapeId="Sheet.185">
+								<position x="4.2" y="12.18055"/>
+								<graphEdge>
+									<anchor>
+										<position x="3.99039" y="11.63193"/>
+									</anchor>
+								</graphEdge>
+							</anchorage>
+						</graphElement>
+					</graphicRepresentation>
+				</constraint>
+				<otherAnnotation type="html">
+					<text>
+						<p>
+							<b>A class which is for all other participants associated with the CDA document not covered by a participation specifically modelled</b>.</p>
+						<p>
+							<b>Participants are people, organisations or devices that are involved in some way with the CDA document. </b>
+							<br/>
+						</p>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contentId" sortKey="0">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<div>
+								<p>
+									<u>
+										<b>Model Attribute Description</b>
+									</u>
+									<br/>
+								</p>
+								<p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward  pointing identifier for the template which constrains                                       the classes and attributes which follow, for NHS use.                                                </p>
+								<p>The  attribute is intended simply as a structural navigational aid and  should not be relied upon as an indicator of semantic                            meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+								</p>
+								<p>
+									<br/>
+									<u>
+										<b>Implementation in XML Instance</b>
+									</u>
+								</p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                <ul>
+									<li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+											<b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+										</font>"                                                                                    </li>
+									<li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.</li>
+								</ul>
+							</div>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contentId" className="Participation" staticModelDerivationId="1"/>
+				<type name="II"/>
+			</attribute>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code from the HL7 vocabulary <b>ParticipationType</b> to identify the type of participation.                                         </p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>
+							<p>                         The XML attribute <b>typeCode </b>shall contain a code from the HL7 vocabulary <b>ParticipationType,</b> The recommended codes to use for NHS use are listed below:</p>
+							<table align="center" border="1" width="90%">
+								<tbody>
+									<tr>
+										<th>Code <br/>
+										</th>
+										<th>Display name <br/>
+										</th>
+										<th>Definition <br/>
+										</th>
+									</tr>
+									<tr>
+										<td>
+											<b>REFT</b>
+											<br type="_moz"/>
+										</td>
+										<td> Referred to<br type="_moz"/>
+										</td>
+										<td>                                   A "referred to" is a participant that receives a patient referral.</td>
+									</tr>
+								</tbody>
+							</table>
+							<p/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ParticipationType"/>
+			</attribute>
+			<attribute isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="0" name="functionCode" sortKey="2">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description  </b>
+								</u>
+								<br/>
+							</p>
+							<p>The HL7 attribute <b>functionCode</b> uses a code from the HL7 vocabulary <b>ParticipationFunction</b> or an alternative vocabulary to describe the function of the participant.<br/>
+							</p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>
+							<p>The  <b>Coded Plain</b> flavour of <b>Coded with Equivalents</b> (CE) data type shall be used to carry this information in the XML element <b>functionCode</b> as  follows:                   </p>
+							<ul>
+								<li>The  XML attribute <b>code </b>shall contain a code for the HL7 vocabulary <b>ParticipationFunction</b>
+								</li>
+								<li>The  XML attribute <b>codeSystem </b>shall contain the OID "<font color="#ff0000">
+										<b>2.16.840.1.113883.5.88</b>
+									</font>"                      </li>
+								<li>The  XML attribute <b>displayName </b>shall contain a description associated with the code.                      </li>
+							</ul>
+							<p>The recommended values for <b>functionCode</b> for NHS USE are listed below: <br/>
+							</p>
+							<table align="center" border="1" width="90%">
+								<tbody>
+									<tr>
+										<th>Code</th>
+										<th>Display name</th>
+										<th>Definition</th>
+									</tr>
+									<tr>
+										<td>
+											<b>ADMPHYS</b>
+										</td>
+										<td>admitting physician</td>
+										<td>A physician who admitted a patient to a hospital or other care unit that is the context of this service.</td>
+									</tr>
+									<tr>
+										<td>
+											<b>ANEST</b>
+										</td>
+										<td>anaesthetist</td>
+										<td>In a typical anaesthesia setting an anaesthesiologist or anaesthesia  		resident in charge of the anaesthesia and life support, but only a  		witness to the surgical procedure itself. To clarify responsibilities  		anaesthesia should always be represented as a separate service related to  		the surgery.  </td>
+									</tr>
+									<tr>
+										<td>
+											<b>ANRS</b>
+										</td>
+										<td>anaesthesia nurse</td>
+										<td>In a typical anaesthesia setting the nurse principally assisting the  		anaesthesiologist during the critical periods.</td>
+									</tr>
+									<tr>
+										<td>
+											<b>ATTPHYS</b>
+										</td>
+										<td>attending physician</td>
+										<td>A physician who is primarily responsible for a patient during the  		hospitalization, which is the context of the service.</td>
+									</tr>
+									<tr>
+										<td>
+											<b>DISPHYS</b>
+										</td>
+										<td>discharging physician</td>
+										<td>A physician who discharged a patient from a hospital or other care unit  		that is the context of this service. </td>
+									</tr>
+									<tr>
+										<td>
+											<b>FASST</b>
+										</td>
+										<td>first assistant surgeon </td>
+										<td>In a typical surgery setting the assistant facing the primary surgeon.  		The first assistant performs parts of the operation and assists in  		others (e.g., incision, approach, electrocoutering, ligatures, sutures). 		</td>
+									</tr>
+									<tr>
+										<td>
+											<b>MDWF</b>
+										</td>
+										<td>midwife</td>
+										<td>A person (usually female) helping a woman deliver a baby.  		Responsibilities vary locally, ranging from a mere optional assistant to  		a full required participant, responsible for (normal) births and pre-  		and post-natal care for both mother and baby. </td>
+									</tr>
+									<tr>
+										<td>
+											<b>NASST </b>
+										</td>
+										<td>  		 		  		nurse assistant </td>
+										<td>  		 		  		In a typical surgery setting the non-sterile nurse handles material  		supply from the stock, forwards specimen to pathology, and helps with  		other non-sterile tasks (e.g., phone calls, etc.).  </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		PCP </b>
+										</td>
+										<td>  		 		  		primary care physician </td>
+										<td>  		 		  		The healthcare provider that holds primary responsibility for the  		overall care of a patient. </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		PRISURG </b>
+										</td>
+										<td>  		 		  		primary surgeon </td>
+										<td>  		 		  		In a typical surgery setting the primary performing surgeon. </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		RNDPHYS </b>
+										</td>
+										<td>  		 		  		rounding physician </td>
+										<td>  		 		  		A physician who made rounds on a patient in a hospital or other care  		center. </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		SASST </b>
+										</td>
+										<td>  		 		  		second assistant surgeon </td>
+										<td>  		 		  		In a typical surgery setting the assistant who primarily holds the  		hooks. </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		SNRS </b>
+										</td>
+										<td>  		 		  		scrub nurse </td>
+										<td>  		 		  		In a typical surgery setting the nurse in charge of the instrumentation. </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		TASST </b>
+										</td>
+										<td>  		 		  		third assistant </td>
+										<td>  		  		In a typical surgery setting there is rarely a third assistant (e.g., in  		some Hip operations the third assistant postures the affected leg). 		 </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		AUCG </b>
+										</td>
+										<td>  		 		  		caregiver information receiver </td>
+										<td>  		 		  		Caregiver authorized to receive patient health information.  </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		AULR </b>
+										</td>
+										<td> 		 		  		legitimate relationship information receiver </td>
+										<td>  		 		  		Provider with legitimate relationship authorized to receive patient  		health information.  </td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		AUTM </b>
+										</td>
+										<td>  		 		  		care team information receiver </td>
+										<td>  		 		Description:  Member  		of care team authorized to receive patient health information.   		</td>
+									</tr>
+									<tr>
+										<td>
+											<b>  		 		AUWA </b>
+										</td>
+										<td>  		 		  		work area information receiver </td>
+										<td>  	 		  		Entities within specified work area authorized to receive patient health  		information.  </td>
+									</tr>
+								</tbody>
+							</table>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="functionCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CE"/>
+				<supplierDomainSpecification codingStrength="CWE" domainName="ParticipationFunction"/>
+			</attribute>
+			<attribute conformance="R" defaultValue="OP" fixedValue="OP" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="contextControlCode" sortKey="3" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description  </b>
+								</u>
+								<br/>
+							</p>
+							<p>The HL7 attribute <b>contextConductionCode </b>uses a set of codes from the HL7 vocabulary <b>ContextControl</b>  to determine whether participations associated with the parent section  is conducted across                            to                         the child section (also associated with the  child section). This set of codes also determine how these  participations conduct.                                               </p>
+							<p>The conduction can only take place if the <b>contextConductionInd</b> is set to "<font color="#ff0000">
+									<b>true</b>
+								</font>".                       </p>
+							<p>The value of this attribute is fixed in the HL7 model to "<font color="#ff0000">
+									<b>OP</b>
+								</font>":                       </p>
+							<ul>
+								<li>"<font color="#ff0000">
+										<b>O</b>
+									</font>" (Overriding)- the participation replaces any  that has been conducted from any previous acts.                                                </li>
+								<li>"<font color="#ff0000">
+										<b>P</b>
+									</font>"   (Propagating)- the participation is conducted to all child acts where the <b>contextConductionInd</b> is set                      to  "<font color="#ff0000">
+										<b>true</b>
+									</font>".                         </li>
+							</ul>
+							<p>
+								<u>
+									<b>Implementation in XML Instance  </b>
+								</u>
+								<br/>
+							</p>  The XML attribute <b>contextControlCode</b> shall contain the fixed value "<font color="#ff0000">
+								<b>OP</b>
+							</font>".</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="contextControlCode" className="Participation" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="ContextControl"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="ParticipantChoice">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" nodeOrientation="Portrait" shapeId="Sheet.191" shapeTemplate="Choice">
+					<position x="0.6" y="10.98055"/>
+					<size height="1.0" width="1.66114"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<b>An abstract placeholder for the templates of a participant.<br/>
+						</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<specializationChild childClassName="Template14">
+				<graphicRepresentation>
+					<graphElement containerDiagramName="Main" shapeId="Sheet.193">
+						<position x="0.725" y="11.23055"/>
+						<size height="0.5" width="1.41114"/>
+					</graphElement>
+				</graphicRepresentation>
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the choice of participant templates.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+			</specializationChild>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="true" name="Template14">
+			<derivationSupplier className="Role" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" isHeightAutoSize="true" isWidthAutoSize="true" shapeId="Sheet.193" shapeTemplate="Role">
+					<position x="0.725" y="11.23055"/>
+					<size height="0.5" width="1.41114"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text/>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classCode" sortKey="0" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="classCode" className="Role" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RoleClass"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedClass>
+		<class isAbstract="false" name="ReplacementOf">
+			<derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+			<graphicRepresentation presentation="HL7">
+				<graphElement containerDiagramName="Main" nodeOrientation="Right" shapeId="Sheet.203" shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+					<position x="8.68" y="1.38002"/>
+					<size height="0.30278" width="2.42"/>
+				</graphElement>
+			</graphicRepresentation>
+			<annotations>
+				<otherAnnotation type="html">
+					<text>
+						<b>This class is a related document relationship it links the current document to a  related CDA document.</b>
+					</text>
+				</otherAnnotation>
+			</annotations>
+			<attribute conformance="R" fixedValue="RPLC" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="typeCode" sortKey="1" isStructural="true">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>
+								<u>
+									<b>Model Attribute Description</b>
+								</u>
+							</p>
+							<p>The HL7 attribute <b>typeCode</b> uses a code to describe the type of relationship as one of replacement.                   </p>
+							<p>
+								<u>
+									<b>Implementation in XML Instance</b>
+								</u>
+							</p>                         The XML attribute <b>typeCode</b> is fixed to "<font color="#ff0000">
+								<b>RPLC</b>
+							</font>"<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier attributeName="typeCode" className="ActRelationship" staticModelDerivationId="1"/>
+				<type name="CS"/>
+				<supplierDomainSpecification codingStrength="CNE" domainName="RPLC"/>
+			</attribute>
+		</class>
+	</ownedClass>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.159">
+				<position x="8.68" y="4.42952"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="8.68" y="4.42952"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="*" minimumMultiplicity="0" name="authorization" participantClassName="Authorization">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundRelationship" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="source" className="Authorization" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.39">
+				<position x="5.59464" y="8.98122"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="5.59464" y="8.98122"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="custodian" participantClassName="Custodian">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundParticipation" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="act" className="Custodian" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.131">
+				<position x="5.59464" y="10.0393"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="5.59464" y="10.0393"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="*" minimumMultiplicity="0" name="informant" participantClassName="Informant">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundParticipation" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="act" className="Informant" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.23">
+				<position x="5.59464" y="7.75139"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="5.59464" y="7.75139"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="recordTarget" participantClassName="RecordTarget">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundParticipation" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="act" className="RecordTarget" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.17">
+				<position x="5.59464" y="5.8118"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="5.59464" y="5.8118"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="*" minimumMultiplicity="1" name="author" participantClassName="Author">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundParticipation" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="act" className="Author" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.11">
+				<position x="5.59464" y="1.85744"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="5.59464" y="1.85744"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="*" minimumMultiplicity="1" name="informationRecipient" participantClassName="PrimaryInformationRecipient">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundParticipation" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="act" className="PrimaryInformationRecipient" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.107">
+				<position x="8.68" y="9.70914"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="8.68" y="9.70914"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="component" participantClassName="Component5">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundRelationship" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="source" className="Component5" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.5">
+				<position x="5.59464" y="3.72294"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="5.59464" y="3.72294"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="*" minimumMultiplicity="0" name="tracker" participantClassName="Tracker">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundParticipation" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="act" className="Tracker" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.87">
+				<position x="8.68" y="6.42156"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="8.68" y="6.42156"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="componentOf" participantClassName="Component">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="inboundRelationship" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="target" className="Component" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.149">
+				<position x="8.68" y="2.87193"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="8.68" y="2.87193"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="*" minimumMultiplicity="0" name="documentationOf" participantClassName="DocumentationOf">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundRelationship" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="source" className="DocumentationOf" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.185">
+				<position x="5.59464" y="11.28055"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="5.59464" y="11.28055"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="*" minimumMultiplicity="0" name="participant" participantClassName="Participant">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundParticipation" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="act" className="Participant" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.1" containerDiagramName="Main" shapeId="Sheet.203">
+				<position x="8.68" y="1.53141"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.1">
+						<position x="8.68" y="1.53141"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="0" name="relatedDocument" participantClassName="ReplacementOf">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundRelationship" className="ClinicalDocument" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClinicalDocument">
+				<derivationSupplier associationEndName="source" className="ReplacementOf" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.67" containerDiagramName="Main" shapeId="Sheet.5">
+				<position x="3.97348" y="3.72294"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.67">
+						<position x="3.97348" y="3.72294"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="1" name="participant" participantClassName="InformationRecipientChoice">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>A link to the choice of tracker templates.</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="role" className="Tracker" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template1" traversalName="participantTemplate1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Tracker">
+				<derivationSupplier associationEndName="participation" className="InformationRecipientChoice" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.67" containerDiagramName="Main" shapeId="Sheet.11">
+				<position x="3.97348" y="1.85744"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.67">
+						<position x="3.97348" y="1.85744"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="participant" participantClassName="InformationRecipientChoice">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>A link to the choice of primary information recipient templates.</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="role" className="PrimaryInformationRecipient" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template1" traversalName="participantTemplate1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="PrimaryInformationRecipient">
+				<derivationSupplier associationEndName="participation" className="InformationRecipientChoice" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.79" containerDiagramName="Main" shapeId="Sheet.17">
+				<position x="2.3" y="5.8118"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.79">
+						<position x="2.3" y="5.8118"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="participant" participantClassName="AuthorChoice">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>A link to the choice of author templates.</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="role" className="Author" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template4" traversalName="participantTemplate4"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Author">
+				<derivationSupplier associationEndName="participation" className="AuthorChoice" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.81" containerDiagramName="Main" shapeId="Sheet.23">
+				<position x="2.17348" y="7.75139"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.81">
+						<position x="2.17348" y="7.75139"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="participant" participantClassName="Patient">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>A link to the patient role templates.</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="role" className="RecordTarget" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template5" traversalName="participantTemplate5"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="RecordTarget">
+				<derivationSupplier associationEndName="participation" className="Patient" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.45" containerDiagramName="Main" shapeId="Sheet.39">
+				<position x="2.93696" y="8.98122"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.45">
+						<position x="2.93696" y="8.98122"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="participant" participantClassName="CustodianChoice">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>A link to the custodian templates.</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="role" className="Custodian" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template6" traversalName="participantTemplate6"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Custodian">
+				<derivationSupplier associationEndName="participation" className="CustodianChoice" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.83" containerDiagramName="Main" shapeId="Sheet.203">
+				<position x="11.1" y="1.53141"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.83">
+						<position x="11.1" y="1.53141"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="1" name="priorParentDocument" participantClassName="ParentDocument">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the parent document<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="target" className="ReplacementOf" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ReplacementOf">
+				<derivationSupplier associationEndName="inboundRelationship" className="ParentDocument" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.113" containerDiagramName="Main" shapeId="Sheet.87">
+				<position x="11.29105" y="6.42156"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.113">
+						<position x="11.29105" y="6.42156"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="encompassingEncounter" participantClassName="EncompassingEncounter">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>
+							<p>A link to the Encompassing encounter.<br/>
+							</p>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="source" className="Component" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template7" traversalName="encompassingEncounterTemplate7"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Component">
+				<derivationSupplier associationEndName="outboundRelationship" className="EncompassingEncounter" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.97" containerDiagramName="Main" shapeId="Sheet.101">
+				<position x="12.65085" y="9.67862"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.97">
+						<position x="12.65085" y="9.67862"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="component" participantClassName="Component4">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundRelationship" className="StructuredBody" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="StructuredBody">
+				<derivationSupplier associationEndName="source" className="Component4" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.97" containerDiagramName="Main" shapeId="Sheet.107">
+				<position x="11.24915" y="9.70914"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.97">
+						<position x="11.24915" y="9.70914"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="structuredBody" participantClassName="StructuredBody">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the structured body.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="target" className="Component5" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Component5">
+				<derivationSupplier associationEndName="inboundRelationship" className="StructuredBody" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.127" containerDiagramName="Main" shapeId="Sheet.101">
+				<position x="14.98819" y="9.67862"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.127">
+						<position x="14.98819" y="9.67862"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="classificationSection" participantClassName="ClassificationSection">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the classification section.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="target" className="Component4" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Component4">
+				<derivationSupplier associationEndName="inboundRelationship" className="ClassificationSection" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.127" containerDiagramName="Main" shapeId="Sheet.115">
+				<position x="16.61181" y="11.47011"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.127">
+						<position x="16.61181" y="11.47011"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="*" minimumMultiplicity="1" name="component" participantClassName="Component3_1">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundRelationship" className="ClassificationSection" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClassificationSection">
+				<derivationSupplier associationEndName="source" className="Component3_1" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.121" containerDiagramName="Main" shapeId="Sheet.115">
+				<position x="19.101" y="11.47011"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.121">
+						<position x="19.101" y="11.47011"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection conformance="R" isMandatory="true" maximumMultiplicity="1" minimumMultiplicity="1" name="sectionChoice" participantClassName="SectionChoice">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the choice of section templates.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="target" className="Component3_1" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template9" traversalName="sectionChoiceTemplate9"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Component3_1">
+				<derivationSupplier associationEndName="inboundRelationship" className="SectionChoice" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.127" containerDiagramName="Main" shapeId="Sheet.173">
+				<position x="16.61181" y="9.01486"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.127">
+						<position x="16.61181" y="9.01486"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="*" minimumMultiplicity="0" name="entry" participantClassName="Component2">
+				<annotations>
+					<otherAnnotation type="html">
+						<text/>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="outboundRelationship" className="ClassificationSection" staticModelDerivationId="1"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="ClassificationSection">
+				<derivationSupplier associationEndName="source" className="Component2" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.137" containerDiagramName="Main" shapeId="Sheet.131">
+				<position x="2.21848" y="10.0393"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.137">
+						<position x="2.21848" y="10.0393"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="1" name="participant" participantClassName="InformantChoice">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the choice of informant templates.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="role" className="Informant" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template8" traversalName="participantTemplate8"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Informant">
+				<derivationSupplier associationEndName="participation" className="InformantChoice" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.169" containerDiagramName="Main" shapeId="Sheet.149">
+				<position x="10.7" y="2.87193"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.169">
+						<position x="10.7" y="2.87193"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="1" name="serviceEvent" participantClassName="ServiceEvent">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the service event.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="target" className="DocumentationOf" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template12" traversalName="serviceEventTemplate12"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="DocumentationOf">
+				<derivationSupplier associationEndName="inboundRelationship" className="ServiceEvent" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.171" containerDiagramName="Main" shapeId="Sheet.159">
+				<position x="11.03792" y="4.42952"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.171">
+						<position x="11.03792" y="4.42952"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="1" name="authorizingConsent" participantClassName="Consent">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to details of the consent associated with the CDA document.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="target" className="Authorization" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template13" traversalName="authorizingTemplate13"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Authorization">
+				<derivationSupplier associationEndName="inboundRelationship" className="Consent" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.183" containerDiagramName="Main" shapeId="Sheet.173">
+				<position x="19.0" y="9.01486"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.183">
+						<position x="19.0" y="9.01486"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="1" name="codedEntry" participantClassName="CodedEntry">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the coded entry.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="target" className="Component2" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template" traversalName="codedEntryTemplate"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Component2">
+				<derivationSupplier associationEndName="inboundRelationship" className="CodedEntry" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+	<ownedAssociation>
+		<graphicRepresentation>
+			<graphElement connectToShapeId="Sheet.191" containerDiagramName="Main" shapeId="Sheet.185">
+				<position x="2.26113" y="11.28055"/>
+				<graphEdge>
+					<anchor connectToShapeId="Sheet.191">
+						<position x="2.26113" y="11.28055"/>
+					</anchor>
+				</graphEdge>
+			</graphElement>
+		</graphicRepresentation>
+		<connections>
+			<traversableConnection isMandatory="false" maximumMultiplicity="1" minimumMultiplicity="1" name="participant" participantClassName="ParticipantChoice">
+				<annotations>
+					<otherAnnotation type="html">
+						<text>A link to the choice of participant templates.<br/>
+						</text>
+					</otherAnnotation>
+				</annotations>
+				<derivationSupplier associationEndName="role" className="Participant" staticModelDerivationId="1"/>
+				<participantClassSpecialization className="Template14" traversalName="participantTemplate14"/>
+			</traversableConnection>
+			<nonTraversableConnection participantClassName="Participant">
+				<derivationSupplier associationEndName="participation" className="ParticipantChoice" staticModelDerivationId="1"/>
+			</nonTraversableConnection>
+		</connections>
+	</ownedAssociation>
+</staticModel>

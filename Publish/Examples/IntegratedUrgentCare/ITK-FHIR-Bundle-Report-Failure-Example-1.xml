@@ -1,0 +1,67 @@
+<!-- FHIR Responses are packaged in a Bundle resource -->
+<Bundle xmlns="http://hl7.org/fhir">
+	<!-- The logical id of the resource.  This is system generated id -->
+	<id value="1727d702-6c9a-4bb9-91a2-4f8034655635"/>
+	<meta>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/itk-bundle-1"/>
+	</meta>
+	<type value="message"/><!--FIXED to message-->
+	<entry>
+		<resource>
+			<MessageHeader>
+				<id value="ea7221b8-3cc0-4b11-bc95-585b056b5427"/>
+				<meta>
+					<profile value="https://fhir.nhs.uk/StructureDefinition/itk-messageheader-1"/>
+				</meta>
+				<timestamp value="2012-01-04T09:10:14Z"/>
+				<event>
+				<!-- Code that identifies the event this message represents -->
+					<system value="https://fhir.nhs.uk/ValueSet/itk-message-event-1"/><!-- FIXED to this valueset location. -->
+					<code value="ITK002"/><!-- FIXED to ITK002 -->
+					<display value="Business layer validation check"/><!-- FIXED to 'Business layer validation check' -->
+				</event>
+				<response>
+				<!-- Information about the message that this message is a response to. Only present if this message is a response.-->
+				<!-- The id of the message that this message is a response to. -->				
+					<identifier value="A709A442-3CF4-476E-8377-376500E829C9"/>
+					<!-- Code that identifies the type of response to the message - whether it was successful or not, and whether it should be re-sent or not. -->
+					<code value="fatal-error"/>
+					<details>
+						<reference value="OperationOutcome/f19e4165-b379-4377-ad43-df65f609eba5"/>
+					</details>
+				</response>
+				<source>
+				<!-- The source application from which this message originated. -->			
+					<endpoint value="urn:nhs-uk:addressing:ods:EM396"/>
+				</source>
+				<destination>
+				<!-- The destination application which the message is intended for. -->
+					<endpoint value="urn:nhs-uk:addressing:ods:5L399:445510770"/>
+				</destination>
+			</MessageHeader>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<OperationOutcome><!-- This resource displays the business acknowledgement message -->
+				<id value="f19e4165-b379-4377-ad43-df65f609eba5"/>
+				<meta>
+					<profile value="https://fhir.nhs.uk/StructureDefinition/itk-businessack-operationoutcome-1"/>
+				</meta>
+				<issue>
+					<severity value="error"/><!-- severity to be selected from valueset http://hl7.org/fhir/ValueSet/issue-severity -->
+					<code value="informational"/><!-- To be selected from the valueset http://hl7.org/fhir/ValueSet/issue-type -->
+					<details>
+						<coding>
+						<!-- The following information can be populated from the local valueset from 
+						https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1 -->
+							<system value="https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1"/><!-- FIXED to  https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1-->
+							<code value="41002"/>
+							<display value="Patient not known here. (aka Patient record not present in system)"/>
+						</coding>
+					</details>
+				</issue>
+			</OperationOutcome>
+		</resource>
+	</entry>
+</Bundle>

@@ -1,0 +1,28 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2017-01-18T23:00:00+00:00"
+  },
+  "url": "https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1",
+  "name": "Business Acknowledgement",
+  "status": "active",
+  "description": "A valueset to describe the business ackowledgements returned to the sender.",
+  "copyright": "Copyright © 2016 Health and Social Care Information Centre",
+  "codeSystem": {
+    "system": "https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1",
+    "concept": [
+      {
+        "code": "41001",
+        "display": "Patient known here. (e.g. Patient is registered here)"
+      },
+      {
+        "code": "41002",
+        "display": "Patient not known here. (aka ‘patient record not present in system’)"
+      },
+      {
+        "code": "41022",
+        "display": "Patient no longer at this clinical setting"
+      }
+    ]
+  }
+}

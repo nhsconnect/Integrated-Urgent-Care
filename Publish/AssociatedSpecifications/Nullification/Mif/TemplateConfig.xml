@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Templates version="6.0" title="Template configuration file nullification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../dt/TemplateConfig.xsd">
+	<ChangeHistory>
+		<p>Updated for Recipient Templates (NPFIT-800008#Role) to version 2.0, to include RecipientOrganizationUniversal (COCD_TP145203GB03), RecipientPersonUniversal (COCD_TP145202GB02) and RecipientWorkgroupUniversal (COCD_TP145204GB03)</p>
+		<p>Updated for Patient Templates (NPFIT-800019#Role) to version 2.0, to include ChildPatientUniversal (COCD_TP145230GB01)</p>
+		<p>Sixth Version of File</p>
+	</ChangeHistory>
+	<DomainList>
+		<domain id="TEM">Templates</domain>
+		<domain id="NUL">Nullification</domain>		
+	</DomainList>
+	<StatusFlag>
+		<value id="A">Active</value>
+		<value id="D">Deprecated</value>
+		<value id="P">Proposed</value>
+	</StatusFlag>
+	<Template id="NPFIT-800008#Role" version="2.0" status="A">
+		<comments>
+			<font color="black">Recipient Templates</font>
+			<br/>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">When a Sender has access to Spine Directory Services (SDS)  one of the following templates are recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*RecipientEntitySDS (COCD_TP145021UK05)</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*RecipientOrganisation (COCD_TP145017UK03)</font>
+			<br/>
+			<font color="black">When a Sender does not have access to Spine Directory Services (SDS)  one of the following templates are recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*RecipientOrganizationUniversal (COCD_TP145203GB02)</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*RecipientPersonUniversal (COCD_TP145202UK01)</font>
+			<br/>
+			<font color="black">The following templates are deprecated in this constraint  and only included for backwards compatibility with existing systems </font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*RecipientEntitySDS (COCD_TP145021UK04)</font>
+			<br/>
+		</comments>
+			<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145017UK03</id>
+		<id>COCD_TP145021UK04</id>
+		<id>COCD_TP145021UK05</id>		
+		<id>COCD_TP145202GB01</id>
+		<id>COCD_TP145202GB02</id>
+		<id>COCD_TP145203GB02</id>
+		<id>COCD_TP145203GB03</id>
+		<id>COCD_TP145029UK02</id>
+		<id>COCD_TP145204GB02</id>
+		<id>COCD_TP145204GB03</id>
+	</Template>
+	<Template id="NPFIT-800007#Role" version="1.0" status="A">
+		<comments>
+			<font color="black">Author Templates</font>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">When a Sender has access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*AuthorSDS (COCD_TP145001UK03)</font>
+			<br/>
+			<font color="black">When a Sender does not have access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*AuthorPersonUniversal (COCD_TP145200GB01)</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145001UK03</id>
+		<id>COCD_TP145200GB01</id>
+		<id>COCD_TP145207GB01</id>
+		<id>COCD_TP145208GB01</id>
+		<id>COCD_TP145019UK03</id>
+		<id>COCD_TP145031GB02</id>
+		<id>COCD_TP145212GB02</id>
+	</Template>
+	<Template id="NPFIT-800016#Role" version="1.0" status="A">
+		<comments>
+			<font color="black">DataEnterer Templates</font>
+			<br/>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">When a Sender has access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*EntitySDS (COCD_TP145004UK03)</font>
+			<br/>
+			<font color="black">When a Sender does not have access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*PersonUniversal (COCD_TP145205GB01)</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145004UK03</id>
+		<id>COCD_TP145205GB01</id>
+	</Template>
+	<Template id="NPFIT-800019#Role" version="2.0" status="A">
+		<comments>
+			<font color="black">Patient Templates</font>
+			<br/>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">When a Sender has access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*Patient (COCD_TP145020UK03)</font>
+			<br/>
+			<font color="black">When a Sender does not have access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*PatientUniversal (COCD_TP145201GB01)</font>
+			<br/>
+			<br/>
+		<font color="red"><b>When a Sender cannot reliably determine that all recipients can resolve the NHS number of the patient <br/>and retrieve the demographic information from an authoritative source of patient demographics (e.g. PDS, NHAIS), <br/>the following template must be used:</b></font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*PatientUniversal (COCD_TP145201GB01)</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145020UK03</id>
+		<id>COCD_TP145201GB01</id>
+		<id>COCD_TP145230GB01</id>
+	</Template>
+	<Template id="NPFIT-800014#Role" version="1.0" status="A">
+		<comments>
+			<font color="black">Custodian Organisation Templates</font>
+			<br/>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">When a Sender has access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*CustodianUniversal (COCD_TP145018UK03)</font>
+			<br/>
+			<font color="black">When a Sender does not have access to Spine Directory Services (SDS)  one of the following templates is recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*CustodianUniversal (COCD_TP145018UK03)</font>
+			<br/>
+		</comments>
+		<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145018UK03</id>
+	</Template>
+	
+	<Template id="NPFIT-800032#Section" version="1.0" status="A">
+		<comments>
+			<p>CRE type lists</p>
+		</comments>
+		<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146062UK01</id>
+	</Template>
+	<Template id="NPFIT-800001#Section" version="1.0" status="A">
+		<comments>
+			<p>Text Section Templates</p>
+		</comments>
+		<parentModel>		
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146061UK01</id>
+	</Template>	
+		<Template id="NPFIT-000001#Role" version="4.0" status="A">
+		<comments>
+			<p>Text Section Templates</p>
+		</comments>
+		<parentModel>		
+			<domain id="TEM">
+				<id>COCD_TP146061UK01</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145001UK03</id>
+		<id>COCD_TP145200GB01</id>
+		<id>COCD_TP145002UK03</id>
+		<id>COCD_TP145003UK03</id>
+	</Template>	
+	<Template id="NPFIT-800017#Section" version="1.0" status="A">
+		<comments>
+			<p>nullify template</p>
+		</comments>
+		<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP146049UK05</id>
+	</Template>	
+
+	<Template id="NPFIT-800024#Role" version="1.0" status="A">
+		<comments>
+			<font color="black">Authenticator Templates</font>
+			<br/>
+			<b> Template Usage Guidance:</b>
+			<br/>
+			<font color="black">When a Sender has access to Spine Directory Services (SDS)  one of the following templates are recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*EntitySDSWithRequiredRoleProfileId (COCD_TP145022UK02)</font>
+			<br/>
+			<font color="black">When a Sender does not have access to Spine Directory Services (SDS)  one of the following templates are recommended for use:</font>
+			<br/>
+			<font color="white">----</font>
+			<font color="black">*PersonUniversal (COCD_TP145205GB01)</font>
+			<br/>
+		</comments>		
+		<parentModel>
+			<domain id="NUL">
+				<id>POCD_MT130001UK05</id>
+			</domain>
+		</parentModel>
+		<id>COCD_TP145022UK02</id>
+		<id>COCD_TP145205GB01</id>
+	</Template>	
+	
+</Templates>

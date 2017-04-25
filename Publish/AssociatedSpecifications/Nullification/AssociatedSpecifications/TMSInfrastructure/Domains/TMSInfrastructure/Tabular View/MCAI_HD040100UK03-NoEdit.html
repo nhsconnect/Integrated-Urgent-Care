@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml"><head><title>TMS Infrastructure - Tabular View</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><link href="../../../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../../../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">TMS Infrastructure<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>5.7; <b>Status: </b>Final</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../../../index.html">About</a></li><li><a href="../../../Core/changehistory.html">Change History</a></li><li><a href="../../../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../../../Domains/messages.html">Messages</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../../../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../../../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../../../Domains/CMETs/Document files/cmetsusage.html">CMETs Usage</a></li><li><a href="../../../Vocabulary/vocabularyusage.html">Vocabulary Usage</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class="tabularview">
+ <h3>ControlAct Tabular View</h3> 
+ <table cellspacing="0" cellpadding="2" width="1201" class=" table">
+  <tbody>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr>
+    <td><a href="MCAI_RM040000UK03.html"><b>MCAI_RM040000UK03</b></a></td>
+    <td nowrap=""/>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td bgcolor="yellow"><a name="ControlActEvent"> </a><b>ControlActEvent</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#ControlAct;ControlActEvent_c" title="MCAI_HD040100UK03#ControlActEvent_c">
+      <p><b>The Control Act carries administrative information related to the "controlled act" that is being communicated in the message. It is intended that a single Control Act profile is used for the same types of interaction across the domains.</b></p>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr class="hmd">
+    <td align="right"/> 
+    <td><font color="gray"><a name="ControlActEvent">Used by: </a></font></td>
+   </tr>
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>CACT</b>} )<a>{  }</a><b> Fixed="<font color="red">CACT</font>"</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#Act;ControlActEvent/$classCode" title="ControlActEvent.classCode">
+      <p>Indicates that  this is a Control Act.</p>
+      <ul>
+       <li>Fixed value "CACT"</li>
+      </ul>
+     </div></td>
+   </tr>
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>moodCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>EVN</b>} )<a>{  }</a><b> Fixed="<font color="red">EVN</font>"</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#Act;ControlActEvent/$moodCode" title="ControlActEvent.moodCode">
+      <p>Indicates that the control act mood is an event.</p>
+      <ul>
+       <li>Fixed value "EVN"</li>
+      </ul>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%" bgcolor="#d0ffff"><font color="green"><b>[0..1] </b></font><a name="Author"> </a><b>author</b></td>
+    <td>
+     <div id="MCAI_HD040100UK03#Act;/ControlActEvent/author" title="MCAI_HD040100UK03#/ControlActEvent/author">
+      <p><b>A participation referring to a person who is logged in at the time the message is initiated. </b></p>
+      <p><b>The participation is optional. It shall be present when the message is initiated by a person. It shall not be present when the message is automatically initiated by a system. </b></p>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>typeCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>AUT</b>} )<a>{  }</a><b> Fixed="<font color="red">AUT</font>"</b></td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$classCode3" title="MCAI_HD040100UK03#DetectedIssueEvent.classCode">
+      Indicates that the role has author responsibility.
+      <ul>
+       <li>Fixed value: "AUT"</li>
+      </ul>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b><a href="../../CMETs/Tabular View/UKCT_HD120900UK01-NoEdit.html">participant</a></b> <a href="../../CMETs/Tabular View/UKCT_RM120900UK01.html">[CMET: UKCT_MT120901UK01]</a></td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$moodCode3" title="MCAI_HD040100UK03#DetectedIssueEvent.moodCode">
+      NPfIT CMET to identify a person fulfilling a specific role where the Person, Role Profile and Job Role are all mandatory. Full details of the person, role profile and job role are available from SDS.
+      <p>In this context the person is the signed in user for the user session responsible for initiating the message. The person shall be identified by SDS Role Profile ID, SDS User Id and SDS Role Id.</p>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%" bgcolor="#d0ffff"><font color="green"><b>[1..2] </b></font><a name="Author2"> </a><b>author1</b></td>
+    <td>
+     <div id="MCAI_HD040100UK03#Act;/ControlActEvent/author1" title="MCAI_HD040100UK03#/ControlActEvent/author1">
+      <p><b>A participation referring to one or more systems that are involved in the initiation of the message.</b></p>
+      <p><b>One instance of the participation is mandatory and shall carry the accredited service id of the system in use at the time the message is initiated.</b></p>
+      <p><b>One instance of the participation is optional and may carry the workstation id of the system being used by the logged in user at the time the message is initiated</b>.</p>
+     </div></td>
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>typeCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>AUT</b>} )<a>{  }</a><b> Fixed="<font color="red">AUT</font>"</b></td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$classCode2" title="MCAI_HD040100UK03#DetectedIssueEvent.classCode">
+      Indicates that the role has author responsibility.
+      <ul>
+       <li>Fixed value: "AUT"</li>
+      </ul>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b><a href="../../CMETs/Tabular View/UKCT_HD121000UK01-NoEdit.html">participant</a></b> <a href="../../CMETs/Tabular View/UKCT_RM121000UK01.html">[CMET: UKCT_MT121001UK01]</a></td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$moodCode2" title="MCAI_HD040100UK03#DetectedIssueEvent.moodCode">
+      NPfIT CMET to identify a mandatory system which could be software or hardware. Full details of the system are available from SDS.
+      <p>In this context the system is a system in use at the time the message is initiated. This shall be represented by either the SDS Accredited Application Instance Id held in the SDS directory as the Accredited System Identifier or a locally identified workstation id.</p>
+     </div></td> 
+   </tr> 
+   <tr> 
+    <td/> 
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%" bgcolor="#d0ffff"><font color="green"><b>[0..*] </b></font><a name="Reason"> </a><b>reason</b></td>
+    <td>
+     <div id="MCAI_HD040100UK03#Act;/ControlActEvent/reason" title="MCAI_HD040100UK03#/ControlActEvent/reason">
+      <p><b>Identifies the relationship between the control act and the detected issue event.</b></p>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>typeCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>RSON</b>} )<a>{  }</a><b> Fixed="<font color="red">RSON</font>"</b></td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$classCode0" title="MCAI_HD040100UK03#DetectedIssueEvent.classCode">
+      Indicates that this is a reason.
+      <ul>
+       <li>Fixed value: "RSON"</li>
+      </ul>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>justifyingDetectedIssueEvent</b> (<a href="#DetectedIssueEvent"><b>DetectedIssueEvent</b></a>)</td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$moodCode0" title="MCAI_HD040100UK03#DetectedIssueEvent.moodCode">
+      A link to details of the detected issue.
+     </div></td> 
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/> 
+   </tr> 
+   <tr valign="top">
+    <td width="50%" bgcolor="#d0ffff"><font color="green"><b>[0..1] </b></font><a name="Subject"> </a><b>subject</b></td>
+    <td>
+     <div id="MCAI_HD040100UK03#Act;/ControlActEvent/subject" title="MCAI_HD040100UK03#/ControlActEvent/subject">
+      <p><b>Refers to the subject act of the message.</b> </p>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>typeCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>SUBJ</b>} )<a>{  }</a><b> Fixed="<font color="red">SUBJ</font>"</b></td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$classCode1" title="MCAI_HD040100UK03#DetectedIssueEvent.classCode">
+      <p>Indicates that the domain payload entry point act is the subject of the Control Act. </p>
+      <ul>
+       <li>Fixed value "SUBJ"</li>
+      </ul>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>contextConductionInd</b> (<a href="../../../Data Types/datatypes.html#BL"><b>BL</b></a>)</td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$moodCode1" title="MCAI_HD040100UK03#DetectedIssueEvent.moodCode">
+      <p>A value indicating whether any of the other participations, eg. "author", are inherited by the domain payload.  </p> 
+      <p><b><a>N.B. The value attribute has a fixed value of "false" indicating that none of the author participations shall be inherited.</a></b></p>
+     </div></td> 
+   </tr> 
+   <tr bgcolor="gray"> 
+    <td/> 
+   </tr> 
+   <tr> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>act</b> (<a href="#Act"><b>Act</b></a>)</td> 
+    <td width="594"> 
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$code0" title="MCAI_HD040100UK03#DetectedIssueEvent.code">
+      A link to the act that is the entry point into the domain payload.
+     </div></td> 
+   </tr> 
+   <tr bgcolor="black"> 
+    <td/> 
+   </tr> 
+   <tr valign="top">
+    <td bgcolor="yellow"><a name="DetectedIssueEvent"> </a><b>DetectedIssueEvent</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent_c" title="MCAI_HD040100UK03#DetectedIssueEvent_c">
+      <p><b>Details of the business issue or error that has been detected by the receiving system. </b></p>
+      <p><b>A business issue or error is defined as being one that is related to the information conveyed by the message evaluated in context by the processing application.</b> </p>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr class="hmd">
+    <td align="right"/> 
+    <td><font color="gray"><a name="DetectedIssueEvent">Used by: </a></font><a href="#ControlActEvent"><b>ControlActEvent</b></a></td>
+   </tr>
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>ALRT</b>} )<a>{  }</a><b> Fixed="<font color="red">ALRT</font>"</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$classCode" title="MCAI_HD040100UK03#DetectedIssueEvent.classCode">
+      <p>Indicates that the act is an alert.</p>
+      <ul>
+       <li>Fixed value: "ALRT"</li>
+      </ul>
+     </div></td>
+   </tr>
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>moodCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>EVN</b>} )<a>{  }</a><b> Fixed="<font color="red">EVN</font>"</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$moodCode" title="MCAI_HD040100UK03#DetectedIssueEvent.moodCode">
+      <p>Indicates that this is an alert that has occurred.</p>
+      <ul>
+       <li>Fixed value: "EVN"</li>
+      </ul>
+     </div></td>
+   </tr>
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>code</b> (<a href="../../../Data Types/datatypes.html#CD"><b>CD</b></a> {<a> </a><b>CNE</b>:<a href="../../../Vocabulary/ActDetectedIssueCode.html"><b>ActDetectedIssueCode</b></a>} )</td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#Observation;DetectedIssueEvent/$code" title="MCAI_HD040100UK03#DetectedIssueEvent.code">
+      <p>This allows the responding system to record the business issue or error that has been detected.</p>
+      <p>All business issues and errors shall be reported using DetectedIssueEvent.code. The code shall contain a qualifier sub element to indicate the severity of the issue or error. </p>
+      <p>The Coded Qualified datatype flavour shall be used to carry this information as follows:</p>
+      <ul>
+       <li>The <i>code</i> attribute is required and shall contain a value from one of the code systems identified under ActDetectedIssueCode </li>
+       <li>The <i>displayName</i> attribute is optional and may contain the textual description of the code</li>
+       <li>The <i>codeSystem</i> attribute is required and shall contain an OID as appropriate.</li>
+       <li>The <i>originalText</i> sub element is optional and may contain the text used as the basis for the coding </li>
+       <li>The <i>qualifier</i> sub element is required and  shall contain one of the qualifier codes identified under DetectedIssueQualifier together with the appropriate OID.</li>
+      </ul>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td bgcolor="yellow"><a name="Act"> </a><b>Act</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#ActHeir;Act_c" title="MCAI_HD040100UK03#Act_c">
+      <p><b>This class provides the entry point into the domain payload.</b> </p>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+   <tr class="hmd">
+    <td align="right"/> 
+    <td><font color="gray"><a name="Act">Used by: </a></font><a href="#ControlActEvent"><b>ControlActEvent</b></a></td>
+   </tr>
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>ACT</b>} )<a>{  }</a><b> Fixed="<font color="red">ACT</font>"</b></td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#ActHeir;Act/$classCode" title="MCAI_HD040100UK03#Act.classCode">
+      <p>Indicates that the entry point is an act.</p>
+      <ul>
+       <li>Fixed value "ACT"</li>
+      </ul>
+     </div></td>
+   </tr>
+   <tr bgcolor="gray"> 
+    <td/>
+   </tr>
+   <tr valign="top">
+    <td width="50%"><font color="green"><b>[1..1] </b></font><b>moodCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<b>ActMood</b>} )</td> 
+    <td width="594">
+     <div id="MCAI_HD040100UK03#ActHeir;Act/$moodCode" title="MCAI_HD040100UK03#Act.moodCode">
+      <p>Indicates that the act that is the entry point has a mood.</p>
+     </div></td>
+   </tr>
+   <tr bgcolor="black"> 
+    <td/>
+   </tr>
+  </tbody>
+ </table>
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:interoperabilityteam@hscic.gov.uk">Contact Us</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>20-Jan-2012</p></div></div></div></div><script src="../../../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../../../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../../../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

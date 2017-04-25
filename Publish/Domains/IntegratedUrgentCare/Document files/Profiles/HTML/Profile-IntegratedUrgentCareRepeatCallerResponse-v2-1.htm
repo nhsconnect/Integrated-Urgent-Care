@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"><head><title>Integrated Urgent Care - Configuration Profile</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><link href="../../../../../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../../../../../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../../../../../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../../../../../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">Integrated Urgent Care<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>3.0; <b>Status: </b>RC1</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../../../../../index.html">About</a></li><li><a href="../../../../../Core/changehistory.html">Change History</a></li><li><a href="../../../../../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../../../../../Domains/messages.html">Messages</a></li><li><a href="../../../../../Examples/examples.html">Examples</a></li><li><a href="../../../../../AssociatedSpecifications/AssociatedSpecifications.html">Associated Specifications</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../../../../../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../../../../../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../../../../../Domains/Templates/Document files/constraintusage.html">Constraint Usage</a></li><li><a href="../../../../../Domains/Templates/Document files/templateusage.html">Template Usage</a></li><li><a href="../../../../../Domains/profiles.html">Configuration Profiles</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><h3>Configuration Profile</h3><div xmlns="" id="profile"> 
+ <h3>Profile: urn:nhs-en:profile:RepeatCallerResponse-v2-1</h3> 
+ <p>The profile has the following configurable items:</p> 
+ <h3>Message Type</h3> 
+ <table class=" table table-striped table-condensed"> 
+  <thead> 
+   <tr> 
+    <th>Message Name</th> 
+    <th>Message Type OID</th> 
+    <th>Message Identifier</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td>RepeatCallerResponse</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.18.17</td> 
+    <td>PRPA_MT000001GB01</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <h3>Templates</h3> 
+ <table class=" table table-striped table-condensed"> 
+  <thead> 
+   <tr> 
+    <th>Template Identifier</th> 
+    <th>Template Name</th> 
+    <th>Template Scheme</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td>COCD_TP145202GB02</td> 
+    <td>RecipientPersonUniversal</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.18.2</td> 
+   </tr> 
+   <tr> 
+    <td>COCD_TP145208GB01</td> 
+    <td>AuthorNonNamedPersonUniversal</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.18.2</td> 
+   </tr> 
+   <tr> 
+    <td>COCD_TP146050GB01</td> 
+    <td>PermissionToView</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.18.2</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <h3>Vocabularies</h3> 
+ <table class=" table table-striped table-condensed"> 
+  <thead> 
+   <tr> 
+    <th>Vocabulary Name</th> 
+    <th>OID</th> 
+    <th>Version</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td>CDAObservationType</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.17.220</td> 
+    <td>9.0</td> 
+   </tr> 
+   <tr> 
+    <td>CDAOrganizationType</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.17.191</td> 
+    <td>1.0</td> 
+   </tr> 
+   <tr> 
+    <td>JobRoleName</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.17.124</td> 
+    <td>5.0</td> 
+   </tr> 
+   <tr> 
+    <td>NHS111MessageType</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.17.420</td> 
+    <td>1.0</td> 
+   </tr> 
+   <tr> 
+    <td>NHS111RepeatCallerServiceResponseType</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.17.421</td> 
+    <td>1.0</td> 
+   </tr> 
+   <tr> 
+    <td>PermissionToViewOutcome</td> 
+    <td>2.16.840.1.113883.2.1.3.2.4.17.524</td> 
+    <td>1.0</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <h3>TemplateConstraints</h3> 
+ <table class=" table table-striped table-condensed"> 
+  <thead> 
+   <tr> 
+    <th>Template Constraint Name</th> 
+    <th>Version</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td>NPFIT-100007#Act</td> 
+    <td>1.0</td> 
+   </tr> 
+   <tr> 
+    <td>NPFIT-100032#Role</td> 
+    <td>1.0</td> 
+   </tr> 
+   <tr> 
+    <td>NPFIT-100034#Role</td> 
+    <td>1.0</td> 
+   </tr> 
+   <tr> 
+    <td>NPFIT-300007#Act</td> 
+    <td>1.0</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+ <h3>CoreSchemas</h3> 
+ <table class=" table table-striped table-condensed"> 
+  <thead> 
+   <tr> 
+    <th>Core Schema Name</th> 
+    <th>Version</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td>CDAVocab.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>InfVocab.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>datatypes.xsd</td> 
+    <td>1.0</td> 
+   </tr> 
+   <tr> 
+    <td>datatypeflavours.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>infrastructureRoot.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>datatypes-2005.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>NarrativeBlock.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>NHSLocalisation.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>NHSVocab.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>commonInclude.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+   <tr> 
+    <td>voc.xsd</td> 
+    <td>UNDEFINED</td> 
+   </tr> 
+  </tbody> 
+ </table>  
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:information.standards@nhs.net?subject=IntegratedUrgentCare v3.0">Contact us
+            					</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>2017</p></div></div></div></div><script src="../../../../../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../../../../../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../../../../../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

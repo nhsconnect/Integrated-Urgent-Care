@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "meta": {
+    "lastUpdated": "2017-01-18T23:00:00+00:00"
+  },
+  "url": "https://fhir.nhs.uk/ValueSet/itk-message-event-1",
+  "name": "Message Event",
+  "status": "active",
+  "description": "A valueset to describe the event that triggered the message.",
+  "copyright": "Copyright © 2016 Health and Social Care Information Centre",
+  "codeSystem": {
+    "system": "https://fhir.nhs.uk/ValueSet/itk-message-event-1",
+    "concept": [
+      {
+        "code": "ITK001",
+        "display": "Message structure validation check"
+      },
+      {
+        "code": "ITK002",
+        "display": "Business layer validation check"
+      }
+    ]
+  }
+}

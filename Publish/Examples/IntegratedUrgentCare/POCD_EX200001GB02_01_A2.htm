@@ -1,0 +1,353 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:xhtml="NPfIT:PresentationText">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <!--$trasformVersion=1.0 $updateDate=29/06/2012 Interoperability Team-->
+      <!--$trasformVersion=1.0 $updateDate=12/10/2012 Interoperability Team - branched for NHS111-->
+      <!-- Do NOT edit this HTML directly, it was generated via an XSLT transformation from the original release 2 CDA
+          Document. -->
+      <title>Integrated Urgent Care Report</title><style type="text/css">
+						body { color: #000000; font-size: 8pt; line-height: normal; font-family: Verdana, Arial, sans-serif; margin: 10px; }
+						a { color: #0099ff; text-decoration: none }
+						.input { color: #003366; font-size: 8pt; font-family: Verdana, Arial, sans-serif;  border: solid 1px }
+						div.titlebar {  border: 1px solid #000000; padding: 3px; margin-bottom: 20px;}
+						div.doctitle { font-size: 12pt; font-weight: bold; margin-bottom: 10px;}
+						div.header { font-size: 8pt; margin-bottom: 30px; border: 1px solid #000000; }
+						div.footer { font-size: 8pt; margin-top: 30px; border: 1px solid #000000; }
+						p {margin-top: 2px; margin-bottom: 6px;}
+						h1 { font-size: 10pt; font-weight: bold; color: #000000; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid #CCCCCC;}
+						h2 { font-size: 8pt; font-weight: bold; color: #000000; margin-top: 20px; margin-bottom: 6px; }
+						h3 { font-size: 8pt; font-weight: bold; color: #000000; margin-top: 15px; margin-bottom: 6px; }
+						h4 { font-size: 8pt; font-weight: bold; text-decoration: underline; color: #000000; margin-top: 6px; margin-bottom: 6px; }
+						h5 { font-size: 8pt; font-weight: normal; text-decoration: underline;  color: #000000; margin-top: 4px; margin-bottom: 4px; }
+						h6 { font-size: 8pt; font-weight: normal; color: #000000; margin-top: 2px; margin-bottom: 2px; }
+						table { border: 1px solid #000000; }
+						th.default {font-size: 8pt;padding: 3px; color: #000000;  text-align: left;}
+						th {font-size: 8pt;padding: 3px; color: #000000; }
+						td {font-size: 8pt;padding: 3px; }
+						table.titlebar { border: 0px;  }
+						td.titlebar {font-size: 8pt;color: #000000;  font-weight: bold;}
+						th.titlebar {font-size: 8pt;color: #000000;  font-weight: normal; font-style: italic; text-align: left;}
+						th.sectitle {font-size: 8pt;color: #000000;  font-weight: bold; text-align: left;}
+						th.participant {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						table.header { font-size: 8pt;border: 0px;  }
+						td.header {font-size: 8pt;color: #000000;  font-weight: bold;}
+						th.header {font-size: 8pt;color: #000000;  font-weight: normal; text-align: left; font-style:italic;}
+						/*Classes below map to CDA styleCodes*/
+						.Bold {font-weight: bold;}
+						.Underline {text-decoration:underline;}
+						.Italics {font-style:italic;}
+						.Emphasis {font-style:italic;}
+						.Rrule {border-right: 1px solid black;}
+						.Lrule {border-left: 1px solid black;}
+						.Toprule {border-top: 1px solid black;}
+						.Botrule {border-right: 1px solid black;}
+						/*Banner styles*/
+						div.banner { font-size: 8pt; margin-bottom: 30px; border: 1px solid #000000; }
+						div.banner TABLE { border: 0px;  font-weight: bold; }
+						div.banner TD {  vertical-align: top; padding-right: 1em;}
+						/*div.banner TABLE P {margin: 0;}*/
+						.label {font-style:italic; font-weight: normal;}
+						#hist{width:100%;}
+						div.banner #hist td {font-size: 8pt;color: #000000;  font-weight: normal; font-style: italic; text-align: left;}
+						div.banner #hist th {font-size: 8pt;color: #000000;  font-weight: normal; font-style: italic; text-align: left;}
+						table#hist #journdate {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						table#hist #disposition {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						table#hist #caseid {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						table#hist #caseref {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						table#hist #jauthor {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						table#hist #advice content[styleCode="bold"] {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						.fieldsetContainer {
+							height: 0;
+							overflow: hidden;
+							transition: height 400ms linear;
+						}
+						
+						#toggle {
+							display: none;
+						}
+						
+						#toggle:checked ~ .fieldsetContainer {
+							height: auto;
+						}
+						
+						label .arrow-dn { display: inline-block; }
+						label .arrow-up { display: none; }
+						
+						#toggle:checked ~ label .arrow-dn { display: none; }
+						#toggle:checked ~ label .arrow-up { display: inline-block; }
+
+				</style></head>
+   <!--Derived from HL7 Finland R2 Tyylitiedosto: Tyyli_R2_B3_01.xslt-->
+   <!--Updated by Calvin E. Beebe, Mayo Clinic - Rochester Mn. -->
+   <!--Updated by Keith W. Boone, Dictaphone - Burlington, MA -->
+   <!--Updated by Kai U. Heitmann, Heitmann Consulting & Service, NL for VHitG, Germany -->
+   <!--Updated by Rene Spronk, translate back to english-language labels-->
+   <!--Updated by Dick Donker, Philips Medical Systems include linkHtml-->
+   <!--Updated by Tim Pilkington - NHS CFH-->
+   <!--Updated by Aled Greenhalgh - NHS CFH-->
+   <!--Updated by Prashant Trivedi - NHS CFH-->
+   <!--Updated by Dave Barnet - branched for NHS111-->
+   <body>
+      <div class="doctitle">Integrated Urgent Care Report</div>
+      <div id="patientBanner" class="banner">
+         <table>
+            <tbody>
+               <tr>
+                  <td>JOE, Blogg (Mr)
+                     				
+                  </td>
+                  <td align="right"><span class="label"> Born </span>01-Jan-1989
+                  </td>
+                  <td align="right"><span class="label"> Gender </span>Male
+                  </td>
+                  <td><span class="label"> Unverified NHS No. </span>993 254 128<br><span class="label"> Local Patient ID </span>K12345<br></td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="header">
+            <tbody>
+               <tr>
+                  <td>
+                     <p class="label">Home Address</p>
+                     <p>17, County Avenue<br>Woodtown<br>Medway<br>ME5 FS3
+                     </p>
+                  </td>
+                  <td><span class="label">Home Phone </span>01634775667<br><span class="label">Vacation/Temporary Phone </span>01634451628<br><span class="label">Home Email </span>Joe.Blogg@emailfree.co.uk
+                  </td>
+                  <td>
+                     <p class="label">GP Practice</p>
+                     <p>Medway Medical Practice<br>Springer Street<br>Medway<br>ME5 5TY
+                     </p>
+                     <p><span class="label">Phone </span>01634111222
+                     </p>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <h1>Permission to View</h1>
+      								
+      <table>
+         									
+         <tbody>
+            										
+            <tr>
+               											
+               <th class="default">Permission to view outcome</th>
+               											
+               <td>Permission to view obtained</td>
+               										
+            </tr>
+            										
+            <tr>
+               											
+               <th class="default">Date obtained</th>
+               											
+               <td>01-Jan-2017, 20:00</td>
+               										
+            </tr>
+            										
+            <tr>
+               											
+               <th class="default">Date expires</th>
+               											
+               <td>15-Jan-2017, 20:00</td>
+               										
+            </tr>
+            									
+         </tbody>
+         								
+      </table>
+      							
+      <h1>Primary Reason for Call</h1>
+      								Patient feels dizzy.
+      							
+      <h1>Clinical Summary</h1>
+      								
+      								Patient fels nausea and dizzy after waking up. Lasted 30 minutes.
+      								
+      							
+      <h1>Additional Patient Notes</h1>
+      								Additional Patient Notes<br>
+      								Additional Patient Notes def 01-Feb-2017, 12:50<br>
+      							These are more notes, nested under the top one.
+      <h1>Disposition Details</h1>
+      								Lie down.
+      							
+      <h1>Information and advice given</h1>
+      								Do not perform any strenuous activities.
+      							
+      <h1>Recorded Allergies</h1>
+      								No known allergies or adverse reaction.
+      							
+      <h1>Triage Report</h1>
+      								An injury or other health problem was described.
+      								<br>The individual was described as breathing and conscious.
+      								<br>Loss of at least a mugful of blood in the last 30 minutes was not described.
+      								<br>An illness or other health problem was described. - Dizziness
+      								<br>Fighting for breath was not described.
+      								<br>A heart attack, chest/upper back pain, recent probable stroke, recent fit/seizure
+      or suicide attempt was not described as the main call reason.
+      								<br>Dizziness and nausea was described.
+      								<br>
+      								
+      							
+      <h1>Prescribed Items</h1>
+      								
+      								Medications
+      								
+      							
+      <div class="header">
+         <table class="header">
+            <tr>
+               <th class="header">Document Created</th>
+               <td class="header">01-Jan-2017, 20:00</td>
+            </tr>
+            <tr>
+               <th class="header">Document Owner</th>
+               <td class="header">Medway NHS Foundation Trust</td>
+            </tr>
+            <tr>
+               <th class="header">Authored by</th>
+               <td class="header">Mary Jones - Nurse Triage Practitioner, Medway NHS Foundation Trust on 01-Jan-2017, 20:00</td>
+            </tr>
+            <tr>
+               <th class="header" valign="top">Consent Status</th>
+               <td class="header">Consent given for electronic record sharing</td>
+            </tr>
+         </table>
+      </div>
+      <div id="informantBanner" class="banner">
+         <table>
+            <tbody>
+               <tr>
+                  <th class="header">Informant</th>
+                  <td>Helga Bloggs - Spouse</td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="header">
+            <tbody>
+               <tr>
+                  <td>
+                     <p class="label">Primary Home Address</p>
+                     <p>43 Summers Avenue<br>Somerset Street<br>Medway<br>ME5 7TY
+                     </p>
+                  </td>
+                  <td><span class="label">Mobile Phone </span>07886554123
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="titlebar">
+         <table class="titlebar">
+            <tr>
+               <th class="titlebar">Encounter Type</th>
+               <td class="titlebar">NHS111 Encounter</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Encounter Time</th>
+               <td class="titlebar">01-Jan-2017, 19:45 to 01-Jan-2017, 20:15</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Journey Identifier</th>
+               <td class="titlebar">LOC665</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Case Reference</th>
+               <td class="titlebar">CASEREF1234</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Case ID</th>
+               <td class="titlebar">CASEID123</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Encounter Disposition</th>
+               <td class="titlebar">Passed onto clinical hub</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Care Setting Location</th>
+               <td class="titlebar">Incident Location</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Care Setting Address</th>
+               <td class="titlebar">
+                  <p class="label">Visit Address</p>
+                  <p>2, Brancaster Road<br>Medway<br>ME5 FL5<br>Follow the high street and turn left by Boots<br>GB<br>Great Britain<br>962145269574<br>+38.265789-85.623415<br>X575776,Y163180
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <th class="titlebar">Care Setting Type</th>
+               <td class="titlebar">Example Care Setting</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Responsible Party</th>
+               <td class="titlebar">Dave Cornwell - Medical Director, Medway South Out of Hours Centre<br></td>
+            </tr>
+         </table>
+      </div>
+      <div id="participantBanner" class="banner">
+         <table>
+            <tbody>
+               <tr>
+                  <th class="sectitle">Other participant(s) in this document</th>
+               </tr>
+            </tbody>
+         </table>
+         <table>
+            <tr>
+               <th class="participant">Referred To</th>
+            </tr>
+            <tr>
+               <th class="header">Referred To Organization</th>
+               <td class="titlebar">Medway Community Hospital</td>
+            </tr>
+         </table>
+         <table class="header">
+            <tbody>
+               <tr>
+                  <td>
+                     <p class="label">Visit Address</p>
+                     <p>Church Street Walk in Centre<br>4 Church Street<br>Medway<br>ME8 7TT
+                     </p>
+                  </td>
+                  <td><span class="label">Emergency Phone </span>0123456789
+                  </td>
+               </tr>
+            </tbody>
+         </table><br><table>
+            <tr>
+               <th class="participant">Call back Contact</th>
+            </tr>
+            <tr>
+               <th class="header">Name</th>
+               <td class="titlebar">Call Centre Manager - Call Centre</td>
+            </tr>
+            <tr>
+               <th class="header">Organization</th>
+               <td class="titlebar">111 CALL CENTRE</td>
+            </tr>
+         </table>
+      </div>
+      <div class="footer">
+         <table class="header">
+            <tr>
+               <th class="header">Document ID</th>
+               <td class="header">35FDD4AA-244A-11E7-93AE-92361F002671</td>
+               <th class="header">Version</th>
+               <td class="header">2</td>
+            </tr>
+            <tr>
+               <th class="header">Replacement of</th>
+               <td class="header">A709A442-3CF4-476E-8377-376500E829C9</td>
+               <th class="header">Version</th>
+               <td class="header">1</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

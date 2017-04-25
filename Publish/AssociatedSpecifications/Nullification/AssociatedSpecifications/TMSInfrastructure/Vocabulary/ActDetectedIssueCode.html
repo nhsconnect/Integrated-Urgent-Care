@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml"><head><title>TMS Infrastructure - </title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link href="../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">TMS Infrastructure<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>5.7; <b>Status: </b>Final</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../index.html">About</a></li><li><a href="../Core/changehistory.html">Change History</a></li><li><a href="../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../Domains/messages.html">Messages</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../Domains/CMETs/Document files/cmetsusage.html">CMETs Usage</a></li><li><a href="../Vocabulary/vocabularyusage.html">Vocabulary Usage</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class=" vocabulary">
+ <h3>ActDetectedIssueCode</h3>
+ <table class="table table-condensed"> 
+  <tbody>
+   <tr>
+    <th style="width: 20%; text-align: left">Code SystemId: </th>
+    <td style="width: 80%"/>
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Version: </th> 
+    <td style="width: 80%">11.0</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Status: </th> 
+    <td style="width: 80%">active</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Date: </th> 
+    <td style="width: 80%">2013-04-09</td> 
+   </tr> 
+  </tbody> 
+ </table>
+ <h4>Description</h4>
+ <p> </p>
+ <p> </p>
+ <p> </p>
+ <p>A generic vocabulary name acting as a placeholder for a number of specific response code vocabularies that identify issue and error codes. Some of the specific vocabularies are published in this MiM, while others are externally maintained and are available from a location detailed in the list below.</p>
+ <p>Each code system shall be qualified by a qualifier from the <a href="DetectedIssueQualifier.html">DetectedIssueQualifier</a> vocabulary. See the <a href="QualificationOfDetectedIssue.html">QualificationOfDetectedIssue</a> code system for the formal specification of how these code systems can be combined.</p>
+ <ul> 
+  <li> <a href="PSISResponseCodes.html">PSISResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.33) A consolidated list of error/issue codes detected by PSIS that can be generated in response to any message received by PSIS. The concepts defined by this code system are maintained externally by BT. The set of concepts pertaining to this version of the code system are published in the EIS version that references the MIM in which this code system version appears. </li> 
+  <li> <a href="LRResponseCodes.html">LRResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.12) A consolidated list of error/issue codes for LR messages. The concepts defined by this code system are maintained externally by BT. The set of concepts pertaining to this version of the code system are published in the EIS version that references the MIM in which this code system version appears. </li> 
+  <li> <a href="PDSResponseCodes.html">PDSResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.42) A consolidated list of error/issue codes for PDS messages. The concepts defined by this code system are maintained externally by BT. The set of concepts pertaining to this version of the code system are published in the EIS version that references the MIM in which this code system version appears. </li> 
+  <li> <a href="EBSResponseCodes.html">EBSResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.100) A consolidated list of error/issue codes for EBS messages. This code system is maintained externally by Atos Origin and listed in Appendix A of the current version of Choose and Book Compliance (EBS-AN\BA\BA011). </li> 
+  <li> <a href="EhrRequestAckCode.html">EhrRequestAckCode</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.101) Currently carries GP2GP request acknowledgement information. Will eventually become a consolidated list of error/issue codes for GP2GP messages. This code system is currently maintained by NPfIT and can be accesed from FileCM ref NPFIT-PC-BLD-0083. </li> 
+  <li> <a href="POCResponseCodes.html">POCResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.102) A consolidated list of error/issue codes detected by all recipients of POC messages with the exception of PSIS (See PSISResponseCodes above) Currently unused by NPfIT. </li> 
+  <li> <a href="MHResponseCodes.html">MHResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.103) A consolidated list of error/issue codes for MH messages. Currently unused by NPfIT. </li> 
+  <li> <a href="CancellationResponseReason.html">CancellationResponseReason</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.19) Describes possible responses to a cancellation request. The concepts defined by this code system are maintained externally by BT. The set of concepts pertaining to this version of the code system are published in the EIS version that references the MIM in which this code system version appears. </li> 
+  <li> <a href="ETPSpineRejectionReasons.html">ETPSpineRejectionReasons</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.22) Describes reasons for refusing to allow the returning of a prescription rather than dispensing it and reasons why a prescription to be placed in the ETP System to be dispensed has been rejected. The concepts defined by this code system are maintained externally by BT. The set of concepts pertaining to this version of the code system are published in the EIS version that references the MIM in which this code system version appears. </li> 
+  <li> <a href="PrescriptionReleaseRejectionReason.html">PrescriptionReleaseRejectionReason</a> (OID = 2.16.840.1.113883.2.1.3.2.4.16.34) Describes any reasons for rejecting a request to release a prescription. The concepts defined by this code system are maintained externally by BT. The set of concepts pertaining to this version of the code system are published in the EIS version that references the MIM in which this code system version appears. </li> 
+  <li> <a href="ReimbursementRejectionReason.html">ReimbursementRejectionReason</a> (OID = 2.16.840.1.113883.2.1.3.2.4.16.37) Describes any reason for rejecting reimbursement claims. This code system is managed externally by the PPA. </li> 
+  <li> <a href="AlertErrorCode.html">AlertErrorCode</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.195) Code used to indicate error in a received alert message. The concepts defined by this code system are maintained externally by BT. The set of concepts pertaining to this version of the code system are published in the EIS version that references the MIM in which this code system version appears.</li> 
+  <li> <a href="PointToPointResponseCodes.html">PointToPointResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.227) A consolidated list of error/issue codes detected by Systems that canbe generated in response to any message received as part of a PSIS CDA Clinical Domain communication during Point to Point messaging. The concepts defined by this code system are maintained by HSCIC. The set of concepts pertaining to his version of the code system are published in the PSIS Clinical Domains Point to Point Error Handling Specification (NPFIT-FNT-TO-REQ-DEL-0154). If Suppliers require an update to this list, the new error should be submitted to HSCIC Interoperability Team for inclusion.</li> 
+  <li> <a href="PathologyResponseCodes.html">PathologyResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.250) A consolidated list of error/issue codes for Pathology domain messages. The concepts defined by this code system are maintained externally from the MIM.</li> 
+  <li> <a href="CP-ISResponseCodes.html">CP-ISResponseCodes</a> (OID = 2.16.840.1.113883.2.1.3.2.4.17.475) A consolidated list of error/issue codes for Child Protection Information Service domain messages. This is only for specifications released after MIM 7.2.02.<br/> </li> 
+ </ul>
+ <p> </p>
+ <p> </p>
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:interoperabilityteam@hscic.gov.uk">Contact Us</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>20-Jan-2012</p></div></div></div></div><script src="../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

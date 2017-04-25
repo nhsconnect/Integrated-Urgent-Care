@@ -1,0 +1,1595 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+			<title>ITK FHIR Distribution - FHIR Implementation Guide</title>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="author" content="HSCIC" />        
+			<meta name="publisher version" content=	"FHIR-Furnace : 2.7.6256.31052" />
+		
+			<link href="../dist/css/fhir.css" rel="stylesheet" />
+	 
+			<!-- Bootstrap core CSS -->
+			<link href="../dist/css/bootstrap.css" rel="stylesheet" />
+			<link href="../dist/css/bootstrap-fhir.css" rel="stylesheet" />
+			<link href="../dist/css/bootstrap-glyphicons.css" rel="stylesheet" />
+
+			<!-- Project extras -->
+			
+			<link href="../dist/css/pygments-manni.css" rel="stylesheet" />
+
+			<script src="../dist/js/jquery.js"> </script>
+			<script src="../dist/js/bootstrap.min.js"> </script>
+
+			<script src="../dist/js/fhir.js"> </script>
+			
+				<script>
+				  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				  ga('create', 'UA-67795986-1', 'auto');
+				  ga('send', 'pageview');
+
+				</script>
+			
+			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!--[if lt IE 9]>
+				<script src="../dist/js/html5shiv.js"></script>
+				<script src="../dist/js/respond.min.js"></script>
+			<![endif]-->
+
+			<!-- Favicons -->
+			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/images/apple-touch-icon-144-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/images/apple-touch-icon-114-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/images/apple-touch-icon-72-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" href="../dist/images/apple-touch-icon-57-precomposed.png" />
+			<link rel="shortcut icon" href="../dist/images/favicon.ico" />
+	</head>
+	
+	<body>  
+		
+		<!-- segment-header -->
+		<div id="segment-header" class="segment">
+            
+            <div class="container">
+                <!-- container -->
+                <a id="logo" href="http://www.digital.nhs.uk" target="_blank">
+                    <img src="../dist/images/logo.png" alt="logo NHS Digital" />
+                </a>
+                <div id="specificationName">
+         
+                        <b>ITK FHIR Distribution</b>
+                  
+                </div>
+
+            </div>
+            <div class="container">
+                <!-- container -->
+            </div>
+        </div>
+        
+		<!-- /segment-header -->
+		
+		
+		<div id="segment-navbar" class="segment">
+            <!-- segment-navbar -->
+            <div id="stripe"> </div>
+            <div class="container">
+                <!-- container -->
+                <!-- HEADER CONTENT -->
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container">
+                        <button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="icon-bar"> </span>
+                            <span class="icon-bar"> </span>
+                            <span class="icon-bar"> </span>
+                        </button>
+                        <div class="nav-collapse collapse navbar-inverse-collapse">
+                            <ul class="nav navbar-nav">   
+
+											<li>
+												<a href='../Chapter.1.About/index.html'>About</a>
+											</li>
+											<li>
+												<a href='../Chapter.2.Change History/index.html'>Change History</a>
+											</li>
+											<li>
+												<a href='../Chapter.3.Architecture/index.html'>Architecture</a>
+											</li>
+											<li>
+												<a href='../Chapter.4.FHIR Constrained Messages/index.html'>FHIR Constrained Messages</a>
+											</li>
+											<li>
+												<a href='../Chapter.5.Examples/examples.html'>Examples</a>
+											</li>
+											<li>
+												<a href='../Chapter.6.Glossary/index.html'>Glossary</a>
+											</li>
+
+                            </ul>
+							
+                            <p class="navbar-text pull-right" style="padding-right: 10px;padding-top: 3px;">
+                                <span class="label label-default"  style="font-size: 95%;">Version 1.0 : DRAFT A</span>
+                            </p>
+
+                        </div>
+                    </div>
+                </nav>				
+            </div>
+        </div>
+		
+		<div id="segment-breadcrumb" class="segment">
+            <!-- segment-breadcrumb -->
+            <div class="container">
+                <!-- container -->
+                <ul class="breadcrumb"></ul>
+            </div>
+            <!-- /container -->
+        </div>
+        <div id="segment-content" class="segment">
+            <!-- segment-content -->
+            <div class="container">
+                <!-- container -->
+                <div class="row">
+                    <div class="inner-wrapper">
+						<!-- CONTENT CONTENT -->
+                        <div class="col-12">
+							
+							
+							
+							
+							
+							
+<div class="panel panel - default" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="panel-heading">
+    <h3 class="panel-title">Care Connect Human Language</h3>
+  </div>
+  <div class="panel-body">
+    <div class="valueset-content">
+      <div class="valueset-summary">
+        <h3 xmlns="" />Summary</div>
+      <div class="valueset-summary-table">
+        <table>
+          <tr class="valueset-summary-table-header">
+            <th title="The name of the element." class="col-name">Name</th>
+            <th title="The value of the element." class="col-description">Description</th>
+          </tr>
+          <tr>
+            <td>Defining URL:</td>
+            <td>https://fhir.hl7.org.uk/ValueSet/CareConnect-HumanLanguage-1</td>
+            <tr>
+              <td>Name:</td>
+              <td>Care Connect Human Language</td>
+            </tr>
+            <tr>
+              <td>Definition:</td>
+              <td>The language used by a person.</td>
+            </tr>
+            <tr>
+              <td>OID:</td>
+              <td>2.16.840.1.113883.2.1.3.2.4.17.70</td>
+            </tr>
+            <tr>
+              <td>Status:</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>Last Updated:</td>
+              <td>27/10/2015 00:00:00 +00:00</td>
+            </tr>
+            <tr>
+              <td>Source Resource:</td>
+              <td>
+                <p>
+                  <a target="_blank" href="..\Resources\Profile.ITKInfAckResponse\ValueSets\CareConnect-HumanLanguage-1.xml">XML</a> / <a target="_blank" href="..\Resources\Profile.ITKInfAckResponse\ValueSets\CareConnect-HumanLanguage-1.json">JSON</a></p>
+              </td>
+            </tr>
+          </tr>
+        </table>
+        <p />
+      </div>
+      <div class="in-line-valueset" xmlns="">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <br />
+          <p>This valueset includes all the codes for Care Connect Human Language ( https://fhir.hl7.org.uk/CareConnect-HumanLanguage-1 ) <br /></p>
+        </div>
+        <div class="codeSystem-table" xmlns="http://www.w3.org/1999/xhtml">
+          <table>
+            <tr class="table-header">
+              <th title="Code that identifies concept" class="col-code">Code</th>
+              <th title="Text to display to the user" class="col-display">Display</th>
+            </tr>
+            <div class="table-rows">
+              <tr>
+                <td>q1</td>
+                <td>
+                  <p>Braille</p>
+                  <a name="Braille" />
+                </td>
+              </tr>
+              <tr>
+                <td>q2</td>
+                <td>
+                  <p>American Sign Language</p>
+                  <a name="American Sign Language" />
+                </td>
+              </tr>
+              <tr>
+                <td>q3</td>
+                <td>
+                  <p>Australian Sign Language</p>
+                  <a name="Australian Sign Language" />
+                </td>
+              </tr>
+              <tr>
+                <td>q4</td>
+                <td>
+                  <p>British Sign Language</p>
+                  <a name="British Sign Language" />
+                </td>
+              </tr>
+              <tr>
+                <td>q5</td>
+                <td>
+                  <p>Makaton</p>
+                  <a name="Makaton" />
+                </td>
+              </tr>
+              <tr>
+                <td>aa</td>
+                <td>
+                  <p>Afar</p>
+                  <a name="Afar" />
+                </td>
+              </tr>
+              <tr>
+                <td>ab</td>
+                <td>
+                  <p>Abkhazian</p>
+                  <a name="Abkhazian" />
+                </td>
+              </tr>
+              <tr>
+                <td>af</td>
+                <td>
+                  <p>Afrikaans</p>
+                  <a name="Afrikaans" />
+                </td>
+              </tr>
+              <tr>
+                <td>ak</td>
+                <td>
+                  <p>Akan</p>
+                  <a name="Akan" />
+                </td>
+              </tr>
+              <tr>
+                <td>sq</td>
+                <td>
+                  <p>Albanian</p>
+                  <a name="Albanian" />
+                </td>
+              </tr>
+              <tr>
+                <td>am</td>
+                <td>
+                  <p>Amharic</p>
+                  <a name="Amharic" />
+                </td>
+              </tr>
+              <tr>
+                <td>ar</td>
+                <td>
+                  <p>Arabic</p>
+                  <a name="Arabic" />
+                </td>
+              </tr>
+              <tr>
+                <td>an</td>
+                <td>
+                  <p>Aragonese</p>
+                  <a name="Aragonese" />
+                </td>
+              </tr>
+              <tr>
+                <td>hy</td>
+                <td>
+                  <p>Armenian</p>
+                  <a name="Armenian" />
+                </td>
+              </tr>
+              <tr>
+                <td>as</td>
+                <td>
+                  <p>Assamese</p>
+                  <a name="Assamese" />
+                </td>
+              </tr>
+              <tr>
+                <td>av</td>
+                <td>
+                  <p>Avaric</p>
+                  <a name="Avaric" />
+                </td>
+              </tr>
+              <tr>
+                <td>ae</td>
+                <td>
+                  <p>Avestan</p>
+                  <a name="Avestan" />
+                </td>
+              </tr>
+              <tr>
+                <td>ay</td>
+                <td>
+                  <p>Aymara</p>
+                  <a name="Aymara" />
+                </td>
+              </tr>
+              <tr>
+                <td>az</td>
+                <td>
+                  <p>Azerbaijani</p>
+                  <a name="Azerbaijani" />
+                </td>
+              </tr>
+              <tr>
+                <td>ba</td>
+                <td>
+                  <p>Bashkir</p>
+                  <a name="Bashkir" />
+                </td>
+              </tr>
+              <tr>
+                <td>bm</td>
+                <td>
+                  <p>Bambara</p>
+                  <a name="Bambara" />
+                </td>
+              </tr>
+              <tr>
+                <td>eu</td>
+                <td>
+                  <p>Basque</p>
+                  <a name="Basque" />
+                </td>
+              </tr>
+              <tr>
+                <td>be</td>
+                <td>
+                  <p>Belarusian</p>
+                  <a name="Belarusian" />
+                </td>
+              </tr>
+              <tr>
+                <td>bn</td>
+                <td>
+                  <p>Bengali</p>
+                  <a name="Bengali" />
+                </td>
+              </tr>
+              <tr>
+                <td>bh</td>
+                <td>
+                  <p>Bihari</p>
+                  <a name="Bihari" />
+                </td>
+              </tr>
+              <tr>
+                <td>bi</td>
+                <td>
+                  <p>Bislama</p>
+                  <a name="Bislama" />
+                </td>
+              </tr>
+              <tr>
+                <td>bo</td>
+                <td>
+                  <p>Tibetan</p>
+                  <a name="Tibetan" />
+                </td>
+              </tr>
+              <tr>
+                <td>bs</td>
+                <td>
+                  <p>Bosnian</p>
+                  <a name="Bosnian" />
+                </td>
+              </tr>
+              <tr>
+                <td>br</td>
+                <td>
+                  <p>Breton</p>
+                  <a name="Breton" />
+                </td>
+              </tr>
+              <tr>
+                <td>bg</td>
+                <td>
+                  <p>Bulgarian</p>
+                  <a name="Bulgarian" />
+                </td>
+              </tr>
+              <tr>
+                <td>my</td>
+                <td>
+                  <p>Burmese</p>
+                  <a name="Burmese" />
+                </td>
+              </tr>
+              <tr>
+                <td>ca</td>
+                <td>
+                  <p>Catalan; Valencian</p>
+                  <a name="Catalan; Valencian" />
+                </td>
+              </tr>
+              <tr>
+                <td>cs</td>
+                <td>
+                  <p>Czech</p>
+                  <a name="Czech" />
+                </td>
+              </tr>
+              <tr>
+                <td>ch</td>
+                <td>
+                  <p>Chamorro</p>
+                  <a name="Chamorro" />
+                </td>
+              </tr>
+              <tr>
+                <td>ce</td>
+                <td>
+                  <p>Chechen</p>
+                  <a name="Chechen" />
+                </td>
+              </tr>
+              <tr>
+                <td>zh</td>
+                <td>
+                  <p>Chinese</p>
+                  <a name="Chinese" />
+                </td>
+              </tr>
+              <tr>
+                <td>cu</td>
+                <td>
+                  <p>Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</p>
+                  <a name="Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic" />
+                </td>
+              </tr>
+              <tr>
+                <td>cv</td>
+                <td>
+                  <p>Chuvash</p>
+                  <a name="Chuvash" />
+                </td>
+              </tr>
+              <tr>
+                <td>kw</td>
+                <td>
+                  <p>Cornish</p>
+                  <a name="Cornish" />
+                </td>
+              </tr>
+              <tr>
+                <td>co</td>
+                <td>
+                  <p>Corsican</p>
+                  <a name="Corsican" />
+                </td>
+              </tr>
+              <tr>
+                <td>cr</td>
+                <td>
+                  <p>Cree</p>
+                  <a name="Cree" />
+                </td>
+              </tr>
+              <tr>
+                <td>cy</td>
+                <td>
+                  <p>Welsh</p>
+                  <a name="Welsh" />
+                </td>
+              </tr>
+              <tr>
+                <td>da</td>
+                <td>
+                  <p>Danish</p>
+                  <a name="Danish" />
+                </td>
+              </tr>
+              <tr>
+                <td>de</td>
+                <td>
+                  <p>German</p>
+                  <a name="German" />
+                </td>
+              </tr>
+              <tr>
+                <td>dv</td>
+                <td>
+                  <p>Divehi; Dhivehi; Maldivian</p>
+                  <a name="Divehi; Dhivehi; Maldivian" />
+                </td>
+              </tr>
+              <tr>
+                <td>nl</td>
+                <td>
+                  <p>Dutch; Flemish</p>
+                  <a name="Dutch; Flemish" />
+                </td>
+              </tr>
+              <tr>
+                <td>dz</td>
+                <td>
+                  <p>Dzongkha</p>
+                  <a name="Dzongkha" />
+                </td>
+              </tr>
+              <tr>
+                <td>el</td>
+                <td>
+                  <p>Greek, Modern (1453-)</p>
+                  <a name="Greek, Modern (1453-)" />
+                </td>
+              </tr>
+              <tr>
+                <td>en</td>
+                <td>
+                  <p>English</p>
+                  <a name="English" />
+                </td>
+              </tr>
+              <tr>
+                <td>eo</td>
+                <td>
+                  <p>Esperanto</p>
+                  <a name="Esperanto" />
+                </td>
+              </tr>
+              <tr>
+                <td>et</td>
+                <td>
+                  <p>Estonian</p>
+                  <a name="Estonian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ee</td>
+                <td>
+                  <p>Ewe</p>
+                  <a name="Ewe" />
+                </td>
+              </tr>
+              <tr>
+                <td>fo</td>
+                <td>
+                  <p>Faroese</p>
+                  <a name="Faroese" />
+                </td>
+              </tr>
+              <tr>
+                <td>fa</td>
+                <td>
+                  <p>Persian</p>
+                  <a name="Persian" />
+                </td>
+              </tr>
+              <tr>
+                <td>fj</td>
+                <td>
+                  <p>Fijian</p>
+                  <a name="Fijian" />
+                </td>
+              </tr>
+              <tr>
+                <td>fi</td>
+                <td>
+                  <p>Finnish</p>
+                  <a name="Finnish" />
+                </td>
+              </tr>
+              <tr>
+                <td>fr</td>
+                <td>
+                  <p>French</p>
+                  <a name="French" />
+                </td>
+              </tr>
+              <tr>
+                <td>fy</td>
+                <td>
+                  <p>Western Frisian</p>
+                  <a name="Western Frisian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ff</td>
+                <td>
+                  <p>Fulah</p>
+                  <a name="Fulah" />
+                </td>
+              </tr>
+              <tr>
+                <td>ka</td>
+                <td>
+                  <p>Georgian</p>
+                  <a name="Georgian" />
+                </td>
+              </tr>
+              <tr>
+                <td>gd</td>
+                <td>
+                  <p>Gaelic; Scottish Gaelic</p>
+                  <a name="Gaelic; Scottish Gaelic" />
+                </td>
+              </tr>
+              <tr>
+                <td>ga</td>
+                <td>
+                  <p>Irish</p>
+                  <a name="Irish" />
+                </td>
+              </tr>
+              <tr>
+                <td>gl</td>
+                <td>
+                  <p>Galician</p>
+                  <a name="Galician" />
+                </td>
+              </tr>
+              <tr>
+                <td>gv</td>
+                <td>
+                  <p>Manx</p>
+                  <a name="Manx" />
+                </td>
+              </tr>
+              <tr>
+                <td>gn</td>
+                <td>
+                  <p>Guarani</p>
+                  <a name="Guarani" />
+                </td>
+              </tr>
+              <tr>
+                <td>gu</td>
+                <td>
+                  <p>Gujarati</p>
+                  <a name="Gujarati" />
+                </td>
+              </tr>
+              <tr>
+                <td>ht</td>
+                <td>
+                  <p>Haitian; Haitian Creole</p>
+                  <a name="Haitian; Haitian Creole" />
+                </td>
+              </tr>
+              <tr>
+                <td>ha</td>
+                <td>
+                  <p>Hausa</p>
+                  <a name="Hausa" />
+                </td>
+              </tr>
+              <tr>
+                <td>he</td>
+                <td>
+                  <p>Hebrew</p>
+                  <a name="Hebrew" />
+                </td>
+              </tr>
+              <tr>
+                <td>hz</td>
+                <td>
+                  <p>Herero</p>
+                  <a name="Herero" />
+                </td>
+              </tr>
+              <tr>
+                <td>hi</td>
+                <td>
+                  <p>Hindi</p>
+                  <a name="Hindi" />
+                </td>
+              </tr>
+              <tr>
+                <td>ho</td>
+                <td>
+                  <p>Hiri Motu</p>
+                  <a name="Hiri Motu" />
+                </td>
+              </tr>
+              <tr>
+                <td>hr</td>
+                <td>
+                  <p>Croatian</p>
+                  <a name="Croatian" />
+                </td>
+              </tr>
+              <tr>
+                <td>hu</td>
+                <td>
+                  <p>Hungarian</p>
+                  <a name="Hungarian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ig</td>
+                <td>
+                  <p>Igbo</p>
+                  <a name="Igbo" />
+                </td>
+              </tr>
+              <tr>
+                <td>is</td>
+                <td>
+                  <p>Icelandic</p>
+                  <a name="Icelandic" />
+                </td>
+              </tr>
+              <tr>
+                <td>io</td>
+                <td>
+                  <p>Ido</p>
+                  <a name="Ido" />
+                </td>
+              </tr>
+              <tr>
+                <td>ii</td>
+                <td>
+                  <p>Sichuan Yi</p>
+                  <a name="Sichuan Yi" />
+                </td>
+              </tr>
+              <tr>
+                <td>iu</td>
+                <td>
+                  <p>Inuktitut</p>
+                  <a name="Inuktitut" />
+                </td>
+              </tr>
+              <tr>
+                <td>ie</td>
+                <td>
+                  <p>Interlingue</p>
+                  <a name="Interlingue" />
+                </td>
+              </tr>
+              <tr>
+                <td>ia</td>
+                <td>
+                  <p>Interlingua (International Auxiliary Language Association)</p>
+                  <a name="Interlingua (International Auxiliary Language Association)" />
+                </td>
+              </tr>
+              <tr>
+                <td>id</td>
+                <td>
+                  <p>Indonesian</p>
+                  <a name="Indonesian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ik</td>
+                <td>
+                  <p>Inupiaq</p>
+                  <a name="Inupiaq" />
+                </td>
+              </tr>
+              <tr>
+                <td>it</td>
+                <td>
+                  <p>Italian</p>
+                  <a name="Italian" />
+                </td>
+              </tr>
+              <tr>
+                <td>jv</td>
+                <td>
+                  <p>Javanese</p>
+                  <a name="Javanese" />
+                </td>
+              </tr>
+              <tr>
+                <td>ja</td>
+                <td>
+                  <p>Japanese</p>
+                  <a name="Japanese" />
+                </td>
+              </tr>
+              <tr>
+                <td>kl</td>
+                <td>
+                  <p>Kalaallisut; Greenlandic</p>
+                  <a name="Kalaallisut; Greenlandic" />
+                </td>
+              </tr>
+              <tr>
+                <td>kn</td>
+                <td>
+                  <p>Kannada</p>
+                  <a name="Kannada" />
+                </td>
+              </tr>
+              <tr>
+                <td>ks</td>
+                <td>
+                  <p>Kashmiri</p>
+                  <a name="Kashmiri" />
+                </td>
+              </tr>
+              <tr>
+                <td>kr</td>
+                <td>
+                  <p>Kanuri</p>
+                  <a name="Kanuri" />
+                </td>
+              </tr>
+              <tr>
+                <td>kk</td>
+                <td>
+                  <p>Kazakh</p>
+                  <a name="Kazakh" />
+                </td>
+              </tr>
+              <tr>
+                <td>km</td>
+                <td>
+                  <p>Central Khmer</p>
+                  <a name="Central Khmer" />
+                </td>
+              </tr>
+              <tr>
+                <td>ki</td>
+                <td>
+                  <p>Kikuyu; Gikuyu</p>
+                  <a name="Kikuyu; Gikuyu" />
+                </td>
+              </tr>
+              <tr>
+                <td>rw</td>
+                <td>
+                  <p>Kinyarwanda</p>
+                  <a name="Kinyarwanda" />
+                </td>
+              </tr>
+              <tr>
+                <td>ky</td>
+                <td>
+                  <p>Kirghiz; Kyrgyz</p>
+                  <a name="Kirghiz; Kyrgyz" />
+                </td>
+              </tr>
+              <tr>
+                <td>kv</td>
+                <td>
+                  <p>Komi</p>
+                  <a name="Komi" />
+                </td>
+              </tr>
+              <tr>
+                <td>kg</td>
+                <td>
+                  <p>Kongo</p>
+                  <a name="Kongo" />
+                </td>
+              </tr>
+              <tr>
+                <td>ko</td>
+                <td>
+                  <p>Korean</p>
+                  <a name="Korean" />
+                </td>
+              </tr>
+              <tr>
+                <td>kj</td>
+                <td>
+                  <p>Kuanyama; Kwanyama</p>
+                  <a name="Kuanyama; Kwanyama" />
+                </td>
+              </tr>
+              <tr>
+                <td>ku</td>
+                <td>
+                  <p>Kurdish</p>
+                  <a name="Kurdish" />
+                </td>
+              </tr>
+              <tr>
+                <td>lo</td>
+                <td>
+                  <p>Lao</p>
+                  <a name="Lao" />
+                </td>
+              </tr>
+              <tr>
+                <td>la</td>
+                <td>
+                  <p>Latin</p>
+                  <a name="Latin" />
+                </td>
+              </tr>
+              <tr>
+                <td>lv</td>
+                <td>
+                  <p>Latvian</p>
+                  <a name="Latvian" />
+                </td>
+              </tr>
+              <tr>
+                <td>li</td>
+                <td>
+                  <p>Limburgan; Limburger; Limburgish</p>
+                  <a name="Limburgan; Limburger; Limburgish" />
+                </td>
+              </tr>
+              <tr>
+                <td>ln</td>
+                <td>
+                  <p>Lingala</p>
+                  <a name="Lingala" />
+                </td>
+              </tr>
+              <tr>
+                <td>lt</td>
+                <td>
+                  <p>Lithuanian</p>
+                  <a name="Lithuanian" />
+                </td>
+              </tr>
+              <tr>
+                <td>lb</td>
+                <td>
+                  <p>Luxembourgish; Letzeburgesch</p>
+                  <a name="Luxembourgish; Letzeburgesch" />
+                </td>
+              </tr>
+              <tr>
+                <td>lu</td>
+                <td>
+                  <p>Luba-Katanga</p>
+                  <a name="Luba-Katanga" />
+                </td>
+              </tr>
+              <tr>
+                <td>lg</td>
+                <td>
+                  <p>Ganda</p>
+                  <a name="Ganda" />
+                </td>
+              </tr>
+              <tr>
+                <td>mk</td>
+                <td>
+                  <p>Macedonian</p>
+                  <a name="Macedonian" />
+                </td>
+              </tr>
+              <tr>
+                <td>mh</td>
+                <td>
+                  <p>Marshallese</p>
+                  <a name="Marshallese" />
+                </td>
+              </tr>
+              <tr>
+                <td>ml</td>
+                <td>
+                  <p>Malayalam</p>
+                  <a name="Malayalam" />
+                </td>
+              </tr>
+              <tr>
+                <td>mi</td>
+                <td>
+                  <p>Maori</p>
+                  <a name="Maori" />
+                </td>
+              </tr>
+              <tr>
+                <td>mr</td>
+                <td>
+                  <p>Marathi</p>
+                  <a name="Marathi" />
+                </td>
+              </tr>
+              <tr>
+                <td>ms</td>
+                <td>
+                  <p>Malay</p>
+                  <a name="Malay" />
+                </td>
+              </tr>
+              <tr>
+                <td>mg</td>
+                <td>
+                  <p>Malagasy</p>
+                  <a name="Malagasy" />
+                </td>
+              </tr>
+              <tr>
+                <td>mt</td>
+                <td>
+                  <p>Maltese</p>
+                  <a name="Maltese" />
+                </td>
+              </tr>
+              <tr>
+                <td>mo</td>
+                <td>
+                  <p>Moldavian</p>
+                  <a name="Moldavian" />
+                </td>
+              </tr>
+              <tr>
+                <td>mn</td>
+                <td>
+                  <p>Mongolian</p>
+                  <a name="Mongolian" />
+                </td>
+              </tr>
+              <tr>
+                <td>na</td>
+                <td>
+                  <p>Nauru</p>
+                  <a name="Nauru" />
+                </td>
+              </tr>
+              <tr>
+                <td>nv</td>
+                <td>
+                  <p>Navajo; Navaho</p>
+                  <a name="Navajo; Navaho" />
+                </td>
+              </tr>
+              <tr>
+                <td>nr</td>
+                <td>
+                  <p>Ndebele, South; South Ndebele</p>
+                  <a name="Ndebele, South; South Ndebele" />
+                </td>
+              </tr>
+              <tr>
+                <td>nd</td>
+                <td>
+                  <p>Ndebele, North; North Ndebele</p>
+                  <a name="Ndebele, North; North Ndebele" />
+                </td>
+              </tr>
+              <tr>
+                <td>ng</td>
+                <td>
+                  <p>Ndonga</p>
+                  <a name="Ndonga" />
+                </td>
+              </tr>
+              <tr>
+                <td>ne</td>
+                <td>
+                  <p>Nepali</p>
+                  <a name="Nepali" />
+                </td>
+              </tr>
+              <tr>
+                <td>nn</td>
+                <td>
+                  <p>Norwegian Nynorsk; Nynorsk, Norwegian</p>
+                  <a name="Norwegian Nynorsk; Nynorsk, Norwegian" />
+                </td>
+              </tr>
+              <tr>
+                <td>nb</td>
+                <td>
+                  <p>Bokmal, Norwegian; Norwegian Bokmal</p>
+                  <a name="Bokmal, Norwegian; Norwegian Bokmal" />
+                </td>
+              </tr>
+              <tr>
+                <td>no</td>
+                <td>
+                  <p>Norwegian</p>
+                  <a name="Norwegian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ny</td>
+                <td>
+                  <p>Chichewa; Chewa; Nyanja</p>
+                  <a name="Chichewa; Chewa; Nyanja" />
+                </td>
+              </tr>
+              <tr>
+                <td>oc</td>
+                <td>
+                  <p>Occitan (post1500); Provencal</p>
+                  <a name="Occitan (post1500); Provencal" />
+                </td>
+              </tr>
+              <tr>
+                <td>oj</td>
+                <td>
+                  <p>Ojibwa</p>
+                  <a name="Ojibwa" />
+                </td>
+              </tr>
+              <tr>
+                <td>or</td>
+                <td>
+                  <p>Oriya</p>
+                  <a name="Oriya" />
+                </td>
+              </tr>
+              <tr>
+                <td>om</td>
+                <td>
+                  <p>Oromo</p>
+                  <a name="Oromo" />
+                </td>
+              </tr>
+              <tr>
+                <td>os</td>
+                <td>
+                  <p>Ossetian; Ossetic</p>
+                  <a name="Ossetian; Ossetic" />
+                </td>
+              </tr>
+              <tr>
+                <td>pa</td>
+                <td>
+                  <p>Panjabi; Punjabi</p>
+                  <a name="Panjabi; Punjabi" />
+                </td>
+              </tr>
+              <tr>
+                <td>pi</td>
+                <td>
+                  <p>Pali</p>
+                  <a name="Pali" />
+                </td>
+              </tr>
+              <tr>
+                <td>pl</td>
+                <td>
+                  <p>Polish</p>
+                  <a name="Polish" />
+                </td>
+              </tr>
+              <tr>
+                <td>pt</td>
+                <td>
+                  <p>Portuguese</p>
+                  <a name="Portuguese" />
+                </td>
+              </tr>
+              <tr>
+                <td>ps</td>
+                <td>
+                  <p>Pushto</p>
+                  <a name="Pushto" />
+                </td>
+              </tr>
+              <tr>
+                <td>qu</td>
+                <td>
+                  <p>Quechua</p>
+                  <a name="Quechua" />
+                </td>
+              </tr>
+              <tr>
+                <td>rm</td>
+                <td>
+                  <p>Romansh</p>
+                  <a name="Romansh" />
+                </td>
+              </tr>
+              <tr>
+                <td>ro</td>
+                <td>
+                  <p>Romanian</p>
+                  <a name="Romanian" />
+                </td>
+              </tr>
+              <tr>
+                <td>rn</td>
+                <td>
+                  <p>Rundi</p>
+                  <a name="Rundi" />
+                </td>
+              </tr>
+              <tr>
+                <td>ru</td>
+                <td>
+                  <p>Russian</p>
+                  <a name="Russian" />
+                </td>
+              </tr>
+              <tr>
+                <td>sg</td>
+                <td>
+                  <p>Sango</p>
+                  <a name="Sango" />
+                </td>
+              </tr>
+              <tr>
+                <td>sa</td>
+                <td>
+                  <p>Sanskrit</p>
+                  <a name="Sanskrit" />
+                </td>
+              </tr>
+              <tr>
+                <td>sr</td>
+                <td>
+                  <p>Serbian</p>
+                  <a name="Serbian" />
+                </td>
+              </tr>
+              <tr>
+                <td>si</td>
+                <td>
+                  <p>Sinhala; Sinhalese</p>
+                  <a name="Sinhala; Sinhalese" />
+                </td>
+              </tr>
+              <tr>
+                <td>sk</td>
+                <td>
+                  <p>Slovak</p>
+                  <a name="Slovak" />
+                </td>
+              </tr>
+              <tr>
+                <td>sl</td>
+                <td>
+                  <p>Slovenian</p>
+                  <a name="Slovenian" />
+                </td>
+              </tr>
+              <tr>
+                <td>se</td>
+                <td>
+                  <p>Northern Sami</p>
+                  <a name="Northern Sami" />
+                </td>
+              </tr>
+              <tr>
+                <td>sm</td>
+                <td>
+                  <p>Samoan</p>
+                  <a name="Samoan" />
+                </td>
+              </tr>
+              <tr>
+                <td>sn</td>
+                <td>
+                  <p>Shona</p>
+                  <a name="Shona" />
+                </td>
+              </tr>
+              <tr>
+                <td>sd</td>
+                <td>
+                  <p>Sindhi</p>
+                  <a name="Sindhi" />
+                </td>
+              </tr>
+              <tr>
+                <td>so</td>
+                <td>
+                  <p>Somali</p>
+                  <a name="Somali" />
+                </td>
+              </tr>
+              <tr>
+                <td>st</td>
+                <td>
+                  <p>Sotho, Southern</p>
+                  <a name="Sotho, Southern" />
+                </td>
+              </tr>
+              <tr>
+                <td>es</td>
+                <td>
+                  <p>Spanish; Castilian</p>
+                  <a name="Spanish; Castilian" />
+                </td>
+              </tr>
+              <tr>
+                <td>sc</td>
+                <td>
+                  <p>Sardinian</p>
+                  <a name="Sardinian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ss</td>
+                <td>
+                  <p>Swati</p>
+                  <a name="Swati" />
+                </td>
+              </tr>
+              <tr>
+                <td>su</td>
+                <td>
+                  <p>Sundanese</p>
+                  <a name="Sundanese" />
+                </td>
+              </tr>
+              <tr>
+                <td>sw</td>
+                <td>
+                  <p>Swahili</p>
+                  <a name="Swahili" />
+                </td>
+              </tr>
+              <tr>
+                <td>sv</td>
+                <td>
+                  <p>Swedish</p>
+                  <a name="Swedish" />
+                </td>
+              </tr>
+              <tr>
+                <td>ty</td>
+                <td>
+                  <p>Tahitian</p>
+                  <a name="Tahitian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ta</td>
+                <td>
+                  <p>Tamil</p>
+                  <a name="Tamil" />
+                </td>
+              </tr>
+              <tr>
+                <td>tt</td>
+                <td>
+                  <p>Tatar</p>
+                  <a name="Tatar" />
+                </td>
+              </tr>
+              <tr>
+                <td>te</td>
+                <td>
+                  <p>Telugu</p>
+                  <a name="Telugu" />
+                </td>
+              </tr>
+              <tr>
+                <td>tg</td>
+                <td>
+                  <p>Tajik</p>
+                  <a name="Tajik" />
+                </td>
+              </tr>
+              <tr>
+                <td>tl</td>
+                <td>
+                  <p>Tagalog</p>
+                  <a name="Tagalog" />
+                </td>
+              </tr>
+              <tr>
+                <td>th</td>
+                <td>
+                  <p>Thai</p>
+                  <a name="Thai" />
+                </td>
+              </tr>
+              <tr>
+                <td>ti</td>
+                <td>
+                  <p>Tigrinya</p>
+                  <a name="Tigrinya" />
+                </td>
+              </tr>
+              <tr>
+                <td>to</td>
+                <td>
+                  <p>Tonga (Tonga Islands)</p>
+                  <a name="Tonga (Tonga Islands)" />
+                </td>
+              </tr>
+              <tr>
+                <td>tn</td>
+                <td>
+                  <p>Tswana</p>
+                  <a name="Tswana" />
+                </td>
+              </tr>
+              <tr>
+                <td>ts</td>
+                <td>
+                  <p>Tsonga</p>
+                  <a name="Tsonga" />
+                </td>
+              </tr>
+              <tr>
+                <td>tk</td>
+                <td>
+                  <p>Turkmen</p>
+                  <a name="Turkmen" />
+                </td>
+              </tr>
+              <tr>
+                <td>tr</td>
+                <td>
+                  <p>Turkish</p>
+                  <a name="Turkish" />
+                </td>
+              </tr>
+              <tr>
+                <td>tw</td>
+                <td>
+                  <p>Twi</p>
+                  <a name="Twi" />
+                </td>
+              </tr>
+              <tr>
+                <td>ug</td>
+                <td>
+                  <p>Uighur; Uyghur</p>
+                  <a name="Uighur; Uyghur" />
+                </td>
+              </tr>
+              <tr>
+                <td>uk</td>
+                <td>
+                  <p>Ukrainian</p>
+                  <a name="Ukrainian" />
+                </td>
+              </tr>
+              <tr>
+                <td>ur</td>
+                <td>
+                  <p>Urdu</p>
+                  <a name="Urdu" />
+                </td>
+              </tr>
+              <tr>
+                <td>uz</td>
+                <td>
+                  <p>Uzbek</p>
+                  <a name="Uzbek" />
+                </td>
+              </tr>
+              <tr>
+                <td>ve</td>
+                <td>
+                  <p>Venda</p>
+                  <a name="Venda" />
+                </td>
+              </tr>
+              <tr>
+                <td>vi</td>
+                <td>
+                  <p>Vietnamese</p>
+                  <a name="Vietnamese" />
+                </td>
+              </tr>
+              <tr>
+                <td>vo</td>
+                <td>
+                  <p>Volapuk</p>
+                  <a name="Volapuk" />
+                </td>
+              </tr>
+              <tr>
+                <td>wa</td>
+                <td>
+                  <p>Walloon</p>
+                  <a name="Walloon" />
+                </td>
+              </tr>
+              <tr>
+                <td>wo</td>
+                <td>
+                  <p>Wolof</p>
+                  <a name="Wolof" />
+                </td>
+              </tr>
+              <tr>
+                <td>xh</td>
+                <td>
+                  <p>Xhosa</p>
+                  <a name="Xhosa" />
+                </td>
+              </tr>
+              <tr>
+                <td>yi</td>
+                <td>
+                  <p>Yiddish</p>
+                  <a name="Yiddish" />
+                </td>
+              </tr>
+              <tr>
+                <td>yo</td>
+                <td>
+                  <p>Yoruba</p>
+                  <a name="Yoruba" />
+                </td>
+              </tr>
+              <tr>
+                <td>za</td>
+                <td>
+                  <p>Zhuang; Chuang</p>
+                  <a name="Zhuang; Chuang" />
+                </td>
+              </tr>
+              <tr>
+                <td>zu</td>
+                <td>
+                  <p>Zulu</p>
+                  <a name="Zulu" />
+                </td>
+              </tr>
+            </div>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>						
+					   </div>                      
+                    </div>
+                    <!-- /inner-wrapper -->                   
+                </div>
+                <!-- /row -->              
+            </div>
+            <!-- /container -->           
+        </div>
+    <!-- /segment-content -->
+
+        <div id="segment-footer" class="segment">
+            <!-- segment-footer -->
+            <div class="container">
+                <!-- container -->
+                <div class="inner-wrapper">
+					<div id="explanatoryline">
+                         <img src="../dist/images/explanatoryline.png" alt="Information and technology for better health and care" />
+						 <p>
+                        Copyright &copy; 2017 Health and Social Care Information Centre<br/>
+						NHS Digital is the trading name of the Health and Social Care Information Centre.
+                    </p>
+                    </div>
+				<div id="hl7-nav">
+                    <a id="hl7-logo" href="http://www.hl7.org" target="_blank">
+                        <img src="../dist/images/hl7-logo.png" alt="visit the hl7 website" />
+                    </a>
+					<p>
+					FHIR&reg; is the registered trademark of HL7<br/>
+					and is used with the permission of HL7.
+					</p>
+				</div>
+					<p>
+						<!--<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> -->
+                    </p>
+                </div>
+                <!-- /inner-wrapper -->
+            </div>
+            <!-- /container -->
+        </div>
+
+        <div id="segment-post-footer" class="segment">
+            <!-- segment-post-footer -->
+            <div class="container">
+                <!-- container -->
+            </div>
+            <!-- /container -->
+        </div>
+	</body>
+</html>

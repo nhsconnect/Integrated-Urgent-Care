@@ -1,0 +1,123 @@
+<templatannotations>
+	<attribute name="classCode" fixedValue="OBS">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>Indicates that this is an observation.</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="moodCode" fixedValue="EVN">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>Indicates that this is an event.</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="classCode" fixedValue="PAT">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this is an patient role.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="classCode" fixedValue="ROL">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this is a role.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="classCode" fixedValue="REG">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>Indicates that this is a registration act.</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="determinerCode" fixedValue="INSTANCE">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this Entity represents a distinct single instance.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="typeCode" fixedValue="SBJ">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>Indicates that this a subject participation.</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="typeCode" fixedValue="SUBJ">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>Indicates that this a subject actRelationship.</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="typeCode" fixedValue="RESP">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this a responsible party.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="typeCode" fixedValue="COMP">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>Indicates that this a component relationship.</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="typeCode" fixedValue="AUT">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this an Author participation.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="classCode" fixedValue="PSN">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this a person entity.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="classCode" fixedValue="ORG">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this a organisation entity.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+	<attribute name="classCode" fixedValue="ASSIGNED">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>Indicates that this an assigned role.</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+		<attribute name="classCode" fixedValue="PART">
+		<annotations>
+			<otherAnnotation type="html">
+				<text>
+					<p>Indicates that this a Part role.</p>
+				</text>
+			</otherAnnotation>
+		</annotations>
+	</attribute>
+</templatannotations>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml"><head><title>Nullification - Tabular View</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><link href="../../../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../../../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../../../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">Nullification<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>2.2; <b>Status: </b>Final</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../../../index.html">About</a></li><li><a href="../../../Core/changehistory.html">Change History</a></li><li><a href="../../../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../../../Domains/messages.html">Messages</a></li><li><a href="../../../Examples/examples.html">Examples</a></li><li><a href="../../../AssociatedSpecifications/AssociatedSpecifications.html">Associated Specifications</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../../../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../../../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../../../Domains/Templates/Document files/constraintusage.html">Constraint Usage</a></li><li><a href="../../../Domains/Templates/Document files/templateusage.html">Template Usage</a></li><li><a href="../../../Vocabulary/vocabularyusage.html">Vocabulary Usage</a></li><li><a href="../../../Domains/profiles.html">Configuration Profiles</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class="tabularview">
+ <h3>NonNamedPersonAuthorSDS Tabular View</h3> 
+ <table cellpadding="2" cellspacing="0" class=" table"> 
+  <tbody>
+   <tr class="class"> 
+    <td><a href="COCD_TP145019UK03.html"><b>COCD_TP145019UK03</b></a></td> 
+    <td nowrap="yes"/> 
+   </tr> 
+   <tr valign="top" class="class"> 
+    <td class="roleclass"><a name="AssignedAuthorSDS"> </a><b>AssignedAuthorSDS</b></td> 
+    <td width="50%"> 
+     <div> 
+      <p><b>An author role played by a person when the person's details are not carried as they are either not required or not available.</b></p> 
+     </div> </td> 
+   </tr> 
+   <tr class="mif"> 
+    <td align="right" width="50%"/> 
+    <td><font color="gray">Used by: </font><a href="#"><b/></a></td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<a> </a><b>RoleClass</b> } )<br/> {<b> Fixed="<font color="red">ASSIGNED</font>"</b> } </td> 
+    <td width="50%"> 
+     <div> 
+      <p><u><b>Model Attribute Description </b></u><br/></p> 
+      <p>The HL7 attribute <b>classCode</b> describes this class as an assigned role. An assigned role is a type of agent in which, the player is a person employed by a scoping organisation. </p> 
+      <p><u><b>Implementation in XML Instance </b></u><br/></p> The XML attribute 
+      <b>classCode</b> is fixed to "
+      <font color="#ff0000"><b>ASSIGNED</b></font>". 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [R] </b></font><b>id</b> (<a href="../../../Data Types/datatypes.html#II"><b>II</b></a>) </td> 
+    <td width="50%"> 
+     <div> 
+      <div> 
+       <p><u><b>Model Attribute Description </b></u><br/></p> 
+       <p>The HL7 attribute <b>id</b> is only present for CDA compliancy. </p> 
+       <p><u><b>Implementation in XML Instance </b></u><br/></p> The XML attribute 
+       <b>nullFlavor </b>of the XML element 
+       <b>id </b>shall contain the value "
+       <font color="#ff0000"><b>NA</b></font>". 
+      </div> 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b>templateId</b> (<a href="../../../Data Types/datatypes.html#II"><b>II</b></a>)<br/> {<b> Fixed="<font color="red">COCD_TP145019UK03#AssignedAuthorSDS</font>"</b> } </td> 
+    <td width="50%"> 
+     <div> 
+      <div id="COCD_TP145001UK03.Role.AssignedAuthorSDS/$templateId">
+       <u><b>Model Attribute Description</b></u>
+       <br/>
+       <br/>The HL7 attribute 
+       <b>templateId</b> provides a unique identifier for the template and the class name within that template. This is used to identify how the CDA standard has been constrained for NHS use.
+       <br/>
+       <br/>
+       <u><b>Implementation in XML Instance</b></u>
+       <br/>
+       <br/>The 
+       <b>Identifier External</b> data type flavour is used to carry this information in the XML element 
+       <b>templateId</b> as follows:
+       <br/>
+       <ul> 
+        <li> The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000"><b>2.16.840.1.113883.2.1.3.2.4.18.2</b></font>" </li> 
+        <li> The XML attribute <b>extension</b> is fixed to "<font color="#ff0000"><b>COCD_TP145019UK03#AssignedAuthorSDS</b></font>" </li> 
+       </ul> 
+      </div> 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b><a id="AssignedAuthorSDS/representedOrganization"/>representedOrganization</b> (<a href="#Organization"><b>Organization</b></a>) </td> 
+    <td width="50%"> 
+     <div> 
+      <p>A link to the organisation entity which is scoping this role.</p> 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="class"> 
+    <td class="entclass"><a name="Organization"> </a><b>Organization</b></td> 
+    <td width="50%"> 
+     <div> 
+      <p><b>Details to allow identification of an organisation.<br/></b></p> 
+     </div> </td> 
+   </tr> 
+   <tr class="mif"> 
+    <td align="right" width="50%"/> 
+    <td><font color="gray">Used by: </font><a href="#AssignedAuthorSDS"><b>AssignedAuthorSDS</b></a></td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b>classCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<a> </a><b>EntityClass</b> } )<br/> {<b> Fixed="<font color="red">ORG</font>"</b> } </td> 
+    <td width="50%"> 
+     <div> 
+      <p><u><b>Model Attribute Description </b></u><br/></p> 
+      <p>The HL7 attribute <b>classCode</b> describes this class as an organisation. </p> 
+      <p><u><b>Implementation in XML Instance </b></u><br/></p> 
+      <p>The XML attribute <b>classCode</b> is fixed to "<b><font color="#ff0000">ORG</font></b>". <br/></p> 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b>determinerCode</b> (<a href="../../../Data Types/datatypes.html#CS"><b>CS</b></a> {<a> </a><b>CNE</b>:<a> </a><b>EntityDeterminer</b> } )<br/> {<b> Fixed="<font color="red">INSTANCE</font>"</b> } </td> 
+    <td width="50%"> 
+     <div> 
+      <p><u><b>Model Attribute Description </b></u><br/></p> 
+      <p>The HL7 attribute <b>determinerCode</b> describes this class as an instance of an organisation. </p> 
+      <p><u><b>Implementation in XML Instance </b></u><br/></p> 
+      <p>The XML attribute <b>determinerCode</b> is fixed to "<font color="#ff0000"><b>INSTANCE</b></font>". <br/></p> 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b>id</b> (<a href="../../../Data Types/datatypes.html#II"><b>II</b></a>) </td> 
+    <td width="50%"> 
+     <div> 
+      <p><u><b>Model Attribute Description </b></u><br/></p> 
+      <p>The HL7 attribute<b> id</b> uses an ODS code as an identifier that uniquely identifies the organisation which employs the author. The ODS code should identify the organisation at either the site level or organisation level. Where possible the organisation should be identified at the site level. ODS codes were formerly known as NACS codes. </p> 
+      <p><u><b>Implementation in XML Instance </b></u><br/></p> 
+      <p>When ODS site code is used then the XML element <b>id </b>is populated in the following way: </p> 
+      <ul> 
+       <li>The XML attribute <b>root</b> shall contain an OID with the value "<font color="#ff0000"><b>2.16.840.1.113883.2.1.3.2.4.19.2</b></font>" </li> 
+       <li>The XML attribute <b>extension</b> shall contain the ODS site code </li> 
+      </ul> 
+      <p>When ODS organisation code is used then the XML element <b>id </b>is populated in the following way:<br/></p> 
+      <ul> 
+       <li>The XML attribute <b>root</b> shall contain an OID with the value "<font color="#ff0000"><b>2.16.840.1.113883.2.1.3.2.4.19.1</b></font>" </li> 
+       <li>The XML attribute <b>extension</b> shall contain the ODS organisation code </li> 
+      </ul> 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b>name</b> (<a href="../../../Data Types/datatypes.html#ON"><b>ON</b></a>) </td> 
+    <td width="50%"> 
+     <div> 
+      <p><u><b>Model Attribute Description </b></u><br/></p> 
+      <p>The HL7 attribute <b>name</b> uses the description of the organisation associated with the ODS code. </p> 
+      <p><u><b>Implementation in XML Instance </b></u><br/></p> 
+      <div>
+       The XML element 
+       <b>name</b> will carry the description associated with the ODS code carried in the XML attribute 
+       <b>extension</b> of the XML element 
+       <b>id</b>. 
+      </div> 
+     </div> </td> 
+   </tr> 
+   <tr valign="top" class="part"> 
+    <td width="50%"><font color="green"><b>[1..1] </b></font><font color="green"><b> [M] </b></font><b>templateId</b> (<a href="../../../Data Types/datatypes.html#II"><b>II</b></a>)<br/> {<b> Fixed="<font color="red">COCD_TP145019UK03#representedOrganization</font>"</b> } </td> 
+    <td width="50%"> 
+     <div> 
+      <div> 
+       <p><u><b>Model Attribute Description</b></u><br/><br/> The HL7 attribute <b>templateId</b> provides a unique identifier for the template and the class name within that template. This is used to identify how the CDA standard has been constrained for NHS use. </p> 
+       <p><u><b>Implementation in XML Instance </b></u><br/></p> 
+       <p>The <b>Identifier External </b>data type flavour is used to carry this information in the XML element <b>templateId</b> as follows: </p> 
+       <ul> 
+        <li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000"><b>2.16.840.1.113883.2.1.3.2.4.18.2</b></font>" </li> 
+        <li>The XML attribute <b>extension</b> is fixed to "<b><font color="#ff0000">COCD_TP145019UK03#representedOrganization</font></b>" </li> 
+       </ul> 
+      </div> 
+     </div> </td> 
+   </tr> 
+  </tbody>
+ </table>  
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:interoperabilityteam@hscic.gov.uk">Contact Us</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>09-Sep-2013</p></div></div></div></div><script src="../../../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../../../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../../../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

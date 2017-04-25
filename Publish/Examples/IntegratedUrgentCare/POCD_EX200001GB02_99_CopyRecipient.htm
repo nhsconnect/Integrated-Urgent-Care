@@ -1,0 +1,322 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <!--$trasformVersion=1.0 $updateDate=29/06/2012 Interoperability Team-->
+      <!--$trasformVersion=1.0 $updateDate=12/10/2012 Interoperability Team - branched for NHS111-->
+      <!-- Do NOT edit this HTML directly, it was generated via an XSLT transformation from the original release 2 CDA
+          Document. -->
+      <title>NHS 111 Report - For Information</title><style type="text/css">
+						body { color: #000000; font-size: 8pt; line-height: normal; font-family: Verdana, Arial, sans-serif; margin: 10px; }
+						a { color: #0099ff; text-decoration: none }
+						.input { color: #003366; font-size: 8pt; font-family: Verdana, Arial, sans-serif;  border: solid 1px }
+						div.titlebar {  border: 1px solid #000000; padding: 3px; margin-bottom: 20px;}
+						div.doctitle { font-size: 12pt; font-weight: bold; margin-bottom: 10px;}
+						div.header { font-size: 8pt; margin-bottom: 30px; border: 1px solid #000000; }
+						div.footer { font-size: 8pt; margin-top: 30px; border: 1px solid #000000; }
+						p {margin-top: 2px; margin-bottom: 6px;}
+						h1 { font-size: 10pt; font-weight: bold; color: #000000; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid #CCCCCC;}
+						h2 { font-size: 8pt; font-weight: bold; color: #000000; margin-top: 20px; margin-bottom: 6px; }
+						h3 { font-size: 8pt; font-weight: bold; color: #000000; margin-top: 15px; margin-bottom: 6px; }
+						h4 { font-size: 8pt; font-weight: bold; text-decoration: underline; color: #000000; margin-top: 6px; margin-bottom: 6px; }
+						h5 { font-size: 8pt; font-weight: normal; text-decoration: underline;  color: #000000; margin-top: 4px; margin-bottom: 4px; }
+						h6 { font-size: 8pt; font-weight: normal; color: #000000; margin-top: 2px; margin-bottom: 2px; }
+						table { border: 1px solid #000000; }
+						th.default {font-size: 8pt;padding: 3px; color: #000000;  text-align: left;}
+						th {font-size: 8pt;padding: 3px; color: #000000; }
+						td {font-size: 8pt;padding: 3px; }
+						table.titlebar { border: 0px;  }
+						td.titlebar {font-size: 8pt;color: #000000;  font-weight: bold; }
+						th.titlebar {font-size: 8pt;color: #000000;  font-weight: normal; font-style: italic; text-align: left;}
+						th.sectitle {font-size: 8pt;color: #000000;  font-weight: bold; text-align: left;}
+						th.participant {font-size: 8pt;color: #000000;  font-weight: bold; font-style: italic; text-align: left;}
+						table.header { font-size: 8pt;border: 0px;  }
+						td.header {font-size: 8pt;color: #000000;  font-weight: bold;}
+						th.header {font-size: 8pt;color: #000000;  font-weight: normal; text-align: left; font-style:italic;}
+						/*Classes below map to CDA styleCodes*/
+						.Bold {font-weight: bold;}
+						.Underline {text-decoration:underline;}
+						.Italics {font-style:italic;}
+						.Emphasis {font-style:italic;}
+						.Rrule {border-right: 1px solid black;}
+						.Lrule {border-left: 1px solid black;}
+						.Toprule {border-top: 1px solid black;}
+						.Botrule {border-right: 1px solid black;}
+						/*Banner styles*/
+						div.banner { font-size: 8pt; margin-bottom: 30px; border: 1px solid #000000; }
+						div.banner TABLE { border: 0px;  font-weight: bold; }
+						div.banner TD {  vertical-align: top; padding-right: 1em;}
+						div.banner TABLE P {margin: 0;}
+						.label {font-style:italic; font-weight: normal;}
+				</style></head>
+   <!--Derived from HL7 Finland R2 Tyylitiedosto: Tyyli_R2_B3_01.xslt-->
+   <!--Updated by Calvin E. Beebe, Mayo Clinic - Rochester Mn. -->
+   <!--Updated by Keith W. Boone, Dictaphone - Burlington, MA -->
+   <!--Updated by Kai U. Heitmann, Heitmann Consulting & Service, NL for VHitG, Germany -->
+   <!--Updated by Rene Spronk, translate back to english-language labels-->
+   <!--Updated by Dick Donker, Philips Medical Systems include linkHtml-->
+   <!--Updated by Tim Pilkington - NHS CFH-->
+   <!--Updated by Aled Greenhalgh - NHS CFH-->
+   <!--Updated by Prashant Trivedi - NHS CFH-->
+   <!--Updated by Dave Barnet - branched for NHS111-->
+   <body>
+      <div class="doctitle">NHS 111 Report - For Information</div>
+      <div id="patientBanner" class="banner">
+         <table>
+            <tbody>
+               <tr>
+                  <td>JOE, Blogg (Mr)
+                     				
+                  </td>
+                  <td align="right"><span class="label"> Born </span>01-Jan-1989
+                  </td>
+                  <td align="right"><span class="label"> Gender </span>Male
+                  </td>
+                  <td><span class="label"> Unverified NHS No. </span>993 254 128<br><span class="label"> Local Patient ID </span>K12345<br></td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="header">
+            <tbody>
+               <tr>
+                  <td>
+                     <p class="label">Home Address</p>
+                     <p>17, County Avenue<br>Woodtown<br>Medway<br>ME5 FS3
+                     </p>
+                  </td>
+                  <td><span class="label">Home Phone </span>01634775667<br><span class="label">Vacation/Temporary Phone </span>01634451628<br><span class="label">Home Email </span>Joe.Blogg@emailfree.co.uk
+                  </td>
+                  <td>
+                     <p class="label">GP Practice</p>
+                     <p>Medway Medical Practice<br>Springer Street<br>Medway<br>ME5 5TY
+                     </p>
+                     <p><span class="label">Phone </span>01634111222
+                     </p>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <h1>Permission To View</h1>
+      								
+      <table>
+         									
+         <tbody>
+            										
+            <tr>
+               											
+               <th class="default">Permission to view outcome</th>
+               											
+               <td>Permission to view obtained</td>
+               										
+            </tr>
+            										
+            <tr>
+               											
+               <th class="default">Date obtained</th>
+               											
+               <td>19-May-2011, 20:00</td>
+               										
+            </tr>
+            										
+            <tr>
+               											
+               <th class="default">Date expires</th>
+               											
+               <td>26-May-2011, 20:00</td>
+               										
+            </tr>
+            									
+         </tbody>
+         								
+      </table>
+      							
+      <h1>Patient’s Reported Condition</h1>
+      								Patient has an insect bite.
+      							
+      <h1>Case Summary</h1>
+      								<span class="bold">Disposition:</span>
+      								<br>
+      								Go to the nearest Emergency Department within 4 hours.
+      								<br>
+      								<span class="bold">Selected care service:</span>
+      								<br>
+      								Dx009
+      								<br>
+      								<span class="bold">Pathways Assessment:</span>
+      								<br>
+      								An injury or other health problem was described.
+      									<br>The individual was described as breathing and conscious.
+      									<br>Loss of at least a mugful of blood in the last 30 minutes was not described.
+      									<br>An illness or other health problem was described. - Insect Bite
+      									<br>Fighting for breath was not described.
+      									<br>A heart attack, chest/upper back pain, recent probable stroke, recent fit/seizure
+      or suicide attempt was not described as the main call reason.
+      									<br>New confusion, a diabetic hypo, a probable allergic reaction or successful resuscitation
+      was not described as being the main call reason.
+      									<br>The individual was described as being warm to touch.
+      									<br>An insect or spider bite or sting was described. - Tick Bite
+      									<br>A sting/bite occurring within the last hour was not described.
+      									<br>10 or more stings were not described.
+      									<br>Nausea or vomiting since the sting was not described.
+      									<br>A sting involving the eyes or mouth was not described.
+      									<br>A fever was not described.
+      									<br>An insect still attached to the skin was described.
+      									<br>A tick bite was described.
+      									<br>
+      								
+      								<span class="bold">Advice given:</span>
+      								<br>
+      								Remove any jewellery or tight clothing from the area.
+      									<br>Antihistamine medication and creams help reduce swelling and itching. They can be
+      bought from pharmacies. Talk to the pharmacist for advice. Follow the instructions
+      in the pack.
+      									<br>Unless advised not to, or they have already been given, paracetamol or ibuprofen can
+      be used to relieve pain. Follow the instructions in the pack. If in doubt ask a pharmacist.
+      								
+      							
+      <h1>Patient Special Notes</h1>
+      								Patient has history of violence towards health care professionals
+      							
+      <div class="header">
+         <table class="header">
+            <tr>
+               <th class="header">Document Created</th>
+               <td class="header">19-May-2011, 20:00</td>
+            </tr>
+            <tr>
+               <th class="header">Document Owner</th>
+               <td class="header">Medway NHS Foundation Trust</td>
+            </tr>
+            <tr>
+               <th class="header">Authored by</th>
+               <td class="header">Mary Jones - Nurse Triage Practitioner, Medway NHS Foundation Trust on 19-May-2011, 20:00</td>
+            </tr>
+            <tr>
+               <th class="header" valign="top">Consent Status</th>
+               <td class="header">Consent given for electronic record sharing</td>
+            </tr>
+         </table>
+      </div>
+      <div id="informantBanner" class="banner">
+         <table>
+            <tbody>
+               <tr>
+                  <th class="header">Informant</th>
+                  <td>Helga Bloggs - Spouse</td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="header">
+            <tbody>
+               <tr>
+                  <td>
+                     <p class="label">Primary Home Address</p>
+                     <p>43 Summers Avenue<br>Somerset Street<br>Medway<br>ME5 7TY
+                     </p>
+                  </td>
+                  <td><span class="label">Mobile Phone </span>07886554123
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="titlebar">
+         <table class="titlebar">
+            <tr>
+               <th class="titlebar">Encounter Type</th>
+               <td class="titlebar">NHS111 Encounter</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Encounter Time</th>
+               <td class="titlebar">19-May-2011, 19:45 to 19-May-2011, 20:15</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Case Reference</th>
+               <td class="titlebar">CASEREF1234</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Case ID</th>
+               <td class="titlebar">CASEID123</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Encounter Disposition</th>
+               <td class="titlebar">Go to the nearest Emergency Department within 4 hours.</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Care Setting Location</th>
+               <td class="titlebar">Incident Location</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Care Setting Address</th>
+               <td class="titlebar">
+                  <p class="label">Visit Address</p>
+                  <p>2, Brancaster Road<br>Medway<br>ME5 FL5<br>Follow the high street and turn left by Boots<br>GB<br>Great Britain<br>+38.265789-85.623415
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <th class="titlebar">Care Setting Type</th>
+               <td class="titlebar">Example Care Setting</td>
+            </tr>
+            <tr>
+               <th class="titlebar">Responsible Party</th>
+               <td class="titlebar">Dave Cornwell - Medical Director, Medway South Out of Hours Centre<br></td>
+            </tr>
+         </table>
+      </div>
+      <div id="participantBanner" class="banner">
+         <table>
+            <tbody>
+               <tr>
+                  <th class="sectitle">Other participant(s) in this document</th>
+               </tr>
+            </tbody>
+         </table>
+         <table>
+            <tr>
+               <th class="participant">Referred To</th>
+            </tr>
+            <tr>
+               <th class="header">Referred To Organization</th>
+               <td class="titlebar">Medway Community Hospital</td>
+            </tr>
+         </table>
+         <table class="header">
+            <tbody>
+               <tr>
+                  <td>
+                     <p class="label">Visit Address</p>
+                     <p>Church Street Walk in Centre<br>4 Church Street<br>Medway<br>ME8 7TT
+                     </p>
+                  </td>
+                  <td><span class="label">Emergency Phone </span>0123456789
+                  </td>
+               </tr>
+            </tbody>
+         </table><br></div>
+      <div class="footer">
+         <table class="header">
+            <tr>
+               <th class="header">Document ID</th>
+               <td class="header">A709A442-3CF4-476E-8377-376500E829C9</td>
+               <th class="header">Version</th>
+               <td class="header">2</td>
+            </tr>
+            <tr>
+               <th class="header">Replacement of</th>
+               <td class="header">A709A442-3CF4-476E-8377-376500E82AAA</td>
+               <th class="header">Version</th>
+               <td class="header">1</td>
+            </tr>
+            <tr>
+               <th class="header" valign="top">Copy Recipient</th>
+               <td class="header">Kent Out of Hours Clinic<br></td>
+               <th class="header">Phone</th>
+               <td class="header">0123476233</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

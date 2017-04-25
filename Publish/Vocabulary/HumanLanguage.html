@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"><head><title>Integrated Urgent Care - </title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="content-type" content="text/html;charset=UTF-8"/><link href="../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/><link href="../Template/css/base.css" rel="stylesheet" media="screen"/><link href="../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/></head><body><div id="wrap"><div class="container"><div class="row"><div class="span4"><img src="../Template/images/logo.png"/></div><div class="span8"><h4 class="pack-title text-right">Integrated Urgent Care<br/>Domain Message Specification</h4></div></div><div class="navbar"><div class="navbar-inner"><div class="container"><button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><div class="nav-collapse collapse"><p class="navbar-text pull-right"><b>Version: </b>3.0; <b>Status: </b>RC1</p><ul class="nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"> </b></a><ul class="dropdown-menu"><li><a href="../index.html">About</a></li><li><a href="../Core/changehistory.html">Change History</a></li><li><a href="../Core/glossary.html">Glossary</a></li></ul></li><li><a href="../Domains/messages.html">Messages</a></li><li><a href="../Examples/examples.html">Examples</a></li><li><a href="../AssociatedSpecifications/AssociatedSpecifications.html">Associated Specifications</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">References <b class="caret"> </b></a><ul class="dropdown-menu"><li class="dropdown-submenu"><a tabindex="-1" href="#">Data Types</a><ul class="dropdown-menu"><li><a href="../Data Types/datatypesusage.html">Data Types Usage</a></li><li><a href="../Data Types/datatypes.html">Data Types Specification</a></li></ul></li><li><a href="../Domains/Templates/Document files/constraintusage.html">Constraint Usage</a></li><li><a href="../Domains/Templates/Document files/templateusage.html">Template Usage</a></li><li><a href="../Domains/profiles.html">Configuration Profiles</a></li></ul></li></ul></div></div></div></div><div id="content" class="row"><div class="span12"><div xmlns="" class=" vocabulary">
+ <h3>HumanLanguage</h3>
+ <table class="table table-condensed"> 
+  <tbody>
+   <tr>
+    <th style="width: 20%; text-align: left">Code SystemId: </th>
+    <td style="width: 80%">2.16.840.1.113883.2.1.3.2.4.17.70</td>
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Version: </th> 
+    <td style="width: 80%">4.0</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Status: </th> 
+    <td style="width: 80%">active</td> 
+   </tr> 
+   <tr> 
+    <th style="width: 20%; text-align: left">Date: </th> 
+    <td style="width: 80%">2007-11-30</td> 
+   </tr> 
+  </tbody> 
+ </table>
+ <h4>Description</h4>
+ <p>A language used by human beings. It includes languages that use any of the senses, e.g. sight and touch as well as sound. It is based on the ISO 639-1 two character language codes, plus five extensions required by NPfIT. These make use of the area reserved by ISO 639 for local use and include a digit to distinguish them from any current ISO 639-1 codes.</p>
+ <p> <strong>N.B. For CDA domains, use of codes q1 - q5 are prohibited.</strong> <br/> </p>
+ <h4>Values</h4>
+ <table class=" table table-condensed table-striped"> 
+  <thead class="vocabheader"> 
+   <tr> 
+    <th style="width: 20%">Code</th> 
+    <th style="width: 40%">Description</th> 
+    <th style="width: 40%">Note</th> 
+   </tr> 
+  </thead> 
+  <tbody> 
+   <tr> 
+    <td style="width: 20%">q1</td> 
+    <td style="width: 40%">Braille</td> 
+    <td style="width: 40%"> <p>For people who are unable to see</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">q2</td> 
+    <td style="width: 40%">American Sign Language</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">q3</td> 
+    <td style="width: 40%">Australian.Sign Language</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">q4</td> 
+    <td style="width: 40%">British Sign Language</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">q5</td> 
+    <td style="width: 40%">Makaton</td> 
+    <td style="width: 40%"> <p>Devised for children and adults with a variety of communication and learning disabilities.</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="width: 20%">aa</td> 
+    <td style="width: 40%">Afar</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ab</td> 
+    <td style="width: 40%">Abkhazian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">af</td> 
+    <td style="width: 40%">Afrikaans</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ak</td> 
+    <td style="width: 40%">Akan</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sq</td> 
+    <td style="width: 40%">Albanian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">am</td> 
+    <td style="width: 40%">Amharic</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ar</td> 
+    <td style="width: 40%">Arabic</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">an</td> 
+    <td style="width: 40%">Aragonese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">hy</td> 
+    <td style="width: 40%">Armenian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">as</td> 
+    <td style="width: 40%">Assamese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">av</td> 
+    <td style="width: 40%">Avaric</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ae</td> 
+    <td style="width: 40%">Avestan</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ay</td> 
+    <td style="width: 40%">Aymara</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">az</td> 
+    <td style="width: 40%">Azerbaijani</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ba</td> 
+    <td style="width: 40%">Bashkir</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">bm</td> 
+    <td style="width: 40%">Bambara</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">eu</td> 
+    <td style="width: 40%">Basque</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">be</td> 
+    <td style="width: 40%">Belarusian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">bn</td> 
+    <td style="width: 40%">Bengali</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">bh</td> 
+    <td style="width: 40%">Bihari</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">bi</td> 
+    <td style="width: 40%">Bislama</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">bo</td> 
+    <td style="width: 40%">Tibetan</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">bs</td> 
+    <td style="width: 40%">Bosnian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">br</td> 
+    <td style="width: 40%">Breton</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">bg</td> 
+    <td style="width: 40%">Bulgarian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">my</td> 
+    <td style="width: 40%">Burmese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ca</td> 
+    <td style="width: 40%">Catalan; Valencian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">cs</td> 
+    <td style="width: 40%">Czech</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ch</td> 
+    <td style="width: 40%">Chamorro</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ce</td> 
+    <td style="width: 40%">Chechen</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">zh</td> 
+    <td style="width: 40%">Chinese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">cu</td> 
+    <td style="width: 40%">Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">cv</td> 
+    <td style="width: 40%">Chuvash</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kw</td> 
+    <td style="width: 40%">Cornish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">co</td> 
+    <td style="width: 40%">Corsican</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">cr</td> 
+    <td style="width: 40%">Cree</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">cy</td> 
+    <td style="width: 40%">Welsh</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">da</td> 
+    <td style="width: 40%">Danish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">de</td> 
+    <td style="width: 40%">German</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">dv</td> 
+    <td style="width: 40%">Divehi; Dhivehi; Maldivian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">nl</td> 
+    <td style="width: 40%">Dutch; Flemish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">dz</td> 
+    <td style="width: 40%">Dzongkha</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">el</td> 
+    <td style="width: 40%">Greek, Modern (1453-)</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">en</td> 
+    <td style="width: 40%">English</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">eo</td> 
+    <td style="width: 40%">Esperanto</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">et</td> 
+    <td style="width: 40%">Estonian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ee</td> 
+    <td style="width: 40%">Ewe</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">fo</td> 
+    <td style="width: 40%">Faroese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">fa</td> 
+    <td style="width: 40%">Persian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">fj</td> 
+    <td style="width: 40%">Fijian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">fi</td> 
+    <td style="width: 40%">Finnish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">fr</td> 
+    <td style="width: 40%">French</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">fy</td> 
+    <td style="width: 40%">Western Frisian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ff</td> 
+    <td style="width: 40%">Fulah</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ka</td> 
+    <td style="width: 40%">Georgian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">gd</td> 
+    <td style="width: 40%">Gaelic; Scottish Gaelic</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ga</td> 
+    <td style="width: 40%">Irish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">gl</td> 
+    <td style="width: 40%">Galician</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">gv</td> 
+    <td style="width: 40%">Manx</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">gn</td> 
+    <td style="width: 40%">Guarani</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">gu</td> 
+    <td style="width: 40%">Gujarati</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ht</td> 
+    <td style="width: 40%">Haitian; Haitian Creole</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ha</td> 
+    <td style="width: 40%">Hausa</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">he</td> 
+    <td style="width: 40%">Hebrew</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">hz</td> 
+    <td style="width: 40%">Herero</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">hi</td> 
+    <td style="width: 40%">Hindi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ho</td> 
+    <td style="width: 40%">Hiri Motu</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">hr</td> 
+    <td style="width: 40%">Croatian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">hu</td> 
+    <td style="width: 40%">Hungarian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ig</td> 
+    <td style="width: 40%">Igbo</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">is</td> 
+    <td style="width: 40%">Icelandic</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">io</td> 
+    <td style="width: 40%">Ido</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ii</td> 
+    <td style="width: 40%">Sichuan Yi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">iu</td> 
+    <td style="width: 40%">Inuktitut</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ie</td> 
+    <td style="width: 40%">Interlingue</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ia</td> 
+    <td style="width: 40%">Interlingua (International Auxiliary Language Association)</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">id</td> 
+    <td style="width: 40%">Indonesian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ik</td> 
+    <td style="width: 40%">Inupiaq</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">it</td> 
+    <td style="width: 40%">Italian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">jv</td> 
+    <td style="width: 40%">Javanese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ja</td> 
+    <td style="width: 40%">Japanese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kl</td> 
+    <td style="width: 40%">Kalaallisut; Greenlandic</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kn</td> 
+    <td style="width: 40%">Kannada</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ks</td> 
+    <td style="width: 40%">Kashmiri</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kr</td> 
+    <td style="width: 40%">Kanuri</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kk</td> 
+    <td style="width: 40%">Kazakh</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">km</td> 
+    <td style="width: 40%">Central Khmer</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ki</td> 
+    <td style="width: 40%">Kikuyu; Gikuyu</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">rw</td> 
+    <td style="width: 40%">Kinyarwanda</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ky</td> 
+    <td style="width: 40%">Kirghiz; Kyrgyz</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kv</td> 
+    <td style="width: 40%">Komi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kg</td> 
+    <td style="width: 40%">Kongo</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ko</td> 
+    <td style="width: 40%">Korean</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">kj</td> 
+    <td style="width: 40%">Kuanyama; Kwanyama</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ku</td> 
+    <td style="width: 40%">Kurdish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">lo</td> 
+    <td style="width: 40%">Lao</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">la</td> 
+    <td style="width: 40%">Latin</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">lv</td> 
+    <td style="width: 40%">Latvian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">li</td> 
+    <td style="width: 40%">Limburgan; Limburger; Limburgish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ln</td> 
+    <td style="width: 40%">Lingala</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">lt</td> 
+    <td style="width: 40%">Lithuanian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">lb</td> 
+    <td style="width: 40%">Luxembourgish; Letzeburgesch</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">lu</td> 
+    <td style="width: 40%">Luba-Katanga</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">lg</td> 
+    <td style="width: 40%">Ganda</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mk</td> 
+    <td style="width: 40%">Macedonian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mh</td> 
+    <td style="width: 40%">Marshallese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ml</td> 
+    <td style="width: 40%">Malayalam</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mi</td> 
+    <td style="width: 40%">Maori</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mr</td> 
+    <td style="width: 40%">Marathi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ms</td> 
+    <td style="width: 40%">Malay</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mg</td> 
+    <td style="width: 40%">Malagasy</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mt</td> 
+    <td style="width: 40%">Maltese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mo</td> 
+    <td style="width: 40%">Moldavian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">mn</td> 
+    <td style="width: 40%">Mongolian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">na</td> 
+    <td style="width: 40%">Nauru</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">nv</td> 
+    <td style="width: 40%">Navajo; Navaho</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">nr</td> 
+    <td style="width: 40%">Ndebele, South; South Ndebele</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">nd</td> 
+    <td style="width: 40%">Ndebele, North; North Ndebele</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ng</td> 
+    <td style="width: 40%">Ndonga</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ne</td> 
+    <td style="width: 40%">Nepali</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">nn</td> 
+    <td style="width: 40%">Norwegian Nynorsk; Nynorsk, Norwegian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">nb</td> 
+    <td style="width: 40%">Bokmål, Norwegian; Norwegian Bokmål</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">no</td> 
+    <td style="width: 40%">Norwegian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ny</td> 
+    <td style="width: 40%">Chichewa; Chewa; Nyanja</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">oc</td> 
+    <td style="width: 40%">Occitan (post1500); Provençal</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">oj</td> 
+    <td style="width: 40%">Ojibwa</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">or</td> 
+    <td style="width: 40%">Oriya</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">om</td> 
+    <td style="width: 40%">Oromo</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">os</td> 
+    <td style="width: 40%">Ossetian; Ossetic</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">pa</td> 
+    <td style="width: 40%">Panjabi; Punjabi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">pi</td> 
+    <td style="width: 40%">Pali</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">pl</td> 
+    <td style="width: 40%">Polish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">pt</td> 
+    <td style="width: 40%">Portuguese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ps</td> 
+    <td style="width: 40%">Pushto</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">qu</td> 
+    <td style="width: 40%">Quechua</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">rm</td> 
+    <td style="width: 40%">Romansh</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ro</td> 
+    <td style="width: 40%">Romanian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">rn</td> 
+    <td style="width: 40%">Rundi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ru</td> 
+    <td style="width: 40%">Russian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sg</td> 
+    <td style="width: 40%">Sango</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sa</td> 
+    <td style="width: 40%">Sanskrit</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sr</td> 
+    <td style="width: 40%">Serbian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">si</td> 
+    <td style="width: 40%">Sinhala; Sinhalese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sk</td> 
+    <td style="width: 40%">Slovak</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sl</td> 
+    <td style="width: 40%">Slovenian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">se</td> 
+    <td style="width: 40%">Northern Sami</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sm</td> 
+    <td style="width: 40%">Samoan</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sn</td> 
+    <td style="width: 40%">Shona</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sd</td> 
+    <td style="width: 40%">Sindhi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">so</td> 
+    <td style="width: 40%">Somali</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">st</td> 
+    <td style="width: 40%">Sotho, Southern</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">es</td> 
+    <td style="width: 40%">Spanish; Castilian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sc</td> 
+    <td style="width: 40%">Sardinian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ss</td> 
+    <td style="width: 40%">Swati</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">su</td> 
+    <td style="width: 40%">Sundanese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sw</td> 
+    <td style="width: 40%">Swahili</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">sv</td> 
+    <td style="width: 40%">Swedish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ty</td> 
+    <td style="width: 40%">Tahitian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ta</td> 
+    <td style="width: 40%">Tamil</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">tt</td> 
+    <td style="width: 40%">Tatar</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">te</td> 
+    <td style="width: 40%">Telugu</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">tg</td> 
+    <td style="width: 40%">Tajik</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">tl</td> 
+    <td style="width: 40%">Tagalog</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">th</td> 
+    <td style="width: 40%">Thai</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ti</td> 
+    <td style="width: 40%">Tigrinya</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">to</td> 
+    <td style="width: 40%">Tonga (Tonga Islands)</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">tn</td> 
+    <td style="width: 40%">Tswana</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ts</td> 
+    <td style="width: 40%">Tsonga</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">tk</td> 
+    <td style="width: 40%">Turkmen</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">tr</td> 
+    <td style="width: 40%">Turkish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">tw</td> 
+    <td style="width: 40%">Twi</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ug</td> 
+    <td style="width: 40%">Uighur; Uyghur</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">uk</td> 
+    <td style="width: 40%">Ukrainian</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ur</td> 
+    <td style="width: 40%">Urdu</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">uz</td> 
+    <td style="width: 40%">Uzbek</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">ve</td> 
+    <td style="width: 40%">Venda</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">vi</td> 
+    <td style="width: 40%">Vietnamese</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">vo</td> 
+    <td style="width: 40%">Volapük</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">wa</td> 
+    <td style="width: 40%">Walloon</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">wo</td> 
+    <td style="width: 40%">Wolof</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">xh</td> 
+    <td style="width: 40%">Xhosa</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">yi</td> 
+    <td style="width: 40%">Yiddish</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">yo</td> 
+    <td style="width: 40%">Yoruba</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">za</td> 
+    <td style="width: 40%">Zhuang; Chuang</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+   <tr> 
+    <td style="width: 20%">zu</td> 
+    <td style="width: 40%">Zulu</td> 
+    <td style="width: 40%"> </td>
+   </tr> 
+  </tbody> 
+ </table>
+</div></div></div></div><div id="push"/></div><div id="footer"><div class="container"><div class="row"><div class="span6"><p class="text-left"><a href="mailto:information.standards@nhs.net?subject=IntegratedUrgentCare v3.0">Contact us
+            					</a></p></div><div class="span6"><p class="text-right"><b>Release Date: </b>2017</p></div></div></div></div><script src="../Template/js/jquery/jquery-1.8.3.js"> </script><script src="../Template/js/bootstrap/bootstrap.min.js"> </script><script src="../Template/js/google-code-prettify/prettify.js"> </script><script>
+				!function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+				</script></body></html>

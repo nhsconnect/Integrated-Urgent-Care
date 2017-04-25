@@ -1,0 +1,519 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+			<title>ITK FHIR Distribution - FHIR Implementation Guide</title>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="author" content="HSCIC" />        
+			<meta name="publisher version" content=	"FHIR-Furnace : 2.7.6256.31052" />
+		
+			<link href="../dist/css/fhir.css" rel="stylesheet" />
+	 
+			<!-- Bootstrap core CSS -->
+			<link href="../dist/css/bootstrap.css" rel="stylesheet" />
+			<link href="../dist/css/bootstrap-fhir.css" rel="stylesheet" />
+			<link href="../dist/css/bootstrap-glyphicons.css" rel="stylesheet" />
+
+			<!-- Project extras -->
+			
+			<link href="../dist/css/pygments-manni.css" rel="stylesheet" />
+
+			<script src="../dist/js/jquery.js"> </script>
+			<script src="../dist/js/bootstrap.min.js"> </script>
+
+			<script src="../dist/js/fhir.js"> </script>
+			
+				<script>
+				  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				  ga('create', 'UA-67795986-1', 'auto');
+				  ga('send', 'pageview');
+
+				</script>
+			
+			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!--[if lt IE 9]>
+				<script src="../dist/js/html5shiv.js"></script>
+				<script src="../dist/js/respond.min.js"></script>
+			<![endif]-->
+
+			<!-- Favicons -->
+			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/images/apple-touch-icon-144-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/images/apple-touch-icon-114-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/images/apple-touch-icon-72-precomposed.png" />
+			<link rel="apple-touch-icon-precomposed" href="../dist/images/apple-touch-icon-57-precomposed.png" />
+			<link rel="shortcut icon" href="../dist/images/favicon.ico" />
+	</head>
+	
+	<body>  
+		
+		<!-- segment-header -->
+		<div id="segment-header" class="segment">
+            
+            <div class="container">
+                <!-- container -->
+                <a id="logo" href="http://www.digital.nhs.uk" target="_blank">
+                    <img src="../dist/images/logo.png" alt="logo NHS Digital" />
+                </a>
+                <div id="specificationName">
+         
+                        <b>ITK FHIR Distribution</b>
+                  
+                </div>
+
+            </div>
+            <div class="container">
+                <!-- container -->
+            </div>
+        </div>
+        
+		<!-- /segment-header -->
+		
+		
+		<div id="segment-navbar" class="segment">
+            <!-- segment-navbar -->
+            <div id="stripe"> </div>
+            <div class="container">
+                <!-- container -->
+                <!-- HEADER CONTENT -->
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container">
+                        <button data-target=".navbar-inverse-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="icon-bar"> </span>
+                            <span class="icon-bar"> </span>
+                            <span class="icon-bar"> </span>
+                        </button>
+                        <div class="nav-collapse collapse navbar-inverse-collapse">
+                            <ul class="nav navbar-nav">   
+
+											<li>
+												<a href='../Chapter.1.About/index.html'>About</a>
+											</li>
+											<li>
+												<a href='../Chapter.2.Change History/index.html'>Change History</a>
+											</li>
+											<li>
+												<a href='../Chapter.3.Architecture/index.html'>Architecture</a>
+											</li>
+											<li>
+												<a href='../Chapter.4.FHIR Constrained Messages/index.html'>FHIR Constrained Messages</a>
+											</li>
+											<li>
+												<a href='../Chapter.5.Examples/examples.html'>Examples</a>
+											</li>
+											<li>
+												<a href='../Chapter.6.Glossary/index.html'>Glossary</a>
+											</li>
+
+                            </ul>
+							
+                            <p class="navbar-text pull-right" style="padding-right: 10px;padding-top: 3px;">
+                                <span class="label label-default"  style="font-size: 95%;">Version 1.0 : DRAFT A</span>
+                            </p>
+
+                        </div>
+                    </div>
+                </nav>				
+            </div>
+        </div>
+		
+		<div id="segment-breadcrumb" class="segment">
+            <!-- segment-breadcrumb -->
+            <div class="container">
+                <!-- container -->
+                <ul class="breadcrumb"></ul>
+            </div>
+            <!-- /container -->
+        </div>
+        <div id="segment-content" class="segment">
+            <!-- segment-content -->
+            <div class="container">
+                <!-- container -->
+                <div class="row">
+                    <div class="inner-wrapper">
+						<!-- CONTENT CONTENT -->
+                        <div class="col-12">
+							
+							
+							
+							
+							
+									<div class="panel panel - default">
+											<h1>Glossary</h1>
+<table>
+<thead>
+<tr>
+	<th>Acronym</th>
+	<th>Term</th>
+	<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><strong>AoMRC</strong></td>
+	<td>Academy of Medical Royal Colleges</td>
+	<td>The Academy of Medical Royal Colleges represents standards of care and medical education across the UK. By bringing together the expertise of the medical Royal Colleges and Faculties it drives improvement in health and patient care through education, training and quality standards.</td>
+</tr>
+<tr>
+	<td><strong>ACF</strong></td>
+	<td>Access Control Framework</td>
+	<td>Access to NHS Care Records Service data (on Spine) is controlled by the ACF which registers and authenticates all users. It provides a single log-in and a record of each healthcare professional accessing a patient's NHS care record. All information is provided on a need-to-know basis and based on a user's role and legitimate relationship; with the patient. It stores the details of those relationships between healthcare professionals and patients, as well as patient preferences on information sharing (e.g. whether certain sensitive information is restricted from routine sharing).</td>
+</tr>
+<tr>
+	<td><strong>ACS</strong></td>
+	<td>Access Control Service</td>
+	<td>The Access Control Service used on Spine</td>
+</tr>
+<tr>
+	<td><strong>ADRT</strong></td>
+	<td>Advance Decision to Refuse Treatment</td>
+	<td>An advance decision (sometimes known as an advance decision to refuse treatment, an ADRT, or a living will) is a decision you can make now to refuse a specific type of treatment at some time in the future.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Application Acknowledgement</td>
+	<td>A response from one application to another indicating that a message has been received and is valid.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Application Role</td>
+	<td>The role played by the application in a particular interaction.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>ASID</td>
+	<td>SDS Accredited System Identifier</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Attributes</td>
+	<td>Attributes are abstractions of the data captured about classes. Attributes capture separate aspects of the class and take their values independent of one another.</td>
+</tr>
+<tr>
+	<td><strong>AUS</strong></td>
+	<td>Authenticated User Session</td>
+	<td>An Authenticated User Session is defined as when a real person is physically logged in to a system after being authenticated via their smart card or by another authentication method.</td>
+</tr>
+<tr>
+	<td><strong>CPR</strong></td>
+	<td>Cardiopulmonary Resuscitation</td>
+	<td>Emergency treatment that supports the circulation of blood and/or air in the event of a respiratory and/or cardiac arrest.</td>
+</tr>
+<tr>
+	<td><strong>CP-IS</strong></td>
+	<td>Child Protection Information Sharing service</td>
+	<td>An on-line service that allows NHS unscheduled care services to access basic child protection information that has been provided by the Local Authority Children's Services departments. The NHS is only able to see that a child or foetus has a Child Protection Plan or is in the Looked After system. The information provided is start, end and delete dates; plus a Children's Services contact telephone number where the NHS can get further information. Basic information about NHS accesses is also passed back to Children's Services.</td>
+</tr>
+<tr>
+	<td><strong>CDA</strong></td>
+	<td>Clinical Document Architecture</td>
+	<td>The Clinical Document Architecture is a HL7 standard for the representation and machine processing of clinical documents in a way which makes the documents both human readable and machine processable, it guarantees preservation of the content by using the extensible Mark-up Language (XML) standard.</td>
+</tr>
+<tr>
+	<td><strong>CAF</strong></td>
+	<td>Common Assessment Framework</td>
+	<td>The Common Assessment Framework (CAF) for Adults is a Department of Health funded project that aims to improve information sharing across organisations for multi-disciplinary assessment and care and support planning.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Data Type</td>
+	<td>The structural format of the data carried in an attribute. Every data element has a data type. Data types define the meaning (semantics) of data values that can be assigned to a data element. Meaningful exchange of data requires that we know the definition of values so exchanged. This is true for complex values such as business messages as well as for simpler values such as character strings or integer numbers.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Data Type Flavour</td>
+	<td>A subdivision of a particular data type, that will constrain that particular data type. Data type flavour titles are suffixed with (f).</td>
+</tr>
+<tr>
+	<td><strong>DCE UUID</strong></td>
+	<td>Distributed Computing Environment Universally Unique Identifier</td>
+	<td>A type of universally unique identifier (UUID).</td>
+</tr>
+<tr>
+	<td><strong>DDS</strong></td>
+	<td>Diagnostic Data Services</td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td><strong>DMS</strong></td>
+	<td>Domain Message Specification</td>
+	<td>This provides information to implementers regarding the use of HL7 messages restricted to a particular domain or related group of domains, for use within the English NHS. The main difference between this and a Message Implementation Manual (MIM), is that the MIM will contain a variety of domains with their business analysis artefacts included.</td>
+</tr>
+<tr>
+	<td><strong>EPR</strong></td>
+	<td>Electronic Patient Record</td>
+	<td>An electronic record of periodic health care of a single individual, provided mainly by one institution.</td>
+</tr>
+<tr>
+	<td><strong>EPS</strong></td>
+	<td>Electronic Prescription Service</td>
+	<td>EPS enables prescriber's - such as GPs and practice nurses - to send prescriptions electronically to a dispenser (such as a pharmacy) of the patient's choice. This makes the prescribing and dispensing process more efficient and convenient for patients and staff.</td>
+</tr>
+<tr>
+	<td><strong>FSN</strong></td>
+	<td>Fully Specified Name</td>
+	<td>Each concept has one Fully Specified Name (FSN) intended to provide an unambiguous way to name a concept. The purpose of the FSN is to uniquely describe a concept and clarify its meaning. The FSN is not a commonly used term or natural phrase and would not be expected to appear in the human-readable representation of a clinical record.</td>
+</tr>
+<tr>
+	<td><strong>FHIR</strong></td>
+	<td>Fast Healthcare Interoperability Resources</td>
+	<td>(FHIR, pronounced &quot;Fire&quot;) defines a set of &quot;Resources&quot; that represent granular clinical concepts. The resources can be managed in isolation, or aggregated into complex documents. Technically, FHIR is designed for the web; the resources are based on simple XML or JSON structures, with an http-based RESTful protocol where each resource has predictable URL. Where possible, open internet standards are used for data representation.</td>
+</tr>
+<tr>
+	<td><strong>HSCI</strong></td>
+	<td>Health and Social Care Integration</td>
+	<td>This integrates local health and social care services, to improve coordination between local health and social care agencies leading to improved experiences for those people using these services.</td>
+</tr>
+<tr>
+	<td><strong>HSCIC</strong></td>
+	<td>Health and Social Care Information Centre</td>
+	<td>The Health and Social Care Information Centre is a data, information and technology resource for the health and care system and plays a fundamental role in driving better care, better services and better outcomes for patients in England.</td>
+</tr>
+<tr>
+	<td><strong>HCP</strong></td>
+	<td>Health Care Provider</td>
+	<td>Refers to a person licensed, certified or otherwise authorized or permitted by law to administer health care in the ordinary course of business or practice of a profession, including a health care facility.</td>
+</tr>
+<tr>
+	<td><strong>HL7</strong></td>
+	<td>Health Level Seven</td>
+	<td>HL7), is an all-volunteer, non-profit organization involved in development of international healthcare standards. HL7 is also used to refer to some of the specific standards created by the organization (e.g., HL7 version 2.x, version 3.0, HL7 Reference Information Model (RIM)).</td>
+</tr>
+<tr>
+	<td><strong>HTML</strong></td>
+	<td>Hyper Text Mark-up Language</td>
+	<td>HTML is not a programming language, it is a markup language. A mark-up language is a set of mark-up tags. HTML uses mark-up tags to describe web pages.</td>
+</tr>
+<tr>
+	<td><strong>ITK</strong></td>
+	<td>The Interoperability Tool-kit</td>
+	<td>The Interoperability Tool-kit is a set of common specifications, frameworks and implementation guides to support interoperability within local organisations and across local health and social care communities. The ITK is not a piece of software; it is not a product which is downloadable from this website.</td>
+</tr>
+<tr>
+	<td><strong>ITS</strong></td>
+	<td>Implementation Technology Specification</td>
+	<td>The ITS defines how to represent an HL7 message in a serial form that can be transmitted from a sender to a receiver.</td>
+</tr>
+<tr>
+	<td><strong>LR</strong></td>
+	<td>Legitimate Relationship</td>
+	<td>A Legitimate Relationship is a relationship between a clinician (or NHS organisation work group) and a patient, that gives the clinician, or work group member, certain levels of entitlement to access that patient's health record maintained on National Systems.</td>
+</tr>
+<tr>
+	<td><strong>NACS</strong></td>
+	<td>National Administrative Codes Service</td>
+	<td>The service previously known as the National Administrative Codes Service (NACS) is now known as the Organisation Data Service (ODS). It was responsible for the publication of organisation and practitioner codes, and for the national policy and standards with regard to the majority of organisation codes. These code standards form part of the NHS data standards.</td>
+</tr>
+<tr>
+	<td><strong>NPfIT</strong></td>
+	<td>National Programme for IT</td>
+	<td>A key aim of the National Programme is to give healthcare professionals access to patient information safely, securely and easily, whenever and wherever it is needed.</td>
+</tr>
+<tr>
+	<td><strong>NHS CRS</strong></td>
+	<td>NHS Care Record Service</td>
+	<td>The NHS Care Records Service (NHS CRS) is a secure service to improve the way health information is stored and shared in the NHS in England. It is linking health information from different parts of the NHS to support the NHS in delivering better, safer care.</td>
+</tr>
+<tr>
+	<td><strong>NHS CfH</strong></td>
+	<td>NHS Connecting for Health</td>
+	<td>NHS Connecting for Health was an agency of the Department of Health. This organization was delivering the National Programme for Information Technology (NPfIT) in the NHS. Since 1st of April 2013 substantive functions of this organization are transferred to the Health and Social Care Information Centre.</td>
+</tr>
+<tr>
+	<td><strong>OID</strong></td>
+	<td>Object Identifier</td>
+	<td>A unique identifier e.g. used to identify coding systems.</td>
+</tr>
+<tr>
+	<td><strong>ODS</strong></td>
+	<td>Organisation Data Service</td>
+	<td>This is responsible for the publication of organisation and practitioner codes, and for the national policy and standards with regard to the majority of organisation codes. These code standards form part of the NHS data standards. This was previously known as National Administrative Codes Service (NACS).</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Provider</td>
+	<td>An individual or an organisation that provides health care for a patient.</td>
+</tr>
+<tr>
+	<td><strong>PCT</strong></td>
+	<td>Primary Care Trust</td>
+	<td>Responsible for primary and community health services within a geographical boundary.</td>
+</tr>
+<tr>
+	<td><strong>PAS</strong></td>
+	<td>Patient Administration System</td>
+	<td>Is a core component of a hospital computer system which records the patient's name, home address, date of birth and each contact with the outpatient department or admission and discharge. The NHS patient's record and appointment tracking system is often called PAS, depending on the NHS Hospital Trust. This computerised administration solution that assists with planning, tracking and recording the patient's contact with the outpatient department or admission and discharge.</td>
+</tr>
+<tr>
+	<td><strong>PDS</strong></td>
+	<td>Patient Demographic Service</td>
+	<td>This is an essential element of the NHS Care Records Service which will underpin the creation of an electronic care record for every registered NHS patient in England. Each person's care record will be comprised of both demographic information, such as name, address, date of birth and NHS Number, and medical information.</td>
+</tr>
+<tr>
+	<td><strong>PTV</strong></td>
+	<td>Permission to view</td>
+	<td>Permission to View (PTV) business service that records that a patient has given an explicit permission to view their SCR.</td>
+</tr>
+<tr>
+	<td><strong>PSIS</strong></td>
+	<td>Personal Spine Information Service</td>
+	<td>The central database on the Spine containing clinical records for each NHS patient.</td>
+</tr>
+<tr>
+	<td><strong>PNG</strong></td>
+	<td>Portable Network Graphics</td>
+	<td>Is a bit-mapped image format and video codec that employs lossless data compression. PNG was created to improve upon and replace GIF (Graphics Interchange Format) as an image-file format not requiring a patent license.</td>
+</tr>
+<tr>
+	<td><strong>PT</strong></td>
+	<td>Preferred Term</td>
+	<td>Each concept has one Preferred Term in a given language dialect. The Preferred Term is a common word or phrase used by clinicians to name that concept.</td>
+</tr>
+<tr>
+	<td><strong>PRSB</strong></td>
+	<td>Professional Record Standards Body</td>
+	<td>The independent PRSB is the first point of call for care professionals, service providers, commissioners, policy makers, professional bodies and system suppliers for expertise and all matters relating to care records. The PRSB is a national body providing an independent patient and professional voice on health informatics issues, to ensure that professionally endorsed standards are adopted to enable safe and effective information sharing and exchange.</td>
+</tr>
+<tr>
+	<td><strong>RBAC</strong></td>
+	<td>Role Based Access Control</td>
+	<td>RBAC is the process through which a national set of job roles, activities and work-groups can be applied to grant users access to functionality and indirectly to data within NHS national (Spine) services.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Requester</td>
+	<td>Individual or an organisation responsible for the requesting an action to be performed for the patient.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Service User</td>
+	<td>A person who uses or is eligible to use a health care or Social Care service.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Schematron</td>
+	<td>The Schematron is an XML structure validation language for making assertions about the presence or absence of patterns in trees. It is a simple and powerful structural schema language.</td>
+</tr>
+<tr>
+	<td><strong>SMSP</strong></td>
+	<td>Spine Mini Service Provider</td>
+	<td>Middle ware that provides access to lightweight, filtered services on National Applications.</td>
+</tr>
+<tr>
+	<td>****</td>
+	<td>Spine</td>
+	<td>A national, central service that underpins the NHS Care Records Service. It manages the patient's national Summary Care Records. Clinical information is held in the Personal Spine Information Service (PSIS) and demographic information is held in the Personal Demographics Service (PDS). The Spine also supports other systems and services such Choose and Book and the Electronic Prescription Service.</td>
+</tr>
+<tr>
+	<td><strong>SCR</strong></td>
+	<td>Summary Care Record</td>
+	<td>The SCR is intended to support patient care in urgent and emergency care settings. The SCR will store a defined set of key patient data for every patient in England except those who elect not to have one. This data will make a summary record created from information held on GP clinical systems. This summary record will help in ensuring continuity of care across a variety of care settings.</td>
+</tr>
+<tr>
+	<td><strong>SDS</strong></td>
+	<td>Spine Directory Service</td>
+	<td>The main information source about NHS registered users and accredited systems and services. It ensures that transactions/messages are only processed from authorised users and systems. The Spine Directory Service also stores a record of each NHS organisation. It is a key component of the Spine.</td>
+</tr>
+<tr>
+	<td><strong>SY</strong></td>
+	<td>Synonym</td>
+	<td>A synonym represents a term, other than the FSN or Preferred Term, that can be used to represent a concept in a particular language or dialect.</td>
+</tr>
+<tr>
+	<td><strong>SNOMED CT</strong></td>
+	<td>Systematized Nomenclature of Medicine Clinical Terminology</td>
+	<td>This is a clinical terminology. It is a common computerised language to facilitate communications between healthcare professionals in clear and unambiguous terms. It has greater depth and coverage of healthcare than the versions of Clinical Terms (Read Codes) that it will replace and will enable clinicians, researchers and patients to share and exchange healthcare and clinical knowledge worldwide. SNOMED CT has been chosen to be the common language for gathering and sharing medical knowledge in the NHS Care Records Service. It will cut down the potential for differing interpretation of information and the possibility of errors resulting from traditional paper records.</td>
+</tr>
+<tr>
+	<td><strong>TRUD</strong></td>
+	<td>Terminology Reference-Data Update Distribution Service</td>
+	<td>The Terminology Reference-data Update Distribution Service (TRUD) provides a mechanism for the UK Terminology Centre to license and distribute reference-data to interested parties.</td>
+</tr>
+<tr>
+	<td><strong>TMS</strong></td>
+	<td>Transaction Messaging Service</td>
+	<td>This is a message transfer service that allows clinical messages from NHS Care Records Service (NHS CRS) users to be securely routed to the service they are requesting and to manage the response to that request. Depending on the type of message (e.g. relating to Choose and Book or the Personal Demographics Service), the Transaction Messaging Service identifies where the message needs to be sent.</td>
+</tr>
+<tr>
+	<td><strong>XSLT</strong></td>
+	<td>Transform</td>
+	<td>A language for transforming extensible Mark-up Language.</td>
+</tr>
+<tr>
+	<td><strong>XML</strong></td>
+	<td>Extensible Markup Language</td>
+	<td>Is a set of rules for encoding documents in machine-readable form.</td>
+</tr>
+<tr>
+	<td><strong>UMS</strong></td>
+	<td>Unattended Messaging Session</td>
+	<td>An Unattended Messaging Session is defined as when a system sends a message with no user intervention, and with no authenticated user session. Examples of this might be a Patient Administration System (PAS) requesting PDS retrievals as part of populating the day's patient list.</td>
+</tr>
+<tr>
+	<td><strong>URL</strong></td>
+	<td>Uniform Resource Locator</td>
+	<td>Is a reference (an address) to a resource on the Internet. For example a URL could be the name of a file on the World Wide Web because most URLs refer to a file on some machine on the network. However, URLs also can point to other resources on the network, such as database queries and command output.</td>
+</tr>
+</tbody>
+</table>
+
+									</div>
+							
+						
+					   </div>                      
+                    </div>
+                    <!-- /inner-wrapper -->                   
+                </div>
+                <!-- /row -->              
+            </div>
+            <!-- /container -->           
+        </div>
+    <!-- /segment-content -->
+
+        <div id="segment-footer" class="segment">
+            <!-- segment-footer -->
+            <div class="container">
+                <!-- container -->
+                <div class="inner-wrapper">
+					<div id="explanatoryline">
+                         <img src="../dist/images/explanatoryline.png" alt="Information and technology for better health and care" />
+						 <p>
+                        Copyright &copy; 2017 Health and Social Care Information Centre<br/>
+						NHS Digital is the trading name of the Health and Social Care Information Centre.
+                    </p>
+                    </div>
+				<div id="hl7-nav">
+                    <a id="hl7-logo" href="http://www.hl7.org" target="_blank">
+                        <img src="../dist/images/hl7-logo.png" alt="visit the hl7 website" />
+                    </a>
+					<p>
+					FHIR&reg; is the registered trademark of HL7<br/>
+					and is used with the permission of HL7.
+					</p>
+				</div>
+					<p>
+						<!--<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> -->
+                    </p>
+                </div>
+                <!-- /inner-wrapper -->
+            </div>
+            <!-- /container -->
+        </div>
+
+        <div id="segment-post-footer" class="segment">
+            <!-- segment-post-footer -->
+            <div class="container">
+                <!-- container -->
+            </div>
+            <!-- /container -->
+        </div>
+	</body>
+</html>

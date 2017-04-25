@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pack="urn:pack" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Windows (vers 15 August 2007), see www.w3.org" />
+<title>CDA Implementation Guidance Narrative Block Tags</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="../Template/css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/>
+<link href="../Template/css/base.css" rel="stylesheet" media="screen"/>
+<link href="../Template/css/google-code-prettify/prettify.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div id="wrap">
+<div class="container">
+<div class="row">
+<div class="span4"><img src="../Template/images/logo.png" /></div>
+<div class="span8">
+<h4 class="pack-title text-right">CDA Implementation Guidance Narrative Block Tags<br /></h4>
+</div>
+</div>
+<div class="navbar">
+<div class="navbar-inner">
+<div class="container">
+<button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span></button>
+<div class="nav-collapse collapse">
+<p class="navbar-text pull-right"><b>Version:</b> 1.0; <b>Status:</b> Final</p>
+<ul class="nav">
+<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="../index.html">About</a></li>
+<li><a href="../Core/changehistory.html">Change History</a></li>
+<li><a href="../Core/glossary.html">Glossary</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="narrative.htm">CDA Narrative Block</a></li>
+<li class="dropdown"><a href="narrativeExamples.htm">CDA Narrative Block Snippets</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="content" class="row">
+<div class="span12">
+<h3>CDA Narrative Block</h3>
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><b><a name="textTag" id="textTag"><font size="5">&lt;text&gt;</font></a></b>
+<p>This tag encompassing a text section</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Styles text, such as presenting text in bold, italics underline</td>
+</tr>
+<tr>
+<td>mediaType</td>
+<td>mediaType is akin to mimeType. This is a fixed value in the CDA narrative block, and so can be omitted.</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;text&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#contentTag">&lt;content&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#brTag">&lt;br&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></td>
+</tr>
+<tr>
+<td height="27"><a href="#paragraphTag">&lt;paragraph&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#listTag">&lt;list&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#tableTag">&lt;table&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="background-color: #FFFFFF; background-position: 0% 0%"><font size="2" color="#0000FF"><span style="font-family: Arial,sans-serif">&nbsp;&nbsp;&nbsp;</span></font></span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: #800000; background: white">paragraph</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Some document text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: #800000; background: white">paragraph</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<br />
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><font size="5"><b><a name="contentTag" id="contentTag">&lt;content&gt;</a></b></font>
+<p>Use this tag to wrap some text so that it can be referenced (using the ID attribute), or styled (using the styleCode attribute). This element can be used recursively.</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>revised</td>
+<td>An indication that text has been revised from the original, as an insert or delete</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;content&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#contentTag">&lt;content&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#brTag">&lt;br&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">content</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">styleCode</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">bold</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Some document text appears in bold</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">content</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">&nbsp;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm; margin-left:3.75pt;margin-bottom:.0001pt;line-height:normal;text-autospace: none"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm; margin-left:3.75pt;margin-bottom:.0001pt;line-height:normal;text-autospace: none"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp; Sally has a history of</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">content</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">ID</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">a1</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Exercise Related Asthma</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">content</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">latest attack 2 weeks ago.</span></p>
+<p class="MsoNormal" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm; margin-left:3.75pt;margin-bottom:.0001pt;line-height:normal"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p><br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="8" valign="top"><font size="5"><b><a name="linkHTMLTag" id="linkHTMLTag">&lt;linkHTML&gt;</a></b></font>
+<p>Acts similar to the HTML anchor tag. Can be used to reference identifiers that are both internal and external to the document.</p>
+</td>
+<td>name</td>
+<td>DO NOT USE THIS</td>
+</tr>
+<tr>
+<td>href</td>
+<td>The reference location</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>rev</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>title</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;linkHTML&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">section</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">ID</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">SECT001</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">code</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">code</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">10164-2</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">codeSystem</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">2.16.840.1.113883.6.1</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; codeSystemName</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">LOINC</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">History of Present Illness</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Mr. Smith is a 57 year old male presenting with chest</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pain. He sustained a myocardial infarction 3 years ago,</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">section</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">...</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">section</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">ID</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">SECT003</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">code</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">code</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">10153-2</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">codeSystem</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">2.16.840.1.113883.6.1</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; codeSystemName</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">LOINC</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Past Medical History</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">History of coronary artery disease, as noted</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">linkHtml</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">href</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">#SECT001</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">above</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">linkHtml</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">.</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">section</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p><br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td valign="top"><font size="5"><b><a name="subTag" id="subTag">&lt;sub&gt;</a></b></font>
+<p>Puts text into subscrip.</p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;sub&gt;</h4>
+&lt;&lt;NONE&gt;&gt;
+<h4>Example</h4>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">This is</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">sub</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">subscript</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">sub</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p><br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td valign="top"><font size="5"><b><a name="supTag" id="supTag">&lt;sup&gt;</a></b></font>
+<p>Puts text into superscript</p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;sup&gt;</h4>
+&lt;&lt;NONE&gt;&gt;&nbsp;
+<h4>Example</h4>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">This is</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">su</span><span style="background-color: #FFFFFF; background-position: 0% 0%"><font size="2" color="#800000"><span style="font-family: Arial,sans-serif">p</span></font></span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">superscript</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">su</span><span style="background-color: #FFFFFF; background-position: 0% 0%"><font size="2" color="#800000"><span style="font-family: Arial,sans-serif">p</span></font></span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p>&nbsp;</p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td valign="top"><font size="5"><b><a name="brTag" id="brTag">&lt;br&gt;</a></b></font>
+<p>Used to indicate a hard line break.</p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;br&gt;</h4>
+&lt;&lt;NONE&gt;&gt;
+<h4>Example</h4>
+<p class="MsoNormal"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">This text appears on line one</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">br</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">/&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">and this on line two</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p><br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="3" valign="top"><font size="5"><b><a name="footnoteTag" id="footnoteTag">&lt;footnote&gt;</a></b></font>
+<p>Indicates a footnote, inline with the flow of text to which it is applied.</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;footnote&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#contentTag">&lt;content&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#brTag">&lt;br&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#paragraphTag">&lt;paragraph&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#listTag">&lt;list&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#tableTag">&lt;table&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p><font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font><font face="Arial" size="2">This is the text for the section</font> <font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">footnote</font><font face="Arial" size="2" color="#0000FF">&gt;</font><font face="Arial" size="2">this is a footnote for the section</font><font face="Arial" size="2" color="#0000FF">&lt;/</font><font face="Arial" size="2" color="#800000">footnote</font><font face="Arial" size="2" color="#0000FF">&gt;&lt;/</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font></p>
+<p>&nbsp;</p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><a name="footnoteRefTag" id="footnoteRefTag"><font size="5"><b>&lt;footnoteRef&gt;</b></font></a>
+<p>The &lt;footnoteRef&gt; element can reference an existing footnote in the same or different CDA Narrative Block of the same document. It can be used when the same footnote is being used multiple times. The value of the footnoteRef.IDREF must be an footnote.ID<br />
+value in the same document.</p>
+<p>&nbsp;</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>IDREF</td>
+<td>Used to reference a previous footnote</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;footnoteRef&gt;</h4>
+&lt;&lt;NONE&gt;&gt;
+<h4>Example</h4>
+<p style="line-height: 100%"><font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font><font face="Arial" size="2">This is the text for the section</font> <font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">footnote</font> <font face="Arial" size="2" color="#FF0000">ID</font><font face="Arial" size="2" color="#0000FF">="</font><font face="Arial" size="2">F1</font><font face="Arial" size="2" color="#0000FF">"&gt;</font><font face="Arial" size="2">this is a footnote for the section</font><font face="Arial" size="2" color="#0000FF">&lt;/</font><font face="Arial" size="2" color="#800000">footnote</font><font face="Arial" size="2" color="#0000FF">&gt;&lt;/</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font></p>
+<p style="line-height: 100%"><font face="Arial" size="2">....</font></p>
+<p style="line-height: 100%"><font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font><font face="Arial" size="2">This another text section that references a footnote</font> <font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">footnoteRef</font> <font face="Arial" size="2" color="#FF0000">IDREF</font><font face="Arial" size="2" color="#0000FF">="</font><font face="Arial" size="2">#F1</font><font face="Arial" size="2" color="#0000FF">"&lt;/</font><font face="Arial" size="2" color="#800000">footnoteRef</font><font face="Arial" size="2" color="#0000FF">&gt;</font><font face="Arial" size="2" color="#0000FF">&lt;/</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font></p>
+<p><br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><font size="5"><b><a name="renderMultiMediaTag" id="renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></b></font>
+<p>renderMultiMedia element references external multimedia that is integral to a document, and part of the attestable content of the document, and serves to show where the referenced multimedia is to be rendered.</p>
+<p>Multimedia that is simply referenced by the document and not an integral part of the document must use <a href="#linkHTMLTag">&lt;linkHtml&gt;</a>.</p>
+</td>
+<td>referencedObject</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;renerMultiMedia&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#captionTag">&lt;caption&gt;</a></td>
+</tr>
+</table>
+Example
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">section</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">code</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">code</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: #000000; background: white">ABCD</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">codeSystem</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">2.</span><span style="background-color: #FFFFFF; background-position: 0% 0%"><font size="2" color="#000000"><span style="font-family: Arial,sans-serif">.6.7.8.3.4445</span></font></span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; codeSystemName</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: #000000; background: white">MyCODESYSTEM</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Skin exam</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Erythematous rash, palmar surface, left index finger.</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">renderMultiMedia</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">referencedObject</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">MM1</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">entry</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">observationMedia</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">classCode</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">OBS</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">moodCode</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">EVN</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">ID</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">MM1</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">id</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">root</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">10.23.4567.345</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">value</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">xsi:type</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">ED</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">mediaType</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">image/jpeg</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">reference</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">value</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">left_hand_image.jpeg</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">value</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">observationMedia</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">entry</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">section</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p><br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="3" valign="top"><a name="paragraphTag" id="paragraphTag"><font size="5"><b>&lt;paragraph&gt;</b></font></a>
+<p>Works the same as a HTML &lt;p&gt; tag</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;paragraph&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#captionTag">&lt;caption&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#contentTag">&lt;content&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#brTag">&lt;br&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p><font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font><font face="Arial" size="2">The text section starts with some text.</font><font face="Arial" size="2" color="#0000FF">&lt;</font><font face="Arial" size="2" color="#800000">p</font><font face="Arial" size="2" color="#0000FF">&gt;</font><font face="Arial" size="2">The has a second paragraph</font><font face="Arial" size="2" color="#0000FF">&lt;/</font><font face="Arial" size="2" color="#800000">p</font><font face="Arial" size="2" color="#0000FF">&gt;&lt;</font><font face="Arial" size="2" color="#800000">p</font> <font face="Arial" size="2" color="#FF0000">styleCode</font><font face="Arial" size="2" color="#0000FF">="</font><font face="Arial" size="2">bold</font><font face="Arial" size="2" color="#0000FF">"&gt;</font><font face="Arial" size="2">And a third in bold</font><font face="Arial" size="2" color="#0000FF">&lt;/</font><font face="Arial" size="2" color="#800000">p</font><font face="Arial" size="2" color="#0000FF">&gt;&lt;/</font><font face="Arial" size="2" color="#800000">text</font><font face="Arial" size="2" color="#0000FF">&gt;</font></p>
+<p><br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="3" valign="top"><font size="5"><b><a name="captionTag" id="captionTag">&lt;caption&gt;</a></b></font>
+<p>The CDA &lt;caption&gt; is a label for a paragraph, list, list item, table, or table cell. It can also be used within the &lt;renderMultiMedia&gt; element to indicate a label for referenced ObservationMedia and RegionOfInterest entries. A &lt;caption&gt; contains plain text and may contain links and footnotes.</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;list&gt;</h4>
+<table class=" table table-striped table-condensed"><tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">section</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">code</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">code</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">ABCD</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">codeSystem</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">2..6.7.8.3.4445</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; codeSystemName</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">MyCODESYSTEM</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Skin exam</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">title</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Erythematous rash, palmar surface, left index finger.</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">renderMultiMedia</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">referencedObject</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">MM1</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">caption</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">styleCode</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">italics</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">Left index finger image</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">caption</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">renderMultiMedia</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">entry</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">observationMedia</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">classCode</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">OBS</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">moodCode</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">EVN</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">ID</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">MM1</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">id</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">root</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">10.23.4567.345</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">value</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">xsi:type</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">ED</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">mediaType</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">image/jpeg</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">reference</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: red; background: white">value</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">left_hand_image.jpeg</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">"/&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">value</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">observationMedia</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%; text-autospace: none; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: black; background: white">&nbsp;&nbsp;</span> <span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: maroon; background: white">entry</span><span style="font-size: 10.0pt; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal" style="line-height: 100%"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">section</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p>&nbsp;</p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="4" valign="top"><font size="5"><b><a name="listTag" id="listTag">&lt;list&gt;</a></b></font>
+<p>produces an ordered (numbered) or unordered (bulleted) list. Unordered is the default.</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>listType</td>
+<td>List cane be "ordered" or "unordered"</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;list&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#captionTag">&lt;caption&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#itemTag">&lt;item&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p class="MsoNormal"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">The following is a list of options</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">list</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">Option1</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">Option2</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">list</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<p class="MsoNormal"><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">The following is an ordered list of options</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">list</span> <span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: red; background: white">listType</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">="</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">ordered</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">"&gt;&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">Option1</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: black; background: white">Option2</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">item</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">list</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;&lt;/</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: maroon; background: white">text</span><span style="font-size: 10.0pt; line-height: 115%; font-family: Arial,sans-serif; color: blue; background: white">&gt;</span></p>
+<br />
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="3" valign="top"><font size="5"><b><a name="itemTag" id="itemTag">&lt;item&gt;</a></b></font>
+<p>An item within a list</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;item&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#captionTag">&lt;caption&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#contentTag">&lt;content&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#brTag">&lt;br&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#paragraphTag">&lt;paragraph&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#listTag">&lt;list&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#tableTag">&lt;table&gt;</a></td>
+</tr>
+</table>
+<h4>Example</h4>
+<p>see above<br /></p>
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="10" valign="top"><font size="5"><b><a name="tableTag" id="tableTag">&lt;table&gt;</a></b></font>
+<p>A table - this acts in the same way as a HTML table</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Table width</td>
+</tr>
+<tr>
+<td>border</td>
+<td>Deprecated in favour of styleCode</td>
+</tr>
+<tr>
+<td>frame</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>rules</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>cellspacing</td>
+<td>Deprecated in favour of styleCode</td>
+</tr>
+<tr>
+<td>cellpadding</td>
+<td>Deprecated in favour of styleCode</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;table&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#captionTag">&lt;caption&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#colTag">&lt;col&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#colgroupTag">&lt;colgroup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#theadTag">&lt;thead&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#tfootTag">&lt;tfoot&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#tbodyTag">&lt;tbody&gt;</a></td>
+</tr>
+</table>
+&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="9" valign="top"><font size="5"><b><a name="colTag" id="colTag">&lt;col&gt;</a></b></font></td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics, and for cell borders using "Lrule", "Rrule", "Toprule" and "Botrule"</td>
+</tr>
+<tr>
+<td>span</td>
+<td>Number of columns this cell spans</td>
+</tr>
+<tr>
+<td>width</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>Vertical alignment</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;col&gt;</h4>
+&lt;&lt;NONE&gt;&gt;&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="9" valign="top"><font size="5"><b><a name="colgroupTag" id="colgroupTag">&lt;colgroup&gt;</a></b></font></td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>span</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>width</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;col&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#colTag">&lt;col&gt;</a></td>
+</tr>
+</table>
+&nbsp;&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="7" valign="top"><font size="5"><b><a name="theadTag" id="theadTag">&lt;thead&gt;</a></b></font>
+<p>Table header</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;thead&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#trTag">&lt;tr&gt;</a></td>
+</tr>
+</table>
+&nbsp;&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="7" valign="top"><font size="5"><b><a name="tfootTag" id="tfootTag">&lt;tfoot&gt;</a></b></font>
+<p>table footer</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;tfoot&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#trTag">&lt;tr&gt;</a></td>
+</tr>
+</table>
+&nbsp;&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="7" valign="top"><font size="5"><b><a name="tbodyTag" id="tbodyTag">&lt;tbody&gt;</a></b></font>
+<p>Table body</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;tbody&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#trTag">&lt;tr&gt;</a></td>
+</tr>
+</table>
+&nbsp;&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="13" valign="top"><font size="5"><b><a name="trTag" id="trTag">&lt;tr&gt;</a></b></font>
+<p>Table row</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>abbr</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>axis</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>rowspan</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>colspan</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;tr&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#thTag">&lt;th&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#tdTag">&lt;td&gt;</a></td>
+</tr>
+</table>
+&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="13" valign="top"><font size="5"><b><a name="thTag" id="thTag">&lt;th&gt;</a></b></font>
+<p>Table head</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>abbr</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>axis</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>rowspan</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>colspan</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;th&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#contentTag">&lt;content&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#brTag">&lt;br&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></td>
+</tr>
+</table>
+&nbsp;
+<hr />
+<br />
+<table class=" table table-striped table-condensed">
+<tr>
+<th>Tag Name</th>
+<th>Allowable Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td rowspan="13" valign="top"><font size="5"><b><a name="tdTag" id="tdTag">&lt;td&gt;</a></b></font>
+<p>Table data</p>
+</td>
+<td>ID</td>
+<td>Allows a reference to a coded entry (sometimes called a clinical statement). If no coded entries are referenced, ID is omitted.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The language used for the text between these tags. In the NHS England, this is assumed to be English. If any language other then English is used, the language should be specified.</td>
+</tr>
+<tr>
+<td>styleCode</td>
+<td>Used to style text in the document, such as bold, underline and italics</td>
+</tr>
+<tr>
+<td>abbr</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>axis</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>rowspan</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>colspan</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>align</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>char</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>charoff</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>valign</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<h4>Tags allowed within &lt;td&gt;</h4>
+<table class=" table table-striped table-condensed">
+<tr>
+<td><a href="#contentTag">&lt;content&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#linkHTMLTag">&lt;linkHTML&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#subTag">&lt;sub&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#supTag">&lt;sup&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#brTag">&lt;br&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteTag">&lt;footnote&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#footnoteRefTag">&lt;footnoteRef&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#renderMultiMediaTag">&lt;renderMultiMedia&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#paragraphTag">&lt;paragraph&gt;</a></td>
+</tr>
+<tr>
+<td><a href="#listTag">&lt;list&gt;</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="push"></div>
+</div>
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="span6">
+<p class="text-left"><a href="mailto:interoperabilityteam@hscic.gov.uk">Contact Us</a></p>
+</div>
+<div class="span6">
+<p class="text-right"><b>Release Date:</b> 05-Oct-2012</p>
+</div>
+</div>
+</div>
+</div>
+<script src="../Template/js/jquery/jquery-1.8.3.js" type="text/javascript">
+</script><script src="../Template/js/bootstrap/bootstrap.min.js" type="text/javascript">
+</script><script src="../Template/js/google-code-prettify/prettify.js" type="text/javascript">
+</script><script type="text/javascript">
+//<![CDATA[
+                                !function ($){$(function(){window.prettyPrint && prettyPrint()})}(window.jQuery)
+//]]>
+</script>
+</body>
+</html>

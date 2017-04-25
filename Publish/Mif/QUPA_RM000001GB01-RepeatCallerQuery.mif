@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staticModel isAbstract="false" isSerializable="true"
+    name="QUPA_RM000001GB01" packageKind="root"
+    representationKind="flat" xmlns="urn:hl7-org:v3/mif"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3/mif C:\PROGRA~1\HL7\System\schemas\mifStaticModelFlat.xsd">
+    <packageLocation artifact="RM-deprecated" domain="PA" id="000001"
+        name="QUPA_RM000001GB01" realm="GB" root="DEFN" section="HM"
+        subSection="QU" version="01"/>
+    <header>
+        <renderingInformation
+            application="NHS R-MIM Designer 2.99.KJ.08"
+            renderingTime="2015-11-24T15:06:36" schemaVersion="1"/>
+        <legalese copyrightOwner="NHS Connecting for Health"/>
+    </header>
+    <graphicRepresentation presentation="HL7">
+        <graphElement name="Main">
+            <position x="0.0" y="0.0"/>
+            <size height="9.04056" width="7.59945"/>
+        </graphElement>
+    </graphicRepresentation>
+    <derivationSupplier staticModelDerivationId="1">
+        <targetStaticModel artifact="RIM" realm="UV" root="DEFN" version="1"/>
+    </derivationSupplier>
+    <ownedEntryPoint className="RepeatCallerQuery"
+        id="QUPA_RM000001GB01" isAbstract="false" name="RepeatCallerQuery">
+        <annotations>
+            <description>
+                <text>
+                    <p>NHS111 Repeat caller database request</p>
+                </text>
+            </description>
+            <otherAnnotation type="html">
+                <text>
+                    <b>A query to the repeat caller database, to ascertain whether the subject of the call (i.e. the patient) is a repeat caller. Note that the actual caller may not be the patient.</b>
+                    <br/>
+                </text>
+            </otherAnnotation>
+        </annotations>
+        <graphicRepresentation>
+            <graphElement containerDiagramName="Main"
+                isHeightAutoSize="false" isWidthAutoSize="false"
+                nodeOrientation="Down" shapeId="QUPA_RM000001GB01">
+                <position x="5.19084" y="0.02778"/>
+                <size height="0.45278" width="2.10617"/>
+                <anchorage connectToShapeId="Sheet.47">
+                    <position x="6.24392" y="0.48056"/>
+                    <graphEdge>
+                        <anchor>
+                            <position x="6.24392" y="1.24056"/>
+                        </anchor>
+                    </graphEdge>
+                </anchorage>
+            </graphElement>
+        </graphicRepresentation>
+    </ownedEntryPoint>
+    <ownedClass>
+        <class isAbstract="false" name="Query">
+            <derivationSupplier className="QueryByParameter" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    shapeId="Sheet.1" shapeTemplate="OtherClass">
+                    <position x="4.28375" y="4.03056"/>
+                    <size height="0.75" width="2.31713"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>A container for all the query parameters</b>
+                        <br/>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person.id">
+            <derivationSupplier className="ParameterItem" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    shapeId="Sheet.5" shapeTemplate="OtherClass">
+                    <position x="0.90087" y="4.04112"/>
+                    <size height="0.75" width="2.05513"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>Query parameter: </b>
+                        <b>NHS Number of the patient <br/>
+                        </b>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="value" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>The <b>value </b>of the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                            </p>
+                            <p>The XML element <b>value </b>shall be used to carry the patient's NHS Number as follows: <br/>
+                            </p>
+                            <ul>
+                                <li> The XML attribute <b>root </b>of the XML element <b>value </b>shall contain the OID "<b>
+                                    <font color="#ff0000">2.16.840.1.113883.2.1.4.1</font>
+                                    </b>"</li>
+                                <li>The XML attribute <b>extension </b>of the XML element <b>value </b>shall contain the patient's NHS Number</li>
+                            </ul>
+                            <p/>
+                            <p>
+                                <value nullflavor="NI"/>
+                            </p>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="value"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="II" typeSpecialisation="II.NPfIT.Patient.oid"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="Person.id"
+                fixedValue="Person.id" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="semanticsText" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>A literal text string identifying the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/>  Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>  The XML element <b>semanticsText </b>is fixed to "<b>
+                                <font color="#ff0000">Person.id</font>
+                            </b>"</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="semanticsText"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Author">
+            <derivationSupplier className="Participation" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    nodeOrientation="Left" shapeId="Sheet.9"
+                    shapeTemplate="Participation" textWrappingWidth="66.0">
+                    <position x="1.73666" y="1.43583"/>
+                    <size height="0.56944" width="3.22958"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <constraint name="contentId">
+                    <text>
+                        <p>NPFIT-100033#Role</p>
+                    </text>
+                    <graphicRepresentation>
+                        <graphElement containerDiagramName="Main"
+                            isHeightAutoSize="true"
+                            isWidthAutoSize="true" shapeId="Sheet.140">
+                            <position x="2.87361" y="1.04056"/>
+                            <size height="0.32778" width="1.13639"/>
+                            <anchorage connectToShapeId="Sheet.9">
+                                <position x="3.4418" y="1.20445"/>
+                                <graphEdge>
+                                    <anchor>
+                                    <position x="3.41167" y="1.43584"/>
+                                    </anchor>
+                                </graphEdge>
+                            </anchorage>
+                        </graphElement>
+                    </graphicRepresentation>
+                </constraint>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>This class links the repeat caller service query to author of the query. </b>
+                        <br/>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="contentId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description </b>
+                                </u>
+                            </p>
+                            <p>The HL7 (NHS localisation) attribute <b>contentId</b>, when valued in an instance, provides a unique forward pointing identifier for the template which constrains the classes and attributes which follow, for NHS use.<br/>
+                                <br/>The attribute is intended simply as a structural navigational aid and should not be relied upon as an indicator of semantic meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+                                <u>
+                                    <b>
+                                    <br/>Implementation in XML Instance</b>
+                                </u>
+                                <br/>
+                                <br/>The<b> Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId </b>as follows:<br/>
+                            </p>
+                            <ul>
+                                <li>The XML attribute <b>root </b>is fixed to the OID " <b>
+                                    <font color="#ff0000">2.16.840.1.113883.2.1.3.2.4.18.16</font>
+                                    </b> "</li>
+                                <li>The XML attribute <b>extension </b>shall contain one of the allowed template artefact identifiers</li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="contentId"
+                    className="Participation" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="AUT"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="typeCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description</b>
+                                </u>
+                                <br/>
+                                <br/>The HL7 attribute <b>typeCode </b>uses a code to describe this class as an author participation.</p>
+                            <p>
+                                <b>
+                                    <u>Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                                <br/>The XML attribute <b>classCode </b>is fixed to " <b>
+                                    <font color="#ff0000">AUT </font>
+                                </b>".</p>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="typeCode"
+                    className="Participation" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="AUT"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="OP" fixedValue="OP"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="contextControlCode" sortKey="3">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description </b>
+                                </u>
+                                <br/>The HL7 attribute <b>contextConductionCode </b>uses a set of codes from the HL7 vocabulary <b>ContextControl </b>to determine whether participations associated with the query are conducted across to the child classes (also associated with the child classes). This set of codes also determines how these participations conduct.<br/>
+                                <br/>The conduction can only take place if the <b>contextConductionInd </b>is set to " <b>
+                                    <font color="#ff0000">true </font>
+                                </b>"<br/>
+                                <br/>The value of this attribute is fixed in the HL7 model to " <b>
+                                    <font color="#ff0000">OP </font>
+                                </b>"<br/>
+                            </p>
+                            <ul>
+                                <li>" <font color="#ff0000">
+                                    <b>O</b>
+                                    </font> " (Overriding)- the author replaces any author that has been conducted from any previous acts.</li>
+                                <li>" <font color="#ff0000">
+                                    <b>P</b>
+                                    </font> " (Propagating)- the author is conducted to all child acts where the <b>contextConductionInd </b>is set to " <b>
+                                    <font color="#ff0000">true </font>
+                                    </b>".</li>
+                            </ul>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance </b>
+                                </u>
+                                <br/>The XML attribute <b>contextControlCode </b>is fixed to " <b>
+                                    <font color="#ff0000">OP</font>
+                                </b> "</p>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="contextControlCode"
+                    className="Participation" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="ContextControl"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="true" name="AuthorChoice">
+            <derivationSupplier className="Role" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    nodeOrientation="Portrait" shapeId="Sheet.15" shapeTemplate="Choice">
+                    <position x="0.01" y="1.34056"/>
+                    <size height="1.0" width="1.72666"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>An abstract placeholder for the template choice for an author</b>
+                        <br/>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <specializationChild childClassName="Template1">
+                <graphicRepresentation>
+                    <graphElement containerDiagramName="Main" shapeId="Sheet.17">
+                        <position x="0.135" y="1.59056"/>
+                        <size height="0.5" width="1.41114"/>
+                    </graphElement>
+                </graphicRepresentation>
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text/>
+                    </otherAnnotation>
+                </annotations>
+            </specializationChild>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="true" name="Template1">
+            <derivationSupplier className="Role" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    shapeId="Sheet.17" shapeTemplate="Role">
+                    <position x="0.135" y="1.59056"/>
+                    <size height="0.5" width="1.41114"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>A link to the templates for an author</b>
+                        <br/>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                isStructural="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="classCode" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text/>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="RoleClass"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person.givenName">
+            <derivationSupplier className="ParameterItem" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="true"
+                    shapeId="Sheet.27" shapeTemplate="OtherClass">
+                    <position x="0.42534" y="4.90112"/>
+                    <size height="0.75" width="2.53066"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>Query parameter: </b>
+                        <b>given name of the patient</b>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="value" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>The <b>value </b>of the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p> The XML element <b>value </b>shall contain the patient's given name</p>
+                            <br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="value"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="Person.givenName"
+                fixedValue="Person.givenName" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="semanticsText" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>A literal text string identifying the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/>  Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p> The XML element <b>semanticsText </b>is fixed to "<b>
+                                    <font color="#ff0000">Person.givenName</font>
+                                </b>"</p>
+                            <p>
+                                <value nullflavor="NI"/>
+                            </p>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="semanticsText"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person.familyName">
+            <derivationSupplier className="ParameterItem" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    shapeId="Sheet.31" shapeTemplate="OtherClass">
+                    <position x="0.41" y="5.72612"/>
+                    <size height="0.75" width="2.55518"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>Query parameter</b>
+                        <b>: family name of the patient </b>
+                        <br/>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="value" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>The <b>value </b>of the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>The XML element <b>value</b> shall contain the patient's family name <br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="value"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="Person.familyName"
+                fixedValue="Person.familyName" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="semanticsText" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>A literal text string identifying the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/>  Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p> The XML element <b>semanticsText </b>is fixed to "<b>
+                                <font color="#ff0000">Person.familyName</font>
+                            </b>"</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="semanticsText"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person.birthTime">
+            <derivationSupplier className="ParameterItem" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="true"
+                    shapeId="Sheet.35" shapeTemplate="OtherClass">
+                    <position x="0.5243" y="6.55112"/>
+                    <size height="0.75" width="2.4317"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>Query parameter: </b>
+                        <b>date of birth of the patient</b>
+                        <br/>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="value" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>The <b>value </b>of the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>The XML attribute <b>value</b> of the XML element <b>value </b>shall contain the date of birth of the patient in the format format yyyymmdd where:<br/>
+                            <ul>
+                                <li>yyyy is the year</li>
+                                <li>mm is the month</li>
+                                <li>dd is the day</li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="value"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="TS"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="Person.birthTime"
+                fixedValue="Person.birthTime" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="semanticsText" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>A literal text string identifying the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>The XML  element <b>semanticsText </b>is fixed to "<b>
+                                    <font color="#ff0000">Person.birthTime</font>
+                                </b>"<br/>
+                            </p>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="semanticsText"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person.postalCode">
+            <derivationSupplier className="ParameterItem" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    shapeId="Sheet.39" shapeTemplate="OtherClass">
+                    <position x="0.31564" y="7.40112"/>
+                    <size height="0.75" width="2.64036"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>Query parameter: </b>
+                        <b>post code of the patient r</b>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="value" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>The <b>value </b>of the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                            </p>
+                            <p>The XML element <b>value </b>shall contain the patient's post code                         </p>
+                            <br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="value"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="Person.postalCode"
+                fixedValue="Person.postalCode" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="semanticsText" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>A literal text string identifying the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/>  Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>  The XML element <b>semanticsText </b>is fixed to "<b>
+                                <font color="#ff0000">Person.postalCode</font>
+                            </b>"</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="semanticsText"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person.streetAddressLine1">
+            <derivationSupplier className="ParameterItem" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="true"
+                    shapeId="Sheet.43" shapeTemplate="OtherClass">
+                    <position x="0.03" y="8.28056"/>
+                    <size height="0.75" width="2.926"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>Query parameter: </b>
+                        <b>first address line of the patient <br/>
+                        </b>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="value" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>The <b>value </b>of the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                            </p>
+                            <p>The XML element <b>value </b>shall contain the patient's first address line                         </p>
+                            <br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="value"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+            <attribute conformance="R"
+                defaultValue="Person.streetAddressLine1"
+                fixedValue="Person.streetAddressLine1"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="semanticsText" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <b>
+                                    <u>Model Attribute Description</u>
+                                </b>
+                                <br/>
+                            </p>
+                            <p>A literal text string identifying the parameter item.<br/>
+                                <b>
+                                    <u>
+                                    <br/>  Implementation in XML Instance</u>
+                                </b>
+                                <br/>
+                            </p>  The XML element <b>semanticsText </b>is fixed to "<b>
+                                <font color="#ff0000">Person.streetAddressLine1</font>
+                            </b>"</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="semanticsText"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+                <type name="ST"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="RepeatCallerQuery">
+            <derivationSupplier className="ControlAct" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="false" isWidthAutoSize="false"
+                    shapeId="Sheet.47" shapeTemplate="Act">
+                    <position x="4.96624" y="1.24056"/>
+                    <size height="2.2" width="2.62321"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>This message is a query to the Repeat Caller service to ascertain whether the NHS111 patient is a repeat caller to the NHS111 service </b>
+                        <br/>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" fixedValue="CACT"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="classCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <u>
+                                <b>Model Attribute Description </b>
+                            </u>
+                            <br/>
+                            <br/>The HL7 attribute <b>classCode </b>describes this class as a control act.<br/>
+                            <br/>
+                            <u>
+                                <b>Implementation in XML Instance </b>
+                            </u>
+                            <br/>
+                            <br/>The XML attribute <b>classCode </b>is fixed to " <b>
+                                <font color="#ff0000">CACT </font>
+                            </b>".</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="ControlAct" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="CACT"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="EVN"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="moodCode" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <u>
+                                <b>Model Attribute Description </b>
+                            </u>
+                            <br/>
+                            <br/>The HL7 attribute <b>moodCode </b>describes this class as an event.<br/>
+                            <br/>
+                            <u>
+                                <b>Implementation in XML Instance </b>
+                            </u>
+                            <br/>
+
+                            <br/>The XML attribute <b>moodCode </b>is fixed to " <font color="#ff0000">
+                                <b>EVN </b>
+                            </font>".</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="moodCode"
+                    className="ControlAct" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="EVN"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="id" sortKey="3">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <u>
+                                <b>Model Attribute Description </b>
+                            </u>
+                            <br/>
+                            <br/>The HL7 attribute <b>id </b>holds a unique identifier for this control act event.<br/>
+                            <br/>
+                            <u>
+                                <b>Implementation in XML Instance </b>
+                            </u>
+                            <br/>
+                            <br/>The XML element <b>id </b>is populated with a generated DCE UUID in the following way:<br/>
+                            <ul>
+                                <li>The XML attribute <b>root </b>shall contain a DCE UUID.</li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="id"
+                    className="ControlAct" staticModelDerivationId="1"/>
+                <type name="II" typeSpecialisation="II.NPfIT.uuid.mandatory"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="01" fixedValue="01"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="code" sortKey="4">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description </b>
+                                </u>
+                                <br/>
+                                <br/>The HL7 attribute <b>code </b>uses a code from the <b>NHS111MessageType </b>vocabulary to describe this message as a repeat caller service query message.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance </b>
+                                </u>
+                                <br/>
+                                <br/>The <b>Coded with Code System</b> flavour of <b>Coded Value</b> (CV) data type shall be used to carry this in the XML element code information as follows: <br/>
+                            </p>
+                            <ul>
+                                <li>The XML attribute <b>code </b>shall contain " <b>
+                                    <font color="#ff0000">01</font>
+                                    </b> "</li>
+
+                                <li>The XML attribute <b>codeSystem </b>shall contain the OID " <font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.17.420</b>
+                                    </font> "</li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="code"
+                    className="ControlAct" staticModelDerivationId="1"/>
+                <type name="CV" typeSpecialisation="CV.NPfIT.CodedCodeSystem"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="NHS111MessageType"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="effectiveTime" sortKey="10">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description</b>
+                                </u>
+                                <br/>
+                                <br/>The HL7 attribute <b>effectiveTime </b>is used to define when the query to the repeat caller service was made.<br/>
+                                <u>
+                                    <b/>
+                                </u>
+                            </p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance </b>
+                                </u>
+                                <br/>
+                                <br/>The XML attribute value of the XML element <b>effectiveTime </b>shall be populated with the time the query to the repeat caller service was made using a time stamp in the format yyyymmddhhmmss[+|-ZZzz] where:<br/>
+                            </p>
+                            <ul>
+                                <li>yyyy is the year</li>
+                                <li>mm is the month</li>
+                                <li>dd is the day</li>
+                                <li>hh is the hour</li>
+                                <li>mm is the minutes</li>
+                                <li>ss is the seconds</li>
+                                <li>[+|-ZZzz] is the time zone offset in hours and minutes</li>
+                            </ul>
+                            <u>
+                                <b/>
+                            </u>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="effectiveTime"
+                    className="ControlAct" staticModelDerivationId="1"/>
+                <type name="TS"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="PertinentInformation">
+            <derivationSupplier className="ActRelationship" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    nodeOrientation="Left" shapeId="Sheet.51"
+                    shapeTemplate="ActRelationship" textWrappingWidth="66.0">
+                    <position x="2.06911" y="2.68583"/>
+                    <size height="0.56944" width="2.89713"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <constraint name="contentId">
+                    <text>
+                        <p>NPFIT-300007#Act</p>
+                    </text>
+                    <graphicRepresentation>
+                        <graphElement containerDiagramName="Main"
+                            isHeightAutoSize="true"
+                            isWidthAutoSize="true" shapeId="Sheet.144">
+                            <position x="3.6418" y="3.44056"/>
+                            <size height="0.32778" width="1.13639"/>
+                            <anchorage connectToShapeId="Sheet.51">
+                                <position x="4.21" y="3.60444"/>
+                                <graphEdge>
+                                    <anchor>
+                                    <position x="3.58018" y="3.25528"/>
+                                    </anchor>
+                                </graphEdge>
+                            </anchorage>
+                        </graphElement>
+                    </graphicRepresentation>
+                </constraint>
+                <otherAnnotation type="html">
+                    <text>
+                        <p>
+                            <b>This class is a relationship of pertinent information.</b>
+                        </p>
+                        <p>
+                            <b>It is used to carry the Permission To View outcome.</b>
+                        </p>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="contentId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div contenteditable="false" style="height: 100%; width: 100%">
+                                <div>
+                                    <p>
+                                    <u>
+                                    <b>Model Attribute Description</b>
+                                    </u>
+                                    <br/>
+                                    </p>
+                                    <p>The HL7 (NHS localisation) attribute <b>contentId</b>,   when valued in an instance, provides a unique forward  pointing   identifier for the template which constrains                                           the classes and attributes which  follow, for NHS use.                                                                                                                                      </p>
+                                    <p>The   attribute is intended simply as a structural navigational aid and   should not be relied upon as an indicator of semantic                                  meaning. The <b>contentId </b>is populated at runtime with a value from the allowed list contained in the model.<br/>
+                                    </p>
+                                    <p>
+                                    <br/>
+                                    <u>
+                                    <b>Implementation in XML Instance</b>
+                                    </u>
+                                    </p>  The <b>Identifier External</b> data type flavour is used to carry this information in the XML element <b>contentId</b> as follows:                                                                                                     <ul>
+
+                                    <li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.18.16</b>
+                                    </font>"                                                                                                                                               </li>
+                                    <li>The XML attribute <b>extension</b> shall contain one of the allowed template artefact identifiers.                                                           </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="contentId"
+                    className="ActRelationship" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="PERT"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="typeCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description</b>
+                                </u>
+                                <br/>
+                                <br/> The HL7 attribute <b>typeCode </b>describes this class as one of pertinent information.<br/>
+                                <br/>
+                                <b>
+                                    <u>Implementation in XML Instance</u>
+                                </b>
+                            </p>
+                            <ul>
+
+                                <li>The XML attribute <b>typeCode </b>is fixed to "<font color="#ff0000">
+                                    <b>PERT</b>
+                                    </font>".                                                  </li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="typeCode"
+                    className="ActRelationship" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="PERT"/>
+            </attribute>
+            <attribute conformance="R" defaultValue="false"
+                fixedValue="false" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="seperatableInd" sortKey="14">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description</b>
+                                </u>
+                                <br/>
+                                <br/> The HL7 attribute <b>seperatableInd </b>uses a Boolean (true or false) to indicate whether two pieces of information can be interpreted separately.<br/>
+                                <b>
+                                    <u>
+                                    <br/> Implementation in XML Instance</u>
+                                </b>
+                            </p>
+                            <ul>
+                                <li>                          The XML attribute <b>seperatableInd </b>is fixed to "<b>
+                                    <font color="#ff0000">false</font>
+                                    </b>".</li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="seperatableInd"
+                    className="ActRelationship" staticModelDerivationId="1"/>
+                <type name="BL"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="true" name="PermissionToViewChoice">
+            <derivationSupplier className="Act" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="true"
+                    nodeOrientation="Portrait" shapeId="Sheet.57" shapeTemplate="Choice">
+                    <position x="0.01" y="2.37806"/>
+                    <size height="1.125" width="2.05911"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>An abstract placeholder for the template choice for a permission to view outcome.<br/>
+                        </b>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <specializationChild childClassName="Template2">
+                <graphicRepresentation>
+                    <graphElement containerDiagramName="Main" shapeId="Sheet.59">
+                        <position x="0.135" y="2.62806"/>
+                        <size height="0.75" width="1.675"/>
+                    </graphElement>
+                </graphicRepresentation>
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text/>
+                    </otherAnnotation>
+                </annotations>
+            </specializationChild>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="true" name="Template2">
+            <derivationSupplier className="Act" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    shapeId="Sheet.59" shapeTemplate="Act">
+                    <position x="0.135" y="2.62806"/>
+                    <size height="0.75" width="1.675"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text/>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                isStructural="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="classCode" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text/>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Act" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="ActClass"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                isStructural="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="moodCode" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text/>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="moodCode"
+                    className="Act" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="ActMood"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.1"
+                containerDiagramName="Main" shapeId="Sheet.63">
+                <position x="4.28375" y="4.40556"/>
+                <graphEdge>
+                    <waypoint x="3.61988" y="4.40556"/>
+                    <waypoint x="3.61988" y="4.41612"/>
+                    <anchor connectToShapeId="Sheet.5">
+                        <position x="2.95599" y="4.41612"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="person.id" participantClassName="Person.id">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to the query parameter representing the patient's NHS Number<br/>
+                            </b>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="target-QueryByParameter-parameterItem-ParameterItem-queryByParameter"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="Query">
+                <derivationSupplier associationEndName="source"
+                    className="QueryByParameter" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.47"
+                containerDiagramName="Main" shapeId="Sheet.73">
+                <position x="6.01552" y="3.44054"/>
+                <graphEdge>
+                    <waypoint x="6.01552" y="3.73556"/>
+                    <waypoint x="6.0216" y="3.73556"/>
+                    <anchor connectToShapeId="Sheet.1">
+                        <position x="6.0216" y="4.03056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="query" participantClassName="Query">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to the query parameters</b>
+                            <br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="target-ControlAct-queryByParameter-QueryByParameter-controlAct"
+                    className="QueryByParameter" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="RepeatCallerQuery">
+                <derivationSupplier associationEndName="source"
+                    className="CACT" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.27"
+                containerDiagramName="Main" shapeId="Sheet.83">
+                <position x="2.956" y="5.27612"/>
+                <graphEdge>
+                    <waypoint x="2.956" y="4.78056"/>
+                    <anchor connectToShapeId="Sheet.1">
+                        <position x="4.28375" y="4.78056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="person.givenName" participantClassName="Person.givenName">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to the query parameter representing the patient's given name<br/>
+                            </b>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="source-ParameterItem-queryByParameter-QueryByParameter-parameterItem"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="Query">
+                <derivationSupplier associationEndName="target"
+                    className="QueryByParameter" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.43"
+                containerDiagramName="Main" shapeId="Sheet.93">
+                <position x="2.956" y="8.65556"/>
+                <graphEdge>
+                    <waypoint x="2.956" y="4.78056"/>
+                    <anchor connectToShapeId="Sheet.1">
+                        <position x="6.60088" y="4.78056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="person.streetAddressLine1" participantClassName="Person.streetAddressLine1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to the query parameter representing the patient's street address line 1<br/>
+                            </b>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="source-ParameterItem-queryByParameter-QueryByParameter-parameterItem"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="Query">
+                <derivationSupplier associationEndName="target"
+                    className="QueryByParameter" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.31"
+                containerDiagramName="Main" shapeId="Sheet.103">
+                <position x="2.96518" y="6.10112"/>
+                <graphEdge>
+                    <waypoint x="2.96518" y="4.78056"/>
+                    <anchor connectToShapeId="Sheet.1">
+                        <position x="4.86303" y="4.78056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="person.familyName" participantClassName="Person.familyName">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to the query parameter representing the patient's family name<br/>
+                            </b>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="source-ParameterItem-queryByParameter-QueryByParameter-parameterItem"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="Query">
+                <derivationSupplier associationEndName="target"
+                    className="QueryByParameter" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.35"
+                containerDiagramName="Main" shapeId="Sheet.113">
+                <position x="2.956" y="6.92612"/>
+                <graphEdge>
+                    <waypoint x="2.956" y="4.78056"/>
+                    <anchor connectToShapeId="Sheet.1">
+                        <position x="5.44232" y="4.78056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="person.birthTime" participantClassName="Person.birthTime">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to the query parameter representing the patient's date of birth<br/>
+                            </b>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="source-ParameterItem-queryByParameter-QueryByParameter-parameterItem"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="Query">
+                <derivationSupplier associationEndName="target"
+                    className="QueryByParameter" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.39"
+                containerDiagramName="Main" shapeId="Sheet.123">
+                <position x="2.956" y="7.77612"/>
+                <graphEdge>
+                    <waypoint x="2.956" y="4.78056"/>
+                    <anchor connectToShapeId="Sheet.1">
+                        <position x="6.0216" y="4.78056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="person.postalCode" participantClassName="Person.postalCode">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to the query parameter representing the patient's post code</b>
+                            <br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="source-ParameterItem-queryByParameter-QueryByParameter-parameterItem"
+                    className="ParameterItem" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="Query">
+                <derivationSupplier associationEndName="target"
+                    className="QueryByParameter" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.47"
+                containerDiagramName="Main" shapeId="Sheet.9">
+                <position x="4.96624" y="1.72056"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.47">
+                        <position x="4.96624" y="1.72056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="author" participantClassName="Author">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text/>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="outboundParticipation"
+                    className="RepeatCallerQuery" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="RepeatCallerQuery">
+                <derivationSupplier associationEndName="act"
+                    className="Author" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.15"
+                containerDiagramName="Main" shapeId="Sheet.9">
+                <position x="1.73666" y="1.72056"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.15">
+                        <position x="1.73666" y="1.72056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="participant" participantClassName="AuthorChoice">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <b>A link to a choice of authors.</b>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier associationEndName="role"
+                    className="Author" staticModelDerivationId="1"/>
+                <participantClassSpecialization className="Template1" traversalName="participantTemplate1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="Author">
+                <derivationSupplier associationEndName="participation"
+                    className="AuthorChoice" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.47"
+                containerDiagramName="Main" shapeId="Sheet.51">
+                <position x="4.96624" y="2.97056"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.47">
+                        <position x="4.96624" y="2.97056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="pertinentInformation" participantClassName="PertinentInformation">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text/>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier
+                    associationEndName="outboundRelationship"
+                    className="RepeatCallerQuery" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="RepeatCallerQuery">
+                <derivationSupplier associationEndName="source"
+                    className="PertinentInformation" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.57"
+                containerDiagramName="Main" shapeId="Sheet.51">
+                <position x="2.06911" y="2.97056"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.57">
+                        <position x="2.06911" y="2.97056"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="pertinentPermissionToViewChoice" participantClassName="PermissionToViewChoice">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>A link to the choice of permission to view templates.</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier associationEndName="target"
+                    className="PertinentInformation" staticModelDerivationId="1"/>
+                <participantClassSpecialization className="Template2" traversalName="pertinentTemplate2"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="PertinentInformation">
+                <derivationSupplier
+                    associationEndName="inboundRelationship"
+                    className="PermissionToViewChoice" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+</staticModel>

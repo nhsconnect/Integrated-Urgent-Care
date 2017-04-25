@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	This example message is provided for illustrative purposes only. It has had no clinical validation. Whilst every effort has been taken to ensure that the examples are consistent with the
+	message specification contained within the MiM, where there are conflicts with the written message specification or schema, the specification or schema shall be considered to take
+	precedence
+-->
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:npfitlc="NPFIT:HL7:Localisation" moodCode="EVN" classCode="DOCCLIN">
+	<code code="285091000000108" codeSystem="2.16.840.1.113883.2.1.3.2.4.15"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal"/>
+	<effectiveTime value="20070102123459"/>
+	<id root="7D5B4DC0-AE1A-11DB-95FB-B18E1E0994CD"/>
+	<npfitlc:messageType root="2.16.840.1.113883.2.1.3.2.4.18.17" extension="POCD_MT130001UK05"/>
+	<setId root="7D5B4DC0-AE1A-11DB-95FC-B18E1E0994CD"/>
+	<title>Nullification Document</title>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<versionNumber value="2"/>
+	<author contextControlCode="OP" typeCode="AUT">
+		<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145001UK03#AssignedAuthorSDS"/>
+		<functionCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.178" code="OA" displayName="Originating Author"/>
+		<time value="200701021234"/>
+		<COCD_TP145001UK03.AssignedAuthorSDS classCode="ASSIGNED">
+			<code code="R0050" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" displayName="Consultant"/>
+			<id root="1.2.826.0.1285.0.2.0.65" extension="673836492727"/>
+			<id root="1.2.826.0.1285.0.2.0.67" extension="984181387037"/>
+			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145001UK03#AssignedAuthorSDS"/>
+			<assignedPerson determinerCode="INSTANCE" classCode="PSN">
+				<name>
+					<prefix>Dr</prefix>
+					<given>Steve</given>
+					<family>Fulham</family>
+				</name>
+				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145001UK03#assignedPerson"/>
+			</assignedPerson>
+			<representedOrganization determinerCode="INSTANCE" classCode="ORG">
+				<id root="2.16.840.1.113883.2.1.3.2.4.19.2" extension="RR109"/>
+				<name>Solihull Hospital</name>
+				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145001UK03#representedOrganization"/>
+			</representedOrganization>
+		</COCD_TP145001UK03.AssignedAuthorSDS>
+	</author>
+	<component typeCode="COMP" contextConductionInd="true">
+		<structuredBody moodCode="EVN" classCode="DOCBODY">
+			<component typeCode="COMP" contextConductionInd="true">
+				<classificationSection classCode="DOCSECT" moodCode="EVN">
+					<id root="D9303D40-EF24-11DB-A1C1-F5CA408FF127"/>
+					<component typeCode="COMP" contextConductionInd="true">
+						<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146061UK01#Section1"/>
+						<COCD_TP146061UK01.Section1 classCode="DOCSECT" moodCode="EVN">
+							<id root="D9303D40-EF24-11DB-A1C2-F5CA408FF127"/>
+							<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146061UK01#Section1"/>
+							<text>Discharge Report</text>
+							<title>Document Withdrawn</title>
+							<component1 typeCode="COMP" contextConductionInd="true">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146061UK01#component1"/>
+								<section2 classCode="DOCSECT" moodCode="EVN">
+									<id root="D92DCC40-EF24-11DB-A1BE-F5CA408FF127"/>
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146061UK01#section2"/>
+									<text>02-Jan-2007</text>
+									<title>Withdrawn Document Created</title>
+								</section2>
+							</component1>
+							<component1 typeCode="COMP" contextConductionInd="true">
+								<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146061UK01#component1"/>
+								<section2 classCode="DOCSECT" moodCode="EVN">
+									<id root="D92DCC40-EF24-11DB-A1BE-F5CA408FF127"/>
+									<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146061UK01#section2"/>
+									<text>
+										<content ID="a1">Sent to wrong patient record</content>
+									</text>
+									<title>Reason for Withdrawal</title>
+								</section2>
+							</component1>
+						</COCD_TP146061UK01.Section1>
+					</component>
+					<entry typeCode="COMP" contextConductionInd="true">
+						<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP146049UK05#Reason"/>
+						<COCD_TP146049UK05.Reason classCode="OBS" moodCode="EVN">
+							<code codeSystem="2.16.840.1.113883.2.1.3.2.4.17.176" code="02" displayName="Sent to wrong patient record">
+								<originalText>
+									<reference value="#a1"/>
+								</originalText>
+							</code>
+							<effectiveTime value="200701021234"/>
+							<id root="7D5B4DC0-AE1A-11DB-9600-B18E1E0994CD"/>
+							<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP146049UK05#Reason"/>
+						</COCD_TP146049UK05.Reason>
+					</entry>
+				</classificationSection>
+			</component>
+		</structuredBody>
+	</component>
+	<custodian typeCode="CST">
+		<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145018UK03#AssignedCustodian"/>
+		<COCD_TP145018UK03.AssignedCustodian classCode="ASSIGNED">
+			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145018UK03#AssignedCustodian"/>
+			<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="RR109"/>
+				<name>Solihull Hospital</name>
+				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145018UK03#representedCustodianOrganization"/>
+			</representedCustodianOrganization>
+		</COCD_TP145018UK03.AssignedCustodian>
+	</custodian>
+	<informationRecipient typeCode="PRCP">
+		<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145017UK03#IntendedRecipient"/>
+		<COCD_TP145017UK03.IntendedRecipient classCode="ASSIGNED">
+			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145017UK03#IntendedRecipient"/>
+			<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.840.1.113883.2.1.3.2.4.19.2" extension="YEA"/>
+				<name>NATIONAL CARE RECORDS SERVICE SPINE</name>
+				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145017UK03#representedOrganization"/>
+			</representedOrganization>
+		</COCD_TP145017UK03.IntendedRecipient>
+	</informationRecipient>
+	<informationRecipient typeCode="PRCP">
+		<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145021UK04#AssignedEntitySDS"/>
+		<COCD_TP145021UK04.AssignedEntitySDS classCode="ASSIGNED">
+			<id root="1.2.826.0.1285.0.2.0.65" extension="673836492727"/>
+			<id root="1.2.826.0.1285.0.2.0.67" extension="984181387037"/>
+			<npfitlc:recipientRoleCode code="GP" codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196" displayName="General Practitioner"/>
+			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK04#AssignedEntitySDS"/>
+			<assignedPerson determinerCode="INSTANCE" classCode="PSN">
+				<name>
+					<prefix>Dr</prefix>
+					<given>Jill</given>
+					<family>Fulham</family>
+				</name>
+				<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145021UK04#assignedPerson"/>
+			</assignedPerson>
+		</COCD_TP145021UK04.AssignedEntitySDS>
+	</informationRecipient>
+	<recordTarget typeCode="RCT" contextControlCode="OP">
+		<npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16" extension="COCD_TP145020UK03#PatientRole"/>
+		<COCD_TP145020UK03.PatientRole classCode="PAT">
+			<id root="2.16.840.1.113883.2.1.4.1" extension="9900002558"/>
+			<templateId root="2.16.840.1.113883.2.1.3.2.4.18.2" extension="COCD_TP145020UK03#PatientRole"/>
+		</COCD_TP145020UK03.PatientRole>
+	</recordTarget>
+	<relatedDocument typeCode="RPLC">
+		<priorParentDocument moodCode="EVN" classCode="DOCCLIN">
+			<code codeSystem="2.16.840.1.113883.2.1.3.2.4.15" code="163391000000107"/>
+			<id root="7D5B4DC0-AE1A-11DB-9601-B18E1E0994CD"/>
+			<setId root="7D5B4DC0-AE1A-11DB-95FC-B18E1E0994CD"/>
+			<versionNumber value="1"/>
+		</priorParentDocument>
+	</relatedDocument>
+</ClinicalDocument>

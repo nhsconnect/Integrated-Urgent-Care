@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staticModel isAbstract="false" isSerializable="true"
+    name="COCD_TP145029UK02" packageKind="root"
+    representationKind="flat" xmlns="urn:hl7-org:v3/mif"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3/mif ../MifSchemas/mifStaticModelFlat.xsd">
+    <packageLocation artifact="TP" domain="CD" id="145029"
+        name="COCD_TP145029UK02" realm="UK" root="DEFN" section="HM"
+        subSection="CO" version="02"/>
+    <header>
+        <renderingInformation
+            application="NHS R-MIM Designer 2.99.KJ.07"
+            renderingTime="2011-03-15T10:43:37" schemaVersion="1"/>
+        <legalese copyrightOwner="NHS Connecting for Health"/>
+    </header>
+    <graphicRepresentation presentation="HL7">
+        <graphElement name="Main">
+            <position x="0.0" y="0.0"/>
+            <size height="3.80733" width="8.02933"/>
+        </graphElement>
+    </graphicRepresentation>
+    <derivationSupplier staticModelDerivationId="1">
+        <targetStaticModel artifact="RIM" realm="UV" root="DEFN" version="1"/>
+    </derivationSupplier>
+    <ownedEntryPoint className="RecipientWorkgroupSDS"
+        id="COCD_TP145029UK02" isAbstract="false" name="RecipientWorkgroupSDS">
+        <annotations>
+            <description>
+                <text>
+                    <p>Template for Recipient SDS workgroup</p>
+                </text>
+            </description>
+            <otherAnnotation type="html">
+                <text/>
+            </otherAnnotation>
+        </annotations>
+        <graphicRepresentation>
+            <graphElement containerDiagramName="Main"
+                isHeightAutoSize="false" isWidthAutoSize="false"
+                nodeOrientation="Down" shapeId="COCD_TP145029UK02">
+                <position x="3.33795" y="0.02778"/>
+                <size height="0.45278" width="2.03787"/>
+                <anchorage connectToShapeId="Sheet.5">
+                    <position x="4.35689" y="0.48056"/>
+                    <graphEdge>
+                        <anchor>
+                            <position x="4.35689" y="0.95356"/>
+                        </anchor>
+                    </graphEdge>
+                </anchorage>
+            </graphElement>
+        </graphicRepresentation>
+    </ownedEntryPoint>
+    <ownedClass>
+        <class isAbstract="false" name="Organization">
+            <derivationSupplier className="Organization" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="false"
+                    shapeId="Sheet.1" shapeTemplate="Entity">
+                    <position x="0.01" y="2.74955"/>
+                    <size height="1.04778" width="2.829"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <p>
+                            <b>This class details the organisation which scopes the role of the recipient (the organisation which employs the person or team who/which is the recipient).<br/>
+                            </b>
+                        </p>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R"
+                defaultValue="COCD_TP145029UK02#representedOrganization"
+                fixedValue="COCD_TP145029UK02#representedOrganization"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="templateId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <div>
+                                <p>
+                                    <u>
+                                    <b>Model Attribute Description</b>
+                                    </u>
+                                    <br/>
+                                    <br/> The HL7 attribute <b>templateId</b> provides a unique identifier for the template and the class name within that template. This is used to identify how the CDA standard has been constrained for NHS use.</p>
+                                <p>
+                                    <u>
+                                    <b>Implementation in XML Instance </b>
+                                    </u>
+                                    <br/>
+                                </p>
+                                <p>The <b>Identifier External </b>data type flavour is used to carry this information in the XML element <b>templateId</b> as follows:</p>
+                                <ul>
+
+                                    <li>The XML attribute <b>root</b>  is fixed to the OID "<font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.18.2</b>
+                                    </font>"</li>
+                                    <li>The XML attribute <b>extension</b> is fixed to "<b>
+                                    <font color="#ff0000">COCD_TP145029UK02#representedOrganization</font>
+                                    </b>"</li>
+                                </ul>
+                            </div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="templateId"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="ORG"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="classCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>classCode</b> describes this class as an organisation.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The XML attribute <b>classCode</b> is fixed to "<b>
+                                    <font color="#ff0000">ORG</font>
+                                </b>".   <br/>
+                            </p>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="ORG"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="INSTANCE"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="determinerCode" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description  </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>determinerCode</b> describes this class as an instance of an organisation.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance  </b>
+                                </u>
+                                <br/>
+                            </p>
+
+                            <p>The XML attribute <b>determinerCode</b> is fixed to "<font color="#ff0000">
+                                    <b>INSTANCE</b>
+                                </font>". <br/>
+                            </p>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="determinerCode"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="INSTANCE"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="id" sortKey="3">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description   </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute<b> id</b> uses an ODS code as an identifier that uniquely identifies the organisation which employs the recipient. The ODS code should identify the organisation at either the site level or organisation level. Where possible the organisation should be identified at the site level. ODS codes were formerly known as NACS codes.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance   </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>When ODS site code is used then the XML element <b>id </b>is populated in the following way:</p>
+                            <ul>
+
+                                <li>The XML attribute <b>root</b> shall contain an OID with the value "<font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.19.2</b>
+                                    </font>"</li>
+                                <li>The XML attribute <b>extension</b> shall contain the ODS site code</li>
+                            </ul>
+                            <p>When ODS organisation code is used then the XML element <b>id </b>is populated in the following way:<br/>
+                            </p>
+                            <ul>
+
+                                <li>The XML attribute <b>root</b> shall contain an OID with the value "<font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.19.1</b>
+                                    </font>"</li>
+                                <li>The XML attribute <b>extension</b> shall contain the ODS organisation code</li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="id"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="II" typeSpecialisation="II.NPfIT.OrganizationSDS.Organisation.oid:II.NPfIT.OrganizationSDS.Site.oid"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="name" sortKey="6">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>name</b> uses the description of the organisation associated with the ODS code.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance  </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <div>The XML element <b>name</b> will carry the description associated with the ODS code carried in the XML attribute <b>extension</b>  of the XML element <b>id</b>.</div>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="name"
+                    className="Organization" staticModelDerivationId="1"/>
+                <type name="ON"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="RecipientWorkgroupSDS">
+            <derivationSupplier className="Role" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="false" isWidthAutoSize="false"
+                    shapeId="Sheet.5" shapeTemplate="Role">
+                    <position x="2.69189" y="0.95356"/>
+                    <size height="1.196" width="3.487"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <p>
+                            <b>A template to allow identification of a workgroup or team which is the recipient of the information.</b>
+                            <br/>
+                        </p>
+                        <p>
+                            <b>This class carries details to allow identification of the </b>
+                            <b>workgroup.</b>
+                        </p>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="recipientRoleCode" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description</b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>recipientRoleCode</b> uses the <b>WorkgroupRoleName </b>vocabulary to identify a workgroup or team by name.</p>
+                            <p>The vocabulary used is a default one which contains no values and its only purpose is to allow the XML attribute <b>displayName</b> to carry the name of the workgroup or team.<br/>
+                            </p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance</b>
+                                </u>
+                            </p>
+                            <p>The <b>Coded Plain</b> flavour of the <b>Coded Value</b> (CV) data type shall be used to carry this information in the XML element <b>recipientRoleCode</b> as follows:                    </p>
+                            <p>When no alternative vocabulary is available then: <br/>
+                            </p>
+                            <ul>
+
+                                <li>The XML attribute <b>code</b> shall contain the fixed value "<font color="#ff0000">
+                                    <b>01</b>
+                                    </font>"                                                  </li>
+
+                                <li>The XML attribute <b>codeSystem</b>                         shall contain the OID "<font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.17.266</b>
+                                    </font>"                                                  </li>
+                                <li>The XML attribute <b>displayName</b> shall carry the name of the workgroup or team<br/>
+                                </li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="recipientRoleCode"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="CV"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="WorkgroupRoleName"/>
+            </attribute>
+            <attribute conformance="R"
+                defaultValue="COCD_TP145029UK02#RecipientWorkgroupSDS"
+                fixedValue="COCD_TP145029UK02#RecipientWorkgroupSDS"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="templateId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <u>
+                                <b>Model Attribute Description</b>
+                            </u>
+                            <br/>
+                            <br/> The HL7 attribute <b>templateId</b>  provides a unique identifier for the template and the class name within  that template. This is used to identify how the CDA                          standard has been constrained for NHS use.<br/>
+                            <br/>
+                            <u>
+                                <b>Implementation in XML Instance</b>
+                            </u>
+                            <br/>
+                            <br/> The <b>Identifier External </b>data type flavour is used to carry this information in the XML element <b>templateId</b> as follows:<br/>
+                            <ul>
+
+                                <li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.18.2</b>
+                                    </font>"                            </li>
+
+                                <li>The XML attribute <b>extension</b> is fixed to "<font color="#ff0000">
+                                    <b>COCD_TP145029UK02#RecipientWorkgroupSDS</b>
+                                    </font>"                            </li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="templateId"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="ASSIGNED"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="classCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>classCode</b>  describes this class as an assigned role.                 					 An  assigned role is a type of agent in which, the player                       is a person employed by a scoping organisation.                    </p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance </b>
+                                </u>
+                                <br/>
+
+                            </p> The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+                                <b>ASSIGNED</b>
+                            </font>".</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Role" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="ASSIGNED"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="id" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description</b>
+                                </u>
+                                <br/>
+                            </p> The HL7 attribute <b>id</b> uses an identifier to identify the workgroup or team.                    <p>
+                                <u>
+                                    <b>Implementation in XML Instance <br/>
+                                    </b>
+                                </u>
+                            </p>
+                            <p>The XML element<b> id </b>shall be used to carry this information as follows:                    </p>
+                            <ul>
+
+                                <li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+                                    <b>1.2.826.0.1285.0.2.0.109</b>
+                                    </font>"                                            </li>
+                                <li>The XML attribute <b>extension</b> shall be the SDS workgroup code                       </li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="id" className="Role" staticModelDerivationId="1"/>
+                <type name="II" typeSpecialisation="II.NPfIT.OrganizationSDS.Type2.oid"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedClass>
+        <class isAbstract="false" name="Person">
+            <derivationSupplier className="Person" staticModelDerivationId="1"/>
+            <graphicRepresentation presentation="HL7">
+                <graphElement containerDiagramName="Main"
+                    isHeightAutoSize="true" isWidthAutoSize="true"
+                    shapeId="Sheet.22" shapeTemplate="Entity">
+                    <position x="4.6332" y="2.90733"/>
+                    <size height="0.78112" width="3.33361"/>
+                </graphElement>
+            </graphicRepresentation>
+            <annotations>
+                <otherAnnotation type="html">
+                    <text>
+                        <b>Details to allow identification of a person who is a member of the workgroup or team.</b>
+                    </text>
+                </otherAnnotation>
+            </annotations>
+            <attribute conformance="R"
+                defaultValue="COCD_TP145029UK02#assignedPerson"
+                fixedValue="COCD_TP145029UK02#assignedPerson"
+                isMandatory="true" maximumMultiplicity="1"
+                minimumMultiplicity="1" name="templateId" sortKey="0">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <u>
+                                <b>Model Attribute Description</b>
+                            </u>
+                            <br/>
+                            <br/>The HL7 attribute <b>templateId</b> provides a unique identifier for the template and the class name within that template. This is used to identify how the CDA standard has been constrained for NHS use.<br/>
+                            <br/>
+                            <u>
+                                <b>Implementation in XML Instance</b>
+                            </u>
+                            <br/>
+                            <br/>The <b>Identifier External </b>data type flavour is used to carry this information in the XML element <b>templateId</b> as follows:<br/>
+                            <ul>
+
+                                <li>The XML attribute <b>root</b> is fixed to the OID "<font color="#ff0000">
+                                    <b>2.16.840.1.113883.2.1.3.2.4.18.2</b>
+                                    </font>"</li>
+
+                                <li>The XML attribute <b>extension</b> is fixed to "<font color="#ff0000">
+                                    <b>COCD_TP145029UK02#assignedPerson</b>
+                                    </font>"</li>
+                            </ul>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="templateId"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="II"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="PSN"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="classCode" sortKey="1">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description  </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>classCode</b> describes this class as a person.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance  </b>
+                                </u>
+                                <br/>
+
+                            </p>The XML attribute <b>classCode</b> is fixed to "<font color="#ff0000">
+                                <b>PSN</b>
+                            </font>".</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="classCode"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="PSN"/>
+            </attribute>
+            <attribute conformance="R" fixedValue="INSTANCE"
+                isMandatory="true" isStructural="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="determinerCode" sortKey="2">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description  </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>determinerCode</b> describes this class as an instance of a person.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance  </b>
+                                </u>
+                                <br/>
+
+                            </p>The XML attribute <b>determinerCode</b> is fixed to "<font color="#ff0000">
+                                <b>INSTANCE</b>
+                            </font>".</text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="determinerCode"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="CS"/>
+                <supplierDomainSpecification codingStrength="CNE" domainName="INSTANCE"/>
+            </attribute>
+            <attribute conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="name" sortKey="6">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>
+                            <p>
+                                <u>
+                                    <b>Model Attribute Description  </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The HL7 attribute <b>name</b> provides a name associated with the person who is a member of the team.</p>
+                            <p>
+                                <u>
+                                    <b>Implementation in XML Instance  </b>
+                                </u>
+                                <br/>
+                            </p>
+                            <p>The <b>Person Name Structured</b>
+                                <b> with optional Use and optional Valid Time</b> flavour of the<b> PN</b> data type is the recommended format for the author's name. This information is carried in the XML element <b>name </b>as follows: </p>
+                            <ul>
+                                <li>The XML element <b>prefix</b> should contain the author's title</li>
+                                <li>The XML element <b>given</b> should contain the author's forenames; there can be as many occurrences of the XML element as required<br/>
+                                </li>
+                                <li>The XML element <b>family</b> should contain the author's surname</li>
+                                <li>The XML element <b>suffix</b> may contain any suffix for the author<br/>
+                                </li>
+                            </ul>
+                            <p>Additionally the XML attribute <b>use</b> of the XML element <b>name </b>should be used to indicate the type of name; the recommended codes to be used are listed below: </p>
+                            <p>Note some of the codes listed are NHS extensions, these are marked with an * <br/>
+                            </p>
+                            <table align="center" border="1" width="90%">
+                                <tbody>
+                                    <tr>
+                                    <th width="30%">Code</th>
+                                    <th width="70%">Definition</th>
+                                    </tr>
+                                    <tr>
+                                    <td>
+                                    <b>L</b>
+                                    <br/>
+                                    </td>
+                                    <td>Legal<br/>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td>
+                                    <b>PREFERRED *</b>
+                                    <br/>
+                                    </td>
+                                    <td>Preferred name<br/>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>Additionally the XML element <b>validTime</b> of the XML element <b>name</b> may be used to indicate the time when the name is valid/was valid for the author, some uses are shown below:  <br/>
+                            </p>
+                            <ul>
+                                <li>A point in time when the name details are known to be valid<br/>
+                                </li>
+                                <li>A start and end time</li>
+                                <ul>
+                                    <li>To represent the period of time the author is/was known by this name <br/>
+                                    </li>
+                                </ul>
+                                <li>A start time only to indicate when the name is/was valid from for the author<br/>
+                                </li>
+                                <li>An end time only to indicate that the name is/was only valid for the author until a certain date   </li>
+                            </ul>
+                            <br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier attributeName="name"
+                    className="Person" staticModelDerivationId="1"/>
+                <type name="PN"/>
+            </attribute>
+        </class>
+    </ownedClass>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.1"
+                containerDiagramName="Main" shapeId="Sheet.5">
+                <position x="6.17889" y="0.95356"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.1">
+                        <position x="2.839" y="2.74955"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection conformance="R" isMandatory="true"
+                maximumMultiplicity="1" minimumMultiplicity="1"
+                name="representedOrganization" participantClassName="Organization">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>A link to the represented organisation.<br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier associationEndName="scoper"
+                    className="RecipientWorkgroupSDS" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="RecipientWorkgroupSDS">
+                <derivationSupplier associationEndName="scopedRole"
+                    className="Organization" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+    <ownedAssociation>
+        <graphicRepresentation>
+            <graphElement connectToShapeId="Sheet.22"
+                containerDiagramName="Main" shapeId="Sheet.5">
+                <position x="6.17889" y="2.14956"/>
+                <graphEdge>
+                    <anchor connectToShapeId="Sheet.22">
+                        <position x="6.3" y="2.90734"/>
+                    </anchor>
+                </graphEdge>
+            </graphElement>
+        </graphicRepresentation>
+        <connections>
+            <traversableConnection isMandatory="false"
+                maximumMultiplicity="1" minimumMultiplicity="0"
+                name="assignedPerson" participantClassName="Person">
+                <annotations>
+                    <otherAnnotation type="html">
+                        <text>A link to the person.<br/>
+                        </text>
+                    </otherAnnotation>
+                </annotations>
+                <derivationSupplier associationEndName="player"
+                    className="RecipientWorkgroupSDS" staticModelDerivationId="1"/>
+            </traversableConnection>
+            <nonTraversableConnection participantClassName="RecipientWorkgroupSDS">
+                <derivationSupplier associationEndName="playedRole"
+                    className="Person" staticModelDerivationId="1"/>
+            </nonTraversableConnection>
+        </connections>
+    </ownedAssociation>
+</staticModel>

@@ -1,0 +1,45 @@
+<!-- FHIR Responses are packaged in a Bundle resource -->
+<Bundle xmlns="http://hl7.org/fhir">
+	<!-- The logical id of the resource. This is system generated id -->
+	<id value="1727d702-6c9a-4bb9-91a2-4f8034655635"/>
+	<meta>
+		<profile value="https://fhir.nhs.uk/StructureDefinition/itk-bundle-1"/>
+	</meta>
+	<type value="message"/><!--FIXED to message-->
+	<entry>
+		<resource>
+			<MessageHeader>
+				<id value="ea7221b8-3cc0-4b11-bc95-585b056b5427"/>
+				<meta>
+					<profile value="https://fhir.nhs.uk/StructureDefinition/itk-messageheader-1"/>
+				</meta>
+				<!-- resource extension to include a local reference number-->
+				<extension url="https://fhir.nhs.uk/StructureDefinition/extension-senderreference-1">
+					<valueString value="cad456"/>
+				</extension>
+				<timestamp value="2012-01-04T09:10:14Z"/>
+				<event>
+ 					<!-- Code that identifies the event this message represents -->			
+					<system value="https://fhir.nhs.uk/ValueSet/itk-message-event-1"/><!-- FIXED to this valueset location. -->
+					<code value="ITK002"/><!-- FIXED to ITK002 -->
+					<display value="Business layer validation check"/><!-- FIXED to 'Business layer validation check' -->
+				</event>
+				<response>
+				<!-- Information about the message that this message is a response to. Only present if this message is a response.-->
+				<!-- The id of the message that this message is a response to. -->
+					<identifier value="7D6F23E0-AE1A-11DB-9808-B18E1E0777CD"/>
+					<!-- Code that identifies the type of response to the message - whether it was successful or not, and whether it should be re-sent or not. -->
+					<code value="ok"/>
+				</response>
+				<source>
+				<!-- The source application from which this message originated. -->
+					<endpoint value="urn:nhs-uk:addressing:ods:AMB123"/>
+				</source>
+				<destination>
+				<!-- The destination application which the message is intended for. -->
+					<endpoint value="urn:nhs-uk:addressing:ods:EM396"/>
+				</destination>
+			</MessageHeader>
+		</resource>
+	</entry>
+</Bundle>

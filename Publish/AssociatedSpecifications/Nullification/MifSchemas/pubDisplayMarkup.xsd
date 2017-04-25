@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by Richard Lowden (Quicksilva Ltd) -->
+<xs:schema targetNamespace="urn:hl7-org:v3/mif" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:hl7-org:v3/mif" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>
+********************************************************************************
+Author: Initial development by Lloyd McKenzie, Dec. 2002
+(c) 2002, 2003 by HL7 Inc.
+
+Purpose:
+	Defines the available text markup for use in various descriptive elements in various artifacts.
+	The contents of this schema are owned and defined by the publishing committee.  I.e. They decide what sorts of markup are allowed
+
+Modification History:
+	2003-01-23: Revamped 'graphic' markup element to be renamed figure, and to have support for fixed and scalable images.
+	2003-01-28: Fixed graphic width to be optional
+	2003-02-07: Modified property restriction to allow restriction of non-named properties
+	2003-03-18: Added domainNameType as a separate type to handle x_domains
+			- Changed upperCamelCaseType to support underscores to allow for proper choice names.  (We may want to revisit this.)
+			- Removed the 'hide' markup element.  (If you don't want something, keep a copy or comment it out.)
+			- Added references for dynamicModel, storyboardModel, ITS and communicationProtocol
+	2003-03-23: Changed domainRef to vocabularyDomainRef and added vocabularyCodeRef and codeSystemRef
+	2003-05-10: Defined references for vocabularyModels, datatypeModels and Glossaries
+	2003-05-15: Moved stuff around because Spy defect has been fixed
+			- Added artifactGroupRef to list of references
+
+Outstanding questions:
+  - Should we have a rule for 'indent', 'div' and/or 'listType' restricting the nesting depth of lists?  (E.g. Can you have a list of lists of lists of lists of . . .)
+  - Should we make graphic height and width mandatory?
+
+Programatic rules (rules that apply but are not schema or schematron-enforced):
+  - Ensure that datatypes are restricted to a list of defined datatypes
+  - Ensure that datatypes which are supposed to have parameters do in fact have parameter types, and those parameters are restrictions of the appropriate type as specified in the datatype definition
+  - All items that are 'referenced' must actually exist
+  - All items defined as an 'artifactIdType' must be globally unique.  (I.e. there can not be more than one item with a given number defined within a given package hierarchy.)
+********************************************************************************
+		</xs:documentation>
+	</xs:annotation>
+	<!-- Note: when this schema gets split, this include moves into the second schema -->
+	<xs:include schemaLocation="mifReferencedCodes.xsd"/>
+	<!-- NOTE: We could define these groups by 'ref'erencing the other groups.  However, spy has a bug (#1779) that causes validation problems with mixed content when you do this. -->
+	<xs:group name="basicMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>Markup focusing solely on the appearance of the text.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="p" type="BasicMarkup">
+				<xs:annotation>
+					<xs:documentation>Contained content is a separate paragraph.  If appearing as an empty element, forces a line-break</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="pubSimpleMarkupGroup"/>
+			<xs:group ref="referenceMarkupGroup"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="formatMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>Markup focusing solely on the appearance of the text, appropriate for labels and titles.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="b" type="FormatMarkup">
+				<xs:annotation>
+					<xs:documentation>The contained content will appear as bolded text</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="i" type="FormatMarkup">
+				<xs:annotation>
+					<xs:documentation>The contained content will appear as italicized text</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="code" type="FormatMarkup">
+				<xs:annotation>
+					<xs:documentation>Information that is to be highlighted in non-proportional font.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="fullMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>A choice of all available markup types, including structural markup.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:group ref="pubSimpleMarkupGroup"/>
+			<xs:group ref="referenceMarkupGroup"/>
+			<xs:group ref="pubComplexMarkupGroup"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="pubComplexMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>A choice of elements that can themselves contain markup.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="div" type="Div">
+				<xs:annotation>
+					<xs:documentation>Identifies a section of related content under a particular title.</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate div element">
+							<sch:rule context="mif:div">
+								<sch:extends rule="Div"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="p" type="FullMarkup">
+				<xs:annotation>
+					<xs:documentation>Contained content is a separate paragraph.  If appearing as an empty element, forces a line-break</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ol" type="List">
+				<xs:annotation>
+					<xs:documentation>The content will consist of a set of list items where each item is labeled with a number (starting with 1)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ul" type="List">
+				<xs:annotation>
+					<xs:documentation>The content will consist of a set of list items where each item is labeled with a bullet</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="note" type="BasicMarkup">
+				<xs:annotation>
+					<xs:documentation>Information that is to be highlighted as a Note.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="indent" type="FullMarkup">
+				<xs:annotation>
+					<xs:documentation>Identifies content that should be left-indented from the surrounding text.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="figure" type="Figure">
+				<xs:annotation>
+					<xs:documentation>Inserts a pre-defined graphic image</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate figure element">
+							<sch:rule context="mif:figure">
+								<sch:extends rule="Figure"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="table" type="Table">
+				<xs:annotation>
+					<xs:documentation>Inserts a two-dimensional table</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate table element">
+							<sch:rule context="mif:table">
+								<sch:extends rule="Table"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="constructedElement" type="ConstructedElement">
+				<xs:annotation>
+					<xs:documentation>This is a cue to the publications process to auto-generate some form of construct such as a summary table, cross reference table or artifact at a certain place in the publication.  It may *only* be used with the pre-approval of the publications group.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="styledText" type="StyledText">
+				<xs:annotation>
+					<xs:documentation>This is a cue to the publications process to auto-format the contained text using a special style (which may include color, font, background, indentation, etc.).  It may *only* be used with the pre-approval of the publications group.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="pubSimpleMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>A choice of elements that may only contain simple string content (no markup).</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="sup" type="FormatMarkup">
+				<xs:annotation>
+					<xs:documentation>Content that should appear in a smaller font, slightly above the surrounding text.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sub" type="FormatMarkup">
+				<xs:annotation>
+					<xs:documentation>Content that should appear in a smaller font, slightly below the surrounding text.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pre" type="VariousMixedContent">
+				<xs:annotation>
+					<xs:documentation>Indicates that the contained content should not have its spacing adjusted.  NOTE: This element can technically contain markup elements.  However, they will be treated as non-markup and will be displayed, not processed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="footnote" type="FullMarkup">
+				<xs:annotation>
+					<xs:documentation>Supporting content that should be referenced within the document, but displayed at the end of the page or document section.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="formatMarkupGroup"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="pubReferenceMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>A choice of elements that reference other artifacts or markup elements.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="externalRef" type="ExternalRef">
+				<xs:annotation>
+					<xs:documentation>A reference to an external document or artifact that allows linking to the document or artifact.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="externalSpecRef" type="ExternalSpecRef">
+				<xs:annotation>
+					<xs:documentation>A reference to an externally defined specification.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="figureRef" type="FigureRef">
+				<xs:annotation>
+					<xs:documentation>A reference to a graphic defined within the document</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate figureRef element">
+							<sch:rule context="mif:figureRef">
+								<sch:extends rule="FigureRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tableRef" type="TableRef">
+				<xs:annotation>
+					<xs:documentation>A reference to a table defined within the document</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate tableRef element">
+							<sch:rule context="mif:tableRef">
+								<sch:extends rule="TableRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="divRef" type="DivRef">
+				<xs:annotation>
+					<xs:documentation>A reference to a section defined within the document</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate divRef element">
+							<sch:rule context="mif:divRef">
+								<sch:extends rule="DivRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="referenceMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>A choice of elements that reference other artifacts or markup elements.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:group ref="pubReferenceMarkupGroup"/>
+			<xs:group ref="artifactReferenceMarkupGroup"/>
+		</xs:choice>
+	</xs:group>
+	<xs:complexType name="BasicMarkup" mixed="true">
+		<xs:annotation>
+			<xs:documentation>Basic formatting markup and paragraphs but no structural markup (lists and subdivisions)</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="basicMarkupGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:complexType>
+	<xs:complexType name="FormatMarkup" mixed="true">
+		<xs:annotation>
+			<xs:documentation>Formatting markup only.  No paragraphs or structural markup.</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:group ref="formatMarkupGroup"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="FullMarkup" mixed="true">
+		<xs:annotation>
+			<xs:documentation>Full-blown markup including formating, paragraphs and structural markup (lists and subdivisions).</xs:documentation>
+		</xs:annotation>
+		<xs:group ref="fullMarkupGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:complexType>
+	<xs:complexType name="PubComplexMarkup" mixed="true">
+		<xs:annotation>
+			<xs:documentation>Formatting markup only.  No paragraphs or structural markup.</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:group ref="pubComplexMarkupGroup"/>
+		</xs:choice>
+	</xs:complexType>
+	<!-- Sub-types that are used within the markup and subsequent schemas -->
+	<xs:complexType name="VariousMixedContent" mixed="true">
+		<xs:annotation>
+			<xs:documentation>A type that allows unconstrained mixed-text markup</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:any processContents="skip"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StyledText" mixed="true">
+		<xs:annotation>
+			<xs:documentation>Text defined in a pre-defined named style (could affect font size, weight, type, color, etc.)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent mixed="true">
+			<xs:extension base="PubComplexMarkup">
+				<xs:attribute name="style" type="TextStyleKind" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the style that should be applied to the text.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConstructedElement">
+		<xs:annotation>
+			<xs:documentation>Indicates that some sort of pre-defined 'auto-constructed' element should be inserted at this location.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="constructType" type="ConstructedElementKind" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicates what type of construct should be inserted</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Div" mixed="true">
+		<xs:annotation>
+			<xs:documentation>Represents a 'section' of content.  Sections can be nested.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate Div type">
+					<sch:rule abstract="true" id="Div">
+						<sch:report test="@id and count(preceding::mif:*[name(.)=name(current())][@id=current()/@id])">
+										ERROR: Div id must be unique within the document, if specified.</sch:report>
+						<!-- Can't use unique because we don't know what the root node is going to be. -->
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent mixed="true">
+			<xs:extension base="FullMarkup">
+				<xs:attribute name="title" type="ShortDescriptiveName" use="required">
+					<xs:annotation>
+						<xs:documentation>Identifies the heading name for the section</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="numberSectionInd" type="xs:boolean" use="optional" default="true">
+					<xs:annotation>
+						<xs:documentation>If false, indicates that this section should not be assigned a number or appear in the table of contents.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="id" type="BasicId" use="optional">
+					<xs:annotation>
+						<xs:documentation>A unique identifier for the division within the document.  Used when referencing a table with <divRef/>.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Image">
+		<xs:annotation>
+			<xs:documentation>Used for all references to graphic figures</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="fixedImage" type="FixedImageContent">
+				<xs:annotation>
+					<xs:documentation>A fixed size image.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resizable" type="ResizableImage">
+				<xs:annotation>
+					<xs:documentation>A resizable image definition that can be scaled as necessary for display purposes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="Figure">
+		<xs:annotation>
+			<xs:documentation>A graphic image to be inserted into the document.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate Figure type">
+					<sch:rule abstract="true" id="Figure">
+						<sch:report test="@id and count(preceding::mif:*[name(.)=name(current())][@id=current()/@id])">
+										ERROR: Figure id must be unique within the document, if specified.</sch:report>
+						<!-- Can't use unique because we don't know what the root node is going to be. -->
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="Image">
+				<xs:sequence>
+					<xs:element name="caption" type="BasicMarkup" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Descriptive text to be associated with the graphic image.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="id" type="BasicId" use="optional">
+					<xs:annotation>
+						<xs:documentation>An identifier for the figure (unique within the document) that can be used to reference the figure.  NOTE: The figure id will not necessarily be the number/letter/identifier displayed for the figure in documentation.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FixedImage">
+		<xs:annotation>
+			<xs:documentation>A graphic image with a fixed size</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="href" type="LocalFileReference" use="required">
+			<xs:annotation>
+				<xs:documentation>A reference to the relative file name and location of the fixed image.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="height" type="PositiveDecimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>The vertical size of the fixed image (in inches).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="width" type="PositiveDecimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>The horizontal size of the fixed image (in inches).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="FixedImageContent">
+		<xs:annotation>
+			<xs:documentation>The actual content of a fixed size graphic image</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="pixmap" type="FixedImage">
+				<xs:annotation>
+					<xs:documentation>A fixed-size image.  This is the 'primary' image for the figure.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="thumbnail" type="FixedImage" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A small rendition of the pixmap image intended to be used as a place-holder (often with a hyperlink to the larger pixmap image) when space constraints prevent the display of the full-size image.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="List">
+		<xs:annotation>
+			<xs:documentation>Used in defining all types of lists.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="li" type="FullMarkup" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The content will appear as a separate item within a list</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResizableImage">
+		<xs:annotation>
+			<xs:documentation>A graphic image that can be scaled</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="href" type="LocalFileReference" use="required">
+			<xs:annotation>
+				<xs:documentation>A reference to the relative file name and location of the resizable image.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="imageType" type="ImageKind" use="required">
+			<xs:annotation>
+				<xs:documentation>Defines what format the image is stored in.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="recommendedHeight" type="PositiveDecimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>The suggested vertical size at which the image should be rendered (in inches).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="recommendedWidth" type="PositiveDecimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>The suggested horizontal size at which the image should be rendered (in inches).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Row">
+		<xs:annotation>
+			<xs:documentation>A horizontal row within a table</xs:documentation>
+		</xs:annotation>
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="th" type="BasicMarkup">
+				<xs:annotation>
+					<xs:documentation>Represents header data within one cell of the table</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="td" type="BasicMarkup">
+				<xs:annotation>
+					<xs:documentation>Represents non-header data within one cell of the table</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="Table">
+		<xs:annotation>
+			<xs:documentation>Used when the contained content should be represented as a table.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate Table type">
+					<sch:rule abstract="true" id="Table">
+						<sch:report test="@id and count(preceding::mif:*[name(.)=name(current())][@id=current()/@id])">
+										ERROR: Table id must be unique within the document, if specified.</sch:report>
+						<!-- Can't use unique because we don't know what the root node is going to be. -->
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="caption" type="BasicMarkup" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The text of the caption that should appear above the table</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="col" type="TableColumn" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Defines the columns for the table.  If not specified, columns will be autosized.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="thead" type="TableHead" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Defines the contents of the table header row.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbody" type="TableBody">
+				<xs:annotation>
+					<xs:documentation>Contains the information of the table.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="BasicId" use="optional">
+			<xs:annotation>
+				<xs:documentation>A unique identifier for the table within the document.  Used when referencing a table with <tableRef/>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="borders" type="SingleNonNegativeInteger" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the width of the border.  A width of 0 means no border will appear.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TableColumn">
+		<xs:annotation>
+			<xs:documentation>Defines a vertical row in a table</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="width" type="PositiveDecimal" use="required">
+			<xs:annotation>
+				<xs:documentation>Identifies the horizontal size of the column in inches.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TableHead">
+		<xs:annotation>
+			<xs:documentation>Defines a table row or rows that is a table heading</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tr" type="Row" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The row containing the table header labels</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TableBody">
+		<xs:annotation>
+			<xs:documentation>Defines the set of rows that make up the 'content' of the table</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tr" type="Row" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Represents a row within the table</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DivRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a 'section' defined within the document .</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate DivRef type">
+					<sch:rule abstract="true" id="DivRef">
+						<sch:report test="not(//mif:*[name(.)=name(current())][@id=current()/@id])">
+										ERROR: No div with the referenced id exists within this document.</sch:report>
+						<!-- Can't use keyref because we don't know what the root node is going to be. -->
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:attribute name="id" type="BasicId" use="required">
+			<xs:annotation>
+				<xs:documentation>The identifier assigned to the division being referenced.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ExternalRef">
+		<xs:annotation>
+			<xs:documentation>Used to reference an external document or item by URL.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="ref" type="Url" use="required">
+			<xs:annotation>
+				<xs:documentation>The URL where the document or item can be found.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="alt" type="LongDescriptiveName" use="optional">
+			<xs:annotation>
+				<xs:documentation>The descriptive name for the document or item.  If not specified, the description will be the URL itself.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ExternalSpecRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a defined artifact from an external specification</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="spec" type="ShortDescriptiveName" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the referenced specification.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="version" type="Version" use="optional">
+			<xs:annotation>
+				<xs:documentation>The version number of the referenced specification.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ref" type="Url" use="optional">
+			<xs:annotation>
+				<xs:documentation>The URL where the referenced artifact can be found.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="FigureRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a graphic image defined within the document or in an external document.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate FigureRef type">
+					<sch:rule abstract="true" id="FigureRef">
+						<sch:report test="not(//mif:*[name(.)=name(current())][@id=current()/@id])">
+										ERROR: No figure with the referenced id exists within this document.</sch:report>
+						<!-- Can't use keyref because we don't know what the root node is going to be. -->
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:attribute name="id" type="BasicId" use="required">
+			<xs:annotation>
+				<xs:documentation>The identifier assigned to the figure being referenced.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TableRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a table defined within the document .</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate TableRef type">
+					<sch:rule abstract="true" id="TableRef">
+						<sch:report test="not(//mif:*[name(.)=name(current())][@id=current()/@id])">
+										ERROR: No table with the referenced id exists within this document.</sch:report>
+						<!-- Can't use keyref because we don't know what the root node is going to be. -->
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:attribute name="id" type="BasicId" use="required">
+			<xs:annotation>
+				<xs:documentation>The identifier assigned to the table being referenced.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- ***********************************************************************************************
+		- The following content should be split into a separate schema, but can't until SPY fixes a bug
+		- (Spy doesn't allow valid redefines of groups, which we need to do.)
+		- *********************************************************************************************** -->
+	<!-- Sub-types that are used within the markup and subsequent schemas -->
+	<xs:group name="artifactReferenceMarkupGroup">
+		<xs:annotation>
+			<xs:documentation>A choice of elements that reference other artifacts.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="itemName" type="ItemName">
+				<xs:annotation>
+					<xs:documentation>A reference to one of the parents of the current element</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate itemName element">
+							<sch:rule context="mif:itemName">
+								<sch:extends rule="ItemName"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="annotationRef" type="AnnotationRef">
+				<xs:annotation>
+					<xs:documentation>A reference to an annotation on the current element or one of its parents</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate annoationRef element">
+							<sch:rule context="mif:annotationRef">
+								<sch:extends rule="AnnotationRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="artifactGroupRef" type="ArtifactGroupRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a collection of artifacts of a particular type</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate artifactGroupRef element">
+							<sch:rule context="mif:artifactGroupRef">
+								<sch:extends rule="ArtifactGroupRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="packageRef" type="PackageRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a particular package</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate packageRef element">
+							<sch:rule context="mif:packageRef">
+								<sch:extends rule="PackageRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="datatypeModelRef" type="PackageRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a datatype model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate datatypeModelRef element">
+							<sch:rule context="mif:datatypeModelRef">
+								<sch:extends rule="PackageRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="datatypeRef" type="DatatypeRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a datatype definition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="propertyRef" type="DatatypePropertyRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific property of a datatype definition</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate propertyRef element">
+							<sch:rule context="mif:propertyRef">
+								<sch:extends rule="DatatypePropertyRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="staticModelRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific static model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate staticModelRef element">
+							<sch:rule context="mif:staticModelRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subjectAreaRef" type="SubjectAreaRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific subject area in a static model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate subjectAreaRef element">
+							<sch:rule context="mif:subjectAreaRef">
+								<sch:extends rule="SubjectAreaRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="classRef" type="ClassRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific class in a static model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate classRef element">
+							<sch:rule context="mif:classRef">
+								<sch:extends rule="ClassRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="transitionRef" type="TransitionRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific state transition for a class in a static model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate transitionRef element">
+							<sch:rule context="mif:transitionRef">
+								<sch:extends rule="TransitionRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stateRef" type="StateRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific state for a class in a static model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate stateRef element">
+							<sch:rule context="mif:stateRef">
+								<sch:extends rule="StateRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attributeRef" type="AttributeRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific attribute for a class in a static model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate attributeRef element">
+							<sch:rule context="mif:attributeRef">
+								<sch:extends rule="AttributeRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="associationEndRef" type="AssociationEndRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific association end for a class in a static model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate associationEndRef element">
+							<sch:rule context="mif:associationEndRef">
+								<sch:extends rule="AssociationEndRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="storyboardModelRef" type="PackageRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific storyboard model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate storyboardModelRef element">
+							<sch:rule context="mif:storyboardModelRef">
+								<sch:extends rule="PackageRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="storyboardRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific storyboard within a storyboard model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate storyboardRef element">
+							<sch:rule context="mif:storyboardRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="triggerEventRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific trigger event</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate triggerEventRef element">
+							<sch:rule context="mif:triggerEventRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationRoleRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific application role</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate applicationRoleRef element">
+							<sch:rule context="mif:applicationRoleRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="interactionRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific interaction</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate interactionRef element">
+							<sch:rule context="mif:interactionRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vocabularyModelRef" type="PackageRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific vocabulary model</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate vocabularyModelRef element">
+							<sch:rule context="mif:vocabularyModelRef">
+								<sch:extends rule="PackageRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vocabularyDomainRef" type="PackageRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific vocabulary domain</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate vocabularyDomainRef element">
+							<sch:rule context="mif:vocabularyDomainRef">
+								<sch:extends rule="PackageRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codeSystemRef" type="PackageRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific code system</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate codeSystemRef element">
+							<sch:rule context="mif:codeSystemRef">
+								<sch:extends rule="PackageRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="vocabularyCodeRef" type="VocabularyCodeRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific code within a code system</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate vocabularyCodeRef element">
+							<sch:rule context="mif:vocabularyCodeRef">
+								<sch:extends rule="VocabularyCodeRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glossaryRef" type="PackageRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific glossary</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate glossaryRef element">
+							<sch:rule context="mif:glossaryRef">
+								<sch:extends rule="PackageRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="glossaryTermRef" type="GlossaryTermRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific term within a glossary</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate glossaryTermRef element">
+							<sch:rule context="mif:glossaryTermRef">
+								<sch:extends rule="GlossaryTermRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="templateRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific template</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate templateRef element">
+							<sch:rule context="mif:templateRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="itsRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific implementation technology</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate itsRef element">
+							<sch:rule context="mif:itsRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="communicationProtocolRef" type="ArtifactRef">
+				<xs:annotation>
+					<xs:documentation>An absolute reference to a specific communication protocol</xs:documentation>
+					<xs:appinfo>
+						<sch:pattern name="Validate communicationProtocolRef element">
+							<sch:rule context="mif:communicationProtocolRef">
+								<sch:extends rule="ArtifactRef"/>
+							</sch:rule>
+						</sch:pattern>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:complexType name="ItemName">
+		<xs:annotation>
+			<xs:documentation>A reference to the name of the containing element of the specified type.  This element should be used instead of the name of the element to minimize the number of changes necessary if a name should change.  E.g. In a definition you might say "A <itemName/> is used when . . ."</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate ItemName type">
+					<sch:rule abstract="true" id="ItemName">
+						<!-- Todo: Fix names of referenced types -->
+						<sch:report test="(@item='datatype' and not(ancestor::mif:datatypeDefinition)) or
+												 (@item='property' and not(ancestor::mif:property)) or
+												 (@item='class' and not(ancestor::mif:class)) or
+												 (@item='attribute' and not(ancestor::mif:attribute)) or
+												 (@item='relationship' and not(ancestor::mif:relationship)) or
+												 (@item='trigger' and not(ancestor::mif:triggerEvent)) or
+												 (@item='appRole' and not(ancestor::mif:applicationRole))">
+							ERROR: There is no ancestor of the specified type.</sch:report>
+						<sch:report test="not(@item) and (not(
+												 ancestor::mif:datatypeDefinition or ancestor::mif:property or ancestor::mif:class or ancestor::mif:attribute or
+												 ancestor::mif:relationship or ancestor::mif:triggerEvent or ancestor::mif:applicationRole))">
+							ERROR: There is no ancestor of an appropriate type having a name.</sch:report>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:attribute name="item" type="ParentArtifactKind" use="optional">
+			<xs:annotation>
+				<xs:documentation>Identifies the type of containing element the name is a reference for.  If there are multiple containing elements of the same type, the referenced name will be the nearest one.  If not specified, then the nearest eligible containing element will be used.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="AnnotationRef">
+		<xs:annotation>
+			<xs:documentation>A reference to an annotation on the current element, or (if 'item' is specified), one of its parents</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate AnnotationRef type">
+					<sch:rule abstract="true" id="AnnotationRef">
+						<sch:extends rule="ItemName"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ItemName">
+				<xs:attribute name="annotationKind" type="AnnotationKind" use="required">
+					<xs:annotation>
+						<xs:documentation>Identifies the kind of annotation being referenced.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="annotationName" type="ShortDescriptiveName" use="optional">
+					<xs:annotation>
+						<xs:documentation>The specific name of the annotation.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PackageRef">
+		<xs:annotation>
+			<xs:documentation>Used to make absoloute references to other packages.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate PackageRef type">
+					<sch:rule abstract="true" id="PackageRef">
+						<sch:report test="@subSection and not(@section)">
+							ERROR: Can't have a subsection without a section.</sch:report>
+						<sch:report test="@domain and not(@subSection)">
+							ERROR: Can't have a domain without a subSection.</sch:report>
+						<sch:report test="contains(concat(';', @artifact, ';'), ';RIM;ITS;VO;DT;') and (@section)">
+							ERROR: RIM, ITS, Vocabulary and Datatypes must be global (they may not be within a section).</sch:report>
+						<sch:report test="contains(concat(';', @artifact, ';'), ';DIM;CIM;LIM;AR;TE;IN;TP;DAM;') and not(@domain)">
+							ERROR: DIMs, DAMs, CIMs, LIMs, Application Roles, Trigger Events, Interactions and Templates may only be defined in a domain.</sch:report>
+						<sch:report test="contains(concat(';', @artifact, ';'), ';GL;DC;CMET;STUB;SB;') and @section and not(@domain)">
+							ERROR: Glossaries, Documents, CMETs, Stubs and Storyboards must either be global (no section) or domain-specific.</sch:report>
+						<sch:report test="@subArtifact and @artifact!='VO'">
+							ERROR: Only vocabulary artifacts may have sub-artifact types.</sch:report>
+						<!-- Todo: Add more constraints -->
+						<!-- Todo: Can only have identifierId if realm is ZZ -->
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:attribute name="root" type="PackageRootKind" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicates the fundamental categorization of the package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="section" type="SectionKind" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the name of the section package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="subSection" type="SubSectionKind" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the name of the sub-section package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="domain" type="DomainKind" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the name of the domain package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="realm" type="AffiliateKind" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the geographic area covered by the package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="version" type="ShortDescriptiveName" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the name of the version package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="artifact" type="ArtifactKind" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the category of the artifacts in the package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="subArtifact" type="SubArtifactKind" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the sub-category of the artifacts in the package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="name" type="ShortDescriptiveName" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the name of the package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="id" type="SmallNonNegativeInteger" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the identifier number of the package</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="creatorId" type="Oid" use="optional">
+			<xs:annotation>
+				<xs:documentation>An OID distinguishing the namespace of a specific artifact creator</xs:documentation>
+				<xs:documentation>UML: ModelElement.name, inherited by package</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="uri" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="PackageNodeName">
+		<xs:annotation>
+			<xs:documentation>A package node might be a name or an OID</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Oid BasicFormalName"/>
+	</xs:simpleType>
+	<xs:complexType name="ArtifactRef">
+		<xs:annotation>
+			<xs:documentation>References to artifacts within a particular package</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate ArtifactRef type">
+					<sch:rule abstract="true" id="ArtifactRef">
+						<sch:extends rule="PackageRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PackageRef">
+				<xs:attribute name="artifactName" type="BasicFormalName" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the referenced artifact within the package</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PackageOrArtifactRef">
+		<xs:annotation>
+			<xs:documentation>References to generic elements that could be packages or artifacts</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate PackageOrArtifactRef type">
+					<sch:rule abstract="true" id="PackageOrArtifactRef">
+						<sch:extends rule="PackageRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PackageRef">
+				<xs:attribute name="artifactName" type="BasicFormalName" use="optional">
+					<xs:annotation>
+						<xs:documentation>The name of the referenced artifact within the package</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ArtifactGroupRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a particular grouping of artifacts.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate ArtifactGroupRef type">
+					<sch:rule abstract="true" id="ArtifactGroupRef">
+						<sch:extends rule="PackageRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PackageRef">
+				<xs:attribute name="group" type="ArtifactGroupKind" use="required">
+					<xs:annotation>
+						<xs:documentation>Identifies the type of artifact group being referenced.  Used in circumstances where there is not a model or other artifact that contains only the specified type of item.  NOTE: This should only be used with the approval of the publications committee.  (They will decide what 'groups' of things will actually be portrayed as groups)</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="linkToEnd" type="xs:boolean" use="optional" default="false">
+					<xs:annotation>
+						<xs:documentation>If true, indicates that the link should be to the first item following the specified group.  If false, the link is to the begining of the group.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="withinClassName" type="FormalProperName" use="optional">
+					<xs:annotation>
+						<xs:documentation>Indicates the name of the class within which to link to the group.  For example, link to the 'attributes' section in class 'A' static model 'B'.  If not specified, the link will be to the nearest ancestor artifact that contains the specified type of group.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AssociationEndRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a defined relationship within a particular model and class.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate AssociationEndRef type">
+					<sch:rule abstract="true" id="AssociationEndRef">
+						<sch:extends rule="ClassRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ClassRef">
+				<xs:attribute name="relationshipName" type="FormalPropertyName" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the relationship being referenced.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AttributeRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a defined attribute within a particular model and class.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate AttributeRef type">
+					<sch:rule abstract="true" id="AttributeRef">
+						<sch:extends rule="ClassRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ClassRef">
+				<xs:attribute name="attributeName" type="FormalPropertyName" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the attribute being referenced.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ClassRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a defined class within a particular model.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate ClassRef type">
+					<sch:rule abstract="true" id="ClassRef">
+						<sch:extends rule="PackageRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PackageRef">
+				<xs:attribute name="className" type="AllClassName" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the class being referenced.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DatatypeRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a datatype definition.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="supplierBindingArgumentDatatype" type="DatatypeRef" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Identifies a datatype to bind to one of the referenced datatypes templateParameters</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="DatatypeName" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the datatype being referenced</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="typeSpecialisation" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Type specialisation</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DatatypePropertyRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a datatype property defined within the document or in an external document.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate DatatypePropertyRef type">
+					<sch:rule abstract="true" id="DatatypePropertyRef">
+						<sch:report test="@propertyName and count(mif:conversionDatatype)!=0">
+										ERROR: A property reference may only have a name or a conversion datatype, not both.</sch:report>
+						<sch:report test="not(@propertyName) and count(mif:conversionDatatype)=0">
+										ERROR: A property reference must have either a name or a conversion datatype.</sch:report>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="DatatypeRef">
+				<xs:sequence>
+					<xs:element name="conversionDatatype" type="DatatypeRef" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>For 'conversion' properties, identifies the target datatype for the conversion.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="propertyName" type="FormalPropertyName" use="optional">
+					<xs:annotation>
+						<xs:documentation>The name of the property being referenced.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GlossaryTermRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a glossary term.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate GlossaryTermRef type">
+					<sch:rule abstract="true" id="GlossaryTermRef">
+						<sch:extends rule="PackageRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PackageRef">
+				<xs:attribute name="termName" type="ShortDescriptiveName" use="required">
+					<xs:annotation>
+						<xs:documentation>Name of the referenced term.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StateRef">
+		<xs:annotation>
+			<xs:documentation>Identifies a state that is associated with the trigger event.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate StateRef type">
+					<sch:rule abstract="true" id="StateRef">
+						<sch:extends rule="ClassRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ClassRef">
+				<xs:attribute name="stateName" type="FormalPropertyName" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the state within the 'focal' class.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TransitionRef">
+		<xs:annotation>
+			<xs:documentation>Identifies a state transition defined elsewhere.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate TransitionRef type">
+					<sch:rule abstract="true" id="TransitionRef">
+						<sch:extends rule="ClassRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ClassRef">
+				<xs:attribute name="stateTransitionName" type="FormalPropertyName" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the state transition within the 'focal' class that is the basis for the trigger event.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SubjectAreaRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a defined subject area within a particular model.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate SubjectAreaRef type">
+					<sch:rule abstract="true" id="SubjectAreaRef">
+						<sch:extends rule="ArtifactRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ArtifactRef">
+				<xs:attribute name="subjectAreaName" type="BasicFormalName" use="required">
+					<xs:annotation>
+						<xs:documentation>The name of the subject area being referenced.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="VocabularyCodeRef">
+		<xs:annotation>
+			<xs:documentation>A reference to a vocabulary code defined in another model.</xs:documentation>
+			<xs:appinfo>
+				<sch:pattern name="Validate VocabularyCodeRef type">
+					<sch:rule abstract="true" id="VocabularyCodeRef">
+						<sch:extends rule="PackageRef"/>
+					</sch:rule>
+				</sch:pattern>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="PackageRef">
+				<xs:attribute name="code" type="ShortDescriptiveName" use="required">
+					<xs:annotation>
+						<xs:documentation>The identifier or mnemonic of the referenced code.</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
