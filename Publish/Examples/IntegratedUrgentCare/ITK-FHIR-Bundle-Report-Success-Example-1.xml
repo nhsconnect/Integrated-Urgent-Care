@@ -1,5 +1,5 @@
 <!-- FHIR Responses are packaged in a Bundle resource -->
-<Bundle xmlns="http://hl7.org/fhir">
+<Bundle xmlns="http://hl7.org/fhir"  xsi:schemaLocation="http://hl7.org/fhir ../../Schemas/bundle.xsd">
 	<!-- The logical id of the resource. This is system generated id -->
 	<id value="1727d702-6c9a-4bb9-91a2-4f8034655635"/>
 	<meta>

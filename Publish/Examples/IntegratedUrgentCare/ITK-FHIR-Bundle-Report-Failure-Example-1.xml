@@ -56,9 +56,10 @@
 						<!-- The following information can be populated from the local valueset from 
 						https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1 -->
 							<system value="https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1"/><!-- FIXED to  https://fhir.nhs.uk/ValueSet/itk-business-acknowledgement-1-->
-							<code value="41002"/>
-							<display value="Patient not known here. (aka Patient record not present in system)"/>
+							<code value="UC001"/>
+							<display value="Rejected as address cannot be processed"/>
 						</coding>
+						<text value="Could not process the postcode"/>
 					</details>
 				</issue>
 			</OperationOutcome>
