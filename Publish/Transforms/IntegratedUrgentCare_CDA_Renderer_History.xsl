@@ -136,7 +136,7 @@
 					<!--PRTR1 This banner should apperas if informant is present-->
 				</xsl:if>
 				<xsl:call-template name="titlebar"/>
-				<!--<xsl:call-template name="history"/>-->
+				<xsl:call-template name="history"/>
 				<xsl:if test="/n1:ClinicalDocument/n1:participant">
 					<xsl:call-template name="participantBanner"/>
 					<!--PRTR1 This banner should apperas if participant is present-->
